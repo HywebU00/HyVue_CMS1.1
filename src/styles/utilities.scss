@@ -1,0 +1,19 @@
+// ✅ 定義你要的自訂顏色名稱（對應到 Vuetify 的 theme.colors）
+// $custom-utilities: ('primary2', 'secondary1');
+
+// @each $color in $custom-utilities {
+//   .bg-#{$color},
+//   [class*='bg-#{$color}'] {
+//     background-color: rgb(var(--v-theme-#{$color})) !important;
+//   }
+
+//   .text-#{$color},
+//   [class*='text-#{$color}'] {
+//     color: rgb(var(--v-theme-#{$color})) !important;
+//   }
+
+//   .border-#{$color},
+//   [class*='border-#{$color}'] {
+//     border-color: rgb(var(--v-theme-#{$color})) !important;
+//   }
+// }
