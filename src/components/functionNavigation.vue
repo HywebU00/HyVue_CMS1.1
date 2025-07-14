@@ -161,58 +161,33 @@ export default {
   }),
   methods: {
     toggleDarkTheme() {
-      const theme = this.$vuetify.theme;
-      console.log(theme.name.value);
-      theme.name.value === `dark`
-        ? theme.change("default")
-        : theme.change("dark");
-      // 切換主題：如果是 dark，就換回 default，否則切成 dark
-      // if (theme.global.name.value === "dark") {
-      //   theme.change("default");
-      // } else {
-      //   theme.change("dark");
-      // }
-
-      // 寫入 cookie
-      this.createCookie("Theme", theme.global.name.value, 356);
-
-      // 同步其他狀態
+      //let th = this.$vuetify.theme.global;
+      let th = this.$vuetify.theme;
+      const newTheme = th.name.value === "dark" ? "default" : "dark";
+      // 使用官方新方法切換
+      th.change(newTheme);
+      this.createCookie("Theme", newTheme, 356);
       this.themeDark = !this.themeDark;
+
       if (this.themeDark === true) {
-        this.theme = "default";
+        th.change("dark");
+      } else {
+        th.change("default");
       }
     },
 
     changeTheme(color) {
       const theme = this.$vuetify.theme;
-
       // 使用新 API 切換主題
       theme.change(color);
 
       // 同步其他狀態
       this.theme = color;
       this.themeDark = false;
-
       // 寫入 cookie
       this.createCookie("Theme", color, 356);
     },
 
-    // toggleDarkTheme() {
-    //   let th = this.$vuetify.theme.global;
-    //   th.name === `dark` ? (th.name = `default`) : (th.name = `dark`);
-    //   this.createCookie("Theme", `${th.name}`, 356);
-    //   this.themeDark = !this.themeDark;
-    //   if (this.themeDark === true) {
-    //     this.theme = "default";
-    //   }
-    // },
-    // changeTheme(color) {
-    //   let th = this.$vuetify.theme.global;
-    //   th.name = color;
-    //   this.theme = color;
-    //   this.themeDark = false;
-    //   this.createCookie("Theme", `${color}`, 356);
-    // },
     fontSizeChange(targetSize) {
       this.createCookie("FontSize", `${targetSize}`, 356);
       this.changeFontSizeClass(targetSize);
@@ -278,15 +253,32 @@ export default {
       this.getFontSizeText(this.cookie);
     },
     themeInit() {
-      this.theme = this.readCookie("Theme") || null;
-      if (this.theme == null) {
+      const savedTheme = this.readCookie("Theme");
+      // console.log(savedTheme);
+      // 如果是 null、undefined 或空字串，都 fallback 為 "default"
+      if (savedTheme == null) {
+        // console.log("1");
         this.theme = "default";
         this.themeDark = false;
-      }
-      if (this.theme == "dark") {
+      } else {
+        // console.log("2");
         this.themeDark = true;
+        // this.theme = savedTheme;
+        // this.themeDark = savedTheme === "dark";
       }
+
+      // 避免 undefined 傳入 changeTheme
       this.changeTheme(this.theme);
+      /////////////////////////////
+      // this.theme = this.readCookie("Theme") || null;
+      // if (this.theme == null) {
+      //   this.theme = "default";
+      //   this.themeDark = false;
+      // }
+      // if (this.theme == "dark") {
+      //   this.themeDark = true;
+      // }
+      // this.changeTheme(this.theme);
     },
     //桌機與手機版本header 切換
     handleResize() {
