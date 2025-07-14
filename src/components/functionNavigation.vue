@@ -180,7 +180,6 @@ export default {
       const theme = this.$vuetify.theme;
       // 使用新 API 切換主題
       theme.change(color);
-
       // 同步其他狀態
       this.theme = color;
       this.themeDark = false;
@@ -254,31 +253,13 @@ export default {
     },
     themeInit() {
       const savedTheme = this.readCookie("Theme");
-      // console.log(savedTheme);
-      // 如果是 null、undefined 或空字串，都 fallback 為 "default"
       if (savedTheme == null) {
-        // console.log("1");
         this.theme = "default";
         this.themeDark = false;
       } else {
-        // console.log("2");
         this.themeDark = true;
-        // this.theme = savedTheme;
-        // this.themeDark = savedTheme === "dark";
       }
-
-      // 避免 undefined 傳入 changeTheme
       this.changeTheme(this.theme);
-      /////////////////////////////
-      // this.theme = this.readCookie("Theme") || null;
-      // if (this.theme == null) {
-      //   this.theme = "default";
-      //   this.themeDark = false;
-      // }
-      // if (this.theme == "dark") {
-      //   this.themeDark = true;
-      // }
-      // this.changeTheme(this.theme);
     },
     //桌機與手機版本header 切換
     handleResize() {

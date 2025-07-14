@@ -85,19 +85,19 @@ export default {
       document.cookie = name + "=" + value + _expires + "; path=/";
     },
     changeTheme(color) {
-      let th = this.$vuetify.theme.global;
-      th.name = color;
+      const theme = this.$vuetify.theme;
+      // 使用新 API 切換主題
+      theme.change(color);
       this.theme = color;
       this.themeDark = false;
       this.createCookie("Theme", `${color}`, 356);
     },
     themeInit() {
-      this.theme = this.readCookie("Theme") || null;
-      if (this.theme == null) {
+      const savedTheme = this.readCookie("Theme");
+      if (savedTheme == null) {
         this.theme = "default";
         this.themeDark = false;
-      }
-      if (this.theme == "dark") {
+      } else {
         this.themeDark = true;
       }
       this.changeTheme(this.theme);
