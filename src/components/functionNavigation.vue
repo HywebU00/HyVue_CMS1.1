@@ -144,7 +144,7 @@
 <script>
 export default {
   data: () => ({
-    theme: "",
+    theme: "default",
     themeDark: false,
     mobileHeader: false,
     userLoginCard: false,
@@ -161,21 +161,58 @@ export default {
   }),
   methods: {
     toggleDarkTheme() {
-      let th = this.$vuetify.theme.global;
-      th.name === `dark` ? (th.name = `default`) : (th.name = `dark`);
-      this.createCookie("Theme", `${th.name}`, 356);
+      const theme = this.$vuetify.theme;
+      console.log(theme.name.value);
+      theme.name.value === `dark`
+        ? theme.change("default")
+        : theme.change("dark");
+      // 切換主題：如果是 dark，就換回 default，否則切成 dark
+      // if (theme.global.name.value === "dark") {
+      //   theme.change("default");
+      // } else {
+      //   theme.change("dark");
+      // }
+
+      // 寫入 cookie
+      this.createCookie("Theme", theme.global.name.value, 356);
+
+      // 同步其他狀態
       this.themeDark = !this.themeDark;
       if (this.themeDark === true) {
         this.theme = "default";
       }
     },
+
     changeTheme(color) {
-      let th = this.$vuetify.theme.global;
-      th.name = color;
+      const theme = this.$vuetify.theme;
+
+      // 使用新 API 切換主題
+      theme.change(color);
+
+      // 同步其他狀態
       this.theme = color;
       this.themeDark = false;
-      this.createCookie("Theme", `${color}`, 356);
+
+      // 寫入 cookie
+      this.createCookie("Theme", color, 356);
     },
+
+    // toggleDarkTheme() {
+    //   let th = this.$vuetify.theme.global;
+    //   th.name === `dark` ? (th.name = `default`) : (th.name = `dark`);
+    //   this.createCookie("Theme", `${th.name}`, 356);
+    //   this.themeDark = !this.themeDark;
+    //   if (this.themeDark === true) {
+    //     this.theme = "default";
+    //   }
+    // },
+    // changeTheme(color) {
+    //   let th = this.$vuetify.theme.global;
+    //   th.name = color;
+    //   this.theme = color;
+    //   this.themeDark = false;
+    //   this.createCookie("Theme", `${color}`, 356);
+    // },
     fontSizeChange(targetSize) {
       this.createCookie("FontSize", `${targetSize}`, 356);
       this.changeFontSizeClass(targetSize);

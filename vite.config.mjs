@@ -8,6 +8,7 @@ import { fileURLToPath, URL } from 'node:url';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // logLevel: 'error', // 只顯示 error，忽略 warning
   plugins: [
     vue({
       template: { transformAssetUrls },

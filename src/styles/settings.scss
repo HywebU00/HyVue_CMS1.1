@@ -26,7 +26,8 @@ $border-radius-root: 8px;
   $rounded:
     (
       0: 0,
-      'sm': $border-radius-root / 2,
+      'sm': calc($border-radius-root / 2),
+      //$border-radius-root / 2,
       null: $border-radius-root,
       'lg': $border-radius-root * 2,
       'xl': $border-radius-root * 6,
