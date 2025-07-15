@@ -32,49 +32,28 @@
         density="compact"
         nav
         class="folderMenu"
-        :opened="opened"
+        v-model:opened="opened"
         @update:opened="menuTarget"
       >
-        <!-- Home1 start -->
-        <v-list-group value="Home1">
+        <!-- 若要點擊選單都展開，移除「@update:opened="menuTarget"」 -->
+        <!-- Home start -->
+        <v-list-group value="Home">
           <template v-slot:activator="{ props }">
             <v-list-item
               prepend-icon="mdi-home"
               v-bind="props"
               append-icon=""
               title="Home"
-              :to="'/'"
+              @click="pushLink('/')"
             >
             </v-list-item>
           </template>
         </v-list-group>
-        <!-- Home1 end -->
+        <!-- Home end -->
         <!-- 案件管理 end -->
         <v-divider class="ma-1"></v-divider>
 
-        <!-- Element start -->
-        <v-list-group value="Element">
-          <template v-slot:activator="{ props }">
-            <v-list-item
-              prepend-icon="mdi-collage"
-              v-bind="props"
-              title="Element"
-            >
-            </v-list-item>
-          </template>
-          <v-list-item title="Grid System" value="Grid System" :to="'/system'">
-          </v-list-item>
-
-          <v-list-item title="From" value="From" :to="'/from'"> </v-list-item>
-          <v-list-item title="Table" value="Table" :to="'/table'">
-          </v-list-item>
-          <v-list-item title="Card" value="Card" :to="'/card'"> </v-list-item>
-          <v-list-item title="Chart" value="Chart" :to="'/chart'">
-          </v-list-item>
-        </v-list-group>
-        <!-- Element end -->
-
-        <!-- Element start -->
+        <!-- Components start -->
         <v-list-group value="Components">
           <template v-slot:activator="{ props }">
             <v-list-item
@@ -84,52 +63,30 @@
             >
             </v-list-item>
           </template>
-          <v-list-item
-            title="Containment"
-            value="Containment"
-            :to="'/component/containment'"
-          >
+          <v-list-item title="Containment" :to="'/component/containment'">
           </v-list-item>
-          <v-list-item
-            title="Controls"
-            value="Controls"
-            :to="'/component/controls'"
-          >
+          <v-list-item title="Controls" :to="'/component/controls'">
           </v-list-item>
-          <v-list-item
-            title="Feedback"
-            value="Feedback"
-            :to="'/component/feedback'"
-          >
+          <v-list-item title="Feedback" :to="'/component/feedback'">
           </v-list-item>
-          <v-list-item
-            title="Image & Icon"
-            value="imageIcon"
-            :to="'/component/imageIcon'"
-          >
+          <v-list-item title="Image & Icon" :to="'/component/imageIcon'">
           </v-list-item>
-          <v-list-item
-            title="Navigation"
-            value="Navigation"
-            :to="'/component/navigation'"
-          >
+          <v-list-item title="Navigation" :to="'/component/navigation'">
           </v-list-item>
-          <v-list-item
-            title="Pickers"
-            value="Pickers"
-            :to="'/component/pickers'"
-          >
+          <v-list-item title="Pickers" :to="'/component/pickers'">
           </v-list-item>
-          <v-list-item
-            title="Selection"
-            value="Selection"
-            :to="'/component/selection'"
-          >
+          <v-list-item title="Selection" :to="'/component/selection'">
           </v-list-item>
+          <v-list-item title="Grid System" :to="'/component/system'">
+          </v-list-item>
+          <v-list-item title="From" :to="'/component/from'"> </v-list-item>
+          <v-list-item title="Table" :to="'/component/table'"> </v-list-item>
+          <v-list-item title="Card" :to="'/component/card'"> </v-list-item>
+          <v-list-item title="Chart" :to="'/component/chart'"> </v-list-item>
         </v-list-group>
-        <!-- Element end -->
+        <!-- Components end -->
         <!-- Basic Layout start -->
-        <v-list-group value="Basic Layout">
+        <v-list-group value="BasicLayout">
           <template v-slot:activator="{ props }">
             <v-list-item
               prepend-icon="mdi-layers"
@@ -138,16 +95,9 @@
             >
             </v-list-item>
           </template>
-          <v-list-item title="Widget" value="Widget" :to="'/widget'">
-          </v-list-item>
-          <v-list-item title="新增資料" value="addNews" :to="'/addNews'">
-          </v-list-item>
-          <v-list-item
-            title="多媒體資料庫"
-            value="mediaPhoto"
-            :to="'/mediaPhoto'"
-          >
-          </v-list-item>
+          <v-list-item title="Widget" :to="'/widget'"> </v-list-item>
+          <v-list-item title="AddNews" :to="'/addNews'"> </v-list-item>
+          <v-list-item title="MediaPhoto" :to="'/mediaPhoto'"> </v-list-item>
         </v-list-group>
         <!-- Basic Layout end -->
         <v-divider class="ma-1"></v-divider>
@@ -211,10 +161,10 @@ export default {
     value: 0,
     windowWidth: "",
     railWidth: "0",
-    open: ["Users"],
+    // open: ["Home1"],
     theme: "default",
     themeDark: "false",
-    opened: ["案件管理"],
+    opened: ["Home"],
     overlay: false,
     isSmallScreen: window.innerWidth < 768,
   }),

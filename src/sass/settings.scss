@@ -4,20 +4,20 @@
 @use '@/sass/common/mixins/_mediaquery.scss';
 @use '@/sass/common/mixins/_text.scss';
 
-//customizingComponents
-@use '@/sass/customizingComponents/sideBar.scss';
-@use '@/sass/customizingComponents/folderMenu.scss';
-@use '@/sass/customizingComponents/generalControls.scss';
+//customize
+@use '@/sass/customize/sideBar.scss';
+@use '@/sass/customize/folderMenu.scss';
+@use '@/sass/customize/generalControls.scss';
 
-@use '@/sass/customizingComponents/form.scss';
-@use '@/sass/customizingComponents/table.scss';
-@use '@/sass/customizingComponents/card.scss';
-@use '@/sass/customizingComponents/pagination.scss';
-@use '@/sass/customizingComponents/navigation.scss';
+@use '@/sass/customize/form.scss';
+@use '@/sass/customize/table.scss';
+@use '@/sass/customize/card.scss';
+@use '@/sass/customize/pagination.scss';
+@use '@/sass/customize/navigation.scss';
 
-@use '@/sass/customizingComponents/treeBlock.scss';
-@use '@/sass/customizingComponents/accordion.scss';
-@use '@/sass/customizingComponents/datePicker.scss';
+@use '@/sass/customize/treeBlock.scss';
+@use '@/sass/customize/accordion.scss';
+@use '@/sass/customize/datePicker.scss';
 
 //material-icons-round
 @use '@/sass/vendor/material-icons-round.scss';
