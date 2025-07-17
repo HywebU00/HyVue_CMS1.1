@@ -3,6 +3,8 @@
 @use 'variables.scss';
 @use '@/sass/common/mixins/_mediaquery.scss';
 @use '@/sass/common/mixins/_text.scss';
+@use '@/sass/common/mixins/_scrollbar.scss';
+@use '@/sass/customize/shadow.scss';
 
 //customize
 @use '@/sass/customize/sideBar.scss';
@@ -26,6 +28,7 @@
 @use '@/sass/layout/layout.scss';
 @use '@/sass/layout/customize_color.scss';
 @use '@/sass/layout/customize_font.scss';
+@use '@/sass/layout/template.scss';
 
 //vuetifyCSS
 @use '@/sass/components/VListItem.scss';

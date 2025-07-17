@@ -1,0 +1,8 @@
+@use '@/sass/variables.scss' as *;
+@use '@/sass/common/mixins/scrollbar.scss' as *;
+.scrollCard {
+  .box {
+    overflow-x: auto;
+    @include scrollbar;
+  }
+}

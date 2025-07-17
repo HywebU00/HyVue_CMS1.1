@@ -1,0 +1,10 @@
+$shadows: (
+  20: #0000003d 0px 3px 8px,
+  40: rgba(0, 0, 0, 0.24) 0px 3px 8px,
+  60: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+);
+@each $name, $shadow in $shadows {
+  .shadow-#{$name} {
+    box-shadow: $shadow !important;
+  }
+}

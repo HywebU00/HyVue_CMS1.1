@@ -95,6 +95,9 @@
       background: $neutral100;
       box-shadow: $boxShadow;
       border-radius: 50% !important;
+      @include screen('notebook') {
+        display: none;
+      }
     }
   }
   .drawerBtn {
@@ -191,6 +194,7 @@
       color: $neutral100;
     }
   }
+
   .drawerBtn {
     span {
       transform: rotate(0deg);

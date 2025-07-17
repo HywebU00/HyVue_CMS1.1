@@ -27,11 +27,12 @@ $border-radius-root: 8px;
     (
       0: 0,
       'sm': calc($border-radius-root / 2),
-      //$border-radius-root / 2,
       null: $border-radius-root,
-      'lg': $border-radius-root * 2,
+      'def': $border-radius-root,
+      'md': $border-radius-root * 1.5,
+      'lg': $border-radius-root * 2.25,
       'xl': $border-radius-root * 6,
-      'pill': 9999px,
+      'full': 120px,
       'circle': 50%,
     )
 );

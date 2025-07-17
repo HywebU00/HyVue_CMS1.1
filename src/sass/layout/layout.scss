@@ -52,6 +52,12 @@ header {
   }
 }
 .navigationBar {
+  .sideBarBtn {
+    display: none;
+    @include screen('notebook') {
+      display: block;
+    }
+  }
   &.v-app-bar.v-toolbar {
     background: $neutral80;
     box-shadow: none !important;

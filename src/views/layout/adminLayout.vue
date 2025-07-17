@@ -126,6 +126,7 @@
         </ul>
       </v-btn>
       <!-- 使用者 登入視窗end -->
+      <!-- style="display: none" -->
       <v-app-bar-nav-icon
         :icon="rail ? 'mdi-chevron-right' : 'mdi-chevron-left'"
         width="64"
@@ -136,12 +137,12 @@
     </v-navigation-drawer>
 
     <v-app-bar class="navigationBar">
-      <!-- <v-app-bar-nav-icon
+      <v-app-bar-nav-icon
         :icon="rail ? 'mdi-chevron-right' : 'mdi-chevron-left'"
         width="64"
-        class="rounded-0 h-100 ml-0"
+        class="rounded-0 h-100 ml-0 sideBarBtn"
         @click.stop="rail = !rail"
-      ></v-app-bar-nav-icon> -->
+      ></v-app-bar-nav-icon>
       <Navigation />
     </v-app-bar>
     <v-main>

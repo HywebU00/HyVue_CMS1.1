@@ -7,17 +7,274 @@
         <v-card class="h-100">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h6 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
                 按鈕樣式 ( Button)
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
-              <div class="">
-                <v-btn class="ma-1" color="primary"> Button </v-btn>
-                <v-btn class="ma-1"> Button </v-btn>
-                <v-btn class="ma-1" variant="outlined"> outlinedButton </v-btn>
-                <v-btn class="ma-1" variant="tonal"> tonalButton </v-btn>
-                <v-btn class="ma-1" variant="text"> textButton </v-btn>
-                <v-btn class="ma-1" variant="plain"> plainButton </v-btn>
+              <h5 class="text-subtitle-1 font-weight-bold my-3">尺寸效果</h5>
+              <div
+                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
+              >
+                <div class="box">
+                  <div class="d-flex mb-3">
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Size:Large
+                      </div>
+                      <v-btn size="large" color="primary"> Button </v-btn>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Size:Medium
+                      </div>
+                      <v-btn color="primary"> Button </v-btn>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Size:Small
+                      </div>
+                      <v-btn size="small" color="primary"> Button </v-btn>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h5 class="text-subtitle-1 font-weight-bold my-3">區塊按鈕</h5>
+              <div
+                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
+              >
+                <div class="box">
+                  <div class="d-flex mb-3">
+                    <div class="ma-3 w-100">
+                      <div class="">
+                        <v-btn size="large" block color="primary">
+                          Button
+                        </v-btn>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h5 class="text-subtitle-1 font-weight-bold my-3">圓角效果</h5>
+              <div
+                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
+              >
+                <div class="box">
+                  <div class="d-flex mb-3">
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Radius: 4/SM
+                      </div>
+                      <v-btn color="primary" size="large" rounded="sm">
+                        radius 4 / SM
+                      </v-btn>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Radius: 8/DEF
+                      </div>
+                      <v-btn color="primary" size="large" rounded="def">
+                        radius 8 / DEF
+                      </v-btn>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Radius: 12/MED
+                      </div>
+                      <v-btn color="primary" size="large" rounded="md">
+                        radius 12 / MED
+                      </v-btn>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Radius: 18/LG
+                      </div>
+                      <v-btn color="primary" size="large" rounded="lg">
+                        radius 18 / LG
+                      </v-btn>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Radius: 120/FULL
+                      </div>
+                      <v-btn color="primary" size="large" rounded="full">
+                        radius 120 / FULL
+                      </v-btn>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h5 class="text-subtitle-1 font-weight-bold my-3">陰影效果</h5>
+              <div
+                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
+              >
+                <div class="box">
+                  <div class="d-flex mb-3">
+                    <div class="ma-3" v-for="i in 3" :key="i">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        {{ `shadow${i * 20}` }}
+                      </div>
+                      <v-btn
+                        size="large"
+                        :class="[`shadow-${i * 20}`]"
+                        color="primary"
+                      >
+                        Button
+                      </v-btn>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h5 class="text-subtitle-1 font-weight-bold my-3">樣態</h5>
+              <div
+                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
+              >
+                <div class="box">
+                  <div class="d-flex mb-3">
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Type:Elevated
+                      </div>
+                      <v-btn color="primary"> Button </v-btn>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Type:Flat
+                      </div>
+                      <v-btn variant="flat" color="primary"> Button </v-btn>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Type:Tonal
+                      </div>
+                      <v-btn variant="tonal" color="primary">Button </v-btn>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Type:Outlined
+                      </div>
+                      <v-btn variant="outlined" color="primary"> Button </v-btn>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Type:Text
+                      </div>
+                      <v-btn variant="text" color="primary"> Button </v-btn>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Type:Plain
+                      </div>
+                      <v-btn variant="plain" color="primary"> Button </v-btn>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h5 class="text-subtitle-1 font-weight-bold my-3">按鈕圖示</h5>
+              <div
+                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
+              >
+                <div class="box">
+                  <div class="d-flex mb-3">
+                    <div class="ma-3">
+                      <div
+                        style="height: 68px; width: 158px"
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 justify-center d-flex"
+                      >
+                        <div class="text-start">
+                          Show First Icon:True <br />
+                          Show Lable:False
+                        </div>
+                      </div>
+                      <div class="d-flex justify-center">
+                        <v-btn icon="mdi-web" size="large" color="primary">
+                        </v-btn>
+                      </div>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        style="height: 68px"
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 justify-center d-flex"
+                      >
+                        <div class="text-start">
+                          Show First Icon:True <br />Show Lable:True
+                        </div>
+                      </div>
+                      <v-btn size="large" color="primary">
+                        <template v-slot:prepend>
+                          <v-icon icon="mdi-pencil"></v-icon>
+                        </template>
+
+                        Frist Icon
+                      </v-btn>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        style="height: 68px"
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 justify-center d-flex"
+                      >
+                        <div class="text-start">
+                          Show Last Icon:True<br />Show Lable:True
+                        </div>
+                      </div>
+                      <v-btn size="large" color="primary">
+                        <template v-slot:append>
+                          <v-icon icon="mdi-chevron-right"></v-icon>
+                        </template>
+                        Last Icon</v-btn
+                      >
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        style="height: 68px"
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 justify-center d-flex"
+                      >
+                        <div class="text-start">
+                          Show First Icon:True<br />Show Last Icon:True<br />Show
+                          Lable:True
+                        </div>
+                      </div>
+                      <v-btn size="large" color="primary">
+                        <template v-slot:prepend>
+                          <v-icon icon="mdi-pencil"></v-icon>
+                        </template>
+                        First / Last
+                        <template v-slot:append>
+                          <v-icon icon="mdi-chevron-down"></v-icon>
+                        </template>
+                      </v-btn>
+                    </div>
+                  </div>
+                </div>
               </div>
             </v-container>
           </div>
@@ -27,7 +284,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h6 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
                 卡片樣式 (Cards)
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
@@ -81,79 +338,162 @@
         <v-card>
           <div class="mb-1">
             <v-container class="container">
-              <h4 class="text-h6 text-primary font-weight-bold">chip</h4>
+              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+                標籤樣式 ( chip)
+              </h4>
               <v-divider class="py-2 mb-2"></v-divider>
               <!-- 標籤列 start -->
-              <v-row class="mb-1">
-                <v-col cols="12" class="py-0"
-                  ><div>
-                    <v-chip-group v-model="selection">
-                      <v-chip
-                        v-for="item in 6"
-                        :key="item"
-                        color="primary"
-                        link
-                        label
+              <h5 class="text-subtitle-1 font-weight-bold my-3">樣態</h5>
+              <div
+                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
+              >
+                <div class="box">
+                  <div class="d-flex mb-3">
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
                       >
-                        標籤
-                      </v-chip>
-                    </v-chip-group>
+                        Type: Default
+                      </div>
+                      <div class="d-flex justify-center">
+                        <v-chip link label> 標籤 </v-chip>
+                      </div>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Type: Outlined
+                      </div>
+                      <div class="d-flex justify-center">
+                        <v-chip color="primary" variant="outlined" link label>
+                          標籤
+                        </v-chip>
+                      </div>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Type: Elevated
+                      </div>
+                      <div class="d-flex justify-center">
+                        <v-chip variant="elevated" color="primary" link label>
+                          標籤
+                        </v-chip>
+                      </div>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Type: Text
+                      </div>
+                      <div class="d-flex justify-center">
+                        <v-chip variant="text" link label> 標籤 </v-chip>
+                      </div>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
+                      >
+                        Type: Plain
+                      </div>
+                      <div class="d-flex justify-center">
+                        <v-chip variant="plain" link label> 標籤 </v-chip>
+                      </div>
+                    </div>
                   </div>
-                </v-col>
-              </v-row>
-              <!-- 標籤列 end -->
-            </v-container>
-            <!--滑動標籤 標籤列 start -->
-            <v-container class="container">
-              <h4 class="text-h6 text-primary font-weight-bold">
-                chip 圖示標籤
-              </h4>
-              <v-divider class="py-2 mb-2"></v-divider>
-              <v-row class="mb-1">
-                <v-col cols="12" class="py-0"
-                  ><div>
-                    <v-chip class="ma-2" label> Label </v-chip>
+                </div>
+              </div>
+              <h5 class="text-subtitle-1 font-weight-bold my-3">圖示標籤</h5>
+              <div
+                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
+              >
+                <div class="box">
+                  <div class="d-flex mb-3">
+                    <div class="ma-3">
+                      <div
+                        style="height: 45px"
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 justify-center d-flex"
+                      >
+                        <div class="text-start">Show First Icon:True</div>
+                      </div>
 
-                    <v-chip class="ma-2" color="pink" label>
-                      <v-icon icon="mdi-label" start></v-icon>
-                      Tags
-                    </v-chip>
+                      <div class="d-flex justify-center">
+                        <v-chip class="ma-2" label>
+                          <v-icon
+                            icon="mdi-check-circle-outline"
+                            start
+                          ></v-icon>
+                          Frist Icon
+                        </v-chip>
+                      </div>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        style="height: 45px"
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 justify-center d-flex"
+                      >
+                        <div class="text-start">Show Last Icon: True</div>
+                      </div>
 
-                    <v-chip class="ma-2" color="primary" label>
-                      <v-icon icon="mdi-account-circle-outline" start></v-icon>
-                      John Leider
-                    </v-chip>
+                      <div class="d-flex justify-center">
+                        <v-chip class="ma-2" label>
+                          <v-icon
+                            icon="mdi-check-circle-outline"
+                            start
+                          ></v-icon>
+                          Last Icon
+                          <v-icon icon="mdi-close" end></v-icon>
+                        </v-chip>
+                      </div>
+                    </div>
+                    <div class="ma-3">
+                      <div
+                        style="height: 45px"
+                        class="mb-3 text-subtitle-2 text-neutral-darken-5 justify-center d-flex"
+                      >
+                        <div class="text-start">
+                          Show Last Icon : True <br />
+                          Show First Icon: True
+                        </div>
+                      </div>
 
-                    <v-chip class="ma-2" color="cyan" closable label>
-                      <v-icon icon="mdi-twitter" start></v-icon>
-                      New Tweets
-                    </v-chip>
+                      <div class="d-flex justify-center">
+                        <v-chip class="ma-2" label>
+                          First + Last
+                          <v-icon icon="mdi-close" end></v-icon>
+                        </v-chip>
+                      </div>
+                    </div>
                   </div>
-                </v-col>
-              </v-row>
-            </v-container>
-            <!--滑動標籤 標籤列 end -->
-            <!--滑動標籤 標籤列 start -->
-            <v-container class="container">
-              <h4 class="text-h6 text-primary font-weight-bold">
-                chip 滑動標籤
-              </h4>
-              <v-divider class="py-2 mb-2"></v-divider>
-              <v-row class="mb-1">
-                <v-col cols="12" class="py-0"
-                  ><div>
-                    <v-sheet>
-                      <v-slide-group show-arrows>
-                        <v-slide-group-item v-for="n in 25" :key="n">
-                          <v-chip> Chip </v-chip>
+                </div>
+              </div>
+              <h5 class="text-subtitle-1 font-weight-bold my-3">滑動標籤</h5>
+              <div
+                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
+              >
+                <div class="box">
+                  <div class="d-flex mb-3">
+                    <div class="">
+                      <v-slide-group show-arrows style="width: 500px">
+                        <v-slide-group-item v-for="n in 8" :key="n">
+                          <v-chip label variant="outlined" link class="mx-1">
+                            <v-icon
+                              icon="mdi-check-circle-outline"
+                              start
+                            ></v-icon>
+                            Chip
+                          </v-chip>
                         </v-slide-group-item>
                       </v-slide-group>
-                    </v-sheet>
+                    </div>
                   </div>
-                </v-col>
-              </v-row>
+                </div>
+              </div>
+              <!-- 標籤列 end -->
             </v-container>
-            <!--滑動標籤 標籤列 end -->
           </div>
         </v-card></v-col
       >
