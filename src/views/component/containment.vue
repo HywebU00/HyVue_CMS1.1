@@ -11,271 +11,207 @@
                 按鈕樣式 ( Button)
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
-              <h5 class="text-subtitle-1 font-weight-bold my-3">尺寸效果</h5>
-              <div
-                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
-              >
-                <div class="box">
-                  <div class="d-flex mb-3">
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Size:Large
-                      </div>
-                      <v-btn size="large" color="primary"> Button </v-btn>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Size:Medium
-                      </div>
-                      <v-btn color="primary"> Button </v-btn>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Size:Small
-                      </div>
-                      <v-btn size="small" color="primary"> Button </v-btn>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h5 class="text-subtitle-1 font-weight-bold my-3">區塊按鈕</h5>
-              <div
-                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
-              >
-                <div class="box">
-                  <div class="d-flex mb-3">
-                    <div class="ma-3 w-100">
-                      <div class="">
-                        <v-btn size="large" block color="primary">
-                          Button
-                        </v-btn>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h5 class="text-subtitle-1 font-weight-bold my-3">圓角效果</h5>
-              <div
-                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
-              >
-                <div class="box">
-                  <div class="d-flex mb-3">
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Radius: 4/SM
-                      </div>
-                      <v-btn color="primary" size="large" rounded="sm">
-                        radius 4 / SM
-                      </v-btn>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Radius: 8/DEF
-                      </div>
-                      <v-btn color="primary" size="large" rounded="def">
-                        radius 8 / DEF
-                      </v-btn>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Radius: 12/MED
-                      </div>
-                      <v-btn color="primary" size="large" rounded="md">
-                        radius 12 / MED
-                      </v-btn>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Radius: 18/LG
-                      </div>
-                      <v-btn color="primary" size="large" rounded="lg">
-                        radius 18 / LG
-                      </v-btn>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Radius: 120/FULL
-                      </div>
-                      <v-btn color="primary" size="large" rounded="full">
-                        radius 120 / FULL
-                      </v-btn>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h5 class="text-subtitle-1 font-weight-bold my-3">陰影效果</h5>
-              <div
-                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
-              >
-                <div class="box">
-                  <div class="d-flex mb-3">
-                    <div class="ma-3" v-for="i in 3" :key="i">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        {{ `shadow${i * 20}` }}
-                      </div>
-                      <v-btn
-                        size="large"
-                        :class="[`shadow-${i * 20}`]"
-                        color="primary"
-                      >
-                        Button
-                      </v-btn>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h5 class="text-subtitle-1 font-weight-bold my-3">樣態</h5>
-              <div
-                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
-              >
-                <div class="box">
-                  <div class="d-flex mb-3">
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Type:Elevated
-                      </div>
-                      <v-btn color="primary"> Button </v-btn>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Type:Flat
-                      </div>
-                      <v-btn variant="flat" color="primary"> Button </v-btn>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Type:Tonal
-                      </div>
-                      <v-btn variant="tonal" color="primary">Button </v-btn>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Type:Outlined
-                      </div>
-                      <v-btn variant="outlined" color="primary"> Button </v-btn>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Type:Text
-                      </div>
-                      <v-btn variant="text" color="primary"> Button </v-btn>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Type:Plain
-                      </div>
-                      <v-btn variant="plain" color="primary"> Button </v-btn>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h5 class="text-subtitle-1 font-weight-bold my-3">按鈕圖示</h5>
-              <div
-                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
-              >
-                <div class="box">
-                  <div class="d-flex mb-3">
-                    <div class="ma-3">
-                      <div
-                        style="height: 68px; width: 158px"
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 justify-center d-flex"
-                      >
-                        <div class="text-start">
-                          Show First Icon:True <br />
-                          Show Lable:False
-                        </div>
-                      </div>
-                      <div class="d-flex justify-center">
-                        <v-btn icon="mdi-web" size="large" color="primary">
-                        </v-btn>
-                      </div>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        style="height: 68px"
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 justify-center d-flex"
-                      >
-                        <div class="text-start">
-                          Show First Icon:True <br />Show Lable:True
-                        </div>
-                      </div>
-                      <v-btn size="large" color="primary">
-                        <template v-slot:prepend>
-                          <v-icon icon="mdi-pencil"></v-icon>
-                        </template>
+              <!-- 尺寸效果 start -->
+              <layoutCard title="尺寸效果">
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Size:Large </template>
+                  <template #content>
+                    <v-btn size="large" color="primary"> Button </v-btn>
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Size:Medium </template>
+                  <template #content>
+                    <v-btn color="primary"> Button </v-btn>
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Size:Small </template>
+                  <template #content>
+                    <v-btn size="small" color="primary"> Button </v-btn>
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 尺寸效果 end -->
+              <!-- 區塊按鈕 start -->
+              <layoutCard title="區塊按鈕">
+                <layoutCardItem style="width: 100%">
+                  <template #content>
+                    <v-btn size="large" block color="primary"> Button </v-btn>
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 區塊按鈕 end -->
+              <!-- 圓角效果 start -->
+              <layoutCard title="圓角效果">
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label>Radius: 4/SM</template>
+                  <template #content>
+                    <v-btn color="primary" size="large" rounded="sm">
+                      radius 4 / SM
+                    </v-btn></template
+                  >
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Radius: 8/DEF</template>
+                  <template #content>
+                    <v-btn color="primary" size="large" rounded="def">
+                      radius 8 / DEF
+                    </v-btn></template
+                  >
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Radius: 12/MED</template>
+                  <template #content>
+                    <v-btn color="primary" size="large" rounded="md">
+                      radius 12 / MED
+                    </v-btn></template
+                  >
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Radius: 18/LG</template>
+                  <template #content>
+                    <v-btn color="primary" size="large" rounded="lg">
+                      radius 18 / LG
+                    </v-btn></template
+                  >
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Radius: 120/FULL</template>
+                  <template #content>
+                    <v-btn color="primary" size="large" rounded="full">
+                      radius 120 / FULL
+                    </v-btn></template
+                  >
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 圓角效果 end -->
+              <!-- 陰影效果 start -->
+              <layoutCard title="陰影效果">
+                <layoutCardItem
+                  :width="'150px'"
+                  :height="'20px'"
+                  v-for="i in 3"
+                  :key="i"
+                >
+                  <template #label>
+                    {{ `shadow${i * 20}` }}
+                  </template>
+                  <template #content>
+                    <v-btn
+                      size="large"
+                      :class="[`shadow-${i * 20}`]"
+                      color="primary"
+                    >
+                      Button
+                    </v-btn>
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 陰影效果 end -->
+              <!-- 樣態 start -->
+              <layoutCard title="樣態">
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label>Type:Elevated</template>
+                  <template #content>
+                    <v-btn color="primary"> Button </v-btn></template
+                  >
+                </layoutCardItem>
 
-                        Frist Icon
-                      </v-btn>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        style="height: 68px"
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 justify-center d-flex"
-                      >
-                        <div class="text-start">
-                          Show Last Icon:True<br />Show Lable:True
-                        </div>
-                      </div>
-                      <v-btn size="large" color="primary">
-                        <template v-slot:append>
-                          <v-icon icon="mdi-chevron-right"></v-icon>
-                        </template>
-                        Last Icon</v-btn
-                      >
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        style="height: 68px"
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 justify-center d-flex"
-                      >
-                        <div class="text-start">
-                          Show First Icon:True<br />Show Last Icon:True<br />Show
-                          Lable:True
-                        </div>
-                      </div>
-                      <v-btn size="large" color="primary">
-                        <template v-slot:prepend>
-                          <v-icon icon="mdi-pencil"></v-icon>
-                        </template>
-                        First / Last
-                        <template v-slot:append>
-                          <v-icon icon="mdi-chevron-down"></v-icon>
-                        </template>
-                      </v-btn>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Type:Flat</template>
+                  <template #content>
+                    <v-btn variant="flat" color="primary">
+                      Button1
+                    </v-btn></template
+                  >
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Type:Tonal</template>
+                  <template #content>
+                    <v-btn variant="tonal" color="primary"
+                      >Button
+                    </v-btn></template
+                  >
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Type:Outlined</template>
+                  <template #content>
+                    <v-btn variant="outlined" color="primary"> Button </v-btn>
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Type:Text</template>
+                  <template #content>
+                    <v-btn variant="text" color="primary">
+                      Button
+                    </v-btn></template
+                  >
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Type:Plain</template>
+                  <template #content>
+                    <v-btn variant="plain" color="primary"> Button </v-btn>
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 樣態 end -->
+              <!-- 按鈕圖示 start -->
+              <layoutCard title="按鈕圖示">
+                <layoutCardItem :height="'68px'">
+                  <template #label>
+                    Show First Icon:True <br />
+                    Show Lable:False</template
+                  >
+                  <template #content>
+                    <v-btn icon="mdi-web" size="large" color="primary"> </v-btn>
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'68px'">
+                  <template #label>
+                    Show First Icon:True <br />Show Lable:True</template
+                  >
+                  <template #content>
+                    <v-btn size="large" color="primary">
+                      <template v-slot:prepend>
+                        <v-icon icon="mdi-pencil"></v-icon>
+                      </template>
+
+                      Frist Icon
+                    </v-btn></template
+                  >
+                </layoutCardItem>
+                <layoutCardItem :height="'68px'">
+                  <template #label>
+                    Show Last Icon:True<br />Show Lable:True
+                  </template>
+                  <template #content>
+                    <v-btn size="large" color="primary">
+                      <template v-slot:append>
+                        <v-icon icon="mdi-chevron-right"></v-icon>
+                      </template>
+                      Last Icon</v-btn
+                    >
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'68px'">
+                  <template #label>
+                    Show First Icon:True<br />Show Last Icon:True<br />Show
+                    Lable:True</template
+                  >
+                  <template #content>
+                    <v-btn size="large" color="primary">
+                      <template v-slot:prepend>
+                        <v-icon icon="mdi-pencil"></v-icon>
+                      </template>
+                      First / Last
+                      <template v-slot:append>
+                        <v-icon icon="mdi-chevron-down"></v-icon>
+                      </template> </v-btn
+                  ></template>
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 按鈕圖示 end -->
             </v-container>
           </div>
         </v-card>
@@ -288,8 +224,50 @@
                 卡片樣式 (Cards)
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
-              <div class="">
-                <v-row class="albumCardList mt-0">
+
+              <!-- 邀請樣式start -->
+              <layoutCard title="卡片樣 (直式)" flexWrap="wrap">
+                <layoutCardItem :height="'20px'" :width="'340px'">
+                  <template #label> Type:Flat </template>
+                  <template #content>
+                    <card />
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'340px'">
+                  <template #label> Type:Elevated </template>
+                  <template #content>
+                    <card />
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'340px'">
+                  <template #label> Type:Tonal </template>
+                  <template #content>
+                    <card />
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'340px'">
+                  <template #label> Type:Outlined </template>
+                  <template #content>
+                    <card />
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'340px'">
+                  <template #label> Type:Text </template>
+                  <template #content>
+                    <card />
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'340px'">
+                  <template #label> Type:Plain </template>
+                  <template #content>
+                    <card />
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <div class="">增加 Class='albumCardList list'</div>
+              <layoutCard title="卡片樣式 (橫式) " flexWrap="wrap">
+                <!-- 橫向樣式 start -->
+                <v-row class="albumCardList list">
                   <v-col
                     v-for="item in 4"
                     :key="item"
@@ -302,34 +280,8 @@
                     <card />
                   </v-col>
                 </v-row>
-              </div>
-            </v-container>
-          </div>
-        </v-card>
-      </v-col>
-      <v-col cols="12">
-        <v-card class="">
-          <div class="">
-            <v-container class="container">
-              <h4 class="text-h6 text-primary font-weight-bold">
-                卡片樣式 (Cards)
-              </h4>
-              <v-divider class="pt-2 mb-2"></v-divider>
-              <!-- 橫向樣式 start -->
-              <v-row class="albumCardList list">
-                <v-col
-                  v-for="item in 4"
-                  :key="item"
-                  cols="12"
-                  sm="6"
-                  md="4"
-                  lg="3"
-                  xl="2"
-                >
-                  <card />
-                </v-col>
-              </v-row>
-              <!-- 橫向樣式 end -->
+                <!-- 橫向樣式 end -->
+              </layoutCard>
             </v-container>
           </div>
         </v-card>
@@ -343,155 +295,98 @@
               </h4>
               <v-divider class="py-2 mb-2"></v-divider>
               <!-- 標籤列 start -->
-              <h5 class="text-subtitle-1 font-weight-bold my-3">樣態</h5>
-              <div
-                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
-              >
-                <div class="box">
-                  <div class="d-flex mb-3">
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Type: Default
-                      </div>
-                      <div class="d-flex justify-center">
-                        <v-chip link label> 標籤 </v-chip>
-                      </div>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Type: Outlined
-                      </div>
-                      <div class="d-flex justify-center">
-                        <v-chip color="primary" variant="outlined" link label>
-                          標籤
-                        </v-chip>
-                      </div>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Type: Elevated
-                      </div>
-                      <div class="d-flex justify-center">
-                        <v-chip variant="elevated" color="primary" link label>
-                          標籤
-                        </v-chip>
-                      </div>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Type: Text
-                      </div>
-                      <div class="d-flex justify-center">
-                        <v-chip variant="text" link label> 標籤 </v-chip>
-                      </div>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 text-center"
-                      >
-                        Type: Plain
-                      </div>
-                      <div class="d-flex justify-center">
-                        <v-chip variant="plain" link label> 標籤 </v-chip>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h5 class="text-subtitle-1 font-weight-bold my-3">圖示標籤</h5>
-              <div
-                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
-              >
-                <div class="box">
-                  <div class="d-flex mb-3">
-                    <div class="ma-3">
-                      <div
-                        style="height: 45px"
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 justify-center d-flex"
-                      >
-                        <div class="text-start">Show First Icon:True</div>
-                      </div>
-
-                      <div class="d-flex justify-center">
-                        <v-chip class="ma-2" label>
+              <!-- 樣態 start -->
+              <layoutCard title="樣態">
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Type: Default </template>
+                  <template #content>
+                    <v-chip link label> 標籤 </v-chip>
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Type: Outlined </template>
+                  <template #content>
+                    <v-chip color="primary" variant="outlined" link label>
+                      標籤
+                    </v-chip>
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Type: Elevated </template>
+                  <template #content>
+                    <v-chip variant="elevated" color="primary" link label>
+                      標籤
+                    </v-chip>
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Type: Text </template>
+                  <template #content>
+                    <v-chip variant="text" link label> 標籤 </v-chip>
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Type: Plain </template>
+                  <template #content>
+                    <v-chip variant="plain" link label> 標籤 </v-chip>
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 樣態 end -->
+              <!-- 圖示標籤 start -->
+              <layoutCard title="圖示標籤">
+                <layoutCardItem :height="'45px'">
+                  <template #label> Show First Icon:True </template>
+                  <template #content>
+                    <v-chip class="ma-2" label>
+                      <v-icon icon="mdi-check-circle-outline" start></v-icon>
+                      Frist Icon
+                    </v-chip>
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'45px'">
+                  <template #label> Show Last Icon: True </template>
+                  <template #content>
+                    <v-chip class="ma-2" label>
+                      Last Icon
+                      <v-icon icon="mdi-close" end></v-icon>
+                    </v-chip>
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'45px'">
+                  <template #label>
+                    Show Last Icon : True <br />
+                    Show First Icon: True</template
+                  >
+                  <template #content>
+                    <v-chip class="ma-2" label>
+                      <v-icon icon="mdi-check-circle-outline" start></v-icon>
+                      Last + Icon
+                      <v-icon icon="mdi-close" end></v-icon>
+                    </v-chip>
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 圖示標籤 end -->
+              <!-- 滑動標籤 start  -->
+              <layoutCard title="滑動標籤">
+                <layoutCardItem>
+                  <template #content>
+                    <v-slide-group show-arrows style="width: 500px">
+                      <v-slide-group-item v-for="n in 8" :key="n">
+                        <v-chip label variant="outlined" link class="mx-1">
                           <v-icon
                             icon="mdi-check-circle-outline"
                             start
                           ></v-icon>
-                          Frist Icon
+                          Chip
                         </v-chip>
-                      </div>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        style="height: 45px"
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 justify-center d-flex"
-                      >
-                        <div class="text-start">Show Last Icon: True</div>
-                      </div>
-
-                      <div class="d-flex justify-center">
-                        <v-chip class="ma-2" label>
-                          <v-icon
-                            icon="mdi-check-circle-outline"
-                            start
-                          ></v-icon>
-                          Last Icon
-                          <v-icon icon="mdi-close" end></v-icon>
-                        </v-chip>
-                      </div>
-                    </div>
-                    <div class="ma-3">
-                      <div
-                        style="height: 45px"
-                        class="mb-3 text-subtitle-2 text-neutral-darken-5 justify-center d-flex"
-                      >
-                        <div class="text-start">
-                          Show Last Icon : True <br />
-                          Show First Icon: True
-                        </div>
-                      </div>
-
-                      <div class="d-flex justify-center">
-                        <v-chip class="ma-2" label>
-                          First + Last
-                          <v-icon icon="mdi-close" end></v-icon>
-                        </v-chip>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <h5 class="text-subtitle-1 font-weight-bold my-3">滑動標籤</h5>
-              <div
-                class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
-              >
-                <div class="box">
-                  <div class="d-flex mb-3">
-                    <div class="">
-                      <v-slide-group show-arrows style="width: 500px">
-                        <v-slide-group-item v-for="n in 8" :key="n">
-                          <v-chip label variant="outlined" link class="mx-1">
-                            <v-icon
-                              icon="mdi-check-circle-outline"
-                              start
-                            ></v-icon>
-                            Chip
-                          </v-chip>
-                        </v-slide-group-item>
-                      </v-slide-group>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                      </v-slide-group-item>
+                    </v-slide-group>
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 滑動標籤 end -->
               <!-- 標籤列 end -->
             </v-container>
           </div>
@@ -501,23 +396,51 @@
         <v-card>
           <div class="">
             <v-container class="container">
-              <h4 class="text-h6 text-primary font-weight-bold">
-                对话框（Dialogs）
+              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+                對話框（Dialogs）
               </h4>
-              <v-divider class="py-2 mb-2"></v-divider>
-              <!-- 標籤列 start -->
-              <v-row class="mb-1">
-                <v-col cols="12" class="py-0"
-                  ><div>
-                    <v-container>
-                      <dialogs />
-                      <scrollDialogs />
-                      <largeScrollDialogs />
-                    </v-container>
-                  </div>
-                </v-col>
-              </v-row>
-              <!-- 標籤列 end -->
+              <v-divider class="pt-2 mb-2"></v-divider>
+              <!-- 預設樣式 start -->
+              <layoutCard title="預設樣式">
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Type : Default </template>
+                  <template #content>
+                    <dialogs />
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'150px'">
+                  <template #label> Type : Default Color </template>
+                  <template #content>
+                    <dialogs />
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 預設樣式 end -->
+              <!-- 邀請樣式start -->
+              <layoutCard title="邀請樣式">
+                <layoutCardItem>
+                  <template #content>
+                    <!-- <dialogs /> -->
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 邀請樣式end -->
+              <!-- 捲軸樣式start -->
+              <layoutCard title="捲軸樣式">
+                <layoutCardItem :height="'20px'">
+                  <template #label> Type : Medium Scroll </template>
+                  <template #content>
+                    <scrollDialogs />
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'">
+                  <template #label> Type : Large Scroll </template>
+                  <template #content>
+                    <largeScrollDialogs />
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 捲軸樣式end -->
             </v-container>
           </div>
         </v-card></v-col
@@ -526,14 +449,14 @@
         <v-card>
           <div class="">
             <v-container class="container">
-              <h4 class="text-h6 text-primary font-weight-bold">
-                扩展面板（Expansion panels）
+              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+                擴展面板（Expansion panels）
               </h4>
               <v-divider class="py-2 mb-2"></v-divider>
-              <!-- 標籤列 start -->
-              <v-row class="mb-1">
-                <v-col cols="12" class="py-0"
-                  ><div>
+              <layoutCard title="圖標更換">
+                <layoutCardItem style="width: 100%">
+                  <template #label> </template>
+                  <template #content>
                     <v-expansion-panels>
                       <v-expansion-panel
                         title="Title"
@@ -541,9 +464,17 @@
                       >
                       </v-expansion-panel>
                     </v-expansion-panels>
-                  </div>
-                  <div>
-                    <div class="text-subtitle-2 mb-2">Default</div>
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <layoutCard title="面板樣式" flexWrap="wrap">
+                <layoutCardItem
+                  label-align="justify-start"
+                  style="width: 100%"
+                  :height="'20px'"
+                >
+                  <template #label> Sate : Default </template>
+                  <template #content>
                     <v-expansion-panels>
                       <v-expansion-panel
                         v-for="i in 3"
@@ -552,9 +483,15 @@
                         title="Item"
                       ></v-expansion-panel>
                     </v-expansion-panels>
-
-                    <div class="text-subtitle-2 mt-4 mb-2">Accordion</div>
-
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem
+                  label-align="justify-start"
+                  style="width: 100%"
+                  :height="'20px'"
+                >
+                  <template #label>Sate : Accordion </template>
+                  <template #content>
                     <v-expansion-panels variant="accordion">
                       <v-expansion-panel
                         v-for="i in 3"
@@ -563,9 +500,16 @@
                         title="Item"
                       ></v-expansion-panel>
                     </v-expansion-panels>
+                  </template>
+                </layoutCardItem>
 
-                    <div class="text-subtitle-2 mt-4 mb-2">Inset</div>
-
+                <layoutCardItem
+                  label-align="justify-start"
+                  style="width: 100%"
+                  :height="'20px'"
+                >
+                  <template #label>Sate : Inset </template>
+                  <template #content>
                     <v-expansion-panels class="my-4" variant="inset">
                       <v-expansion-panel
                         v-for="i in 3"
@@ -574,9 +518,15 @@
                         title="Item"
                       ></v-expansion-panel>
                     </v-expansion-panels>
-
-                    <div class="text-subtitle-2 mt-4 mb-2">Popout</div>
-
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem
+                  label-align="justify-start"
+                  style="width: 100%"
+                  :height="'20px'"
+                >
+                  <template #label>Sate : Popout</template>
+                  <template #content>
                     <v-expansion-panels class="my-4" variant="popout">
                       <v-expansion-panel
                         v-for="i in 3"
@@ -585,58 +535,67 @@
                         title="Item"
                       ></v-expansion-panel>
                     </v-expansion-panels>
-                  </div>
-                </v-col>
-              </v-row>
-              <!-- 標籤列 end -->
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
             </v-container>
-          </div>
-        </v-card></v-col
-      >
+          </div> </v-card
+      ></v-col>
       <v-col cols="12">
         <v-card>
           <div class="">
             <v-container class="container">
-              <h4 class="text-h6 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
                 提示(Tooltips)
               </h4>
               <v-divider class="py-2 mb-2"></v-divider>
               <!-- 標籤列 start -->
-              <v-row class="mb-1">
-                <v-col cols="12" class="py-0"
-                  ><div>
-                    <div class="d-flex justify-space-around">
-                      <v-btn color="primary">
-                        Start
-                        <v-tooltip activator="parent" location="start"
-                          >Tooltip</v-tooltip
-                        >
-                      </v-btn>
-
-                      <v-btn color="primary">
-                        End
-                        <v-tooltip activator="parent" location="end"
-                          >Tooltip</v-tooltip
-                        >
-                      </v-btn>
-
-                      <v-btn color="primary">
-                        Top
-                        <v-tooltip activator="parent" location="top"
-                          >Tooltip</v-tooltip
-                        >
-                      </v-btn>
-
-                      <v-btn color="primary">
-                        Bottom
-                        <v-tooltip activator="parent" location="bottom"
-                          >Tooltip</v-tooltip
-                        >
-                      </v-btn>
-                    </div>
-                  </div>
-                </v-col>
-              </v-row>
+              <layoutCard title=" 提示(Tooltips)">
+                <layoutCardItem :height="'20px'" :width="'200px'">
+                  <template #label>Direction: Left ⭠</template>
+                  <template #content>
+                    <v-btn color="primary">
+                      start
+                      <v-tooltip activator="parent" location="start"
+                        >Tooltip</v-tooltip
+                      >
+                    </v-btn>
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'200px'">
+                  <template #label>Direction: Right ⭢ </template>
+                  <template #content>
+                    <v-btn color="primary">
+                      end
+                      <v-tooltip activator="parent" location="end"
+                        >Tooltip</v-tooltip
+                      >
+                    </v-btn>
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'200px'">
+                  <template #label>Direction: Top⭡</template>
+                  <template #content>
+                    <v-btn color="primary">
+                      top
+                      <v-tooltip activator="parent" location="top"
+                        >Tooltip</v-tooltip
+                      >
+                    </v-btn>
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'200px'">
+                  <template #label>Direction: Bottom ⭣</template>
+                  <template #content>
+                    <v-btn color="primary">
+                      bottom
+                      <v-tooltip activator="parent" location="bottom"
+                        >Tooltip</v-tooltip
+                      >
+                    </v-btn>
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
               <!-- 標籤列 end -->
             </v-container>
           </div>
@@ -651,9 +610,18 @@ import card from "@/components/card.vue";
 import dialogs from "@/components/dialogs.vue";
 import scrollDialogs from "@/components/scrollDialogs.vue";
 import largeScrollDialogs from "@/components/largeScrollDialogs.vue";
+import layoutCard from "@/components/layoutComponent/layoutCard.vue";
+import layoutCardItem from "@/components/layoutComponent/layoutCard_item.vue";
 
 export default {
-  components: { card, dialogs, scrollDialogs, largeScrollDialogs },
+  components: {
+    card,
+    dialogs,
+    scrollDialogs,
+    largeScrollDialogs,
+    layoutCard,
+    layoutCardItem,
+  },
 };
 </script>
 
