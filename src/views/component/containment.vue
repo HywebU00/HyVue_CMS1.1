@@ -264,8 +264,11 @@
                   </template>
                 </layoutCardItem>
               </layoutCard>
-              <div class="">增加 Class='albumCardList list'</div>
-              <layoutCard title="卡片樣式 (橫式) " flexWrap="wrap">
+              <layoutCard
+                title="卡片樣式 (橫式) "
+                subtitle="增加 Class='albumCardList list'改變 卡片樣為橫式"
+                flexWrap="wrap"
+              >
                 <!-- 橫向樣式 start -->
                 <v-row class="albumCardList list">
                   <v-col
@@ -502,7 +505,6 @@
                     </v-expansion-panels>
                   </template>
                 </layoutCardItem>
-
                 <layoutCardItem
                   label-align="justify-start"
                   style="width: 100%"

@@ -12,7 +12,7 @@
     </div>
 
     <!-- 下方 content -->
-    <div class="d-flex justify-center">
+    <div class="d-flex" :class="contentAlign">
       <slot name="content" />
     </div>
   </div>
@@ -30,6 +30,10 @@ defineProps({
     default: "auto",
   },
   labelAlign: {
+    type: String,
+    default: "justify-center",
+  },
+  contentAlign: {
     type: String,
     default: "justify-center",
   },

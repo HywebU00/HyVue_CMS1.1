@@ -7,135 +7,214 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h6 text-primary font-weight-bold">
-                滑块 （ sliders）
+              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+                滑桿元件（ sliders）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
               <div class="">
-                <v-slider></v-slider>
-                <div class="mt-3">
-                  <div class="text-caption">Media volume</div>
-
-                  <v-slider
-                    v-model="media"
-                    prepend-icon="mdi-volume-high"
-                  ></v-slider>
-
-                  <div class="text-caption">Alarm volume</div>
-
-                  <v-slider v-model="alarm" append-icon="mdi-alarm"></v-slider>
-
-                  <div class="text-caption">Icon click callback</div>
-
-                  <v-slider
-                    v-model="zoom"
-                    append-icon="mdi-magnify-plus-outline"
-                    prepend-icon="mdi-magnify-minus-outline"
-                    @click:append="zoomIn"
-                    @click:prepend="zoomOut"
-                  ></v-slider>
-                </div>
-                <div class="mt-3">
-                  <div>
-                    <div class="text-caption">Custom thumb size</div>
-                    <v-slider
-                      v-model="slider3"
-                      :thumb-size="36"
-                      thumb-label="always"
-                    ></v-slider>
-                  </div>
-
-                  <div>
-                    <div class="text-caption">Custom thumb label</div>
-                    <v-slider
-                      color="primary"
-                      v-model="slider4"
-                      thumb-label="always"
+                <!-- 圖示 start -->
+                <layoutCard title="圖示" flexWrap="wrap">
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'20px'"
+                  >
+                    <template #label>Show First Icon : True</template>
+                    <template #content>
+                      <v-slider
+                        v-model="media"
+                        prepend-icon="mdi-volume-high"
+                      ></v-slider>
+                    </template>
+                  </layoutCardItem>
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'20px'"
+                  >
+                    <template #label>Show First + End Icon : True</template>
+                    <template #content>
+                      <v-slider
+                        v-model="media"
+                        prepend-icon="mdi-volume-high"
+                        append-icon="mdi-magnify-plus-outline"
+                      ></v-slider>
+                    </template>
+                  </layoutCardItem>
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'20px'"
+                  >
+                    <template #label>Show End Icon : True</template>
+                    <template #content>
+                      <v-slider
+                        v-model="media"
+                        append-icon="mdi-magnify-plus-outline"
+                      ></v-slider>
+                    </template>
+                  </layoutCardItem>
+                </layoutCard>
+                <!-- 圖示 end -->
+                <!-- 標籤 start -->
+                <layoutCard title="標籤" flexWrap="wrap">
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'42px'"
+                  >
+                    <template #label
+                      >Show Thumb: True<br />
+                      Type : Text</template
                     >
-                      <template v-slot:thumb-label="{ modelValue }">
-                        {{
-                          satisfactionEmojis[
-                            Math.min(Math.floor(modelValue / 10), 9)
-                          ]
-                        }}
-                      </template>
-                    </v-slider>
-                  </div>
-                </div>
-                <div class="mt-3">
-                  <v-slider
-                    v-model="slider"
-                    :max="max"
-                    :min="min"
-                    class="align-center"
-                    hide-details
-                  >
-                    <template v-slot:append>
-                      <v-text-field
-                        v-model="slider1"
-                        density="compact"
-                        style="width: 70px"
-                        type="number"
-                        hide-details
-                        single-line
-                      ></v-text-field>
+                    <template #content>
+                      <v-slider
+                        v-model="slider3"
+                        :thumb-size="36"
+                        thumb-label="always"
+                      ></v-slider>
                     </template>
-                  </v-slider>
-                  <v-slider
-                    v-model="slider"
-                    :max="max"
-                    :min="min"
-                    class="align-center"
-                    hide-details
+                  </layoutCardItem>
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'42px'"
                   >
-                    <template v-slot:append>
-                      <v-text-field
+                    <template #label
+                      >Show Thumb: True <br />
+                      Type : Icon</template
+                    >
+                    <template #content>
+                      <v-slider
+                        color="primary"
+                        v-model="slider4"
+                        thumb-label="always"
+                      >
+                        <template v-slot:thumb-label="{ modelValue }">
+                          {{
+                            satisfactionEmojis[
+                              Math.min(Math.floor(modelValue / 10), 9)
+                            ]
+                          }}
+                        </template>
+                      </v-slider>
+                    </template>
+                  </layoutCardItem>
+                </layoutCard>
+                <!-- 標籤 end -->
+                <layoutCard title="欄位樣式" flexWrap="wrap">
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'20px'"
+                  >
+                    <template #label> Show First input : True </template>
+                    <template #content>
+                      <v-slider
                         v-model="slider"
-                        density="compact"
-                        style="width: 70px"
-                        type="number"
+                        :max="max"
+                        :min="min"
+                        class="align-center"
                         hide-details
-                        single-line
-                      ></v-text-field>
+                      >
+                        <template v-slot:prepend>
+                          <v-text-field
+                            v-model="slider1"
+                            density="compact"
+                            style="width: 70px"
+                            type="number"
+                            hide-details
+                            single-line
+                          ></v-text-field>
+                        </template>
+                      </v-slider>
                     </template>
-                    <template v-slot:prepend>
-                      <v-text-field
-                        v-model="slider1"
-                        density="compact"
-                        style="width: 70px"
-                        type="number"
-                        hide-details
-                        single-line
-                      ></v-text-field>
-                    </template>
-                  </v-slider>
-                  <v-slider
-                    v-model="slider"
-                    :max="max"
-                    :min="min"
-                    class="align-center"
-                    hide-details
+                  </layoutCardItem>
+
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'20px'"
                   >
-                    <template v-slot:prepend>
-                      <v-text-field
-                        v-model="slider"
-                        density="compact"
-                        style="width: 70px"
-                        type="number"
-                        hide-details
-                        single-line
-                      ></v-text-field>
+                    <template #label>
+                      Show First + End input : True）
                     </template>
-                  </v-slider>
-                </div>
-                <div class="mt-3">
-                  <div class="text-caption">Tick size</div>
-                  <v-slider
-                    show-ticks="always"
-                    step="10"
-                    tick-size="4"
-                  ></v-slider>
-                </div>
+                    <template #content>
+                      <v-slider
+                        v-model="slider"
+                        :max="max"
+                        :min="min"
+                        class="align-center"
+                        hide-details
+                      >
+                        <template v-slot:append>
+                          <v-text-field
+                            v-model="slider"
+                            density="compact"
+                            style="width: 70px"
+                            type="number"
+                            hide-details
+                            single-line
+                          ></v-text-field>
+                        </template>
+                        <template v-slot:prepend>
+                          <v-text-field
+                            v-model="slider1"
+                            density="compact"
+                            style="width: 70px"
+                            type="number"
+                            hide-details
+                            single-line
+                          ></v-text-field>
+                        </template>
+                      </v-slider>
+                    </template>
+                  </layoutCardItem>
+
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'20px'"
+                  >
+                    <template #label>Show End input : True </template>
+                    <template #content>
+                      <v-slider
+                        v-model="slider"
+                        :max="max"
+                        :min="min"
+                        class="align-center"
+                        hide-details
+                      >
+                        <template v-slot:append>
+                          <v-text-field
+                            v-model="slider"
+                            density="compact"
+                            style="width: 70px"
+                            type="number"
+                            hide-details
+                            single-line
+                          ></v-text-field>
+                        </template>
+                      </v-slider>
+                    </template>
+                  </layoutCardItem>
+                </layoutCard>
+                <layoutCard title="刻度">
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'20px'"
+                  >
+                    <template #label> Show Tick : True </template>
+                    <template #content>
+                      <v-slider
+                        show-ticks="always"
+                        step="10"
+                        tick-size="4"
+                      ></v-slider>
+                    </template>
+                  </layoutCardItem>
+                </layoutCard>
               </div>
             </v-container>
           </div>
@@ -145,64 +224,227 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h6 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
                 下拉选择框（Selects）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
               <div class="">
-                <div class="">
-                  <v-select
-                    label="Select"
-                    :items="[
-                      'California',
-                      'Colorado',
-                      'Florida',
-                      'Georgia',
-                      'Texas',
-                      'Wyoming',
-                    ]"
-                  ></v-select>
-                  <v-select
-                    label="Select"
-                    disabled
-                    :items="[
-                      'California',
-                      'Colorado',
-                      'Florida',
-                      'Georgia',
-                      'Texas',
-                      'Wyoming',
-                    ]"
-                  ></v-select>
-                </div>
-                <div class="mt-3">
-                  <v-select
-                    label="Select"
-                    :items="[
-                      'California',
-                      'Colorado',
-                      'Florida',
-                      'Georgia',
-                      'Texas',
-                      'Wyoming',
-                    ]"
-                    variant="outlined"
-                  ></v-select>
-                </div>
-                <div class="mt-3">
-                  <v-select
-                    label="Select"
-                    :items="[
-                      'California',
-                      'Colorado',
-                      'Florida',
-                      'Georgia',
-                      'Texas',
-                      'Wyoming',
-                    ]"
-                    variant="solo"
-                  ></v-select>
-                </div>
+                <layoutCard title="樣式" flexWrap="wrap">
+                  <!-- Default -->
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'20px'"
+                  >
+                    <template #label>Type: Default</template>
+                    <template #content>
+                      <v-select
+                        label="Select"
+                        :items="[
+                          'California',
+                          'Colorado',
+                          'Florida',
+                          'Georgia',
+                          'Texas',
+                          'Wyoming',
+                        ]"
+                      ></v-select>
+                    </template>
+                  </layoutCardItem>
+
+                  <!-- Disabled -->
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'20px'"
+                  >
+                    <template #label>Type: Underlined</template>
+                    <template #content>
+                      <v-select
+                        label="Select"
+                        disabled
+                        :items="[
+                          'California',
+                          'Colorado',
+                          'Florida',
+                          'Georgia',
+                          'Texas',
+                          'Wyoming',
+                        ]"
+                      ></v-select>
+                    </template>
+                  </layoutCardItem>
+                  <!-- Outlined -->
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'20px'"
+                  >
+                    <template #label>Type: Outlined</template>
+                    <template #content>
+                      <v-select
+                        label="Select"
+                        variant="outlined"
+                        :items="[
+                          'California',
+                          'Colorado',
+                          'Florida',
+                          'Georgia',
+                          'Texas',
+                          'Wyoming',
+                        ]"
+                      ></v-select>
+                    </template>
+                  </layoutCardItem>
+
+                  <!-- Solo -->
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'20px'"
+                  >
+                    <template #label>Type: Solo</template>
+                    <template #content>
+                      <v-select
+                        label="Select"
+                        variant="solo"
+                        :items="[
+                          'California',
+                          'Colorado',
+                          'Florida',
+                          'Georgia',
+                          'Texas',
+                          'Wyoming',
+                        ]"
+                      ></v-select>
+                    </template>
+                  </layoutCardItem>
+                  <!-- Solo -->
+                  <!-- Solo-filled -->
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'20px'"
+                  >
+                    <template #label>Type: Solo-filled</template>
+                    <template #content>
+                      <v-select
+                        label="Select"
+                        variant="solo"
+                        :items="[
+                          'California',
+                          'Colorado',
+                          'Florida',
+                          'Georgia',
+                          'Texas',
+                          'Wyoming',
+                        ]"
+                      ></v-select>
+                    </template>
+                  </layoutCardItem>
+                  <!-- Solo-filled -->
+                  <!-- Solo-inverted -->
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'20px'"
+                  >
+                    <template #label>Type: Solo-inverted</template>
+                    <template #content>
+                      <v-select
+                        label="Select"
+                        variant="solo-inverted"
+                        :items="[
+                          'California',
+                          'Colorado',
+                          'Florida',
+                          'Georgia',
+                          'Texas',
+                          'Wyoming',
+                        ]"
+                      ></v-select>
+                    </template>
+                  </layoutCardItem>
+                  <!-- Solo-inverted -->
+                </layoutCard>
+                <layoutCard title="下拉選單" flexWrap="wrap">
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'42px'"
+                  >
+                    <template #label>
+                      State: Default<br />
+                      Show First Icon: True
+                    </template>
+                    <template #content>
+                      <v-select
+                        label="Select"
+                        :items="[
+                          'California',
+                          'Colorado',
+                          'Florida',
+                          'Georgia',
+                          'Texas',
+                          'Wyoming',
+                        ]"
+                      ></v-select>
+                    </template>
+                  </layoutCardItem>
+                  <layoutCardItem
+                    label-align="justify-start"
+                    style="width: 100%"
+                    :height="'42px'"
+                  >
+                    <template #label>
+                      State: Default<br />
+                      Show First Icon: True
+                    </template>
+                    <template #content>
+                      <v-select
+                        v-model="selectedFruits"
+                        :items="fruits"
+                        label="Favorite Fruits"
+                        multiple
+                      >
+                        <template v-slot:prepend-item>
+                          <v-list-item title="Select All" @click="toggle">
+                            <template v-slot:prepend>
+                              <v-checkbox-btn
+                                :color="
+                                  likesSomeFruit ? 'indigo-darken-4' : undefined
+                                "
+                                :indeterminate="
+                                  likesSomeFruit && !likesAllFruit
+                                "
+                                :model-value="likesAllFruit"
+                              ></v-checkbox-btn>
+                            </template>
+                          </v-list-item>
+
+                          <v-divider class="mt-2"></v-divider>
+                        </template>
+
+                        <template v-slot:append-item>
+                          <v-divider class="mb-2"></v-divider>
+
+                          <v-list-item
+                            :subtitle="subtitle"
+                            :title="title"
+                            disabled
+                          >
+                            <template v-slot:prepend>
+                              <v-avatar
+                                color="primary"
+                                icon="mdi-food-apple"
+                              ></v-avatar>
+                            </template>
+                          </v-list-item>
+                        </template>
+                      </v-select>
+                    </template>
+                  </layoutCardItem>
+                </layoutCard>
               </div>
             </v-container>
           </div>
@@ -212,110 +454,211 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h6 text-primary font-weight-bold">
-                範圍滑块（Range sliders）
+              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+                範圍滑桿元件（Range sliders）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
-              <div class="">
-                <v-range-slider v-model="value" strict></v-range-slider>
-              </div>
-              <div class="mt-3">
-                <v-range-slider
-                  v-model="value2"
-                  step="10"
-                  thumb-label="always"
-                ></v-range-slider>
-              </div>
+              <!-- Default start -->
+              <layoutCard title="Range Sliders" flexWrap="wrap">
+                <layoutCardItem
+                  label-align="justify-start"
+                  style="width: 100%"
+                  :height="'42px'"
+                >
+                  <template #label>State : Default</template>
+                  <template #content>
+                    <v-range-slider v-model="value" strict></v-range-slider>
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <!-- Default end -->
+              <!-- 標籤 start -->
+              <layoutCard title="標籤" flexWrap="wrap">
+                <!-- thumb-label always -->
+                <layoutCardItem
+                  label-align="justify-start"
+                  style="width: 100%"
+                  :height="'76px'"
+                >
+                  <template #label
+                    >Show Thumb: True<br />
+                    Type : Text</template
+                  >
+                  <template #content>
+                    <v-range-slider
+                      v-model="value2"
+                      step="10"
+                      thumb-label="always"
+                    ></v-range-slider>
+                  </template>
+                </layoutCardItem>
 
-              <div class="mt-3">
-                <v-range-slider
-                  v-model="range"
-                  :max="10"
-                  :min="-10"
-                  :step="1"
-                  class="align-center"
-                  hide-details
+                <layoutCardItem
+                  label-align="justify-start"
+                  style="width: 100%"
+                  :height="'76px'"
                 >
-                  <template v-slot:prepend>
-                    <v-text-field
-                      v-model="range[0]"
-                      density="compact"
-                      style="width: 70px"
-                      type="number"
-                      variant="outlined"
-                      hide-details
-                      single-line
-                    ></v-text-field>
+                  <template #label
+                    >Show Thumb: True<br />
+                    Type : Icon</template
+                  >
+                  <template #content>
+                    <v-range-slider
+                      v-model="range"
+                      :step="0"
+                      thumb-label="always"
+                    >
+                      <template v-slot:thumb-label="{ modelValue }">
+                        <v-icon
+                          size="16"
+                          class="mr-1"
+                          :icon="
+                            modelValue === range[0]
+                              ? 'mdi-weather-sunny'
+                              : 'mdi-weather-night'
+                          "
+                        />
+                      </template>
+                    </v-range-slider>
                   </template>
-                </v-range-slider>
-                <v-range-slider
-                  v-model="range"
-                  :max="10"
-                  :min="-10"
-                  :step="1"
-                  class="align-center"
-                  hide-details
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 標籤 end -->
+              <!-- 文字欄位 start -->
+              <layoutCard title="文字欄位" flexWrap="wrap">
+                <layoutCardItem
+                  label-align="justify-start"
+                  style="width: 100%"
+                  :height="'42px'"
                 >
-                  <template v-slot:append>
-                    <v-text-field
-                      v-model="range[1]"
-                      density="compact"
-                      style="width: 70px"
-                      type="number"
-                      variant="outlined"
+                  <template #label>Show First input : True</template>
+                  <template #content>
+                    <v-range-slider
+                      v-model="range"
+                      :max="10"
+                      :min="-10"
+                      :step="1"
+                      class="align-center"
                       hide-details
-                      single-line
-                    ></v-text-field>
+                    >
+                      <template v-slot:prepend>
+                        <v-text-field
+                          v-model="range[0]"
+                          density="compact"
+                          style="width: 70px"
+                          type="number"
+                          variant="outlined"
+                          hide-details
+                          single-line
+                        />
+                      </template>
+                    </v-range-slider>
                   </template>
-                </v-range-slider>
-                <v-range-slider
-                  v-model="range"
-                  :max="10"
-                  :min="-10"
-                  :step="1"
-                  class="align-center"
-                  hide-details
+                </layoutCardItem>
+
+                <layoutCardItem
+                  label-align="justify-start"
+                  style="width: 100%"
+                  :height="'42px'"
                 >
-                  <template v-slot:prepend>
-                    <v-text-field
-                      v-model="range[0]"
-                      density="compact"
-                      style="width: 70px"
-                      type="number"
-                      variant="outlined"
+                  <template #label>Show First + End input : True</template>
+                  <template #content>
+                    <v-range-slider
+                      v-model="range"
+                      :max="10"
+                      :min="-10"
+                      :step="1"
+                      class="align-center"
                       hide-details
-                      single-line
-                    ></v-text-field>
+                    >
+                      <template v-slot:append>
+                        <v-text-field
+                          v-model="range[1]"
+                          density="compact"
+                          style="width: 70px"
+                          type="number"
+                          variant="outlined"
+                          hide-details
+                          single-line
+                        />
+                      </template>
+                    </v-range-slider>
                   </template>
-                  <template v-slot:append>
-                    <v-text-field
-                      v-model="range[1]"
-                      density="compact"
-                      style="width: 70px"
-                      type="number"
-                      variant="outlined"
-                      hide-details
-                      single-line
-                    ></v-text-field>
-                  </template>
-                </v-range-slider>
-              </div>
-              <div class="mt-3">
-                <v-range-slider
-                  :model-value="[0, 1]"
-                  :step="1"
-                  :ticks="seasons"
-                  max="3"
-                  min="0"
-                  show-ticks="always"
-                  thumb-label="always"
-                  tick-size="4"
+                </layoutCardItem>
+
+                <!-- Prepend + Append TextField -->
+                <layoutCardItem
+                  label-align="justify-start"
+                  style="width: 100%"
+                  :height="'42px'"
                 >
-                  <template v-slot:thumb-label="{ modelValue }">
-                    <v-icon :icon="season(modelValue)" theme="dark"></v-icon>
+                  <template #label>Show End input : True</template>
+                  <template #content>
+                    <v-range-slider
+                      v-model="range"
+                      :max="10"
+                      :min="-10"
+                      :step="1"
+                      class="align-center"
+                      hide-details
+                    >
+                      <template v-slot:prepend>
+                        <v-text-field
+                          v-model="range[0]"
+                          density="compact"
+                          style="width: 70px"
+                          type="number"
+                          variant="outlined"
+                          hide-details
+                          single-line
+                        />
+                      </template>
+                      <template v-slot:append>
+                        <v-text-field
+                          v-model="range[1]"
+                          density="compact"
+                          style="width: 70px"
+                          type="number"
+                          variant="outlined"
+                          hide-details
+                          single-line
+                        />
+                      </template>
+                    </v-range-slider>
                   </template>
-                </v-range-slider>
-              </div>
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 文字欄位 end -->
+              <!-- 刻度 start -->
+              <layoutCard title="刻度" flexWrap="wrap">
+                <layoutCardItem
+                  label-align="justify-start"
+                  style="width: 100%"
+                  :height="'60px'"
+                >
+                  <template #label>Show Tick : True</template>
+                  <template #content>
+                    <v-range-slider
+                      :model-value="[0, 1]"
+                      :step="1"
+                      :ticks="seasons"
+                      max="3"
+                      min="0"
+                      show-ticks="always"
+                      thumb-label="always"
+                      tick-size="4"
+                    >
+                      <template v-slot:thumb-label="{ modelValue }">
+                        <v-icon
+                          :icon="season(modelValue)"
+                          theme="dark"
+                        ></v-icon>
+                      </template>
+                    </v-range-slider>
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <!-- 刻度 end -->
             </v-container>
           </div>
         </v-card>
@@ -325,6 +668,8 @@
 </template>
 
 <script>
+import layoutCard from "@/components/layoutComponent/layoutCard.vue";
+import layoutCardItem from "@/components/layoutComponent/layoutCard_item.vue";
 export default {
   data() {
     return {
@@ -358,6 +703,55 @@ export default {
       },
       icons: ["mdi-snowflake", "mdi-leaf", "mdi-fire", "mdi-water"],
       value2: [20, 40],
+      fruits: [
+        "Apples",
+        "Apricots",
+        "Avocado",
+        "Bananas",
+        "Blueberries",
+        "Blackberries",
+        "Boysenberries",
+        "Bread fruit",
+        "Cantaloupes (cantalope)",
+        "Cherries",
+        "Cranberries",
+        "Cucumbers",
+        "Currants",
+        "Dates",
+        "Eggplant",
+        "Figs",
+        "Grapes",
+        "Grapefruit",
+        "Guava",
+        "Honeydew melons",
+        "Huckleberries",
+        "Kiwis",
+        "Kumquat",
+        "Lemons",
+        "Limes",
+        "Mangos",
+        "Mulberries",
+        "Muskmelon",
+        "Nectarines",
+        "Olives",
+        "Oranges",
+        "Papaya",
+        "Peaches",
+        "Pears",
+        "Persimmon",
+        "Pineapple",
+        "Plums",
+        "Pomegranate",
+        "Raspberries",
+        "Rose Apple",
+        "Starfruit",
+        "Strawberries",
+        "Tangerines",
+        "Tomatoes",
+        "Watermelons",
+        "Zucchini",
+      ],
+      selectedFruits: [],
     };
   },
 
@@ -371,6 +765,40 @@ export default {
     season(val) {
       return this.icons[val];
     },
+    toggle() {
+      if (this.likesAllFruit) {
+        this.selectedFruits = [];
+      } else {
+        this.selectedFruits = this.fruits.slice();
+      }
+    },
+  },
+  computed: {
+    likesAllFruit() {
+      return this.selectedFruits.length === this.fruits.length;
+    },
+    likesSomeFruit() {
+      return this.selectedFruits.length > 0;
+    },
+    title() {
+      if (this.likesAllFruit)
+        return "Holy smokes, someone call the fruit police!";
+
+      if (this.likesSomeFruit) return "Fruit Count";
+
+      return "How could you not like fruit?";
+    },
+    subtitle() {
+      if (this.likesAllFruit) return undefined;
+
+      if (this.likesSomeFruit) return this.selectedFruits.length;
+
+      return "Go ahead, make a selection above!";
+    },
+  },
+  components: {
+    layoutCard,
+    layoutCardItem,
   },
 };
 </script>

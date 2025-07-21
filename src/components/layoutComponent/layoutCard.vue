@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h5 class="text-subtitle-1 font-weight-bold my-3">{{ title }}</h5>
+    <h5 class="text-subtitle-1 font-weight-bold mt-3">{{ title }}</h5>
+    <div class="text-subtitle-1 mb-3 mt-1 ms-2">{{ subtitle }}</div>
     <div
       class="scrollCard mb-8 pa-5 border-neutral-darken-5 border-md rounded-md"
     >
@@ -16,6 +17,10 @@
 <script setup>
 defineProps({
   title: {
+    type: String,
+    default: "",
+  },
+  subtitle: {
     type: String,
     default: "",
   },
