@@ -122,7 +122,7 @@
                   <template #label> Type:Flat</template>
                   <template #content>
                     <v-btn variant="flat" color="primary">
-                      Button1
+                      Button
                     </v-btn></template
                   >
                 </layoutCardItem>
@@ -228,39 +228,39 @@
               <!-- 邀請樣式start -->
               <layoutCard title="卡片樣 (直式)" flexWrap="wrap">
                 <layoutCardItem :height="'20px'" :width="'340px'">
-                  <template #label> Type:Flat </template>
-                  <template #content>
-                    <card />
-                  </template>
-                </layoutCardItem>
-                <layoutCardItem :height="'20px'" :width="'340px'">
                   <template #label> Type:Elevated </template>
                   <template #content>
-                    <card />
+                    <card variant="elevated" />
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'20px'" :width="'340px'">
-                  <template #label> Type:Tonal </template>
+                  <template #label> Type:Flat </template>
                   <template #content>
-                    <card />
+                    <card variant="flat" />
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'20px'" :width="'340px'">
                   <template #label> Type:Outlined </template>
                   <template #content>
-                    <card />
+                    <card variant="outlined" />
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem :height="'20px'" :width="'340px'">
+                  <template #label> Type:Tonal </template>
+                  <template #content>
+                    <card variant="tonal" />
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'20px'" :width="'340px'">
                   <template #label> Type:Text </template>
                   <template #content>
-                    <card />
+                    <card variant="text" />
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'20px'" :width="'340px'">
                   <template #label> Type:Plain </template>
                   <template #content>
-                    <card />
+                    <card variant="plain" />
                   </template>
                 </layoutCardItem>
               </layoutCard>
@@ -269,10 +269,14 @@
                 subtitle="增加 Class='albumCardList list'改變 卡片樣為橫式"
                 flexWrap="wrap"
               >
+                <!-- <div class="albumCardList list">
+                  <card />
+                </div> -->
+                <card type="list" />
                 <!-- 橫向樣式 start -->
-                <v-row class="albumCardList list">
+                <!-- <v-row class="albumCardList list">
                   <v-col
-                    v-for="item in 4"
+                    v-for="item in 1"
                     :key="item"
                     cols="12"
                     sm="6"
@@ -280,9 +284,9 @@
                     lg="3"
                     xl="2"
                   >
-                    <card />
+                    <card type="list" />
                   </v-col>
-                </v-row>
+                </v-row> -->
                 <!-- 橫向樣式 end -->
               </layoutCard>
             </v-container>
@@ -294,7 +298,7 @@
           <div class="mb-1">
             <v-container class="container">
               <h4 class="text-h4 mb-2 text-primary font-weight-bold">
-                標籤樣式 ( chip)
+                標籤樣式 (chip)
               </h4>
               <v-divider class="py-2 mb-2"></v-divider>
               <!-- 標籤列 start -->
@@ -382,7 +386,7 @@
                             icon="mdi-check-circle-outline"
                             start
                           ></v-icon>
-                          Chip
+                          標籤
                         </v-chip>
                       </v-slide-group-item>
                     </v-slide-group>
@@ -412,9 +416,9 @@
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'20px'" :width="'150px'">
-                  <template #label> Type : Default Color </template>
+                  <template #label> Type : Color </template>
                   <template #content>
-                    <dialogs />
+                    <dialogs bgcolor="bg-neutral-darken-1" />
                   </template>
                 </layoutCardItem>
               </layoutCard>
@@ -423,7 +427,45 @@
               <layoutCard title="邀請樣式">
                 <layoutCardItem>
                   <template #content>
-                    <!-- <dialogs /> -->
+                    <v-dialog class="dialogSmall" max-width="350">
+                      <template v-slot:activator="{ props: activatorProps }">
+                        <v-btn
+                          v-bind="activatorProps"
+                          color="primary"
+                          text="Open Dialog"
+                          variant="flat"
+                        ></v-btn>
+                      </template>
+
+                      <template v-slot:default="{ isActive }">
+                        <v-card>
+                          <v-card-title class="bg-neutral-darken-1">
+                            <span class="material-icons-outlined"> link </span>
+                            Copy link
+                          </v-card-title>
+                          <v-card-text> share with John +1 more </v-card-text>
+
+                          <v-card-actions>
+                            <v-btn
+                              class="closeBtn"
+                              text="Close"
+                              color="neutral-darken-4"
+                              @click="isActive.value = false"
+                            ></v-btn>
+                            <v-btn
+                              variant="outlined"
+                              text="不同意"
+                              color="primary"
+                            ></v-btn>
+                            <v-btn
+                              variant="flat"
+                              text="同意"
+                              color="primary"
+                            ></v-btn>
+                          </v-card-actions>
+                        </v-card>
+                      </template>
+                    </v-dialog>
                   </template>
                 </layoutCardItem>
               </layoutCard>
@@ -461,10 +503,63 @@
                   <template #label> </template>
                   <template #content>
                     <v-expansion-panels>
-                      <v-expansion-panel
-                        title="Title"
-                        text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima"
-                      >
+                      <v-expansion-panel>
+                        <v-expansion-panel-title
+                          collapse-icon="mdi-minus"
+                          expand-icon="mdi-plus"
+                        >
+                          Title
+                        </v-expansion-panel-title>
+                        <v-expansion-panel-text>
+                          Let Google help apps determine location. This means
+                          sending anonymous location data to Google, even when
+                          no apps are running.Let Google help apps determine
+                          location. This means sending anonymous location data
+                          to Google, even when no apps are running.Let Google
+                          help apps determine location. This means sending
+                          anonymous location data to Google, even when no apps
+                          are running.Let Google help apps
+                        </v-expansion-panel-text>
+                      </v-expansion-panel>
+                      <v-expansion-panel>
+                        <v-expansion-panel-title>
+                          Title
+                          <template v-slot:actions="{ expanded }">
+                            <v-icon
+                              :color="!expanded ? 'teal' : ''"
+                              :icon="expanded ? 'mdi-pencil' : 'mdi-check'"
+                            ></v-icon>
+                          </template>
+                        </v-expansion-panel-title>
+                        <v-expansion-panel-text>
+                          Let Google help apps determine location. This means
+                          sending anonymous location data to Google, even when
+                          no apps are running.Let Google help apps determine
+                          location. This means sending anonymous location data
+                          to Google, even when no apps are running.Let Google
+                          help apps determine location. This means sending
+                          anonymous location data to Google, even when no apps
+                          are running.Let Google help apps
+                        </v-expansion-panel-text>
+                      </v-expansion-panel>
+                      <v-expansion-panel>
+                        <v-expansion-panel-title disable-icon-rotate>
+                          Title
+                          <template v-slot:actions>
+                            <v-icon color="error" icon="mdi-alert-circle">
+                            </v-icon>
+                          </template>
+                        </v-expansion-panel-title>
+                        <v-expansion-panel-text>
+                          Let Google help apps determine location. This means
+                          sending anonymous location data to Google, even when
+                          no apps are running.Let Google help apps determine
+                          location. This means sending anonymous location data
+                          to Google, even when no apps are running.Let Google
+                          help apps determine location. This means sending
+                          anonymous location data to Google, even when no apps
+                          are running.Let Google help apps
+                        </v-expansion-panel-text>
                       </v-expansion-panel>
                     </v-expansion-panels>
                   </template>
@@ -482,8 +577,15 @@
                       <v-expansion-panel
                         v-for="i in 3"
                         :key="i"
-                        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                        title="Item"
+                        text="  Let Google help apps determine location. This means
+                          sending anonymous location data to Google, even when
+                          no apps are running.Let Google help apps determine
+                          location. This means sending anonymous location data
+                          to Google, even when no apps are running.Let Google
+                          help apps determine location. This means sending
+                          anonymous location data to Google, even when no apps
+                          are running.Let Google help apps"
+                        title="Title"
                       ></v-expansion-panel>
                     </v-expansion-panels>
                   </template>
@@ -499,8 +601,15 @@
                       <v-expansion-panel
                         v-for="i in 3"
                         :key="i"
-                        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                        title="Item"
+                        text="  Let Google help apps determine location. This means
+                          sending anonymous location data to Google, even when
+                          no apps are running.Let Google help apps determine
+                          location. This means sending anonymous location data
+                          to Google, even when no apps are running.Let Google
+                          help apps determine location. This means sending
+                          anonymous location data to Google, even when no apps
+                          are running.Let Google help apps"
+                        title="Title"
                       ></v-expansion-panel>
                     </v-expansion-panels>
                   </template>
@@ -516,8 +625,15 @@
                       <v-expansion-panel
                         v-for="i in 3"
                         :key="i"
-                        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                        title="Item"
+                        text="  Let Google help apps determine location. This means
+                          sending anonymous location data to Google, even when
+                          no apps are running.Let Google help apps determine
+                          location. This means sending anonymous location data
+                          to Google, even when no apps are running.Let Google
+                          help apps determine location. This means sending
+                          anonymous location data to Google, even when no apps
+                          are running.Let Google help apps"
+                        title="Title"
                       ></v-expansion-panel>
                     </v-expansion-panels>
                   </template>
@@ -534,7 +650,7 @@
                         v-for="i in 3"
                         :key="i"
                         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                        title="Item"
+                        title="Title"
                       ></v-expansion-panel>
                     </v-expansion-panels>
                   </template>
@@ -559,7 +675,7 @@
                     <v-btn color="primary">
                       start
                       <v-tooltip activator="parent" location="start"
-                        >Tooltip</v-tooltip
+                        >prompt text</v-tooltip
                       >
                     </v-btn>
                   </template>
@@ -570,7 +686,7 @@
                     <v-btn color="primary">
                       end
                       <v-tooltip activator="parent" location="end"
-                        >Tooltip</v-tooltip
+                        >prompt text</v-tooltip
                       >
                     </v-btn>
                   </template>
@@ -581,7 +697,7 @@
                     <v-btn color="primary">
                       top
                       <v-tooltip activator="parent" location="top"
-                        >Tooltip</v-tooltip
+                        >prompt text</v-tooltip
                       >
                     </v-btn>
                   </template>
@@ -592,7 +708,7 @@
                     <v-btn color="primary">
                       bottom
                       <v-tooltip activator="parent" location="bottom"
-                        >Tooltip</v-tooltip
+                        >prompt text</v-tooltip
                       >
                     </v-btn>
                   </template>
@@ -609,9 +725,9 @@
 
 <script>
 import card from "@/components/card.vue";
-import dialogs from "@/components/dialogs.vue";
-import scrollDialogs from "@/components/scrollDialogs.vue";
-import largeScrollDialogs from "@/components/largeScrollDialogs.vue";
+import dialogs from "@/components/containment/dialogs.vue";
+import scrollDialogs from "@/components/containment/scrollDialogs.vue";
+import largeScrollDialogs from "@/components/containment/largeScrollDialogs.vue";
 import layoutCard from "@/components/layoutComponent/layoutCard.vue";
 import layoutCardItem from "@/components/layoutComponent/layoutCard_item.vue";
 

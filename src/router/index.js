@@ -54,7 +54,7 @@ const routes = [
     children: [
       {
         path: "containment",
-        component: () => import("@/views/component/containment.vue"),
+        component: () => import("@/views/component/containmentComponent.vue"),
       },
       {
         path: "navigation",

@@ -2,21 +2,91 @@
 @use '@/sass/common/mixins/mediaquery.scss' as *;
 @use '@/sass/variables.scss' as *;
 
-.albumCard {
-  max-width: unset !important;
+.card {
   height: 100%;
-
+  &.default {
+    width: rem(310);
+  }
+  &.list {
+    width: unset;
+    min-width: rem(970);
+    display: block;
+    margin: 0.25rem;
+    .cardContainer {
+      flex-direction: row;
+      background-color: unset;
+      .v-card-text {
+        display: flex;
+        .iconList,
+        .btn {
+          flex-grow: unset;
+          width: unset;
+        }
+        .btn {
+          margin-top: 0;
+          padding-top: 0;
+          margin-left: auto;
+        }
+      }
+    }
+    .v-card-item {
+      padding-top: 1rem;
+    }
+    .v-img {
+      width: rem(364);
+      margin: 1rem;
+    }
+    .btn {
+      button {
+        width: rem(116);
+      }
+    }
+  }
+  .cardCheckbox {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+  }
+  .v-selection-control__wrapper {
+    top: 1rem;
+    position: absolute;
+    left: 1rem;
+  }
   .cardContainer {
     display: flex;
     flex-direction: column;
     height: 100%;
   }
+  .v-avatar {
+    & > .v-img {
+      margin: 0rem;
+    }
+  }
   .v-img {
-    margin: 0.75rem;
-    margin-bottom: 0;
-    border-radius: rem(4);
+    margin: 1rem 1rem 0.5rem 1rem;
+    border-radius: rem(10);
     height: rem(200);
     max-height: rem(200);
+  }
+
+  .v-label {
+    position: absolute;
+    width: 100%;
+    font-size: 0;
+  }
+  .titleText {
+    margin-left: 0.75em;
+    .v-card-title {
+      font-weight: 700;
+      font-size: rem(18);
+      color: $neutral20;
+    }
+    .v-card-subtitle {
+      font-size: rem(14);
+      font-weight: 400;
+      color: $neutral30;
+    }
   }
   .v-card-item {
     display: flex;
@@ -28,31 +98,59 @@
     flex-grow: 1;
   }
   .v-card-item__content {
-    .v-card-subtitle {
-      font-weight: 700;
-      font-size: 1em;
-    }
     p {
-      font-size: 1em;
+      color: $neutral20;
+      font-size: 1rem;
+      line-height: 2rem;
     }
   }
   .v-card-text {
     align-items: self-end;
     display: flex;
+    flex-wrap: wrap;
+    .v-row {
+      &.btn {
+        width: 100%;
+      }
+    }
   }
-
+  .v-card-item {
+    padding-bottom: rem(20);
+  }
   .iconList {
     font-weight: 700;
+    color: $neutral20;
     .v-col {
       display: flex;
       align-items: center;
     }
-    i {
-      font-size: 1rem;
-      margin-right: 0.5rem;
+    .icon {
+      margin-right: 0.25rem;
+      align-items: center;
+      display: flex;
+      color: $neutral20;
     }
   }
+  .btn {
+    button {
+      height: rem(48);
+    }
+  }
+  //樣式ＣＳＳ
+  &.v-card--variant-tonal {
+    background: $neutral80;
+    .v-card__underlay {
+      opacity: 0;
+    }
+  }
+  &.v-card--variant-flat {
+    background: rgba(128, 203, 215, 0.2);
+  }
+  &.v-card--variant-outlined {
+    border: thin solid $neutral40;
+  }
 }
+
 .albumCardList {
   &.v-row {
     margin-top: 0 !important;
@@ -74,7 +172,7 @@
       .cardContainer {
         display: block;
       }
-      .albumCard {
+      .card {
         .cardContainer {
           .v-img {
             margin: 0 0 1rem 0;
@@ -174,4 +272,9 @@
       margin: 0.5rem;
     }
   }
+}
+
+//行高設定
+.line-clamp-2 {
+  @include textLine(2, 16);
 }

@@ -48,7 +48,7 @@
               lg="3"
               xl="2"
             >
-              <v-card class="albumCard">
+              <v-card class="card">
                 <div class="cardContainer">
                   <v-img src="~@/assets/demo/01.jpg" cover></v-img>
                   <div class="info">
@@ -136,7 +136,7 @@
               lg="3"
               xl="2"
             >
-              <v-card class="albumCard">
+              <v-card class="card">
                 <div class="cardContainer">
                   <v-img src="~@/assets/demo/02.jpg" cover></v-img>
                   <div class="info">

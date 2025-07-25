@@ -1,0 +1,43 @@
+@use '@/sass/variables.scss' as *;
+@use '@/sass/common/mixins/text.scss' as *;
+.v-slider {
+  &.v-input--horizontal {
+    &:has(.v-slider-thumb__label) {
+      padding: 0 0.5rem;
+    }
+    .v-slider-thumb__label-container {
+      .v-slider-thumb__label {
+        background: unset;
+        > div {
+          color: #fff;
+          font-size: rem(14);
+          padding-bottom: 0.75rem;
+          > i {
+            margin-right: 0 !important;
+          }
+        }
+        &::before {
+          content: '';
+          color: unset;
+          border: unset;
+          width: rem(60);
+          position: absolute;
+          z-index: -1;
+          bottom: -13px;
+          height: rem(60);
+          background: url('@/assets/images/roundedTag.svg') no-repeat center center;
+        }
+      }
+      .v-slider-track__fill {
+        &.bg-primary {
+          + .v-slider-track__tick {
+            background: $primary30;
+            &.v-slider-track__tick--filled {
+              background: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

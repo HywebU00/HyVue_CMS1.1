@@ -1,0 +1,14 @@
+@use '@/sass/variables.scss' as *;
+@use '@/sass/common/mixins/text.scss' as *;
+.v-expansion-panel {
+  .v-expansion-panel-title {
+    font-weight: 700;
+    color: $neutral10;
+    font-size: rem(20);
+    height: rem(76);
+  }
+  .v-expansion-panel-text {
+    font-size: rem(16);
+    line-height: 2rem;
+  }
+}

@@ -1,0 +1,64 @@
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/common/mixins/scrollbar.scss' as *;
+
+@use '@/sass/variables.scss' as *;
+
+.v-dialog {
+  @include scrollbar;
+  &.dialogSmall {
+    .v-card-title {
+      font-size: 1rem;
+    }
+  }
+  &.scrollDialog {
+    .v-card-title {
+      box-shadow: $boxShadow;
+    }
+    .v-card-text {
+      .v-selection-control {
+        margin: rem(10) 0;
+        color: $neutral30;
+      }
+    }
+    .v-card-actions {
+      border-top: 1px solid $neutral60;
+    }
+  }
+  &.largeScrollDialog {
+    .v-card-text {
+      padding-top: 0 !important;
+      p {
+        color: $neutral10;
+        line-height: rem(32);
+      }
+      .note {
+        color: $neutral30;
+        font-size: rem(14);
+        line-height: rem(28);
+      }
+    }
+  }
+  .v-card-actions {
+    .closeBtn {
+      margin-right: auto;
+    }
+  }
+  .v-card-title {
+    padding: rem(16) rem(24);
+    display: flex;
+    font-weight: 700;
+    font-size: rem(28);
+    span {
+      display: flex;
+      align-items: center;
+      margin-right: 0.5rem;
+    }
+  }
+  .v-card-actions {
+    padding: rem(16) rem(24);
+  }
+  .v-card-text {
+    padding: rem(16) rem(24) !important;
+  }
+}

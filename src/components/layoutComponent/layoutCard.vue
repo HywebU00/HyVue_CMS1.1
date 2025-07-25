@@ -14,21 +14,41 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "layoutCard", // 可以根據你的元件命名
+  props: {
+    title: {
+      type: String,
+      default: "",
+    },
+    subtitle: {
+      type: String,
+      default: "",
+    },
+    flexWrap: {
+      type: String,
+      default: "nowrap",
+    },
+  },
+};
+</script>
 <script setup>
-defineProps({
-  title: {
-    type: String,
-    default: "",
-  },
-  subtitle: {
-    type: String,
-    default: "",
-  },
-  flexWrap: {
-    type: String,
-    default: "nowrap",
-  },
-});
+// defineProps({
+//   title: {
+//     type: String,
+//     default: "",
+//   },
+//   subtitle: {
+//     type: String,
+//     default: "",
+//   },
+//   flexWrap: {
+//     type: String,
+//     default: "nowrap",
+//   },
+// });
+//
 </script>
 
 <style scoped></style>

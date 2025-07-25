@@ -20,11 +20,18 @@
                   <template #label> Sate : Default</template>
                   <template #content>
                     <v-alert
-                      closable
-                      icon="$vuetify"
                       title="Alert title"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend
+                        ><span class="material-icons"> info_outline </span>
+                      </template>
+                      <template #close>
+                        <v-btn variant="text">
+                          <span class="material-icons"> close </span>
+                        </v-btn>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
 
@@ -36,12 +43,21 @@
                   <template #label>Sate : Normal</template>
                   <template #content>
                     <v-alert
-                      closable
-                      icon="$vuetify"
                       title="Alert title"
                       color="info-lighten-1"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend
+                        ><span class="material-icons text-primary">
+                          info_outline
+                        </span></template
+                      >
+                      <template #close>
+                        <v-btn color="primary" variant="text">
+                          <span class="material-icons"> close </span>
+                        </v-btn>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
 
@@ -53,12 +69,21 @@
                   <template #label>Sate : Success</template>
                   <template #content>
                     <v-alert
-                      closable
-                      icon="$vuetify"
                       title="Alert title"
                       color="success-lighten-1"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend
+                        ><span class="material-icons text-success">
+                          check_circle_outline
+                        </span></template
+                      >
+                      <template #close>
+                        <v-btn color="success" variant="text">
+                          <span class="material-icons"> close </span>
+                        </v-btn>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
 
@@ -70,12 +95,21 @@
                   <template #label>Sate : Warning</template>
                   <template #content>
                     <v-alert
-                      closable
-                      icon="$vuetify"
                       title="Alert title"
                       color="warning-lighten-1"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend>
+                        <span class="material-icons text-warning">
+                          warning_amber
+                        </span>
+                      </template>
+                      <template #close>
+                        <v-btn color="warning" variant="text">
+                          <span class="material-icons"> close </span>
+                        </v-btn>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
 
@@ -92,7 +126,18 @@
                       title="Alert title"
                       color="error-lighten-1"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend>
+                        <span class="material-icons text-error">
+                          highlight_off
+                        </span>
+                      </template>
+                      <template #close>
+                        <v-btn color="error" variant="text">
+                          <span class="material-icons"> close </span>
+                        </v-btn>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
               </layoutCard>
@@ -105,12 +150,15 @@
                   <template #label>預設 Border：top</template>
                   <template #content>
                     <v-alert
-                      closable
-                      icon="$vuetify"
                       border="top"
+                      closable
                       title="Alert title"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend
+                        ><span class="material-icons"> info_outline </span>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
 
@@ -123,11 +171,14 @@
                   <template #content>
                     <v-alert
                       closable
-                      icon="$vuetify"
                       border="bottom"
                       title="Alert title"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend
+                        ><span class="material-icons"> info_outline </span>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
 
@@ -140,11 +191,14 @@
                   <template #content>
                     <v-alert
                       closable
-                      icon="$vuetify"
                       border="start"
                       title="Alert title"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend
+                        ><span class="material-icons"> info_outline </span>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
 
@@ -157,11 +211,14 @@
                   <template #content>
                     <v-alert
                       closable
-                      icon="$vuetify"
                       border="end"
                       title="Alert title"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend
+                        ><span class="material-icons"> info_outline </span>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
                 <layoutCardItem
@@ -173,11 +230,14 @@
                   <template #content>
                     <v-alert
                       closable
-                      icon="$vuetify"
                       variant="outlined"
                       title="Alert title"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend
+                        ><span class="material-icons"> info_outline </span>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
                 <layoutCardItem
@@ -189,11 +249,14 @@
                   <template #content>
                     <v-alert
                       closable
-                      icon="$vuetify"
                       title="Alert title"
                       color="neutral-darken-7"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend
+                        ><span class="material-icons"> info_outline </span>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
               </layoutCard>
@@ -201,49 +264,97 @@
                 <layoutCardItem label-align="justify-start" style="width: 100%">
                   <template #content>
                     <v-alert
-                      icon="$vuetify"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend
+                        ><span class="material-icons"> info_outline </span>
+                      </template>
+                      <template #close>
+                        <v-btn variant="text">
+                          <span class="material-icons"> close </span>
+                        </v-btn>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
 
                 <layoutCardItem label-align="justify-start" style="width: 100%">
                   <template #content>
                     <v-alert
-                      icon="$vuetify"
                       color="info-lighten-1"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend
+                        ><span class="material-icons text-primary">
+                          info_outline
+                        </span></template
+                      >
+                      <template #close>
+                        <v-btn color="primary" variant="text">
+                          <span class="material-icons"> close </span>
+                        </v-btn>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
 
                 <layoutCardItem label-align="justify-start" style="width: 100%">
                   <template #content>
                     <v-alert
-                      icon="$vuetify"
                       color="success-lighten-1"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend
+                        ><span class="material-icons text-success">
+                          check_circle_outline
+                        </span></template
+                      >
+                      <template #close>
+                        <v-btn color="success" variant="text">
+                          <span class="material-icons"> close </span>
+                        </v-btn>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
 
                 <layoutCardItem label-align="justify-start" style="width: 100%">
                   <template #content>
                     <v-alert
-                      icon="$vuetify"
                       color="warning-lighten-1"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend>
+                        <span class="material-icons text-warning">
+                          warning_amber
+                        </span>
+                      </template>
+                      <template #close>
+                        <v-btn color="warning" variant="text">
+                          <span class="material-icons"> close </span>
+                        </v-btn>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
 
                 <layoutCardItem label-align="justify-start" style="width: 100%">
                   <template #content>
                     <v-alert
-                      icon="$vuetify"
                       color="error-lighten-1"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
-                    ></v-alert>
+                    >
+                      <template #prepend>
+                        <span class="material-icons text-error">
+                          highlight_off
+                        </span>
+                      </template>
+                      <template #close>
+                        <v-btn color="error" variant="text">
+                          <span class="material-icons"> close </span>
+                        </v-btn>
+                      </template>
+                    </v-alert>
                   </template>
                 </layoutCardItem>
               </layoutCard>
@@ -271,7 +382,7 @@
                       headline="Whoops, 404"
                       title="Page not found"
                       text="The page you were looking for does not exist"
-                      image="https://vuetifyjs.b-cdn.net/docs/images/logos/v.png"
+                      image="src/assets/images/empty.svg"
                     ></v-empty-state>
                   </template>
                 </layoutCardItem>
@@ -285,9 +396,11 @@
                   <template #content>
                     <v-empty-state
                       icon="mdi-magnify"
-                      title="We couldn't find a match."
-                      text="Try adjusting your search terms or filters. Sometimes less specific terms or broader queries can help you find what you're looking for."
-                    ></v-empty-state>
+                      headline="Whoops, 404"
+                      title="Page not found"
+                      text="The page you were looking for does not exist"
+                    >
+                    </v-empty-state>
                   </template>
                 </layoutCardItem>
               </layoutCard>
@@ -316,34 +429,18 @@
                   <template #label>Show Button : True</template>
                   <template #content>
                     <v-empty-state
-                      image="https://cdn.vuetifyjs.com/docs/images/components/v-empty-state/teamwork.png"
+                      icon="mdi-magnify"
+                      headline="Whoops, 404"
+                      title="Page not found"
+                      text="The page you were looking for does not exist"
                     >
-                      <template v-slot:title>
-                        <div class="text-subtitle-2 mt-8">
-                          Manage your inventory transfers
-                        </div>
-                      </template>
-
-                      <template v-slot:text>
-                        <div class="text-caption">
-                          Track and receive your incoming inventory from
-                          suppliers
-                        </div>
-                      </template>
-
                       <template v-slot:actions>
-                        <v-btn
-                          class="text-none"
-                          color="white"
-                          elevation="1"
-                          text="Learn more"
-                        ></v-btn>
-
-                        <v-btn
-                          class="text-none"
-                          elevation="1"
-                          text="Add transfer"
-                        ></v-btn>
+                        <v-btn class="mx-1" variant="outlined" color="primary"
+                          >回上一頁</v-btn
+                        >
+                        <v-btn class="mx-1" variant="flat" color="primary">
+                          回首頁
+                        </v-btn>
                       </template>
                     </v-empty-state>
                   </template>
@@ -365,32 +462,63 @@
                 <layoutCardItem :height="'20px'" :width="'150px'">
                   <template #label>State:None</template>
                   <template #content>
-                    <v-progress-circular model-value="0" :size="75" :width="8">
-                      <template v-slot:default>0%</template>
+                    <v-progress-circular
+                      class="rounded"
+                      model-value="0"
+                      :size="90"
+                      :width="6"
+                    >
+                      <template v-slot:default>
+                        <div class="text"><span>0</span>%</div>
+                      </template>
                     </v-progress-circular>
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'20px'" :width="'150px'">
                   <template #label>State:Default</template>
                   <template #content>
-                    <v-progress-circular model-value="20" :size="75" :width="8">
-                      <template v-slot:default> 75 % </template>
+                    <v-progress-circular
+                      model-value="75"
+                      class="rounded"
+                      color="secondary-lighten-1"
+                      :size="90"
+                      :width="6"
+                    >
+                      <template v-slot:default>
+                        <div class="text"><span>75</span>%</div>
+                      </template>
                     </v-progress-circular>
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'20px'" :width="'150px'">
                   <template #label>State:Error</template>
                   <template #content>
-                    <v-progress-circular model-value="20" :size="75" :width="8">
-                      <template v-slot:default> X </template>
+                    <v-progress-circular
+                      class="rounded"
+                      color="error"
+                      model-value="75"
+                      :size="90"
+                      :width="6"
+                    >
+                      <template v-slot:default>
+                        <span class="material-icons"> close </span></template
+                      >
                     </v-progress-circular>
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'20px'" :width="'150px'">
                   <template #label>State:Success</template>
                   <template #content>
-                    <v-progress-circular model-value="20" :size="75" :width="8">
-                      <template v-slot:default> V </template>
+                    <v-progress-circular
+                      color="success"
+                      class="rounded"
+                      model-value="75"
+                      :size="90"
+                      :width="6"
+                    >
+                      <template v-slot:default>
+                        <span class="material-icons"> check </span>
+                      </template>
                     </v-progress-circular>
                   </template>
                 </layoutCardItem>
@@ -400,12 +528,12 @@
                   <template #label>Type:Rounded</template>
                   <template #content>
                     <v-progress-circular
-                      :model-value="20"
-                      rounded
+                      :model-value="75"
+                      class="rounded"
                       :rotate="360"
                       :size="100"
                       :width="15"
-                      color="teal"
+                      color="secondary-lighten-1"
                     >
                     </v-progress-circular>
                   </template>
@@ -414,11 +542,11 @@
                   <template #label>Type:Square</template>
                   <template #content>
                     <v-progress-circular
-                      :model-value="20"
+                      :model-value="75"
                       :rotate="360"
                       :size="100"
                       :width="15"
-                      color="teal"
+                      color="secondary-lighten-1"
                     >
                     </v-progress-circular>
                   </template>
@@ -429,11 +557,12 @@
                   <template #label>Size:Small</template>
                   <template #content>
                     <v-progress-circular
-                      :model-value="20"
+                      class="rounded"
+                      :model-value="75"
                       :rotate="360"
                       :size="100"
-                      :width="10"
-                      color="teal"
+                      :width="5"
+                      color="secondary-lighten-1"
                     >
                     </v-progress-circular>
                   </template>
@@ -442,11 +571,12 @@
                   <template #label>Size:Large</template>
                   <template #content>
                     <v-progress-circular
-                      :model-value="20"
+                      class="rounded"
+                      :model-value="75"
                       :rotate="360"
                       :size="100"
                       :width="15"
-                      color="teal"
+                      color="secondary-lighten-1"
                     >
                     </v-progress-circular>
                   </template>
@@ -461,7 +591,7 @@
           <div class="">
             <v-container class="container">
               <h4 class="text-h4 mb-2 text-primary font-weight-bold">
-                線性進度條元件元件（Progress linear）
+                線性進度條元件（Progress linear）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
               <layoutCard title="狀態" flexWrap="wrap">
@@ -476,9 +606,10 @@
                       <div class="d-flex align-center">
                         <v-progress-linear
                           model-value="20"
+                          rounded
                           :height="9"
                         ></v-progress-linear>
-                        <div class="text">0%</div>
+                        <div class="text"><span>0</span>%</div>
                       </div>
                     </div>
                   </template>
@@ -495,8 +626,9 @@
                         <v-progress-linear
                           model-value="20"
                           :height="9"
+                          rounded
                         ></v-progress-linear>
-                        <div class="text">0%</div>
+                        <div class="text"><span>0</span>%</div>
                       </div>
                     </div>
                   </template>
@@ -512,9 +644,10 @@
                       <div class="d-flex align-center">
                         <v-progress-linear
                           model-value="20"
+                          rounded
                           :height="9"
                         ></v-progress-linear>
-                        <div class="">
+                        <div class="icon">
                           <div class="">img</div>
                         </div>
                       </div>
@@ -532,9 +665,10 @@
                       <div class="d-flex align-center">
                         <v-progress-linear
                           model-value="20"
+                          rounded
                           :height="9"
                         ></v-progress-linear>
-                        <div class="">
+                        <div class="icon">
                           <div class="">img</div>
                         </div>
                       </div>
@@ -893,6 +1027,7 @@ import layoutCardItem from "@/components/layoutComponent/layoutCard_item.vue";
 export default {
   data: () => ({
     snackbar: false,
+    closeAlert: true,
   }),
   components: {
     layoutCard,

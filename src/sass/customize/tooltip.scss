@@ -1,0 +1,55 @@
+@use '@/sass/common/mixins/text.scss' as *;
+.v-tooltip {
+  &.v-overlay {
+    .v-overlay__content {
+      border-radius: rem(5);
+      &[style*='transform-origin: center bottom'] {
+        &::after {
+          position: absolute;
+          transform: rotate(90deg);
+          content: '';
+          width: 10px;
+          height: 10px;
+          bottom: -8px;
+          left: calc(50% - 5px);
+          background: url('@/assets/images/tooltip-arrow.png') no-repeat center center;
+        }
+      }
+      &[style*='transform-origin: center top'] {
+        &::after {
+          position: absolute;
+          transform: rotate(-90deg);
+          content: '';
+          width: 10px;
+          height: 10px;
+          top: -8px;
+          left: calc(50% - 5px);
+          background: url('@/assets/images/tooltip-arrow.png') no-repeat center center;
+        }
+      }
+      &[style*='transform-origin: left center'] {
+        &::after {
+          position: absolute;
+          transform: rotate(180deg);
+          content: '';
+          width: 10px;
+          height: 10px;
+          left: -8px;
+          top: calc(50% - 5px);
+          background: url('@/assets/images/tooltip-arrow.png') no-repeat center center;
+        }
+      }
+      &[style*='transform-origin: right center'] {
+        &::after {
+          position: absolute;
+          content: '';
+          width: 10px;
+          height: 10px;
+          right: -8px;
+          top: calc(50% - 5px);
+          background: url('@/assets/images/tooltip-arrow.png') no-repeat center center;
+        }
+      }
+    }
+  }
+}

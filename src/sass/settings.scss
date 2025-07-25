@@ -14,12 +14,21 @@
 @use '@/sass/customize/form.scss';
 @use '@/sass/customize/table.scss';
 @use '@/sass/customize/card.scss';
+@use '@/sass/customize/chip.scss';
+@use '@/sass/customize/dialogs.scss';
+@use '@/sass/customize/tooltip.scss';
 @use '@/sass/customize/pagination.scss';
 @use '@/sass/customize/navigation.scss';
+@use '@/sass/customize/slider.scss';
+@use '@/sass/customize/alert.scss';
+@use '@/sass/customize/progressCircular.scss';
+@use '@/sass/customize/progressLinear.scss';
 
 @use '@/sass/customize/treeBlock.scss';
 @use '@/sass/customize/accordion.scss';
+@use '@/sass/customize/expansionPanels.scss';
 @use '@/sass/customize/datePicker.scss';
+@use '@/sass/customize/emptyState.scss';
 
 //material-icons-round
 @use '@/sass/vendor/material-icons-round.scss';

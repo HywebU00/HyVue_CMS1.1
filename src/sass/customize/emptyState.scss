@@ -1,0 +1,45 @@
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/common/mixins/scrollbar.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.v-empty-state {
+  .v-empty-state__media {
+    max-width: rem(400);
+    &:has(.v-img) {
+      padding: rem(40);
+      background: $primary30;
+      border-radius: rem(80);
+    }
+    i {
+      background: $primary30;
+      color: #fff;
+      border-radius: 50%;
+      padding: 1rem;
+      width: rem(130) !important;
+      height: rem(130) !important;
+      font-size: rem(86);
+    }
+  }
+  .v-empty-state__headline {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $neutral20;
+    margin-top: 2.5rem;
+  }
+  .v-empty-state__title {
+    font-weight: 700;
+    color: $neutral20;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+  }
+  .v-empty-state__text {
+    color: $neutral30;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+  .v-img {
+    width: rem(320);
+    height: rem(320) !important;
+  }
+}

@@ -18,24 +18,30 @@
   </div>
 </template>
 
-<script setup>
-defineProps({
-  label: String, // 顯示文字（可被 slot label 覆蓋）
-  height: {
-    type: String,
-    default: "0px",
+<script>
+export default {
+  name: "layoutCardItem", // 可替換成你的元件名稱
+  props: {
+    label: {
+      type: String,
+      default: "", // 若希望有預設值也可加上
+    },
+    height: {
+      type: String,
+      default: "0px",
+    },
+    width: {
+      type: String,
+      default: "auto",
+    },
+    labelAlign: {
+      type: String,
+      default: "justify-center",
+    },
+    contentAlign: {
+      type: String,
+      default: "justify-center",
+    },
   },
-  width: {
-    type: String,
-    default: "auto",
-  },
-  labelAlign: {
-    type: String,
-    default: "justify-center",
-  },
-  contentAlign: {
-    type: String,
-    default: "justify-center",
-  },
-});
+};
 </script>

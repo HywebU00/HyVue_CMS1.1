@@ -1,0 +1,25 @@
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.v-progress-circular {
+  &.rounded {
+    .v-progress-circular__overlay {
+      stroke-linecap: round;
+    }
+  }
+  .v-progress-circular__content {
+    .text {
+      color: $neutral30;
+      span {
+        color: $neutral20;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-right: 0.1rem;
+      }
+    }
+    [class*='icon'] {
+      font-size: 2rem;
+    }
+  }
+}

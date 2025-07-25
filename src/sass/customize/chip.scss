@@ -1,0 +1,24 @@
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+.v-chip {
+  &.v-chip--variant-outlined {
+    border: 1px solid $neutral40;
+  }
+  &.v-theme--default {
+    // height: rem(44) !important;
+    // padding: 0 1rem;
+    // min-width: rem(75);
+  }
+  // &.v-chip--label {
+  //   border-radius: 0.25rem;
+  // }
+  .v-chip__content {
+    justify-content: center;
+    padding: 0 0.5rem;
+    width: 100%;
+    i {
+      color: $neutral20;
+    }
+  }
+}

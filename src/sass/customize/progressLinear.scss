@@ -1,0 +1,22 @@
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.v-progress-linear {
+  &.v-progress-linear--rounded {
+    .v-progress-linear__determinate {
+      border-radius: rem(100);
+    }
+  }
+  + .text {
+    margin: 0 1rem;
+    display: flex;
+    color: $neutral30;
+    span {
+      margin-right: 0.25rem;
+    }
+  }
+  + .icon {
+    margin: 0 1rem;
+  }
+}

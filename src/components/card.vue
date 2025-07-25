@@ -1,35 +1,71 @@
 <template>
-  <v-card class="albumCard">
+  <v-card class="card" :class="type" :variant="variant">
     <div class="cardContainer">
-      <v-img src="~@/assets/demo/01.jpg" cover></v-img>
+      <v-checkbox
+        color="primary-lighten-2"
+        label="cardCheckbox"
+        class="cardCheckbox"
+        hide-details="auto"
+      >
+      </v-checkbox>
+      <v-img src="~@/assets/demo/hyBg_Image.jpg" cover></v-img>
       <div class="info">
         <v-card-item>
-          <v-card-title>資料標題</v-card-title>
-          <v-card-subtitle>負責人/科別</v-card-subtitle>
-          <p>資料內容記事資料內容記事資料內容記事...</p>
+          <div class="d-flex title">
+            <v-avatar
+              image="@/assets/demo/account.jpg"
+              rounded="full"
+            ></v-avatar>
+            <div class="titleText">
+              <v-card-title>資料標題</v-card-title>
+              <v-card-subtitle>負責人/科別</v-card-subtitle>
+            </div>
+          </div>
+          <p class="line-clamp-2">
+            資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事
+            資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事資料內容記事
+          </p>
         </v-card-item>
         <v-card-text>
           <v-row class="iconList">
             <v-col>
-              <v-icon icon="mdi:mdi-clock" />
+              <div class="icon">
+                <span class="material-icons-outlined"> access_time </span>
+              </div>
               <span>112/03/27</span></v-col
             >
             <v-col class="d-flex justify-end">
-              <v-icon icon="mdi:mdi-eye" />
+              <div class="icon">
+                <span class="material-icons-outlined"> visibility </span>
+              </div>
               <span>112</span></v-col
             >
           </v-row>
+          <v-row class="btn">
+            <v-col>
+              <v-btn color="primary" block> more </v-btn>
+            </v-col>
+          </v-row>
         </v-card-text>
-        <v-card-actions>
-          <v-btn variant="tonal" color="primary" block> more </v-btn>
-        </v-card-actions>
       </div>
     </div>
   </v-card>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "card",
+  props: {
+    variant: {
+      type: String,
+      default: "elevated",
+    },
+    type: {
+      type: String,
+      default: "default",
+    },
+  },
+};
 </script>
 
 <style></style>

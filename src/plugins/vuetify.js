@@ -105,4 +105,12 @@ export default createVuetify({
       mdi,
     },
   },
+  defaults: {
+    VAlert: {
+      rounded: "sm", // 修改全域圓角
+    },
+    VChip: {
+      rounded: "sm", // 修改全域圓角
+    },
+  },
 });

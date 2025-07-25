@@ -22,9 +22,15 @@
                     <template #label>Show First Icon : True</template>
                     <template #content>
                       <v-slider
+                        color="primary"
                         v-model="media"
-                        prepend-icon="mdi-volume-high"
-                      ></v-slider>
+                        hide-details="auto"
+                        track-color="neutral-darken-3"
+                      >
+                        <template v-slot:prepend>
+                          <span class="material-icons"> volume_up </span>
+                        </template></v-slider
+                      >
                     </template>
                   </layoutCardItem>
                   <layoutCardItem
@@ -35,10 +41,18 @@
                     <template #label>Show First + End Icon : True</template>
                     <template #content>
                       <v-slider
-                        v-model="media"
-                        prepend-icon="mdi-volume-high"
-                        append-icon="mdi-magnify-plus-outline"
-                      ></v-slider>
+                        v-model="media2"
+                        color="primary"
+                        hide-details="auto"
+                        track-color="neutral-darken-3"
+                      >
+                        <template v-slot:prepend>
+                          <span class="material-icons"> volume_up </span>
+                        </template>
+                        <template v-slot:append>
+                          <span class="material-icons-outlined"> search </span>
+                        </template>
+                      </v-slider>
                     </template>
                   </layoutCardItem>
                   <layoutCardItem
@@ -49,9 +63,15 @@
                     <template #label>Show End Icon : True</template>
                     <template #content>
                       <v-slider
-                        v-model="media"
-                        append-icon="mdi-magnify-plus-outline"
-                      ></v-slider>
+                        v-model="media3"
+                        color="primary"
+                        track-color="neutral-darken-3"
+                        hide-details="auto"
+                      >
+                        <template v-slot:append>
+                          <span class="material-icons-outlined"> search </span>
+                        </template>
+                      </v-slider>
                     </template>
                   </layoutCardItem>
                 </layoutCard>
@@ -61,7 +81,7 @@
                   <layoutCardItem
                     label-align="justify-start"
                     style="width: 100%"
-                    :height="'42px'"
+                    :height="'96px'"
                   >
                     <template #label
                       >Show Thumb: True<br />
@@ -70,15 +90,17 @@
                     <template #content>
                       <v-slider
                         v-model="slider3"
-                        :thumb-size="36"
                         thumb-label="always"
+                        color="primary"
+                        track-color="neutral-darken-3"
+                        hide-details="auto"
                       ></v-slider>
                     </template>
                   </layoutCardItem>
                   <layoutCardItem
                     label-align="justify-start"
                     style="width: 100%"
-                    :height="'42px'"
+                    :height="'96px'"
                   >
                     <template #label
                       >Show Thumb: True <br />
@@ -89,13 +111,11 @@
                         color="primary"
                         v-model="slider4"
                         thumb-label="always"
+                        track-color="neutral-darken-3"
+                        hide-details="auto"
                       >
-                        <template v-slot:thumb-label="{ modelValue }">
-                          {{
-                            satisfactionEmojis[
-                              Math.min(Math.floor(modelValue / 10), 9)
-                            ]
-                          }}
+                        <template v-slot:thumb-label>
+                          <span class="material-icons"> star_outline </span>
                         </template>
                       </v-slider>
                     </template>
@@ -111,11 +131,13 @@
                     <template #label> Show First input : True </template>
                     <template #content>
                       <v-slider
-                        v-model="slider"
+                        v-model="slider5"
                         :max="max"
                         :min="min"
                         class="align-center"
-                        hide-details
+                        color="primary"
+                        track-color="neutral-darken-3"
+                        hide-details="auto"
                       >
                         <template v-slot:prepend>
                           <v-text-field
@@ -125,6 +147,7 @@
                             type="number"
                             hide-details
                             single-line
+                            variant="outlined"
                           ></v-text-field>
                         </template>
                       </v-slider>
@@ -141,15 +164,18 @@
                     </template>
                     <template #content>
                       <v-slider
-                        v-model="slider"
+                        v-model="slider6"
                         :max="max"
                         :min="min"
                         class="align-center"
                         hide-details
+                        color="primary"
+                        track-color="neutral-darken-3"
                       >
                         <template v-slot:append>
                           <v-text-field
-                            v-model="slider"
+                            v-model="slider6"
+                            variant="outlined"
                             density="compact"
                             style="width: 70px"
                             type="number"
@@ -163,6 +189,7 @@
                             density="compact"
                             style="width: 70px"
                             type="number"
+                            variant="outlined"
                             hide-details
                             single-line
                           ></v-text-field>
@@ -179,15 +206,18 @@
                     <template #label>Show End input : True </template>
                     <template #content>
                       <v-slider
-                        v-model="slider"
+                        v-model="slider7"
                         :max="max"
                         :min="min"
                         class="align-center"
                         hide-details
+                        color="primary"
+                        track-color="neutral-darken-3"
                       >
                         <template v-slot:append>
                           <v-text-field
-                            v-model="slider"
+                            v-model="slider3"
+                            variant="outlined"
                             density="compact"
                             style="width: 70px"
                             type="number"
@@ -211,6 +241,9 @@
                         show-ticks="always"
                         step="10"
                         tick-size="4"
+                        hide-details
+                        color="primary"
+                        track-color="neutral-darken-3"
                       ></v-slider>
                     </template>
                   </layoutCardItem>
@@ -285,6 +318,7 @@
                       <v-select
                         label="Select"
                         variant="outlined"
+                        single-line
                         :items="[
                           'California',
                           'Colorado',
@@ -307,6 +341,7 @@
                     <template #content>
                       <v-select
                         label="Select"
+                        single-line
                         variant="solo"
                         :items="[
                           'California',
@@ -330,6 +365,7 @@
                     <template #content>
                       <v-select
                         label="Select"
+                        single-line
                         variant="solo"
                         :items="[
                           'California',
@@ -354,6 +390,7 @@
                       <v-select
                         label="Select"
                         variant="solo-inverted"
+                        single-line
                         :items="[
                           'California',
                           'Colorado',
@@ -380,6 +417,8 @@
                     <template #content>
                       <v-select
                         label="Select"
+                        variant="outlined"
+                        single-line
                         :items="[
                           'California',
                           'Colorado',
@@ -403,8 +442,10 @@
                     <template #content>
                       <v-select
                         v-model="selectedFruits"
+                        variant="outlined"
                         :items="fruits"
                         label="Favorite Fruits"
+                        single-line
                         multiple
                       >
                         <template v-slot:prepend-item>
@@ -467,7 +508,12 @@
                 >
                   <template #label>State : Default</template>
                   <template #content>
-                    <v-range-slider v-model="value" strict></v-range-slider>
+                    <v-range-slider
+                      v-model="value"
+                      strict
+                      track-color="neutral-darken-3"
+                      color="primary"
+                    ></v-range-slider>
                   </template>
                 </layoutCardItem>
               </layoutCard>
@@ -478,7 +524,7 @@
                 <layoutCardItem
                   label-align="justify-start"
                   style="width: 100%"
-                  :height="'76px'"
+                  :height="'96px'"
                 >
                   <template #label
                     >Show Thumb: True<br />
@@ -489,6 +535,9 @@
                       v-model="value2"
                       step="10"
                       thumb-label="always"
+                      color="primary"
+                      hide-details="auto"
+                      track-color="neutral-darken-3"
                     ></v-range-slider>
                   </template>
                 </layoutCardItem>
@@ -496,7 +545,7 @@
                 <layoutCardItem
                   label-align="justify-start"
                   style="width: 100%"
-                  :height="'76px'"
+                  :height="'96px'"
                 >
                   <template #label
                     >Show Thumb: True<br />
@@ -507,6 +556,9 @@
                       v-model="range"
                       :step="0"
                       thumb-label="always"
+                      color="primary"
+                      hide-details="auto"
+                      track-color="neutral-darken-3"
                     >
                       <template v-slot:thumb-label="{ modelValue }">
                         <v-icon
@@ -534,11 +586,13 @@
                   <template #label>Show First input : True</template>
                   <template #content>
                     <v-range-slider
-                      v-model="range"
+                      v-model="range2"
                       :max="10"
                       :min="-10"
                       :step="1"
                       class="align-center"
+                      track-color="neutral-darken-3"
+                      color="primary"
                       hide-details
                     >
                       <template v-slot:prepend>
@@ -564,11 +618,13 @@
                   <template #label>Show First + End input : True</template>
                   <template #content>
                     <v-range-slider
-                      v-model="range"
+                      v-model="range3"
                       :max="10"
                       :min="-10"
                       :step="1"
                       class="align-center"
+                      track-color="neutral-darken-3"
+                      color="primary"
                       hide-details
                     >
                       <template v-slot:append>
@@ -595,11 +651,13 @@
                   <template #label>Show End input : True</template>
                   <template #content>
                     <v-range-slider
-                      v-model="range"
+                      v-model="range4"
                       :max="10"
                       :min="-10"
                       :step="1"
+                      color="primary"
                       class="align-center"
+                      track-color="neutral-darken-3"
                       hide-details
                     >
                       <template v-slot:prepend>
@@ -634,7 +692,7 @@
                 <layoutCardItem
                   label-align="justify-start"
                   style="width: 100%"
-                  :height="'60px'"
+                  :height="'96px'"
                 >
                   <template #label>Show Tick : True</template>
                   <template #content>
@@ -647,6 +705,9 @@
                       show-ticks="always"
                       thumb-label="always"
                       tick-size="4"
+                      color="primary"
+                      hide-details="auto"
+                      track-color="neutral-darken-3"
                     >
                       <template v-slot:thumb-label="{ modelValue }">
                         <v-icon
@@ -673,7 +734,9 @@ import layoutCardItem from "@/components/layoutComponent/layoutCard_item.vue";
 export default {
   data() {
     return {
-      media: 0,
+      media: 50,
+      media2: 50,
+      media3: 50,
       alarm: 0,
       zoom: 0,
       value: 0,
@@ -682,6 +745,9 @@ export default {
       slider2: 50,
       slider3: 50,
       slider4: 50,
+      slider5: 50,
+      slider6: 50,
+      slider7: 50,
       satisfactionEmojis: [
         "😭",
         "😢",
@@ -695,6 +761,9 @@ export default {
         "😍",
       ],
       range: [-5, 5],
+      range2: [-5, 5],
+      range3: [-5, 5],
+      range4: [-5, 5],
       seasons: {
         0: "Winter",
         1: "Spring",
