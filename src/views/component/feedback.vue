@@ -383,10 +383,10 @@
                       title="Page not found"
                       text="The page you were looking for does not exist"
                       image="src/assets/images/empty.svg"
-                    ></v-empty-state>
+                    >
+                    </v-empty-state>
                   </template>
                 </layoutCardItem>
-
                 <layoutCardItem
                   label-align="justify-start"
                   style="width: 100%"
@@ -1229,4 +1229,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped lang="scss">
+.v-empty-state__media {
+  .v-img__img {
+    display: block;
+  }
+}
+</style>
