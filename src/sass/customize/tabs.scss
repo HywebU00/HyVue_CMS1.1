@@ -1,0 +1,44 @@
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.tabs {
+  .v-tab {
+    background: $secondary60;
+    color: $primary30;
+    &.v-tab.v-btn {
+      min-width: rem(260);
+      border-radius: 6px 6px 0 0;
+      margin-right: 0.15rem;
+      .v-btn__content {
+        font-size: 1rem;
+        font-weight: 700;
+        .title {
+          color: $neutral100;
+        }
+      }
+      .v-btn__append {
+        color: $neutral100;
+      }
+    }
+    .v-tab__slider {
+      background: $primary30;
+      height: 6px;
+    }
+  }
+}
+.textTabs {
+  .v-tab {
+    &.v-tab.v-btn {
+      min-width: rem(260);
+      .v-btn__content {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+  }
+  .v-tab__slider {
+    background: $primary30;
+    height: 4px;
+  }
+}

@@ -1,0 +1,22 @@
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+.v-breadcrumbs {
+  .v-breadcrumbs-item {
+    color: $neutral30;
+    text-decoration: underline;
+    &.v-breadcrumbs-item--disabled {
+      text-decoration: none;
+    }
+  }
+  .v-icon {
+    color: $neutral30;
+  }
+  .v-breadcrumbs-divider {
+    transform: rotateZ(20deg);
+    color: $neutral30;
+    &:has(.mdi-chevron-right) {
+      transform: rotateZ(0deg);
+    }
+  }
+}

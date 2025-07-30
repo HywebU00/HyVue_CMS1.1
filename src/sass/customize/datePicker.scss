@@ -1,4 +1,7 @@
 @use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
 .datePicker,
 .dateRangerPicker,
 .multiDatePicker {
@@ -9,5 +12,33 @@
   }
   .dp__action_buttons {
     text-wrap: nowrap;
+  }
+}
+
+.v-date-picker {
+  &.textDatePicker {
+    .v-date-picker-header__content {
+      color: $neutral20 !important;
+    }
+  }
+  color: $neutral20;
+  .v-picker__header {
+    .v-date-picker-header {
+      .v-date-picker-header__content {
+        font-weight: 700;
+        color: $neutral20;
+      }
+    }
+  }
+  .v-picker__body {
+    color: $neutral20;
+  }
+  .v-date-picker-header[class*='bg-'] {
+    .v-date-picker-header__content {
+      color: unset;
+    }
+  }
+  .v-date-picker-month__day {
+    color: $neutral20;
   }
 }

@@ -1,0 +1,16 @@
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.v-snackbar__wrapper {
+  &.v-overlay__content {
+    padding: 0 0.5rem;
+  }
+
+  &.v-snackbar--variant-outlined {
+    background: $neutral100;
+  }
+  &.v-snackbar--variant-tonal {
+    background: $neutral100;
+  }
+}

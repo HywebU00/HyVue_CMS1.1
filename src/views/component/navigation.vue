@@ -89,56 +89,59 @@
               <layoutCard title="Tabs 分頁元件" flexWrap="wrap">
                 <layoutCardItem
                   style="width: 100%"
-                  :height="'20px'"
+                  :height="'40px'"
                   label-align="justify-start"
                 >
                   <template #label>Type: Default</template>
                   <template #content>
-                    <v-card class="w-100">
-                      <v-tabs v-model="tab" bg-color="primary">
-                        <v-tab value="one" prepend-icon="mdi-account"
-                          >Item One</v-tab
-                        >
-                        <v-tab value="two" prepend-icon="mdi-account"
-                          >Item Two</v-tab
-                        >
-                        <v-tab value="three" prepend-icon="mdi-account"
-                          >Item Three</v-tab
+                    <div class="mb-8 w-100">
+                      <v-tabs v-model="tab" class="tabs">
+                        <v-tab value="one">
+                          <div class="title">頁籤項目ㄧ</div>
+                          <template #append>
+                            <span class="material-icons-outlined"> edit </span>
+                          </template>
+                        </v-tab>
+                        <v-tab value="two">
+                          <div class="title">頁籤項目ㄧ</div>
+
+                          <template #append>
+                            <span class="material-icons-outlined"> edit </span>
+                          </template>
+                        </v-tab>
+                        <v-tab value="three">
+                          <div class="title">頁籤項目ㄧ</div>
+                          <template #append>
+                            <span class="material-icons-outlined"> edit </span>
+                          </template></v-tab
                         >
                       </v-tabs>
-                      <v-card-text>
-                        <v-tabs-window v-model="tab">
-                          <v-tabs-window-item value="one"
-                            >One</v-tabs-window-item
-                          >
-                          <v-tabs-window-item value="two"
-                            >Two</v-tabs-window-item
-                          >
-                          <v-tabs-window-item value="three"
-                            >Three</v-tabs-window-item
-                          >
-                        </v-tabs-window>
-                      </v-card-text>
-                    </v-card>
+                    </div>
                   </template>
                 </layoutCardItem>
 
                 <layoutCardItem
                   style="width: 100%"
-                  :height="'20px'"
+                  :height="'40px'"
                   label-align="justify-start"
                 >
                   <template #label>Type: Text</template>
                   <template #content>
-                    <v-tabs class="w-100" v-model="tab2" color="primary">
-                      <v-tab :value="1" prepend-icon="mdi-account"
-                        >Landscape</v-tab
-                      >
-                      <v-tab :value="2" prepend-icon="mdi-account">City</v-tab>
-                      <v-tab :value="3" prepend-icon="mdi-account"
-                        >Abstract</v-tab
-                      >
-                    </v-tabs>
+                    <div class="bg-neutral-darken-2 pa-3 w-100 rounded-sm">
+                      <div class="mb-8 bg-white">
+                        <v-tabs v-model="tab2" class="textTabs" color="primary">
+                          <v-tab :value="1">
+                            <div class="title">頁籤項目ㄧ</div>
+                          </v-tab>
+                          <v-tab :value="2">
+                            <div class="title">頁籤項目ㄧ</div>
+                          </v-tab>
+                          <v-tab :value="3">
+                            <div class="title">頁籤項目ㄧ</div>
+                          </v-tab>
+                        </v-tabs>
+                      </div>
+                    </div>
                   </template>
                 </layoutCardItem>
               </layoutCard>

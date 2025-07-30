@@ -15,22 +15,28 @@
                 <layoutCardItem :height="'40px'" style="width: 150px">
                   <template #label>Type:Square</template>
                   <template #content>
-                    <v-badge dot color="error">
+                    <v-badge dot color="error" offset-y="26">
                       <v-avatar
-                        image="@/assets/images/account.jpg"
-                        rounded="0"
-                      ></v-avatar>
+                        size="32"
+                        rounded="sm"
+                        class="bg-neutral-darken-5"
+                      >
+                        <span class="material-icons-outlined"> person </span>
+                      </v-avatar>
                     </v-badge>
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'40px'" style="width: 150px">
                   <template #label>Type:Circle</template>
                   <template #content>
-                    <v-badge dot color="error">
+                    <v-badge dot color="error" offset-y="26">
                       <v-avatar
-                        image="@/assets/images/account.jpg"
+                        size="32"
+                        class="bg-neutral-darken-5"
                         rounded="full"
-                      ></v-avatar>
+                      >
+                        <span class="material-icons-outlined"> person </span>
+                      </v-avatar>
                     </v-badge>
                   </template>
                 </layoutCardItem>
@@ -39,36 +45,56 @@
                 <layoutCardItem :height="'40px'" style="width: 150px">
                   <template #label>Size:Small</template>
                   <template #content>
-                    <v-badge dot color="error">
+                    <v-badge dot color="error" offset-y="26">
                       <v-avatar
                         size="32"
-                        color="surface-variant"
+                        class="bg-neutral-darken-5"
                         rounded="full"
-                      ></v-avatar>
+                      >
+                        <span class="material-icons-outlined"> person </span>
+                      </v-avatar>
                     </v-badge>
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'40px'" style="width: 150px">
                   <template #label>Size:Medium</template>
                   <template #content>
-                    <v-badge dot color="error">
+                    <v-badge
+                      dot
+                      color="error"
+                      offset-y="38"
+                      rounded="full"
+                      width="10"
+                      height="10"
+                    >
                       <v-avatar
+                        class="bg-neutral-darken-5"
                         size="48"
-                        color="surface-variant"
                         rounded="full"
-                      ></v-avatar>
+                      >
+                        <span class="material-icons-outlined"> person </span>
+                      </v-avatar>
                     </v-badge>
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'40px'" style="width: 150px">
                   <template #label>Size:Large</template>
                   <template #content>
-                    <v-badge dot color="error">
+                    <v-badge
+                      dot
+                      color="error"
+                      offset-y="48"
+                      width="12"
+                      height="12"
+                      rounded="full"
+                    >
                       <v-avatar
                         size="60"
-                        color="surface-variant"
+                        class="bg-neutral-darken-5"
                         rounded="full"
-                      ></v-avatar>
+                      >
+                        <span class="material-icons-outlined"> person </span>
+                      </v-avatar>
                     </v-badge>
                   </template>
                 </layoutCardItem>
@@ -77,19 +103,18 @@
                 <layoutCardItem :height="'40px'" style="width: 150px">
                   <template #label>Avatar:Icon</template>
                   <template #content>
-                    <v-badge dot color="error">
-                      <v-avatar
-                        color="surface-variant"
-                        rounded="full"
-                      ></v-avatar>
+                    <v-badge dot color="error" offset-y="32">
+                      <v-avatar rounded="full" class="bg-neutral-darken-5">
+                        <span class="material-icons-outlined"> person </span>
+                      </v-avatar>
                     </v-badge>
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'40px'" style="width: 150px">
                   <template #label>Avatar:Text</template>
                   <template #content>
-                    <v-badge dot color="error">
-                      <v-avatar color="surface-variant" rounded="full">
+                    <v-badge dot color="error" offset-y="32">
+                      <v-avatar color="primary" rounded="full">
                         <span class="text-h5">CJ</span>
                       </v-avatar>
                     </v-badge>
@@ -98,9 +123,9 @@
                 <layoutCardItem :height="'40px'" style="width: 150px">
                   <template #label>Avatar:Pic</template>
                   <template #content>
-                    <v-badge dot color="error">
+                    <v-badge dot color="error" offset-y="32">
                       <v-avatar
-                        image="@/assets/images/account.jpg"
+                        image="@/assets/demo/account.jpg"
                         rounded="full"
                       ></v-avatar>
                     </v-badge>
@@ -111,11 +136,10 @@
                 <layoutCardItem :height="'40px'" style="width: 150px">
                   <template #label>Show State:True</template>
                   <template #content>
-                    <v-badge dot color="error">
-                      <v-avatar
-                        color="surface-variant"
-                        rounded="full"
-                      ></v-avatar>
+                    <v-badge dot color="error" offset-y="32">
+                      <v-avatar class="bg-neutral-darken-5" rounded="full">
+                        <span class="material-icons-outlined"> person </span>
+                      </v-avatar>
                     </v-badge>
                   </template>
                 </layoutCardItem>
@@ -123,7 +147,9 @@
                   <template #label>Show Number:True</template>
                   <template #content>
                     <v-badge :content="34" color="error">
-                      <v-avatar color="surface-variant"></v-avatar>
+                      <v-avatar class="bg-neutral-darken-5">
+                        <span class="material-icons-outlined"> person </span>
+                      </v-avatar>
                     </v-badge>
                   </template>
                 </layoutCardItem>
@@ -195,126 +221,135 @@
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
               <layoutCard title="圖片尺寸" flexWrap="wrap">
-                <layoutCardItem :height="'20px'" style="width: 220px">
+                <layoutCardItem :height="'20px'" style="width: 300px">
                   <template #label>1 : 1</template>
                   <template #content>
                     <div class="">
                       <v-img
-                        :width="130"
+                        rounded="md"
+                        :width="300"
                         :aspect-ratio="1 / 1"
                         cover
-                        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                        src="@/assets/demo/hyBg_Image.jpg"
                       ></v-img>
                     </div>
                   </template>
                 </layoutCardItem>
-                <layoutCardItem :height="'20px'" style="width: 220px">
+                <layoutCardItem :height="'20px'" style="width: 300px">
                   <template #label>3 : 2</template>
                   <template #content>
                     <div class="">
                       <v-img
-                        :width="200"
+                        rounded="md"
+                        :width="300"
                         :aspect-ratio="3 / 2"
                         cover
-                        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                        src="@/assets/demo/hyBg_Image.jpg"
                       ></v-img>
                     </div>
                   </template>
                 </layoutCardItem>
-                <layoutCardItem :height="'20px'" style="width: 220px">
+                <layoutCardItem :height="'20px'" style="width: 300px">
                   <template #label>4 : 3</template>
                   <template #content>
                     <div class="">
                       <v-img
-                        :width="200"
+                        rounded="md"
+                        :width="300"
                         :aspect-ratio="4 / 3"
                         cover
-                        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                        src="@/assets/demo/hyBg_Image.jpg"
                       ></v-img>
                     </div>
                   </template>
                 </layoutCardItem>
-                <layoutCardItem :height="'20px'" style="width: 220px">
+                <layoutCardItem :height="'20px'" style="width: 300px">
                   <template #label>4 : 3</template>
                   <template #content>
                     <div class="">
                       <v-img
-                        :width="200"
+                        rounded="md"
+                        :width="300"
                         :aspect-ratio="3 / 1"
                         cover
-                        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                        src="@/assets/demo/hyBg_Image.jpg"
                       ></v-img>
                     </div>
                   </template>
                 </layoutCardItem>
               </layoutCard>
               <layoutCard title="圖像滿版" flexWrap="wrap">
-                <layoutCardItem :height="'20px'" style="width: 220px">
+                <layoutCardItem :height="'20px'" style="width: 300px">
                   <template #label>Cover: Default</template>
                   <template #content>
                     <div class="">
                       <v-img
-                        :width="200"
+                        rounded="md"
+                        :width="300"
                         :aspect-ratio="3 / 2"
                         class="bg-neutral-darken-3"
-                        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                        src="@/assets/demo/hyBg_Image.jpg"
                       ></v-img>
                     </div>
                   </template>
                 </layoutCardItem>
-                <layoutCardItem :height="'20px'" style="width: 220px">
+                <layoutCardItem :height="'20px'" style="width: 300px">
                   <template #label>Cover: Cover</template>
                   <template #content>
                     <div class="">
                       <v-img
-                        :width="200"
+                        rounded="md"
+                        :width="300"
                         :aspect-ratio="3 / 2"
                         cover
-                        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                        src="@/assets/demo/hyBg_Image.jpg"
                       ></v-img>
                     </div>
                   </template>
                 </layoutCardItem>
               </layoutCard>
               <layoutCard title="覆蓋遮層" flexWrap="wrap">
-                <layoutCardItem :height="'20px'" style="width: 220px">
+                <layoutCardItem :height="'20px'" style="width: 300px">
                   <template #label>Overlay: Default</template>
                   <template #content>
                     <div class="">
                       <v-img
-                        :width="200"
+                        :width="300"
+                        rounded="md"
                         cover
                         :aspect-ratio="3 / 2"
                         class="bg-neutral-darken-3"
-                        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                        src="@/assets/demo/hyBg_Image.jpg"
                       ></v-img>
                     </div>
                   </template>
                 </layoutCardItem>
-                <layoutCardItem :height="'20px'" style="width: 220px">
+                <layoutCardItem :height="'20px'" style="width: 300px">
                   <template #label>Overlay: Gradient</template>
                   <template #content>
                     <div class="">
                       <v-img
-                        :width="200"
+                        rounded="md"
+                        gradient="rgba(11,11,11,.3)"
+                        :width="300"
                         :aspect-ratio="3 / 2"
                         cover
-                        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                        src="@/assets/demo/hyBg_Image.jpg"
                       ></v-img>
                     </div>
                   </template>
                 </layoutCardItem>
               </layoutCard>
               <layoutCard title="無法顯示圖片" flexWrap="wrap">
-                <layoutCardItem :height="'20px'" style="width: 220px">
+                <layoutCardItem :height="'20px'" style="width: 300px">
                   <template #content>
                     <div class="">
                       <v-img
-                        :width="200"
+                        :width="300"
+                        rounded="md"
                         cover
                         :aspect-ratio="3 / 2"
-                        class="bg-neutral-darken-3"
-                        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+                        class="emptyImg"
                       ></v-img>
                     </div>
                   </template>

@@ -1,0 +1,14 @@
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.v-stepper {
+  .v-stepper-item__avatar {
+    &.v-avatar {
+      // border: 3px solid #fff;
+      width: rem(32) !important;
+      height: rem(32) !important;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+  }
+}

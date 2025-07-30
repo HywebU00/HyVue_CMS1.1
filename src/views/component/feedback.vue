@@ -605,9 +605,10 @@
                     <div class="w-100">
                       <div class="d-flex align-center">
                         <v-progress-linear
-                          model-value="20"
+                          model-value="0"
+                          color="primary"
                           rounded
-                          :height="9"
+                          :height="14"
                         ></v-progress-linear>
                         <div class="text"><span>0</span>%</div>
                       </div>
@@ -624,8 +625,9 @@
                     <div class="w-100">
                       <div class="d-flex align-center">
                         <v-progress-linear
-                          model-value="20"
-                          :height="9"
+                          model-value="50"
+                          color="secondary-lighten-1"
+                          :height="14"
                           rounded
                         ></v-progress-linear>
                         <div class="text"><span>0</span>%</div>
@@ -643,12 +645,13 @@
                     <div class="w-100">
                       <div class="d-flex align-center">
                         <v-progress-linear
-                          model-value="20"
+                          model-value="50"
+                          color="error"
                           rounded
-                          :height="9"
+                          :height="14"
                         ></v-progress-linear>
-                        <div class="icon">
-                          <div class="">img</div>
+                        <div class="icon text-error">
+                          <span class="material-icons"> cancel </span>
                         </div>
                       </div>
                     </div>
@@ -664,12 +667,13 @@
                     <div class="w-100">
                       <div class="d-flex align-center">
                         <v-progress-linear
-                          model-value="20"
+                          model-value="100"
                           rounded
-                          :height="9"
+                          :height="14"
+                          color="success"
                         ></v-progress-linear>
-                        <div class="icon">
-                          <div class="">img</div>
+                        <div class="icon text-success">
+                          <span class="material-icons"> check_circle </span>
                         </div>
                       </div>
                     </div>
@@ -687,7 +691,8 @@
                     <v-progress-linear
                       model-value="20"
                       rounded
-                      :height="9"
+                      color="secondary-lighten-1"
+                      :height="14"
                     ></v-progress-linear>
                   </template>
                 </layoutCardItem>
@@ -700,7 +705,8 @@
                   <template #content>
                     <v-progress-linear
                       model-value="20"
-                      :height="9"
+                      color="secondary-lighten-1"
+                      :height="14"
                     ></v-progress-linear>
                   </template>
                 </layoutCardItem>
@@ -716,7 +722,8 @@
                   <template #content>
                     <v-progress-linear
                       model-value="20"
-                      :height="6"
+                      color="secondary-lighten-1"
+                      :height="8"
                       rounded
                     ></v-progress-linear>
                   </template>
@@ -730,7 +737,8 @@
                   <template #content>
                     <v-progress-linear
                       model-value="20"
-                      :height="9"
+                      color="secondary-lighten-1"
+                      :height="14"
                       rounded
                     ></v-progress-linear>
                   </template>
@@ -756,9 +764,14 @@
                   <template #content>
                     <v-snackbar :timeout="2000">
                       <template v-slot:activator="{ props }">
-                        <v-btn class="ma-2" v-bind="props">open</v-btn>
+                        <v-btn
+                          color="neutral-darken-6"
+                          class="ma-2"
+                          v-bind="props"
+                          >open</v-btn
+                        >
                       </template>
-                      Lorem ipsum dolor sit amet consectetur.
+                      Hello, I am a snackbar
                     </v-snackbar>
                   </template>
                 </layoutCardItem>
@@ -767,21 +780,17 @@
                 <layoutCardItem :height="'20px'">
                   <template #label>Type:flat</template>
                   <template #content>
-                    <v-snackbar
-                      :timeout="2000"
-                      color="blue-grey"
-                      rounded="pill"
-                    >
+                    <v-snackbar :timeout="2000" rounded="pill" color="primary">
                       <template v-slot:activator="{ props }">
                         <v-btn
                           class="ma-2"
-                          color="blue-grey"
+                          color="primary"
                           rounded="pill"
                           v-bind="props"
                           >open</v-btn
                         >
                       </template>
-                      Snackbar with <strong>rounded="pill"</strong>.
+                      Hello, I am a snackbar
                     </v-snackbar>
                   </template>
                 </layoutCardItem>
@@ -790,7 +799,12 @@
                 <layoutCardItem :height="'20px'">
                   <template #label> Type:tonal</template>
                   <template #content>
-                    <v-snackbar :timeout="2000" color="primary" variant="tonal">
+                    <v-snackbar
+                      :timeout="2000"
+                      color="primary"
+                      variant="tonal"
+                      rounded="pill"
+                    >
                       <template v-slot:activator="{ props }">
                         <v-btn
                           class="ma-2"
@@ -800,7 +814,7 @@
                           >open</v-btn
                         >
                       </template>
-                      Snackbar with <strong>tonal</strong> variant.
+                      Hello, I am a snackbar
                     </v-snackbar>
                   </template>
                 </layoutCardItem>
@@ -810,22 +824,32 @@
                   <template #label>Type: outlined</template>
                   <template #content>
                     <v-snackbar
-                      :timeout="2000"
-                      color="success"
+                      v-model="snackbar_outlined"
+                      :timeout="-1"
+                      rounded="pill"
+                      color="secondary-lighten-1"
                       variant="outlined"
                     >
-                      <template v-slot:activator="{ props }">
+                      Hello, I am a snackbar
+                      <template v-slot:actions>
                         <v-btn
-                          class="ma-2"
-                          color="success"
-                          variant="outlined"
-                          v-bind="props"
-                          >open2</v-btn
+                          variant="text"
+                          icon
+                          color="secondary-lighten-1"
+                          @click="snackbar_outlined = false"
                         >
+                          <span class="material-icons">close</span>
+                        </v-btn>
                       </template>
-
-                      Snackbar with <strong>outlined</strong> variant.
                     </v-snackbar>
+                    <v-btn
+                      color="secondary-lighten-1"
+                      variant="outlined"
+                      class="ma-2"
+                      @click="snackbar_outlined = true"
+                    >
+                      Open
+                    </v-btn>
                   </template>
                 </layoutCardItem>
 
@@ -833,34 +857,49 @@
                 <layoutCardItem :height="'20px'">
                   <template #label> Type:text</template>
                   <template #content>
-                    <v-snackbar :timeout="2000">
-                      <template v-slot:activator="{ props }">
-                        <v-btn class="ma-2" v-bind="props">open</v-btn>
+                    <v-snackbar
+                      v-model="snackbar_text"
+                      color="white"
+                      rounded="pill"
+                      :timeout="-1"
+                    >
+                      Hello, I am a snackbar
+                      <template v-slot:actions>
+                        <v-btn
+                          icon
+                          variant="text"
+                          @click="snackbar_text = false"
+                        >
+                          <span class="material-icons">close</span>
+                        </v-btn>
                       </template>
-                      Lorem ipsum dolor sit amet consectetur.
                     </v-snackbar>
+                    <v-btn class="ma-2" @click="snackbar_text = true">
+                      Open
+                    </v-btn>
                   </template>
                 </layoutCardItem>
               </layoutCard>
-
               <layoutCard title="多行文字" flexWrap="wrap">
                 <layoutCardItem>
                   <template #content>
-                    <v-btn color="red-darken-2" @click="snackbar = true">
-                      Open Snackbar
+                    <v-btn
+                      rounded="sm"
+                      color="neutral-darken-6"
+                      @click="snackbar = true"
+                    >
+                      Open
                     </v-btn>
-
                     <v-snackbar v-model="snackbar" multi-line>
-                      I am a multi-line snackbar. I can have more than one line.
-                      This is another line that is quite long.
-
+                      Hello, I am a snackbarHello, I am a snackbarHello, I am a
+                      snackbarHello, I am a snackbarHello, I am a snackbar
                       <template v-slot:actions>
                         <v-btn
-                          color="red"
+                          color=""
                           variant="text"
                           @click="snackbar = false"
                         >
-                          Close
+                          <span class="material-icons"> close </span>
                         </v-btn>
                       </template>
                     </v-snackbar>
@@ -884,19 +923,111 @@
                 <layoutCardItem :height="'20px'" label-align="justify-start">
                   <template #label>垂直時間軸</template>
                   <template #content>
-                    <v-timeline align="start">
-                      <v-timeline-item v-for="i in 3" :key="i">
-                        <template v-slot:opposite> Opposite content </template>
-                        <div>
-                          <div class="text-h6">Content title</div>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                          </p>
-                        </div>
-                      </v-timeline-item>
-                    </v-timeline>
+                    <div>
+                      <v-timeline dot-color="secondary-lighten-1">
+                        <v-timeline-item size="small">
+                          <template v-slot:opposite>
+                            Opposite content
+                          </template>
+                          <div>
+                            <div class="title">
+                              <span class="material-icons-outlined">
+                                comment
+                              </span>
+                              <span>Content title</span>
+                            </div>
+                            <p>
+                              Let Google help apps determine location. This
+                              means sending anonymous location data to Google,
+                              even when no apps are running.
+                            </p>
+                          </div>
+                        </v-timeline-item>
+                        <v-timeline-item>
+                          <template v-slot:opposite>
+                            Opposite content
+                          </template>
+                          <div>
+                            <div class="title">
+                              <span class="material-icons-outlined">
+                                comment
+                              </span>
+                              <span> Content title</span>
+                            </div>
+                            <p>
+                              Let Google help apps determine location. This
+                              means sending anonymous location data to Google,
+                              even when no apps are running.
+                            </p>
+                          </div>
+                        </v-timeline-item>
+                        <v-timeline-item side="start">
+                          <template v-slot:opposite>
+                            Opposite content
+                          </template>
+                          <template v-slot:icon>
+                            <span>LC</span>
+                          </template>
+                          <div>
+                            <div class="title">
+                              <span class="material-icons-outlined">
+                                comment
+                              </span>
+                              <span> Content title</span>
+                            </div>
+                            <p>
+                              Let Google help apps determine location. This
+                              means sending anonymous location data to Google,
+                              even when no apps are running.
+                            </p>
+                          </div>
+                        </v-timeline-item>
+                        <v-timeline-item side="end">
+                          <template v-slot:opposite>
+                            Opposite content
+                          </template>
+                          <template v-slot:icon>
+                            <v-avatar
+                              image="@/assets/demo/account.jpg"
+                            ></v-avatar>
+                          </template>
+                          <div>
+                            <div class="title">
+                              <span class="material-icons-outlined">
+                                comment
+                              </span>
+                              <span> Content title</span>
+                            </div>
+                            <p>
+                              Let Google help apps determine location. This
+                              means sending anonymous location data to Google,
+                              even when no apps are running.
+                            </p>
+                          </div>
+                        </v-timeline-item>
+                        <v-timeline-item side="start">
+                          <template v-slot:opposite>
+                            Opposite content
+                          </template>
+                          <template v-slot:icon>
+                            <span class="material-icons-outlined"> grade </span>
+                          </template>
+                          <div>
+                            <div class="title">
+                              <span class="material-icons-outlined">
+                                comment
+                              </span>
+                              <span> Content title</span>
+                            </div>
+                            <p>
+                              Let Google help apps determine location. This
+                              means sending anonymous location data to Google,
+                              even when no apps are running.
+                            </p>
+                          </div>
+                        </v-timeline-item>
+                      </v-timeline>
+                    </div>
                   </template>
                 </layoutCardItem>
               </layoutCard>
@@ -904,16 +1035,40 @@
               <layoutCard title="水平排列" flexWrap="wrap">
                 <layoutCardItem>
                   <template #content>
-                    <v-timeline direction="horizontal">
-                      <v-timeline-item v-for="i in 3" :key="i">
+                    <v-timeline
+                      direction="horizontal"
+                      dot-color="secondary-lighten-1"
+                    >
+                      <v-timeline-item size="small" v-for="i in 2" :key="i">
                         <template v-slot:opposite> Opposite content </template>
                         <div>
-                          <div class="text-h6">Content title</div>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua.
-                          </p>
+                          <v-card class="elevation-0" width="400">
+                            <v-card-title>
+                              <div class="title">
+                                <span class="material-icons-outlined">
+                                  comment
+                                </span>
+                                <span>Content title</span>
+                              </div>
+                            </v-card-title>
+                            <v-card-text class="">
+                              <p>
+                                Let Google help apps determine location. This
+                                means sending anonymous location data to Google,
+                                even when no apps are running.
+                              </p>
+                            </v-card-text>
+                            <v-card-actions class="d-flex justify-end">
+                              <v-btn
+                                class="mr-1"
+                                rounded="sm"
+                                color="primary"
+                                variant="flat"
+                              >
+                                確認
+                              </v-btn>
+                            </v-card-actions>
+                          </v-card>
                         </div>
                       </v-timeline-item>
                     </v-timeline>
@@ -931,80 +1086,116 @@
                       <template #label>卡片樣式展示</template>
                       <template #content>
                         <div class="d-flex">
-                          <div class="mx-1">
-                            <v-card class="elevation-0">
-                              <v-card-title :class="['text-h6']">
-                                Lorem Ipsum Dolor
+                          <div class="mx-2">
+                            <v-card class="elevation-0 timelineCard">
+                              <v-card-title>
+                                <div class="title">
+                                  <span class="material-icons-outlined">
+                                    comment
+                                  </span>
+                                  <span>Content title</span>
+                                </div>
                               </v-card-title>
                               <v-card-text class="">
                                 <p>
-                                  Lorem ipsum dolor sit amet, no nam oblique
-                                  veritus. Commune scaevola imperdiet nec ut,
-                                  sed euismod convenire principes at. Est et
-                                  nobis iisque percipit, an vim zril disputando
-                                  voluptatibus, vix an salutandi sententiae.
+                                  Let Google help apps determine location. This
+                                  means sending anonymous location data to
+                                  Google, even when no apps are running.
                                 </p>
-                                <v-btn color="primary" variant="outlined">
-                                  Button
-                                </v-btn>
                               </v-card-text>
+                              <v-card-actions class="d-flex justify-end">
+                                <v-btn
+                                  class="mr-1"
+                                  color="primary"
+                                  variant="flat"
+                                >
+                                  確認
+                                </v-btn>
+                              </v-card-actions>
                             </v-card>
                           </div>
-                          <div class="mx-1">
-                            <v-card>
-                              <v-card-title :class="['text-h6']">
-                                Lorem Ipsum Dolor
+                          <div class="mx-2">
+                            <v-card class="timelineCard">
+                              <v-card-title>
+                                <div class="title">
+                                  <span class="material-icons-outlined">
+                                    comment
+                                  </span>
+                                  <span>Content title</span>
+                                </div>
                               </v-card-title>
                               <v-card-text class="">
                                 <p>
-                                  Lorem ipsum dolor sit amet, no nam oblique
-                                  veritus. Commune scaevola imperdiet nec ut,
-                                  sed euismod convenire principes at. Est et
-                                  nobis iisque percipit, an vim zril disputando
-                                  voluptatibus, vix an salutandi sententiae.
+                                  Let Google help apps determine location. This
+                                  means sending anonymous location data to
+                                  Google, even when no apps are running.
                                 </p>
-                                <v-btn color="primary" variant="outlined">
-                                  Button
-                                </v-btn>
                               </v-card-text>
+                              <v-card-actions class="d-flex justify-end">
+                                <v-btn
+                                  class="mr-1"
+                                  color="primary"
+                                  variant="flat"
+                                >
+                                  確認
+                                </v-btn>
+                              </v-card-actions>
                             </v-card>
                           </div>
-                          <div class="mx-1">
-                            <v-card>
-                              <v-card-title :class="['text-h6', `bg-primary`]">
-                                Lorem Ipsum Dolor
-                              </v-card-title>
-                              <v-card-text class="bg-white text--primary">
-                                <p>
-                                  Lorem ipsum dolor sit amet, no nam oblique
-                                  veritus. Commune scaevola imperdiet nec ut,
-                                  sed euismod convenire principes at. Est et
-                                  nobis iisque percipit, an vim zril disputando
-                                  voluptatibus, vix an salutandi sententiae.
-                                </p>
-                                <v-btn color="primary" variant="outlined">
-                                  Button
-                                </v-btn>
-                              </v-card-text>
-                            </v-card>
-                          </div>
-                          <div class="mx-1">
-                            <v-card class="bg-primary">
-                              <v-card-title :class="['text-h6', `bg-primary`]">
-                                Lorem Ipsum Dolor
+                          <div class="mx-2">
+                            <v-card class="timelineCard">
+                              <v-card-title class="bg-secondary-lighten-1">
+                                <div class="title">
+                                  <span class="material-icons-outlined">
+                                    comment
+                                  </span>
+                                  <span>Content title</span>
+                                </div>
                               </v-card-title>
                               <v-card-text class="">
                                 <p>
-                                  Lorem ipsum dolor sit amet, no nam oblique
-                                  veritus. Commune scaevola imperdiet nec ut,
-                                  sed euismod convenire principes at. Est et
-                                  nobis iisque percipit, an vim zril disputando
-                                  voluptatibus, vix an salutandi sententiae.
+                                  Let Google help apps determine location. This
+                                  means sending anonymous location data to
+                                  Google, even when no apps are running.
                                 </p>
-                                <v-btn color="primary" variant="outlined">
-                                  Button
-                                </v-btn>
                               </v-card-text>
+                              <v-card-actions class="d-flex justify-end">
+                                <v-btn
+                                  class="mr-1"
+                                  color="primary"
+                                  variant="flat"
+                                >
+                                  確認
+                                </v-btn>
+                              </v-card-actions>
+                            </v-card>
+                          </div>
+                          <div class="mx-2">
+                            <v-card class="bg-secondary-lighten-1 timelineCard">
+                              <v-card-title>
+                                <div class="title">
+                                  <span class="material-icons-outlined">
+                                    comment
+                                  </span>
+                                  <span>Content title</span>
+                                </div>
+                              </v-card-title>
+                              <v-card-text class="">
+                                <p>
+                                  Let Google help apps determine location. This
+                                  means sending anonymous location data to
+                                  Google, even when no apps are running.
+                                </p>
+                              </v-card-text>
+                              <v-card-actions class="d-flex justify-end">
+                                <v-btn
+                                  class="mr-1"
+                                  color="primary"
+                                  variant="flat"
+                                >
+                                  確認
+                                </v-btn>
+                              </v-card-actions>
                             </v-card>
                           </div>
                         </div>
@@ -1027,6 +1218,8 @@ import layoutCardItem from "@/components/layoutComponent/layoutCard_item.vue";
 export default {
   data: () => ({
     snackbar: false,
+    snackbar_text: false,
+    snackbar_outlined: false,
     closeAlert: true,
   }),
   components: {

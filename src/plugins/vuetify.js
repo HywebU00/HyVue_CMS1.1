@@ -112,5 +112,15 @@ export default createVuetify({
     VChip: {
       rounded: "sm", // 修改全域圓角
     },
+    VSnackbar: {
+      rounded: "sm", // 修改全域圓角
+      minHeight: "72px",
+    },
+    VTabs: {
+      height: "72px",
+    },
+    // VStepper: {
+    //   stepperItemAvatarFontSize: "32px",
+    // },
   },
 });

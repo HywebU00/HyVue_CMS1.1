@@ -20,20 +20,69 @@
                 >
                   <template #label>步驟內容展示</template>
                   <template #content>
-                    <v-stepper
-                      class="w-100"
-                      :items="['Step 1', 'Step 2', 'Step 3']"
-                    >
-                      <template v-slot:item.1>
-                        <v-card title="Step One" flat>aaa</v-card>
-                      </template>
+                    <v-stepper v-model="e1" class="w-100" non-linear>
+                      <template v-slot:default="{ prev, next }">
+                        <v-stepper-header>
+                          <template v-for="n in steps" :key="n">
+                            <v-stepper-item
+                              color="primary"
+                              :complete="e1 > n"
+                              :step="n"
+                              :value="n"
+                            >
+                              <template #title>
+                                <div>
+                                  <div class="title">Name of step {{ n }}</div>
+                                </div>
+                              </template>
+                              <template #subtitle>
+                                <div>
+                                  <div class="subtitle">Optional</div>
+                                </div>
+                              </template>
+                            </v-stepper-item>
+                            <v-divider v-if="n !== steps" :key="n"></v-divider>
+                          </template>
+                        </v-stepper-header>
 
-                      <template v-slot:item.2>
-                        <v-card title="Step Two" flat>bbb</v-card>
-                      </template>
+                        <v-stepper-window>
+                          <v-stepper-window-item
+                            v-for="n in steps"
+                            :key="n"
+                            :value="n"
+                          >
+                            <v-card>
+                              <div class="">Step One</div>
+                              <div class="">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Commodi, ratione debitis quis
+                                est labore voluptatibus! Eaque cupiditate
+                                minima, at placeat totam, magni doloremque
+                                veniam neque porro libero rerum unde voluptatem!
+                              </div>
+                            </v-card>
+                          </v-stepper-window-item>
+                        </v-stepper-window>
 
-                      <template v-slot:item.3>
-                        <v-card title="Step Three" flat>ccc</v-card>
+                        <v-stepper-actions>
+                          <template #prev>
+                            <v-btn
+                              @click="prev"
+                              variant="outlined"
+                              color="primary"
+                              >PREVIOUS</v-btn
+                            >
+                          </template>
+                          <template #next>
+                            <v-btn
+                              color="primary"
+                              variant="elevated"
+                              @click="next"
+                            >
+                              NEXT
+                            </v-btn>
+                          </template>
+                        </v-stepper-actions>
                       </template>
                     </v-stepper>
                   </template>
@@ -130,6 +179,30 @@
 import layoutCard from "@/components/layoutComponent/layoutCard.vue";
 import layoutCardItem from "@/components/layoutComponent/layoutCard_item.vue";
 export default {
+  data() {
+    return {
+      e1: 1,
+      steps: 3,
+    };
+  },
+  methods: {
+    next() {
+      if (this.e1 < 3) this.e1++;
+    },
+    prev() {
+      if (this.e1 > 1) this.e1--;
+    },
+  },
+
+  computed: {
+    disabled() {
+      return this.e1 === 1
+        ? "prev"
+        : this.e1 === this.steps
+        ? "next"
+        : undefined;
+    },
+  },
   components: {
     layoutCard,
     layoutCardItem,

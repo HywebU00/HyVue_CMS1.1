@@ -15,19 +15,31 @@
                 <layoutCardItem :height="'20px'">
                   <template #label>State:Text</template>
                   <template #content>
-                    <v-date-picker></v-date-picker>
+                    <v-date-picker
+                      class="textDatePicker"
+                      color="secondary-lighten-1"
+                      header-color="neutral100"
+                      show-adjacent-months
+                    ></v-date-picker>
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'20px'">
                   <template #label>State:Elevated</template>
                   <template #content>
-                    <v-date-picker></v-date-picker>
+                    <v-date-picker
+                      show-adjacent-months
+                      elevation="6"
+                    ></v-date-picker>
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'20px'">
                   <template #label>State:Flat</template>
                   <template #content>
-                    <v-date-picker></v-date-picker>
+                    <v-date-picker
+                      color="secondary-lighten-1"
+                      elevation="6"
+                      show-adjacent-months
+                    ></v-date-picker>
                   </template>
                 </layoutCardItem>
               </layoutCard>

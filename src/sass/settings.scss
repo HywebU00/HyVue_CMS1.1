@@ -23,12 +23,17 @@
 @use '@/sass/customize/alert.scss';
 @use '@/sass/customize/progressCircular.scss';
 @use '@/sass/customize/progressLinear.scss';
-
+@use '@/sass/customize/snackbar.scss';
+@use '@/sass/customize/timeline.scss';
+@use '@/sass/customize/imageIcon.scss';
+@use '@/sass/customize/breadcrumbs.scss';
 @use '@/sass/customize/treeBlock.scss';
 @use '@/sass/customize/accordion.scss';
 @use '@/sass/customize/expansionPanels.scss';
 @use '@/sass/customize/datePicker.scss';
 @use '@/sass/customize/emptyState.scss';
+@use '@/sass/customize/tabs.scss';
+@use '@/sass/customize/stepper.scss';
 
 //material-icons-round
 @use '@/sass/vendor/material-icons-round.scss';

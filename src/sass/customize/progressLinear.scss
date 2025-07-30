@@ -3,6 +3,12 @@
 @use '@/sass/variables.scss' as *;
 
 .v-progress-linear {
+  .v-progress-linear__background {
+    background-color: $neutral20 !important;
+    // &.bg-primary {
+    //   background-color: $neutral20 !important;
+    // }
+  }
   &.v-progress-linear--rounded {
     .v-progress-linear__determinate {
       border-radius: rem(100);

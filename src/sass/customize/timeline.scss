@@ -1,0 +1,62 @@
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.v-timeline {
+  .v-timeline-item {
+    .v-timeline-divider__dot {
+      background: $neutral100;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .v-timeline-divider__inner-dot {
+      .v-icon--size-small {
+        font-size: rem(18);
+      }
+      .v-icon--size-default {
+        font-size: rem(26);
+      }
+    }
+    .title {
+      font-size: rem(28);
+      font-weight: 700;
+      display: flex;
+      align-items: start;
+      line-height: 1.75rem;
+      :first-child {
+        margin-right: 0.5rem;
+        margin-top: 0.25rem;
+      }
+      + p {
+        max-width: rem(420);
+      }
+    }
+    p {
+      display: block;
+      margin-top: 1rem;
+      font-size: 1rem;
+      line-height: 2.25rem;
+    }
+  }
+}
+.timelineCard {
+  .title {
+    font-size: rem(28);
+    font-weight: 700;
+    display: flex;
+    align-items: start;
+    line-height: 1.75rem;
+    :first-child {
+      margin-right: 0.5rem;
+      margin-top: 0.25rem;
+    }
+    + p {
+      max-width: rem(420);
+    }
+  }
+  .v-card-title {
+    padding: 1rem;
+  }
+  .v-card-actions {
+    padding: 1rem;
+  }
+}
