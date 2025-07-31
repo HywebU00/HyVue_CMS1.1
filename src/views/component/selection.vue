@@ -52,8 +52,8 @@
                             :value="n"
                           >
                             <v-card>
-                              <div class="">Step One</div>
-                              <div class="">
+                              <div class="title">Step One</div>
+                              <div class="text">
                                 Lorem ipsum dolor sit amet consectetur
                                 adipisicing elit. Commodi, ratione debitis quis
                                 est labore voluptatibus! Eaque cupiditate
@@ -84,6 +84,75 @@
                           </template>
                         </v-stepper-actions>
                       </template>
+                    </v-stepper>
+                  </template>
+                </layoutCardItem>
+              </layoutCard>
+              <layoutCard title="排列方式" flexWrap="wrap">
+                <!-- 基本 header 步驟 -->
+                <layoutCardItem
+                  style="width: 100%"
+                  :height="'20px'"
+                  label-align="justify-start"
+                >
+                  <template #label>Direction : Horizontal</template>
+                  <template #content>
+                    <v-stepper class="w-100" model-value="2">
+                      <v-stepper-header>
+                        <v-stepper-item
+                          color="primary"
+                          title="Select campaign settings"
+                          value="1"
+                          complete
+                        ></v-stepper-item>
+
+                        <v-divider></v-divider>
+
+                        <v-stepper-item
+                          color="primary"
+                          title="Create an ad group"
+                          value="2"
+                        ></v-stepper-item>
+
+                        <v-divider></v-divider>
+
+                        <v-stepper-item
+                          title="Create an a"
+                          color="primary"
+                          value="3"
+                        ></v-stepper-item>
+                      </v-stepper-header>
+                    </v-stepper>
+                  </template>
+                </layoutCardItem>
+                <layoutCardItem
+                  style="width: 100%"
+                  :height="'20px'"
+                  label-align="justify-start"
+                >
+                  <template #label>Direction : Vertical</template>
+                  <template #content>
+                    <v-stepper class="w-100" model-value="2" alt-labels>
+                      <v-stepper-header>
+                        <v-stepper-item color="primary" value="1" complete>
+                          <template #title>Name of step 1</template>
+                          <template #subtitle>Optional</template>
+                        </v-stepper-item>
+
+                        <v-divider></v-divider>
+
+                        <v-stepper-item color="primary" value="2">
+                          <template #title>Name of step 2</template>
+                          <template #subtitle>Optional</template>
+                        </v-stepper-item>
+
+                        <v-divider></v-divider>
+
+                        <v-stepper-item color="primary" value="3">
+                          <template #title>Name of step 1</template>
+                          <template #subtitle>Optional</template>
+                        </v-stepper-item>
+                      </v-stepper-header>
                     </v-stepper>
                   </template>
                 </layoutCardItem>

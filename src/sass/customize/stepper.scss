@@ -5,10 +5,47 @@
 .v-stepper {
   .v-stepper-item__avatar {
     &.v-avatar {
-      // border: 3px solid #fff;
       width: rem(32) !important;
       height: rem(32) !important;
+      border: 2px solid;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      font-weight: 700;
     }
+  }
+  .v-stepper-header {
+    .v-divider {
+      margin: 0;
+    }
+  }
+  .v-stepper-item__title {
+    .title {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .v-stepper-item__subtitle {
+    opacity: 1;
+    .subtitle {
+      color: $neutral20;
+    }
+  }
+
+  .v-stepper-window {
+    margin-bottom: 1rem;
+    .v-card {
+      padding: 1rem 1rem 0 1rem;
+      .title {
+        font-weight: 700;
+        font-size: rem(28);
+        margin-bottom: 1rem;
+        color: $neutral10;
+      }
+      .text {
+        line-height: 2rem;
+      }
+    }
+  }
+  .v-stepper-actions {
+    margin: 0 1rem 1rem 1rem;
   }
 }

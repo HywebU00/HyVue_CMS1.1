@@ -4,6 +4,14 @@
 @use '@/sass/variables.scss' as *;
 
 .v-empty-state {
+  .v-empty-state__headline {
+    .img {
+      padding: rem(40);
+      background: $primary30;
+      border-radius: rem(80);
+      margin-bottom: 2.5rem;
+    }
+  }
   .v-empty-state__media {
     max-width: rem(400);
     &:has(.v-img) {
