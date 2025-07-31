@@ -31,9 +31,7 @@
                               :value="n"
                             >
                               <template #title>
-                                <div>
-                                  <div class="title">Name of step {{ n }}</div>
-                                </div>
+                                <div class="title">Name of step {{ n }}</div>
                               </template>
                               <template #subtitle>
                                 <div>
@@ -104,23 +102,48 @@
                           title="Select campaign settings"
                           value="1"
                           complete
-                        ></v-stepper-item>
+                        >
+                          <template #title>
+                            <div>
+                              <div class="title">Name of step 1</div>
+                            </div>
+                          </template>
+                          <template #subtitle>
+                            <div>
+                              <div class="subtitle">Optional</div>
+                            </div>
+                          </template>
+                        </v-stepper-item>
 
                         <v-divider></v-divider>
 
-                        <v-stepper-item
-                          color="primary"
-                          title="Create an ad group"
-                          value="2"
-                        ></v-stepper-item>
+                        <v-stepper-item color="primary" value="2"
+                          ><template #title>
+                            <div>
+                              <div class="title">Name of step 2</div>
+                            </div>
+                          </template>
+                          <template #subtitle>
+                            <div>
+                              <div class="subtitle">Optional</div>
+                            </div>
+                          </template></v-stepper-item
+                        >
 
                         <v-divider></v-divider>
 
-                        <v-stepper-item
-                          title="Create an a"
-                          color="primary"
-                          value="3"
-                        ></v-stepper-item>
+                        <v-stepper-item color="primary" value="3"
+                          ><template #title>
+                            <div>
+                              <div class="title">Name of step 3</div>
+                            </div>
+                          </template>
+                          <template #subtitle>
+                            <div>
+                              <div class="subtitle">Optional</div>
+                            </div>
+                          </template></v-stepper-item
+                        >
                       </v-stepper-header>
                     </v-stepper>
                   </template>
@@ -135,22 +158,34 @@
                     <v-stepper class="w-100" model-value="2" alt-labels>
                       <v-stepper-header>
                         <v-stepper-item color="primary" value="1" complete>
-                          <template #title>Name of step 1</template>
-                          <template #subtitle>Optional</template>
+                          <template #title>
+                            <div class="title">Name of step 1</div></template
+                          >
+                          <template #subtitle>
+                            <div class="subtitle">Optional</div>
+                          </template>
                         </v-stepper-item>
 
                         <v-divider></v-divider>
 
                         <v-stepper-item color="primary" value="2">
-                          <template #title>Name of step 2</template>
-                          <template #subtitle>Optional</template>
+                          <template #title>
+                            <div class="title">Name of step 2</div></template
+                          >
+                          <template #subtitle>
+                            <div class="subtitle">Optional</div>
+                          </template>
                         </v-stepper-item>
 
                         <v-divider></v-divider>
 
                         <v-stepper-item color="primary" value="3">
-                          <template #title>Name of step 1</template>
-                          <template #subtitle>Optional</template>
+                          <template #title>
+                            <div class="title">Name of step 3</div></template
+                          >
+                          <template #subtitle>
+                            <div class="subtitle">Optional</div>
+                          </template>
                         </v-stepper-item>
                       </v-stepper-header>
                     </v-stepper>
@@ -168,25 +203,36 @@
                   <template #content>
                     <v-stepper class="w-100" model-value="2">
                       <v-stepper-header>
-                        <v-stepper-item
-                          title="Select campaign settings"
-                          value="1"
-                          complete
-                        ></v-stepper-item>
+                        <v-stepper-item value="1" complete>
+                          <template #title>
+                            <div class="title">Name of step 1</div></template
+                          >
+                          <template #subtitle>
+                            <div class="subtitle">Optional</div>
+                          </template>
+                        </v-stepper-item>
 
                         <v-divider></v-divider>
 
-                        <v-stepper-item
-                          title="Create an ad group"
-                          value="2"
-                        ></v-stepper-item>
+                        <v-stepper-item value="2">
+                          <template #title>
+                            <div class="title">Name of step 2</div></template
+                          >
+                          <template #subtitle>
+                            <div class="subtitle">Optional</div>
+                          </template>
+                        </v-stepper-item>
 
                         <v-divider></v-divider>
 
-                        <v-stepper-item
-                          title="Create an ad"
-                          value="3"
-                        ></v-stepper-item>
+                        <v-stepper-item value="3">
+                          <template #title>
+                            <div class="title">Name of step 3</div></template
+                          >
+                          <template #subtitle>
+                            <div class="subtitle">Optional</div>
+                          </template>
+                        </v-stepper-item>
                       </v-stepper-header>
                     </v-stepper>
                   </template>
@@ -201,36 +247,42 @@
                 >
                   <template #label>進階步驟列（含驗證與副標題）</template>
                   <template #content>
-                    <v-stepper class="w-100" model-value="3">
+                    <v-stepper class="w-100" model-value="">
                       <v-stepper-header>
-                        <v-stepper-item
-                          title="Job Search"
-                          value="1"
-                          complete
-                        ></v-stepper-item>
+                        <v-stepper-item value="1" complete>
+                          <template #title>
+                            <div class="title">Name of step 1</div></template
+                          >
+                          <template #subtitle>
+                            <div class="subtitle">Optional</div>
+                          </template>
+                        </v-stepper-item>
 
                         <v-divider></v-divider>
 
                         <v-stepper-item
+                          error-icon="mdi-close"
                           :rules="[() => false]"
-                          subtitle="Missing Details"
-                          title="Submit Application"
                           value="2"
-                        ></v-stepper-item>
+                        >
+                          <template #title>
+                            <div class="title">Name of step 1</div></template
+                          >
+                          <template #subtitle>
+                            <div class="subtitle">Optional</div>
+                          </template>
+                        </v-stepper-item>
 
                         <v-divider></v-divider>
 
-                        <v-stepper-item
-                          title="Interview Process"
-                          value="3"
-                        ></v-stepper-item>
-
-                        <v-divider></v-divider>
-
-                        <v-stepper-item
-                          title="Hiring Decision"
-                          value="4"
-                        ></v-stepper-item>
+                        <v-stepper-item value="3">
+                          <template #title>
+                            <div class="title">Name of step 1</div></template
+                          >
+                          <template #subtitle>
+                            <div class="subtitle">Optional</div>
+                          </template></v-stepper-item
+                        >
                       </v-stepper-header>
                     </v-stepper>
                   </template>

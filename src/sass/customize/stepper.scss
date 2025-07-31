@@ -3,13 +3,68 @@
 @use '@/sass/variables.scss' as *;
 
 .v-stepper {
+  .v-stepper-item {
+    &:not(.v-stepper-item--selected):not(.v-stepper-item--complete) {
+      .v-avatar {
+        background-color: $neutral40;
+        + .v-stepper-item__content {
+          .v-stepper-item__title {
+            .title {
+              color: $neutral40;
+            }
+          }
+        }
+      }
+    }
+    &.v-stepper-item--error {
+      opacity: 1;
+      .v-avatar {
+        background-color: $error !important;
+        + .v-stepper-item__content {
+          .v-stepper-item__title {
+            .title {
+              color: $error !important;
+            }
+          }
+        }
+      }
+      .v-stepper-item__subtitle {
+        .subtitle {
+          color: $error;
+        }
+      }
+    }
+    &.v-stepper-item--complete {
+      opacity: 1;
+      .v-avatar {
+        background-color: $neutral30 !important;
+        + .v-stepper-item__content {
+          .v-stepper-item__title {
+            .title {
+              color: $neutral30;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.v-stepper--alt-labels {
+    .v-stepper-header {
+      .v-divider {
+        margin: 70px 0;
+      }
+    }
+  }
   .v-stepper-item__avatar {
     &.v-avatar {
       width: rem(32) !important;
       height: rem(32) !important;
-      border: 2px solid;
+      border: 3px solid $neutral100;
       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
       font-weight: 700;
+      .v-icon {
+        font-size: 1rem;
+      }
     }
   }
   .v-stepper-header {
