@@ -1,23 +1,26 @@
-// $color-pack: false;
-
+//全域基本設定
 @use 'variables.scss';
 @use '@/sass/common/mixins/_mediaquery.scss';
 @use '@/sass/common/mixins/_text.scss';
 @use '@/sass/common/mixins/_scrollbar.scss';
-@use '@/sass/customize/shadow.scss';
 
-//customize
+//material-icons-round
+@use '@/sass/vendor/material-icons-round.scss';
+
+//layout基本設定
+@use '@/sass/common/customize_shadow.scss';
+@use '@/sass/common/customize_color.scss';
+@use '@/sass/common/customize_font.scss';
+
+//元件設定
 @use '@/sass/customize/sideBar.scss';
 @use '@/sass/customize/folderMenu.scss';
-@use '@/sass/customize/generalControls.scss';
-
 @use '@/sass/customize/form.scss';
 @use '@/sass/customize/table.scss';
 @use '@/sass/customize/card.scss';
 @use '@/sass/customize/chip.scss';
 @use '@/sass/customize/dialogs.scss';
 @use '@/sass/customize/tooltip.scss';
-@use '@/sass/customize/pagination.scss';
 @use '@/sass/customize/navigation.scss';
 @use '@/sass/customize/slider.scss';
 @use '@/sass/customize/alert.scss';
@@ -35,15 +38,6 @@
 @use '@/sass/customize/tabs.scss';
 @use '@/sass/customize/stepper.scss';
 
-//material-icons-round
-@use '@/sass/vendor/material-icons-round.scss';
-
-//layout
-@use '@/sass/layout/layout.scss';
-@use '@/sass/layout/customize_color.scss';
-@use '@/sass/layout/customize_font.scss';
-@use '@/sass/layout/template.scss';
-
-//vuetifyCSS
-@use '@/sass/components/VListItem.scss';
-@use '@/sass/components/VTable.scss';
+//layout頁面設定
+@use '@/sass/layout/template.scss'; //全域頁面基本設定
+@use '@/sass/layout/adminLayout.scss'; // Layout設定

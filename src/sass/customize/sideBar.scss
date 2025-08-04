@@ -45,43 +45,67 @@
           margin-top: 0.5rem;
         }
       }
+      .v-list-item__prepend {
+        margin-right: 1rem;
+
+        i {
+          color: $neutral20;
+          display: flex;
+          align-items: center;
+        }
+      }
+      &.v-list-item--active {
+        .v-list-item__prepend {
+          i {
+            color: $neutral100;
+          }
+        }
+      }
     }
     .v-list--nav {
       padding-inline-start: 16px;
       padding-inline-end: 16px;
     }
     //使用者登入資訊
-    button.loginInfo {
+    .loginInfo {
       display: flex;
       margin: 1rem;
       overflow: hidden;
       align-items: center;
       justify-content: flex-start;
       text-transform: unset;
-      padding: 0 0.5rem;
-      ul {
+      padding: 0 0.5rem 0.5rem;
+      height: unset;
+      .user {
+        display: flex;
+      }
+      ul.list {
         margin-left: 1.25rem;
         li {
           font-weight: 600;
           font-size: 1em;
           line-height: 1.25em !important;
           letter-spacing: 0rem;
+          &:first-child {
+            margin-bottom: 0.25rem;
+          }
         }
       }
-      .icon {
-        width: rem(32);
-        height: rem(32);
-        border-radius: 50%;
+      .iconBtn {
+        min-width: auto;
+        width: rem(44);
+        height: rem(44);
+        padding: 0;
+        margin-left: auto;
         color: $neutral30;
         transition: 0.5s all;
-        display: flex;
         align-items: center;
         justify-content: center;
-
+        background-color: $secondary60;
+        color: #fff;
         span {
           font-size: 1.25em;
           font-weight: 600;
-          // color: #fff;
         }
       }
     }
@@ -106,7 +130,6 @@
     justify-content: center;
     right: -30px;
     top: calc(50vh - 60px);
-    // background: $defaultBg;
     width: rem(60);
     height: rem(60);
     align-items: center;
@@ -114,7 +137,6 @@
     span {
       transition: 0.5s all;
       margin-left: 0.5rem;
-      // color: $defaultPrimary;
       font-size: 3rem;
       transform: rotate(180deg);
     }
@@ -154,9 +176,6 @@
         .v-list-item__append {
           display: none;
         }
-        // &.v-list-item--nav {
-        //   padding-inline-start: 0px;
-        // }
         .v-icon {
           color: $neutral100;
 
@@ -176,25 +195,28 @@
       }
     }
   }
-  button.loginInfo {
-    color: $neutral100;
-    background: $primary30;
-    box-shadow: rgba(255, 255, 255, 0.8) 0px 3px 15px 0px;
-    margin: 0 15px;
-    margin-bottom: rem(68);
-
-    border: 10px solid #fff;
-    padding: 0;
-    min-width: unset;
-    --v-btn-height: unset;
-    ul {
+  .loginInfo {
+    padding: 0 0 0.5rem 0;
+    .iconBtn {
+      background-color: #fff;
+      color: $secondary60;
+    }
+    .user {
       display: none;
     }
     .icon {
+      display: flex;
       color: $neutral100;
     }
   }
-
+  .v-list-item {
+    .v-list-item__prepend {
+      i {
+        color: #fff;
+        margin-left: 0.25rem;
+      }
+    }
+  }
   .drawerBtn {
     span {
       transform: rotate(0deg);

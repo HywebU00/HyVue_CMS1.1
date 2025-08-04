@@ -5,14 +5,7 @@
     <h2>系統首頁儀表板</h2>
     <v-divider class="mt-3 mb-4"></v-divider>
     <v-row>
-      <v-col cols="12">
-        <v-alert
-          class="bg-secondary-lighten-2"
-          icon="$vuetify"
-          title="Alert title"
-          text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima, at placeat totam, magni doloremque veniam neque porro libero rerum unde voluptatem!"
-        ></v-alert>
-      </v-col>
+      <v-col cols="12"> </v-col>
       <v-col sm="3" cols="12" v-for="item in countCards" :key="item.title">
         <v-card class="pa-2">
           <h4 class="text-h6 text-primary font-weight-bold">

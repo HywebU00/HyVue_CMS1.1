@@ -8,7 +8,7 @@ const routes = [
     children: [
       // {
       //   path: "system",
-      //   component: () => import("@/views/admin/systemComponent.vue"),
+      //   component: () => import("@/views/component/systemComponent.vue"),
       // },
       // {
       //   path: "component",
@@ -16,35 +16,35 @@ const routes = [
       // },
       {
         path: "/",
-        component: () => import("@/views/admin/defaultComponent.vue"),
+        component: () => import("@/views/basicLayout/defaultComponent.vue"),
       },
       // {
       //   path: "from",
-      //   component: () => import("@/views/admin/fromComponent.vue"),
+      //   component: () => import("@/views/basicLayout/fromComponent.vue"),
       // },
       // {
       //   path: "table",
-      //   component: () => import("@/views/admin/tableComponent.vue"),
+      //   component: () => import("@/views/basicLayout/tableComponent.vue"),
       // },
       // {
       //   path: "card",
-      //   component: () => import("@/views/admin/cardComponent.vue"),
+      //   component: () => import("@/views/basicLayout/cardComponent.vue"),
       // },
       // {
       //   path: "chart",
-      //   component: () => import("@/views/admin/chartComponent.vue"),
+      //   component: () => import("@/views/basicLayout/chartComponent.vue"),
       // },
       {
         path: "widget",
-        component: () => import("@/views/admin/widgetComponent.vue"),
+        component: () => import("@/views/basicLayout/widgetComponent.vue"),
       },
       {
         path: "addNews",
-        component: () => import("@/views/admin/addNewsComponent.vue"),
+        component: () => import("@/views/basicLayout/addNewsComponent.vue"),
       },
       {
         path: "mediaPhoto",
-        component: () => import("@/views/admin/mediaPhotoComponent.vue"),
+        component: () => import("@/views/basicLayout/mediaPhotoComponent.vue"),
       },
     ],
   },
@@ -58,35 +58,31 @@ const routes = [
       },
       {
         path: "navigation",
-        component: () => import("@/views/component/navigation.vue"),
+        component: () => import("@/views/component/navigationComponent.vue"),
       },
       {
         path: "controls",
-        component: () => import("@/views/component/controls.vue"),
+        component: () => import("@/views/component/controlsComponent.vue"),
       },
       {
         path: "selection",
-        component: () => import("@/views/component/selection.vue"),
+        component: () => import("@/views/component/selectionComponent.vue"),
       },
       {
         path: "feedback",
-        component: () => import("@/views/component/feedback.vue"),
+        component: () => import("@/views/component/feedbackComponent.vue"),
       },
       {
         path: "imageIcon",
-        component: () => import("@/views/component/imageIcon.vue"),
+        component: () => import("@/views/component/imageIconComponent.vue"),
       },
       {
         path: "pickers",
-        component: () => import("@/views/component/pickers.vue"),
+        component: () => import("@/views/component/pickersComponent.vue"),
       },
       {
         path: "system",
         component: () => import("@/views/component/systemComponent.vue"),
-      },
-      {
-        path: "component",
-        component: () => import("@/views/component/Component.vue"),
       },
       {
         path: "from",
@@ -112,12 +108,11 @@ const routes = [
   },
   {
     path: "/login",
-    component: () => import("@/views/layout/loginPage.vue"),
+    component: () => import("@/views/basicLayout/loginComponent.vue"),
   },
 ];
 
 const router = createRouter({
-  // history: createWebHistory(process.env.BASE_URL),
   history: createWebHashHistory(process.env.BASE_URL),
   routes,
 });

@@ -119,8 +119,8 @@ export default createVuetify({
     VTabs: {
       height: "72px",
     },
-    // VStepper: {
-    //   stepperItemAvatarFontSize: "32px",
+    // VAvatar: {
+    //   size: "50px",
     // },
   },
 });

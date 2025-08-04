@@ -123,7 +123,7 @@
                 <layoutCardItem :height="'40px'" style="width: 150px">
                   <template #label>Avatar:Pic</template>
                   <template #content>
-                    <v-badge dot color="error" offset-y="32">
+                    <v-badge dot color="error" offset-y="64">
                       <v-avatar
                         image="@/assets/demo/account.jpg"
                         rounded="full"

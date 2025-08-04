@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <!-- 側欄選單 start -->
     <v-navigation-drawer
       v-model="drawer"
       :class="['sideBar', { hidden: rail }]"
@@ -28,6 +29,7 @@
         <h1 class="ml-2 text-h4 text-primary">HyVue CMS</h1>
       </div>
       <!-- 平台logo end -->
+      <!-- 選單 start -->
       <v-list
         density="compact"
         nav
@@ -40,27 +42,31 @@
         <v-list-group value="Home">
           <template v-slot:activator="{ props }">
             <v-list-item
-              prepend-icon="mdi-home"
-              v-bind="props"
               append-icon=""
+              v-bind="props"
               title="Home"
               @click="pushLink('/')"
             >
+              <template #prepend>
+                <i>
+                  <span class="material-symbols-rounded"> home </span>
+                </i>
+              </template>
             </v-list-item>
           </template>
         </v-list-group>
         <!-- Home end -->
         <!-- 案件管理 end -->
         <v-divider class="ma-1"></v-divider>
-
         <!-- Components start -->
-        <v-list-group value="Components">
+        <v-list-group value="Element">
           <template v-slot:activator="{ props }">
-            <v-list-item
-              prepend-icon="mdi-collage"
-              v-bind="props"
-              title="Components"
-            >
+            <v-list-item v-bind="props" title="Element">
+              <template #prepend>
+                <i>
+                  <span class="material-symbols-rounded"> dashboard </span>
+                </i>
+              </template>
             </v-list-item>
           </template>
           <v-list-item title="Containment" :to="'/component/containment'">
@@ -88,54 +94,54 @@
         <!-- Basic Layout start -->
         <v-list-group value="BasicLayout">
           <template v-slot:activator="{ props }">
-            <v-list-item
-              prepend-icon="mdi-layers"
-              v-bind="props"
-              title="Basic Layout"
-            >
+            <v-list-item v-bind="props" title="Basic Layout">
+              <template #prepend>
+                <i>
+                  <span class="material-symbols-rounded">
+                    desktop_landscape
+                  </span>
+                </i>
+              </template>
             </v-list-item>
           </template>
           <v-list-item title="Widget" :to="'/widget'"> </v-list-item>
           <v-list-item title="AddNews" :to="'/addNews'"> </v-list-item>
           <v-list-item title="MediaPhoto" :to="'/mediaPhoto'"> </v-list-item>
+          <v-list-item title="login" :to="'/Login'"> </v-list-item>
         </v-list-group>
         <!-- Basic Layout end -->
-        <v-divider class="ma-1"></v-divider>
-        <!-- 登入頁面 start -->
-        <v-list-group value="login">
-          <template v-slot:activator="{ props }">
-            <v-list-item
-              prepend-icon="mdi-login"
-              v-bind="props"
-              append-icon=""
-              title="login"
-              :to="'/login'"
-            >
-            </v-list-item>
-          </template>
-        </v-list-group>
-        <!-- 登入頁面 end -->
       </v-list>
+      <!-- 選單 end -->
       <!-- 使用者 登入視窗start -->
-      <v-btn class="loginInfo" variant="text">
-        <div class="icon">
-          <span class="material-icons-round"> logout </span>
+      <div class="loginInfo">
+        <div class="user">
+          <v-badge class="img" dot color="error" offset-y="32">
+            <v-avatar
+              image="@/assets/demo/account.jpg"
+              rounded="full"
+            ></v-avatar>
+          </v-badge>
+          <ul class="list">
+            <li>Elle Wang</li>
+            <li>企劃處</li>
+          </ul>
         </div>
-        <ul class="">
-          <li>LoginOut</li>
-        </ul>
-      </v-btn>
+        <v-btn class="iconBtn">
+          <span class="material-symbols-rounded"> logout </span>
+        </v-btn>
+      </div>
       <!-- 使用者 登入視窗end -->
-      <!-- style="display: none" -->
+      <!-- 側欄按鈕 start -->
       <v-app-bar-nav-icon
         :icon="rail ? 'mdi-chevron-right' : 'mdi-chevron-left'"
         width="64"
         class="rounded-0 h-100 ml-0 sideBarBtn"
         @click.stop="rail = !rail"
       ></v-app-bar-nav-icon>
-      <!--  navigation-drawer end-->
+      <!-- 側欄按鈕 end -->
     </v-navigation-drawer>
-
+    <!-- 側欄選單 end -->
+    <!-- 上方工具列 start -->
     <v-app-bar class="navigationBar">
       <v-app-bar-nav-icon
         :icon="rail ? 'mdi-chevron-right' : 'mdi-chevron-left'"
@@ -145,6 +151,7 @@
       ></v-app-bar-nav-icon>
       <Navigation />
     </v-app-bar>
+    <!-- 上方工具列 end -->
     <v-main>
       <pageView />
     </v-main>
@@ -162,7 +169,6 @@ export default {
     value: 0,
     windowWidth: "",
     railWidth: "0",
-    // open: ["Home1"],
     theme: "default",
     themeDark: "false",
     opened: ["Home"],
