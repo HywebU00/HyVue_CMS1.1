@@ -1,0 +1,77 @@
+@use '@/sass/common/mixins/scrollbar.scss' as *;
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.formGrid {
+  &.form {
+    > .v-card {
+      padding: rem(56);
+    }
+    .formGrp {
+      .formTitle {
+        display: inline-block;
+        min-width: rem(80) !important;
+        @media (min-width: 960px) {
+          text-align: center;
+        }
+      }
+      .necessary {
+        color: $error;
+      }
+    }
+    [class^='v-col-'] {
+      &:has(.formTitle) {
+        display: flex;
+        align-items: center;
+        @media (min-width: 960px) {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.formGrp {
+  label {
+    font-weight: 500;
+    margin: 0 0.5rem;
+  }
+  &.infoGrp {
+    margin-bottom: 1rem;
+  }
+  &.formGrp_2.v-row {
+    padding: 0 0.5rem;
+    > [class^='v-col-'] {
+      &:has(.fromGrpTitle) {
+        // text-align: start;
+        .fromGrpTitle {
+          text-align: center;
+        }
+      }
+      @media (min-width: 960px) {
+        &:first-child {
+          margin-right: 1rem;
+          max-width: calc(50% - 1rem);
+          > .v-row {
+            &:nth-child(2) {
+              padding-top: 1rem;
+            }
+          }
+        }
+        &:last-child {
+          margin-left: 1rem;
+          max-width: calc(50% - 1rem);
+          > .v-row {
+            &:nth-child(2) {
+              padding-top: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+input:-internal-autofill-selected {
+  background: #fff !important;
+}

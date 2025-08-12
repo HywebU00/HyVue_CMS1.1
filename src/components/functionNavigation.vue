@@ -1,13 +1,49 @@
 <!-- 桌機版 start-->
 <template>
   <div class="navigation">
+    <!-- 登出按鈕 start -->
+    <v-btn class="shadow-20">
+      <span class="material-symbols-rounded"> logout </span>
+    </v-btn>
+    <!-- 登出按鈕 end -->
+    <!-- 設定按鈕 start -->
+    <v-btn class="shadow-20">
+      <span class="material-symbols-rounded"> settings </span>
+    </v-btn>
+    <!-- 設定按鈕 end -->
+    <!-- 訊息通知按鈕 start -->
+    <v-menu
+      v-model="infoMenu"
+      :close-on-content-click="false"
+      location="bottom"
+    >
+      <template v-slot:activator="{ props }">
+        <v-btn class="shadow-20" v-bind="props">
+          <v-badge :content="2" color="light">
+            <span class="material-symbols-rounded"> notifications </span>
+          </v-badge>
+        </v-btn>
+      </template>
+      <v-card min-width="100" class="infoBtnContainer">
+        <ul class="">
+          <li v-for="item in 5" :key="item">
+            <a href="#">
+              <v-icon color="light" icon="mdi-circle-medium"></v-icon>
+              <div>
+                <span class="title">本月薪資入帳，立即查看</span>
+                <span class="time">111/06/30</span>
+              </div>
+              <v-icon icon="mdi-chevron-right"></v-icon>
+            </a>
+          </li>
+        </ul>
+      </v-card>
+    </v-menu>
+    <!-- 訊息通知按鈕 end -->
     <!-- 暗黑模式 start -->
-    <v-btn
-      @click="toggleDarkTheme()"
-      :icon="
-        this.themeDark ? 'mdi-moon-waning-crescent' : 'mdi-white-balance-sunny'
-      "
-    ></v-btn>
+    <v-btn class="shadow-20" @click="toggleDarkTheme()">
+      <span class="material-symbols-rounded"> contrast </span>
+    </v-btn>
     <!-- 暗黑模式 end -->
     <!-- 改變字級按鈕 start -->
     <v-menu
@@ -16,8 +52,8 @@
       location="bottom"
     >
       <template v-slot:activator="{ props }">
-        <v-btn icon v-bind="props">
-          <span>{{ btnSize }}</span>
+        <v-btn class="shadow-20" v-bind="props">
+          <span class="material-symbols-rounded"> format_size </span>
         </v-btn>
       </template>
       <v-card class="fontBtnContainer" min-width="100">
@@ -66,7 +102,10 @@
       location="bottom"
     >
       <template v-slot:activator="{ props }">
-        <v-btn icon="mdi-palette" v-bind="props" />
+        <v-btn class="shadow-20" v-bind="props">
+          <span class="material-symbols-rounded"> palette </span>
+        </v-btn>
+        <!-- icon="mdi-palette" -->
       </template>
       <v-card class="colorBtnContainer" ref="el" min-width="100">
         <ul class="d-flex">
@@ -106,37 +145,6 @@
       </v-card>
     </v-menu>
     <!-- 改變顏色按鈕 end -->
-    <!-- 訊息通知按鈕 start -->
-    <v-menu
-      v-model="infoMenu"
-      :close-on-content-click="false"
-      location="bottom"
-    >
-      <template v-slot:activator="{ props }">
-        <v-btn icon>
-          <v-badge :content="2" color="light">
-            <span v-bind="props" class="icon material-icons-round">
-              notifications_active
-            </span>
-          </v-badge>
-        </v-btn>
-      </template>
-      <v-card min-width="100" class="infoBtnContainer">
-        <ul class="">
-          <li v-for="item in 5" :key="item">
-            <a href="#">
-              <v-icon color="light" icon="mdi-circle-medium"></v-icon>
-              <div>
-                <span class="title">本月薪資入帳，立即查看</span>
-                <span class="time">111/06/30</span>
-              </div>
-              <v-icon icon="mdi-chevron-right"></v-icon>
-            </a>
-          </li>
-        </ul>
-      </v-card>
-    </v-menu>
-    <!-- 訊息通知按鈕 end -->
   </div>
 </template>
 <!-- 桌機版 end-->

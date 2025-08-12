@@ -1,10 +1,19 @@
 <template>
-  <v-container class="container">
-    <v-breadcrumbs :items="['首頁', '節點', '節點']"></v-breadcrumbs>
+  <v-container class="container page mediaPhoto">
+    <v-breadcrumbs :items="['首頁', '節點', '節點']">
+      <template v-slot:prepend>
+        <span
+          class="material-symbols-rounded text-neutral-darken-5 icon"
+          size="small"
+        >
+          home
+        </span>
+      </template>
+    </v-breadcrumbs>
     <v-divider class="pt-1 mb-3"></v-divider>
-    <h2>特殊範例頁面-多媒體資料庫</h2>
+    <h2 class="title">媒體照片 (MediaPhoto)</h2>
     <v-divider class="mt-3 mb-4"></v-divider>
-    <v-row>
+    <v-row no-gutters>
       <v-col cols="12">
         <!-- tablet 卡片列 start -->
         <v-card class="mb-5">
@@ -12,196 +21,92 @@
             <v-container class="container">
               <!-- 標籤列 start -->
               <v-row class="">
-                <v-col cols="12" class="py-0"
+                <v-col cols="12" class="pb-0"
                   ><div>
-                    <v-chip-group v-model="selection">
-                      <v-chip
-                        v-for="item in 6"
-                        :key="item"
-                        color="primary"
-                        link
-                        label
-                      >
+                    <v-chip-group class="chipGroup" v-model="selection">
+                      <v-chip v-for="item in 6" :key="item" link label>
                         標籤
                       </v-chip>
                     </v-chip-group>
                   </div>
-                  <v-divider class="my-2"></v-divider>
+                  <v-divider class=""></v-divider>
                 </v-col>
-                <v-col class="pb-0 justify-space-between d-flex" cols="12">
-                  <v-menu transition="slide-y-transition">
-                    <template>
-                      <v-btn
-                        variant="flat"
-                        color="primary "
-                        size="small"
-                        prepend-icon="mdi-cog-outline"
-                        v-bind="props"
-                        >批次處理</v-btn
-                      >
-                    </template>
-                    <v-card class="pa-2">
-                      <v-btn
-                        size="small"
-                        variant="outlined"
-                        class="my-1"
-                        block
-                        color="primary"
-                        prepend-icon="mdi-delete"
-                        >刪除</v-btn
-                      >
-                      <v-btn
-                        size="small"
-                        variant="outlined"
-                        class="my-1"
-                        block
-                        prepend-icon="mdi-pencil"
-                        color="primary"
-                        >編輯</v-btn
-                      >
-                      <v-btn
-                        size="small"
-                        variant="outlined"
-                        class="my-1"
-                        block
-                        color="primary"
-                        prepend-icon="mdi-delete"
-                        >設定</v-btn
-                      >
-                    </v-card>
-                  </v-menu>
+                <v-col class="btnList" cols="12">
                   <v-btn
+                    class="btn"
                     variant="flat"
                     color="primary "
-                    size="small"
                     prepend-icon="mdi-plus"
                     >新增</v-btn
                   >
                 </v-col>
+                <v-divider class="mx-3 mb-3"></v-divider>
               </v-row>
               <!-- 標籤列 end -->
-              <v-row>
-                <v-col>
-                  <v-divider class="mt-1 mb-3"></v-divider>
-                </v-col>
-              </v-row>
-              <!-- tab start -->
-              <v-row>
-                <v-col cols="12" md="2">
-                  <h4>資料夾分類</h4>
-
-                  <v-btn
-                    class="my-3"
-                    size="small"
-                    @click="all"
-                    color="primary"
-                    block
-                  >
-                    展開所有分類
-                  </v-btn>
+              <v-row no-gutters>
+                <v-col class="functionList" cols="12" md="3">
+                  <h4 class="text-h4 mt-3 ml-1 mb-8 font-weight-bold">
+                    資料夾分類
+                  </h4>
+                  <div class="px-2">
+                    <v-btn class="my-3 btn" size="small" color="primary" block>
+                      展開所有分類
+                    </v-btn>
+                  </div>
+                  <div class="mb-6 treeBox px-2">
+                    <ul class="treeviewBlock">
+                      <tree-item class="item" :model="treeData"></tree-item>
+                      <tree-item class="item" :model="treeData2"></tree-item>
+                      <tree-item class="item" :model="treeData3"></tree-item>
+                    </ul>
+                  </div>
                   <!-- 手風琴元件 start -->
-                  <v-expansion-panels
-                    class="accordionMenu"
-                    variant="accordion"
-                    v-model="panel"
-                  >
-                    <v-expansion-panel
-                      v-for="i in 3"
-                      :key="i"
-                      :value="`item${i}`"
-                    >
-                      <v-expansion-panel-title class="py-0" hide-actions>
-                        <v-row no-gutters>
-                          <v-col class="d-flex justify-start align-center">
-                            <v-icon size="small" color="primary" class="mr-2"
-                              >mdi-folder</v-icon
-                            >分類 {{ i }}
-                          </v-col>
-                        </v-row>
-                      </v-expansion-panel-title>
-                      <v-expansion-panel-text>
-                        <ul>
-                          <li v-for="a in 6" :key="a">
-                            - 分類 {{ i }} - {{ a }}
-                          </li>
-                        </ul>
-                      </v-expansion-panel-text>
-                    </v-expansion-panel>
-                  </v-expansion-panels>
+
                   <!-- 手風琴元件 end -->
-                  <h4 class="mt-4">分類標籤</h4>
-                  <v-chip-group v-model="selection">
-                    <v-chip
-                      v-for="item in 10"
-                      :key="item"
-                      color="primary"
-                      link
-                      size="small"
-                      label
-                    >
-                      標籤
-                    </v-chip>
-                  </v-chip-group>
+                  <h4 class="text-h4 mt-3 ml-1 mb-8 font-weight-bold">
+                    分類標籤
+                  </h4>
+                  <v-slide-group show-arrows class="sliderGrp">
+                    <v-slide-group-item v-for="n in 8" :key="n">
+                      <v-chip label variant="outlined" link class="mx-1">
+                        標籤
+                      </v-chip>
+                    </v-slide-group-item>
+                  </v-slide-group>
                 </v-col>
-                <v-col cols="12" md="10">
+                <v-col cols="12" md="9">
                   <!-- 卡片列表 start -->
                   <v-container class="container px-0">
-                    <v-row class="pa-0 mediaCardList">
-                      <v-col
-                        class="pa-1"
-                        cols="3"
-                        sm="2"
-                        v-for="item in 2"
-                        :key="item"
-                      >
-                        <v-card class="photoCard">
+                    <v-row class="pa-0 d-flex">
+                      <v-col cols="4" v-for="i in 5" :key="i"
+                        ><v-card class="card" variant="elevated">
                           <div class="cardContainer">
-                            <div class="img">
-                              <v-label></v-label>
-                              <v-checkbox
-                                v-ripple.stop
-                                class="checkbox"
-                                color="light"
-                                v-model="selected"
-                                :value="item"
-                              ></v-checkbox>
-                              <v-img
-                                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                                cover
-                              ></v-img>
-                            </div>
+                            <v-checkbox
+                              color="primary-lighten-2"
+                              label="cardCheckbox"
+                              class="cardCheckbox"
+                              hide-details="auto"
+                            >
+                            </v-checkbox>
+                            <v-img
+                              src="~@/assets/demo/hyBg_Image.jpg"
+                              cover
+                            ></v-img>
                             <div class="info">
                               <v-card-item>
-                                <v-card-title
-                                  >檔案名稱檔案名稱檔案名稱</v-card-title
-                                >
+                                <div class="d-flex">
+                                  <v-avatar
+                                    image="@/assets/demo/account.jpg"
+                                    rounded="full"
+                                  ></v-avatar>
+                                  <div class="titleText">
+                                    <v-card-title>資料標題</v-card-title>
+                                    <v-card-subtitle
+                                      >負責人/科別</v-card-subtitle
+                                    >
+                                  </div>
+                                </div>
                               </v-card-item>
-                            </div>
-                          </div>
-                        </v-card>
-                      </v-col>
-                      <v-col
-                        cols="3"
-                        sm="2"
-                        class="pa-1"
-                        v-for="item in 30"
-                        :key="'num' + item"
-                      >
-                        <v-card class="photoCard">
-                          <div class="cardContainer">
-                            <div class="img">
-                              <v-label></v-label>
-                              <v-checkbox
-                                v-ripple.stop
-                                class="checkbox"
-                                color="light"
-                                v-model="selected"
-                                :value="'num' + item"
-                              ></v-checkbox>
-                              <v-img
-                                src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
-                                cover
-                              ></v-img>
                             </div>
                           </div>
                         </v-card>
@@ -215,15 +120,60 @@
             </v-container>
 
             <!-- Pagination start -->
-            <div class="text-center pb-5">
-              <v-pagination
-                v-model="page"
-                :length="5"
-                rounded="0"
-                active-color="primary"
-                color="primary"
-                size="small"
-              ></v-pagination>
+            <div class="text-center mt-4 pb-5 paginationText">
+              <div class="d-flex justify-center align-center">
+                共 <span class="text-primary">308</span> 筆資料，第
+                <span class="text-primary">1/18</span>
+                頁，每頁顯示
+                <div class="mx-2">
+                  <v-text-field
+                    variant="outlined"
+                    density="compact"
+                    type="number"
+                    width="55px"
+                    hide-details
+                    value="1"
+                    single-line
+                  ></v-text-field>
+                </div>
+                <span>筆</span>
+                <v-btn
+                  class="ml-2"
+                  rounded="sm"
+                  color="secondary-lighten-1"
+                  elevation="0"
+                  >確定</v-btn
+                >
+              </div>
+              <div class="mt-4">
+                <div class="pagination d-flex align-center justify-center">
+                  <v-btn
+                    rounded="sm"
+                    class="btn"
+                    variant="text"
+                    color="neutral-darken-5"
+                  >
+                    <span class="material-symbols-rounded"> first_page </span>
+                  </v-btn>
+                  <v-pagination
+                    v-model="page"
+                    :length="15"
+                    total-visible="5"
+                    rounded="sm"
+                    active-color="primary"
+                    color="neutral-darken-5"
+                    size="small"
+                  />
+                  <v-btn
+                    rounded="sm"
+                    class="btn"
+                    variant="text"
+                    color="neutral-darken-5"
+                  >
+                    <span class="material-symbols-rounded"> last_page </span>
+                  </v-btn>
+                </div>
+              </div>
             </div>
             <!-- Pagination end -->
           </div>
@@ -235,6 +185,67 @@
 </template>
 
 <script>
+import TreeItem from "@/components/TreeItem.vue";
+const treeData = {
+  name: "分類Ａ",
+  children: [
+    { name: "分類Ａ-1" },
+    { name: "分類Ａ-2" },
+    {
+      name: "分類Ａ-3",
+      children: [
+        {
+          name: "分類Ａ-3.1",
+        },
+        { name: "分類Ａ-3.2" },
+        { name: "分類Ａ-3.3" },
+        {
+          name: "分類Ａ-3.4",
+        },
+      ],
+    },
+  ],
+};
+const treeData2 = {
+  name: "分類B",
+  children: [
+    { name: "分類B-1" },
+    { name: "分類B-2" },
+    {
+      name: "分類B-3",
+      children: [
+        {
+          name: "分類B-3.1",
+        },
+        { name: "分類B-3.2" },
+        { name: "分類B-3.3" },
+        {
+          name: "分類B-3.4",
+        },
+      ],
+    },
+  ],
+};
+const treeData3 = {
+  name: "分類C",
+  children: [
+    { name: "分類C-1" },
+    { name: "分類C-2" },
+    {
+      name: "分類C-3",
+      children: [
+        {
+          name: "分類C-3.1",
+        },
+        { name: "分類C-3.2" },
+        { name: "分類C-3.3" },
+        {
+          name: "分類C-3.4",
+        },
+      ],
+    },
+  ],
+};
 export default {
   data: () => ({
     tab: null,
@@ -279,6 +290,9 @@ export default {
     //table serve
     panelOpen: false,
     panel: [],
+    treeData,
+    treeData2,
+    treeData3,
   }),
   methods: {
     all() {
@@ -289,6 +303,9 @@ export default {
         this.panel = [""];
       }
     },
+  },
+  components: {
+    TreeItem,
   },
 };
 </script>

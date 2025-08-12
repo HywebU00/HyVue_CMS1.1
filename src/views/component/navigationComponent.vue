@@ -33,7 +33,12 @@
                   <template #content>
                     <v-breadcrumbs :items="['Foo', 'Bar', 'Fizz']">
                       <template v-slot:prepend>
-                        <v-icon icon="$vuetify" size="small"></v-icon>
+                        <span
+                          class="material-symbols-rounded text-neutral-darken-4"
+                          size="small"
+                        >
+                          home
+                        </span>
                       </template>
                     </v-breadcrumbs>
                   </template>

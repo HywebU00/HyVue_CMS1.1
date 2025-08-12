@@ -1,43 +1,61 @@
 <template>
-  <div style="background: #eee" class="h-screen w-100 d-flex justify-center">
-    <div ref="loginCard" class="mt-16">
-      <v-sheet elevation="5" rounded="lg" width="320px" class="pa-4 r mx-auto">
+  <div class="loginPage h-screen w-100 d-flex justify-center align-center">
+    <div ref="loginCard" class="loginCard">
+      <v-sheet elevation="5" rounded="md" class="mx-auto">
         <v-img
-          :width="50"
+          :width="104"
           aspect-ratio="1/1"
-          class="mr-auto ml-auto mt-5"
+          class="mx-auto logo"
           cover
           src="~@/assets/images/logo.png"
         ></v-img>
-        <h2 class="my-3 mb-5 text-center">網站管理平台</h2>
-        <v-divider class="pt-2 mb-2"></v-divider>
+        <h2 class="title text-center">網站管理平台</h2>
+
         <v-form fast-fail>
           <v-text-field
             density="compact"
             messages="說明文字"
+            single-line
+            variant="outlined"
             label="請輸入帳號"
-          ></v-text-field>
+          >
+            <template #append-inner>
+              <span class="material-symbols-rounded"> key_vertical </span>
+            </template>
+          </v-text-field>
           <v-text-field
             label="請輸入密碼"
-            :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
+            single-line
             :type="visible ? 'text' : 'password'"
             density="compact"
             :messages="['說明文字']"
-            @click:append-inner="visible = !visible"
-          ></v-text-field>
-          <div class="d-flex align-center mb-8">
+            variant="outlined"
+            @click="visible = !visible"
+          >
+            <template #append-inner>
+              <span v-if="visible" class="icon material-symbols-rounded">
+                visibility
+              </span>
+              <span v-else class="icon material-symbols-rounded">
+                visibility_off
+              </span>
+            </template>
+          </v-text-field>
+          <div class="d-flex align-center justify-center">
             <v-checkbox
               v-model="checkbox"
               :rules="[(v) => !!v || '']"
-              label="記住我？"
+              label="記住密碼"
               required
               hide-details=""
             ></v-checkbox>
             <v-btn variant="text">忘記密碼</v-btn>
           </div>
-          <v-btn type="submit" block color="primary" class="mt-2">登入</v-btn>
+          <v-btn type="submit" block color="primary" class="loginBtn"
+            >登入</v-btn
+          >
         </v-form>
-        <ul class="text-caption text-center mt-8">
+        <ul class="list text-center">
           <li>如有登入問題，請聯繫資訊科 王大明 分機123</li>
           <li>電子郵件：abc@gmail.com</li>
         </ul>
@@ -92,6 +110,7 @@ export default {
       this.themeDark = false;
       this.createCookie("Theme", `${color}`, 356);
     },
+
     themeInit() {
       const savedTheme = this.readCookie("Theme");
       if (savedTheme == null) {
@@ -104,7 +123,7 @@ export default {
     },
   },
   mounted() {
-    // this.cardAnimate();
+    //this.cardAnimate();
     this.themeInit();
   },
 };

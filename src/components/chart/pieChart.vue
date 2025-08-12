@@ -1,6 +1,6 @@
 <template>
   <apexchart
-    type="pie"
+    type="donut"
     style="width: 100%"
     :options="chartOptions"
     :series="series"
@@ -16,8 +16,16 @@ export default {
         chart: {
           type: "pie",
         },
-        labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
-        colors: ["#0156a2", "#32a7fa", "#3fd1b5", "#405db2", "#1c93d0"],
+        labels: ["Text1", "Text2", "Text3", "Text4", "Text5"],
+        colors: ["#00428E", "#0055A0", "#80CBD7", "#057BB7", "#80CBD7"],
+        legend: {
+          position: "bottom",
+          offsetY: 20,
+          itemMargin: {
+            horizontal: 10,
+            vertical: 10,
+          },
+        },
         dataLabels: {
           enabled: false,
         },
@@ -36,7 +44,7 @@ export default {
             options: {
               chart: {},
               legend: {
-                position: "right",
+                position: "bottom",
               },
             },
           },
@@ -45,7 +53,7 @@ export default {
             options: {
               chart: {},
               legend: {
-                position: "right",
+                position: "bottom",
               },
             },
           },

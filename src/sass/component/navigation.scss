@@ -12,6 +12,18 @@
     padding: 0;
     list-style: none;
   }
+  .v-btn {
+    min-width: rem(40);
+    height: rem(40) !important;
+    padding: 0;
+    margin: 0 0.25rem;
+    .v-btn__content {
+      .material-symbols-rounded {
+        font-size: 1.2rem;
+        color: $neutral10;
+      }
+    }
+  }
 }
 //工具列ＣＳＳ設定
 @mixin btnContainer {

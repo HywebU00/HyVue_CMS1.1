@@ -108,6 +108,7 @@
           <v-list-item title="AddNews" :to="'/addNews'"> </v-list-item>
           <v-list-item title="MediaPhoto" :to="'/mediaPhoto'"> </v-list-item>
           <v-list-item title="login" :to="'/Login'"> </v-list-item>
+          <v-list-item title="Apply" :to="'/apply'"> </v-list-item>
         </v-list-group>
         <!-- Basic Layout end -->
       </v-list>

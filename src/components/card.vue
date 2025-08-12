@@ -11,7 +11,7 @@
       <v-img src="~@/assets/demo/hyBg_Image.jpg" cover></v-img>
       <div class="info">
         <v-card-item>
-          <div class="d-flex title">
+          <div class="d-flex">
             <v-avatar
               image="@/assets/demo/account.jpg"
               rounded="full"

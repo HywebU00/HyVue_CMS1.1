@@ -1,5 +1,18 @@
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
 //暗黑版樣式設定 dark Style-------
 .v-theme--dark {
+  .navigation {
+    .v-btn {
+      .v-btn__content {
+        .material-symbols-rounded {
+          color: $neutral100;
+        }
+      }
+    }
+  }
   .sideBar {
     .drawerBtn {
       background-color: rgb(35 35 35);
@@ -8,6 +21,18 @@
       }
     }
     .v-navigation-drawer__content {
+      .v-list-item {
+        .v-list-item__prepend {
+          i {
+            color: #fff;
+          }
+        }
+        .v-list-item__content {
+          .v-list-item-title {
+            color: #fff;
+          }
+        }
+      }
       .v-list-group {
         > .v-list-item {
           &:hover,
@@ -17,6 +42,23 @@
             img {
               filter: unset;
             }
+            .v-list-item__content {
+              .v-list-item-title {
+                color: #000;
+              }
+            }
+            .v-list-item__prepend {
+              i {
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+      .v-list {
+        .v-list-item--active {
+          .v-list-item__overlay {
+            background: $neutral100;
           }
         }
       }

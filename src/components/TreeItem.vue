@@ -1,19 +1,27 @@
 <template>
   <li>
-    <div :class="{ bold: isFolder }" @click="toggle" @dblclick="changeType">
+    <div
+      :class="[{ bold: isFolder }, 'shadow-20']"
+      @click="toggle"
+      @dblclick="changeType"
+    >
       <div class="d-flex treeTitle">
         <template v-if="isFolder">
           <span class="iconList">
             <template v-if="isOpen">
-              <v-icon class="mr-2" icon="mdi-folder-open" color="primary" />
+              <span class="material-symbols-rounded mr-2 icon">
+                folder_open
+              </span>
             </template>
             <template v-else>
-              <v-icon class="mr-2" icon="mdi-folder" color="primary" />
+              <span class="material-symbols-rounded mr-2 icon" color="primary">
+                folder
+              </span>
             </template>
           </span>
         </template>
         <template v-else>
-          <v-icon class="mr-2" icon="mdi-file-document" color="secondary" />
+          <span class="material-symbols-rounded mr-2 icon"> description </span>
         </template>
         {{ model.name }}
         <template v-if="isFolder">
@@ -38,7 +46,6 @@
       <div class="d-flex" v-for="model in model.children" :key="model">
         <tree-item class="item" :model="model"> </tree-item>
       </div>
-      <!-- <li class="add" @click="addChild">+</li> -->
     </ul>
   </li>
 </template>

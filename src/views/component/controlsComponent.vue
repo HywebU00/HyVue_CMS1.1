@@ -258,7 +258,7 @@
           <div class="">
             <v-container class="container">
               <h4 class="text-h4 mb-2 text-primary font-weight-bold">
-                下拉选择框（Selects）
+                下拉選擇框（Selects）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
               <div class="">

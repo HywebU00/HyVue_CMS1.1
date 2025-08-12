@@ -1,27 +1,30 @@
 <template>
-  <v-container class="container">
-    <v-breadcrumbs :items="['首頁', '節點', '節點']"></v-breadcrumbs>
+  <v-container class="container page addNews">
+    <v-breadcrumbs :items="['首頁', '節點', '節點']">
+      <template v-slot:prepend>
+        <span
+          class="material-symbols-rounded text-neutral-darken-5 icon"
+          size="small"
+        >
+          home
+        </span>
+      </template>
+    </v-breadcrumbs>
     <v-divider class="pt-1 mb-3"></v-divider>
-    <h2>資料發布 / Editor版本</h2>
+    <h2 class="title">新增新聞 (AddNews)</h2>
     <v-divider class="mt-3 mb-4"></v-divider>
-    <v-row>
-      <v-col lg="10" cols="12">
+    <v-row no-gutters>
+      <v-col lg="9" cols="12">
         <!-- tablet 卡片列 start -->
         <v-card class="mb-5">
           <div class="">
             <v-container class="container">
               <!-- 標籤列 start -->
               <v-row class="">
-                <v-col cols="12" class="py-0"
+                <v-col cols="12" class="py-0 mt-2"
                   ><div>
-                    <v-chip-group v-model="selection">
-                      <v-chip
-                        v-for="item in 6"
-                        :key="item"
-                        color="primary"
-                        link
-                        label
-                      >
+                    <v-chip-group class="chipGroup" v-model="selection">
+                      <v-chip v-for="item in 6" :key="item" link label>
                         標籤
                       </v-chip>
                     </v-chip-group>
@@ -33,7 +36,7 @@
               <!-- tab start -->
               <v-row>
                 <v-col>
-                  <v-tabs v-model="tab" color="primary" grow>
+                  <v-tabs class="textTabs" v-model="tab" color="primary" grow>
                     <v-tab prepend-icon="mdi-pencil" value="one"
                       >內容編輯</v-tab
                     >
@@ -47,56 +50,38 @@
                   <v-card-text>
                     <v-window v-model="tab">
                       <v-window-item value="one">
-                        <h4 class="text-h6 text-primary font-weight-bold">
-                          文字標準表單
-                        </h4>
-                        <v-divider class="mt-2 mb-4"></v-divider>
-                        <v-form>
-                          <v-text-field
-                            label="文字標準表單"
-                            hide-details="auto"
-                            density="compact"
-                          ></v-text-field>
-                        </v-form>
-
-                        <div class="text-h1 my-3">標題一</div>
+                        <div class="text-h1 my-3 text-neutral-darken-6">
+                          標題一
+                        </div>
                         <p>
-                          可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。落然幾檢，牛即弟告者出行飯在教快政有我調個萬，對拿回色無為還成師營各手年天為完種風全，容人友成子選包母何有響好。著是情以裡來不子不覺野行？媽生頭濟那基女的此的下，社麗後難，無升美的力設們就很紙事而不題智香是水學，總切市沒不質熱雜，是視當為青阿少認消大究法成我，都不的友構，的陽式拿八檢腳種合飯市車那張甚活些全萬別他設給步後出領。不機
+                          可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。落然幾檢，牛即弟告者出行飯在教快政有我調個萬，對拿回色無為還成師營各手年天為完種風全，容人友成子選包母何有響好。著是情以裡來不子不覺野行？媽生頭濟那基女的此的下，社麗後難，無升美的力設們就很紙事而不題智香是水學，總切市沒不質熱雜，是視當為青阿少認消大究法成我，都不的友構，的陽式拿八檢腳種合飯市車那張甚活些全萬別他設給步後出領。
                         </p>
-                        <div class="text-h2 my-3">標題二</div>
+                        <div class="text-h2 my-3 text-neutral-darken-6">
+                          標題一
+                        </div>
                         <p>
-                          可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。落然幾檢，牛即弟告者出行飯在教快政有我調個萬，對拿回色無為還成師營各手年天為完種風全，容人友成子選包母何有響好。著是情以裡來不子不覺野行？媽生頭濟那基女的此的下，社麗後難，無升美的力設們就很紙事而不題智香是水學，總切市沒不質熱雜，是視當為青阿少認消大究法成我，都不的友構，的陽式拿八檢腳種合飯市車那張甚活些全萬別他設給步後出領。不機業臉下天研兩南況有上體遊名，我我機叫少種的。
+                          可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。落然幾檢，牛即弟告者出行飯在教快政有我調個萬，對拿回色無為還成師營各手年天為完種風全，容人友成子選包母何有響好。著是情以裡來不子不覺野行？媽生頭濟那基女的此的下，社麗後難，無升美的力設們就很紙事而不題智香是水學，總切市沒不質熱雜，是視當為青阿少認消大究法成我，都不的友構，的陽式拿八檢腳種合飯市車那張甚活些全萬別他設給步後出領。
                         </p>
-                        <div class="text-h3 my-3">標題三</div>
+                        <div class="text-h4 my-3 text-neutral-darken-6">
+                          標題ㄧ
+                        </div>
                         <p>
-                          可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。落然幾檢，牛即弟告者出行飯在教快政有我調個萬，對拿回色無為還成師營各手年天為完種風全，容人友成子選包母何有響好。著是情以裡來不子不覺野行？媽生頭濟那基女的此的下，社麗後難，無升美的力設們就很紙事而不題智香是水學，總切市沒不質熱雜，是視當為青阿少認消大究法成我，都不的友構，的陽式拿八檢腳種合飯市車那張甚活些全萬別他設給步後出領。不機
+                          可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。落然幾檢，牛即弟告者出行飯在教快政有我調個萬，對拿回色無為還成師營各手年天為完種風全，容人友成子選包母何有響好。著是情以裡來不子不覺野行？媽生頭濟那基女的此的下，社麗後難，無升美的力設們就很紙事而不題智香是水學，總切市沒不質熱雜，是視當為青阿少認消大究法成我，都不的友構，的陽式拿八檢腳種合飯市車那張甚活些全萬別他設給步後出領。
                         </p>
-                        <div class="text-h4 my-3">標題四</div>
+                        <div class="text-h5 my-3 text-neutral-darken-6">
+                          標題ㄧ
+                        </div>
+                        <p>
+                          可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。落然幾檢，牛即弟告者出行飯在教快政有我調個萬，對拿回色無為還成師營各手年天為完種風全，容人友成子選包母何有響好。著是情以裡來不子不覺野行？媽生頭濟那基女的此的下，社麗後難，無升美的力設們就很紙事而不題智香是水學，總切市沒不質熱雜，是視當為青阿少認消大究法成我，都不的友構，的陽式拿八檢腳種合飯市車那張甚活些全萬別他設給步後出領。
+                        </p>
                         <v-alert
-                          border="start"
                           border-color="primary"
-                          elevation="2"
                           title="卡片標題"
-                          class="pa-6"
+                          rounded="md"
+                          class="alert bg-neutral-darken-1"
                         >
                           可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。
                         </v-alert>
-                        <div class="text-h5 my-3">標題五</div>
-                        <ul>
-                          <li>影開兒中不們西動會味理化由子常洲國有標題</li>
-                          <li>首動我行得流事個要使著獨操大</li>
-                          <li>證會不就人推陸跑公片重</li>
-                          <li>影開兒中不們西動會味理化由子常洲國有標題</li>
-                          <li>首動我行得流事個要使著獨操大</li>
-                        </ul>
-                        <div class="text-h6 my-3">標題六</div>
-                        <ol>
-                          <li>影開兒中不們西動會味理化由子常洲國有標題</li>
-                          <li>首動我行得流事個要使著獨操大</li>
-                          <li>證會不就人推陸跑公片重</li>
-                          <li>影開兒中不們西動會味理化由子常洲國有標題</li>
-                          <li>首動我行得流事個要使著獨操大</li>
-                        </ol>
                       </v-window-item>
                       <v-window-item value="two"> Two </v-window-item>
 
@@ -107,61 +92,109 @@
               </v-row>
               <!-- tab end -->
             </v-container>
-
             <!-- Pagination start -->
-            <div class="text-center pb-5">
-              <v-pagination
-                v-model="page"
-                :length="5"
-                rounded="0"
-                active-color="primary"
-                color="primary"
-                size="small"
-              ></v-pagination>
+            <div class="text-center mt-4 pb-5 paginationText">
+              <div class="d-flex justify-center align-center">
+                共 <span class="text-primary">308</span> 筆資料，第
+                <span class="text-primary">1/18</span>
+                頁，每頁顯示
+                <div class="mx-2">
+                  <v-text-field
+                    variant="outlined"
+                    density="compact"
+                    type="number"
+                    width="55px"
+                    hide-details
+                    value="1"
+                    single-line
+                  ></v-text-field>
+                </div>
+                <span>筆</span>
+                <v-btn
+                  class="ml-2"
+                  rounded="sm"
+                  color="secondary-lighten-1"
+                  elevation="0"
+                  >確定</v-btn
+                >
+              </div>
+              <div class="mt-4">
+                <div class="pagination d-flex align-center justify-center">
+                  <v-btn
+                    rounded="sm"
+                    class="btn"
+                    variant="text"
+                    color="neutral-darken-5"
+                  >
+                    <span class="material-symbols-rounded"> first_page </span>
+                  </v-btn>
+                  <v-pagination
+                    v-model="page"
+                    :length="15"
+                    total-visible="5"
+                    rounded="sm"
+                    active-color="primary"
+                    color="neutral-darken-5"
+                    size="small"
+                  />
+                  <v-btn
+                    rounded="sm"
+                    class="btn"
+                    variant="text"
+                    color="neutral-darken-5"
+                  >
+                    <span class="material-symbols-rounded"> last_page </span>
+                  </v-btn>
+                </div>
+              </div>
             </div>
             <!-- Pagination end -->
           </div>
         </v-card>
         <!-- tablet 卡片列 end -->
       </v-col>
-      <v-col lg="2" cols="12">
-        <v-card class="pa-2 mb-3">
-          <h4 class="text-h7 text-primary font-weight-bold">單選核取表單</h4>
-          <v-divider class="pt-1 mb-2"></v-divider>
+      <v-col lg="3" cols="12">
+        <v-card class="pa-2 mb-3 checkCard">
+          <h4 class="">單選核取表單</h4>
           <v-form>
             <v-container>
               <v-row class="formGrp">
                 <v-col class="pa-0"
                   ><v-radio-group
                     inline
-                    label="行內排列"
+                    label="水平行內排列"
                     hide-details="auto"
                     color="primary"
                   >
-                    <v-radio label="選項一" value="1"></v-radio>
-                    <v-radio label="選項二" value="2"></v-radio>
-                    <v-radio label="選項三" value="3"></v-radio> </v-radio-group
+                    <v-radio label="我是選項一" value="1"></v-radio>
+                    <v-radio label="我是選項二" value="2"></v-radio>
+                    <v-radio
+                      label="我是選項三"
+                      value="3"
+                    ></v-radio> </v-radio-group
                 ></v-col>
               </v-row>
-              <v-row class="formGrp">
-                <v-col class="pr-1 pb-0" cols="">
-                  <v-btn block color="primary">暫存</v-btn>
-                </v-col>
-                <v-col class="pl-1 pb-0">
-                  <v-btn block color="secondary">預覽</v-btn>
-                </v-col>
-              </v-row>
-              <v-row class="formGrp">
-                <v-col cols="">
-                  <v-btn block class="bg-grey-darken-1">確定發布</v-btn>
-                </v-col>
-              </v-row>
+              <div class="btnGrp">
+                <v-row class="formGrp mb-3" no-gutters>
+                  <v-col class="mr-2">
+                    <v-btn block variant="tonal" color="primary">暫存</v-btn>
+                  </v-col>
+                  <v-col class="ml-2">
+                    <v-btn block variant="tonal" color="primary">預覽</v-btn>
+                  </v-col>
+                </v-row>
+                <v-row class="formGrp" no-gutters>
+                  <v-col>
+                    <v-btn block color="primary">確定發布</v-btn>
+                  </v-col>
+                </v-row>
+              </div>
             </v-container>
           </v-form>
         </v-card>
-        <v-card class="pa-2">
-          <h4 class="text-h7 text-primary font-weight-bold">單選核取表單</h4>
-          <v-divider class="pt-1 mb-2"></v-divider>
+        <v-card class="pa-2 checkCard">
+          <h4>單選核取表單</h4>
+
           <v-form>
             <v-container>
               <v-row class="formGrp">
@@ -178,13 +211,20 @@
               </v-row>
               <v-row class="formGrp">
                 <v-col class="pb-0" cols="">
-                  <v-text-field
+                  <v-select
+                    label="下拉式選單"
+                    variant="outlined"
                     single-line
-                    label="文字標準表單"
-                    hide-details="auto"
-                    density="compact"
-                    append-inner-icon="mdi-calendar"
-                  ></v-text-field>
+                    hide-details
+                    v-model:menu="menuOpen"
+                    :items="['選單ㄧ', '選單二', '選單三']"
+                  >
+                    <template #append-inner>
+                      <v-icon class="me-2">
+                        {{ menuOpen ? "mdi-chevron-up" : "mdi-chevron-down" }}
+                      </v-icon>
+                    </template>
+                  </v-select>
                 </v-col>
               </v-row>
               <v-row>
@@ -204,13 +244,20 @@
               </v-row>
               <v-row class="formGrp">
                 <v-col class="pb-0" cols="">
-                  <v-text-field
+                  <v-select
+                    label="下拉式選單"
+                    variant="outlined"
                     single-line
-                    label="文字標準表單"
-                    hide-details="auto"
-                    density="compact"
-                    append-inner-icon="mdi-calendar"
-                  ></v-text-field>
+                    v-model:menu="menuOpen2"
+                    hide-details
+                    :items="['選單ㄧ', '選單二', '選單三']"
+                  >
+                    <template #append-inner>
+                      <v-icon class="me-2">
+                        {{ menuOpen2 ? "mdi-chevron-up" : "mdi-chevron-down" }}
+                      </v-icon>
+                    </template>
+                  </v-select>
                 </v-col>
               </v-row>
               <v-row>
@@ -228,19 +275,26 @@
                     <v-radio label="排程" value="2"></v-radio> </v-radio-group
                 ></v-col>
               </v-row>
-              <v-row>
-                <v-divider class="mt-3"></v-divider>
-              </v-row>
               <v-row class="formGrp">
                 <v-col class="pb-0" cols="">
-                  <v-text-field
+                  <v-select
+                    label="下拉式選單"
+                    variant="outlined"
                     single-line
-                    label="文字標準表單"
-                    hide-details="auto"
-                    density="compact"
-                    append-inner-icon="mdi-calendar"
-                  ></v-text-field>
+                    v-model:menu="menuOpen3"
+                    hide-details
+                    :items="['選單ㄧ', '選單二', '選單三']"
+                  >
+                    <template #append-inner>
+                      <v-icon class="me-2">
+                        {{ menuOpen3 ? "mdi-chevron-up" : "mdi-chevron-down" }}
+                      </v-icon>
+                    </template>
+                  </v-select>
                 </v-col>
+              </v-row>
+              <v-row>
+                <v-divider class="mt-3 mb-8"></v-divider>
               </v-row>
             </v-container>
           </v-form>
@@ -253,6 +307,9 @@
 <script>
 export default {
   data: () => ({
+    menuOpen: false,
+    menuOpen2: false,
+    menuOpen3: false,
     tab: null,
     toggle: null,
     functionGroupToggle: 0,

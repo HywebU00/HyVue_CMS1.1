@@ -22,6 +22,7 @@ export default createVuetify({
           "primary-lighten-2": "#f6fbff", //$primary70
           //secondary 設定
           secondary: "#2d62b3", //secondary40
+          "secondary-lighten-0": "#0055A0",
           "secondary-lighten-1": "#057bb7", //secondary60
           "secondary-lighten-2": "#80cbd7", //secondary80
           "secondary-lighten-3": "#ebf0f9", //secondary100
@@ -47,6 +48,8 @@ export default createVuetify({
           error: "#C40000", //red30
           "error-lighten-1": "#FFEDF1", //red70
           light: "#36e79e",
+          //thead
+          thead: "#057bb7", //secondary60,
         },
       },
       color1: {

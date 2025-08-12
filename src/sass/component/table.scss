@@ -1,0 +1,40 @@
+@use '@/sass/variables.scss' as *;
+
+table {
+  thead {
+    white-space: nowrap;
+  }
+  .v-data-table__td {
+    background: #dadfe0;
+  }
+}
+.v-table {
+  .v-table__wrapper {
+    > table {
+      > thead {
+        > tr {
+          > th {
+            &:not(:last-child) {
+              border-right: 1px solid $neutral80;
+            }
+          }
+        }
+      }
+      > tbody {
+        > tr {
+          // &:not(:last-child) {
+          //   > td {
+          //     border-bottom: 1px solid $neutral80;
+          //   }
+          // }
+          td {
+            border-bottom: 1px solid $neutral60;
+            &:not(:last-child) {
+              border-right: 1px solid $neutral60;
+            }
+          }
+        }
+      }
+    }
+  }
+}

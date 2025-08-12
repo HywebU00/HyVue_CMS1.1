@@ -1,0 +1,79 @@
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.loginPage {
+  background: url(@/assets/images/login_bg.jpg) center center no-repeat;
+}
+.loginCard {
+  width: rem(492);
+  .v-sheet {
+    padding: rem(28);
+  }
+
+  .title {
+    margin: 1rem 0 rem(28) 0;
+    color: $secondary20;
+    font-size: rem(28);
+    font-weight: 700;
+    line-height: rem(36);
+  }
+  .v-input {
+    &:not(.v-checkbox) {
+      margin-bottom: 1rem;
+    }
+    &.v-checkbox {
+      color: $neutral30;
+      margin-right: 2rem;
+      .v-selection-control__input {
+        i {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .v-input__control {
+      input {
+        height: rem(56);
+      }
+      .icon {
+        cursor: pointer;
+      }
+    }
+
+    .v-input__details {
+      padding-top: rem(12);
+
+      .v-messages__message {
+        color: $neutral30;
+        font-size: rem(14);
+      }
+    }
+  }
+  .v-btn {
+    &.v-btn--variant-text {
+      .v-btn__content {
+        font-size: 1rem;
+        font-weight: 700;
+        color: $primary30;
+      }
+    }
+    &.loginBtn {
+      min-height: rem(60);
+      font-weight: 700;
+
+      margin-top: 1rem;
+      .v-btn__content {
+        font-size: rem(18);
+      }
+    }
+  }
+  .list {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    color: $neutral20;
+    li {
+      line-height: 2rem;
+    }
+  }
+}

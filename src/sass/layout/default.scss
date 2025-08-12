@@ -1,0 +1,58 @@
+@use '@/sass/common/mixins/scrollbar.scss' as *;
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.container.page {
+  [class^='v-col-'],
+  [class*=' v-col-'] {
+    padding: 10px !important;
+  }
+  .countCard {
+    h4 {
+      text-align: center;
+      margin: 0 0 0.5rem 0;
+      font-size: rem(14);
+      color: $neutral10;
+    }
+    &.v-card {
+      padding: 1rem;
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: normal;
+      }
+      .icon {
+        color: #fff;
+        margin-right: 0.5rem;
+      }
+      .content {
+        background: $gradients_v;
+        padding: rem(16) 0;
+        .text {
+          color: #fff;
+          font-size: 2.875em;
+          font-weight: 700;
+        }
+        + .caption {
+          color: $neutral20;
+          margin: 0.5rem 0 0 0;
+          font-size: 0.875em;
+          justify-content: end;
+        }
+      }
+    }
+  }
+  .itemCard {
+    &.v-card {
+      padding: rem(24);
+      h4 {
+        font-weight: 700;
+        font-size: 1.75em;
+        color: $neutral10;
+        margin-bottom: rem(22);
+      }
+    }
+  }
+}

@@ -4,40 +4,45 @@
 @use '@/sass/common/mixins/_text.scss';
 @use '@/sass/common/mixins/_scrollbar.scss';
 
-//material-icons-round
-@use '@/sass/vendor/material-icons-round.scss';
-
 //layout基本設定
 @use '@/sass/common/customize_shadow.scss';
 @use '@/sass/common/customize_color.scss';
 @use '@/sass/common/customize_font.scss';
 
+//material-icons-round
+@use '@/sass/vendor/material-icons-round.scss';
+
 //元件設定
-@use '@/sass/customize/sideBar.scss';
-@use '@/sass/customize/folderMenu.scss';
-@use '@/sass/customize/form.scss';
-@use '@/sass/customize/table.scss';
-@use '@/sass/customize/card.scss';
-@use '@/sass/customize/chip.scss';
-@use '@/sass/customize/dialogs.scss';
-@use '@/sass/customize/tooltip.scss';
-@use '@/sass/customize/navigation.scss';
-@use '@/sass/customize/slider.scss';
-@use '@/sass/customize/alert.scss';
-@use '@/sass/customize/progressCircular.scss';
-@use '@/sass/customize/progressLinear.scss';
-@use '@/sass/customize/snackbar.scss';
-@use '@/sass/customize/timeline.scss';
-@use '@/sass/customize/imageIcon.scss';
-@use '@/sass/customize/breadcrumbs.scss';
-@use '@/sass/customize/treeBlock.scss';
-@use '@/sass/customize/accordion.scss';
-@use '@/sass/customize/expansionPanels.scss';
-@use '@/sass/customize/datePicker.scss';
-@use '@/sass/customize/emptyState.scss';
-@use '@/sass/customize/tabs.scss';
-@use '@/sass/customize/stepper.scss';
+@use '@/sass/component/sideBar.scss';
+@use '@/sass/component/folderMenu.scss';
+@use '@/sass/component/form.scss';
+@use '@/sass/component/table.scss';
+@use '@/sass/component/card.scss';
+@use '@/sass/component/chip.scss';
+@use '@/sass/component/dialogs.scss';
+@use '@/sass/component/tooltip.scss';
+@use '@/sass/component/navigation.scss';
+@use '@/sass/component/slider.scss';
+@use '@/sass/component/alert.scss';
+@use '@/sass/component/progressCircular.scss';
+@use '@/sass/component/progressLinear.scss';
+@use '@/sass/component/snackbar.scss';
+@use '@/sass/component/timeline.scss';
+@use '@/sass/component/imageIcon.scss';
+@use '@/sass/component/breadcrumbs.scss';
+@use '@/sass/component/treeBlock.scss';
+@use '@/sass/component/accordion.scss';
+@use '@/sass/component/expansionPanels.scss';
+@use '@/sass/component/datePicker.scss';
+@use '@/sass/component/emptyState.scss';
+@use '@/sass/component/tabs.scss';
+@use '@/sass/component/stepper.scss';
 
 //layout頁面設定
 @use '@/sass/layout/template.scss'; //全域頁面基本設定
 @use '@/sass/layout/adminLayout.scss'; // Layout設定
+@use '@/sass/layout/login.scss'; // login設定
+@use '@/sass/layout/default.scss'; // default設定
+@use '@/sass/layout/widget.scss'; // widget設定
+@use '@/sass/layout/addNews.scss'; // addNews設定
+@use '@/sass/layout/mediaPhoto.scss'; // mediaPhoto設定

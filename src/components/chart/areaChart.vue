@@ -14,11 +14,11 @@ export default {
     return {
       series: [
         {
-          name: "series1",
+          name: "Text1",
           data: [31, 40, 28, 51, 42, 109, 100],
         },
         {
-          name: "series2",
+          name: "Text2",
           data: [11, 32, 45, 32, 34, 52, 41],
         },
       ],
@@ -49,12 +49,21 @@ export default {
             format: "dd/MM/yy HH:mm",
           },
         },
-        colors: ["#3fd1b5", "#32a7fa"],
+        colors: ["#32a7fa", "#3fd1b5"],
         stroke: {
           show: true,
           curve: "smooth",
-          width: 2,
+          width: 4,
           dashArray: 0,
+        },
+        legend: {
+          position: "bottom",
+          horizontalAlign: "center",
+          offsetY: 20,
+          itemMargin: {
+            horizontal: 10,
+            vertical: 10,
+          },
         },
       },
     };

@@ -1,0 +1,80 @@
+@use '@/sass/common/mixins/scrollbar.scss' as *;
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.treeviewBlock {
+  ul {
+    ul {
+      padding-left: 1rem;
+    }
+  }
+  .treeTitle {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    padding: 0.5rem;
+    color: $neutral30;
+    .icon {
+      font-size: 1.5em;
+      color: $neutral20;
+    }
+
+    button {
+      margin-left: auto;
+    }
+  }
+  .item {
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 0.5rem;
+
+    .bold {
+      border-radius: 0.5rem;
+      color: $neutral30;
+      background-color: $neutral80;
+      + ul {
+        margin-top: 0.5rem;
+      }
+    }
+    .iconList {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    > div {
+      &:hover {
+        background: #f1eeee;
+        border-radius: 0.5rem;
+      }
+      padding: 0.2rem;
+    }
+    > ul > div {
+      line-height: 1.5rem;
+      width: 100%;
+      .item {
+        > div {
+          box-shadow: none !important;
+          .treeTitle {
+            font-weight: 400;
+          }
+        }
+        .bold {
+          background-color: #fff;
+          border: 1px solid $neutral60;
+        }
+      }
+    }
+  }
+  .bold {
+    position: relative;
+
+    + ul {
+      > li :not(.bold + ul) {
+        &:hover {
+          color: #ccc;
+        }
+      }
+    }
+  }
+}

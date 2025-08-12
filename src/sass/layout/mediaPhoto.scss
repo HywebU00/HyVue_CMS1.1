@@ -1,0 +1,33 @@
+@use '@/sass/common/mixins/scrollbar.scss' as *;
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.mediaPhoto {
+  &.page.container {
+    .functionList {
+      .sliderGrp {
+        .v-chip {
+          padding: 0 0.25rem;
+        }
+        .v-slide-group__next,
+        .v-slide-group__prev {
+          min-width: unset;
+        }
+      }
+    }
+    .btn {
+      height: rem(48);
+      padding: 0 1rem;
+      font-weight: 700;
+    }
+    .btnList {
+      padding: 0 0 0.5rem 1rem !important;
+    }
+    .treeBox {
+      max-height: 50vh;
+      overflow: scroll;
+      @include scrollbar;
+    }
+  }
+}

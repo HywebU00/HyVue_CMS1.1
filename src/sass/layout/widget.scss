@@ -1,0 +1,62 @@
+@use '@/sass/common/mixins/scrollbar.scss' as *;
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.widgetPage {
+  .v-btn {
+    &.actionBtn {
+      height: rem(44);
+      width: rem(56);
+    }
+  }
+}
+.paginationText {
+  .v-field__field {
+    input {
+      padding: 0.5rem;
+      text-align: center;
+    }
+  }
+}
+.pagination {
+  .v-pagination {
+    .v-pagination__item {
+      button {
+        background: #dee0e3;
+        &.v-btn--disabled {
+          background: unset;
+        }
+      }
+      &.v-pagination__item--is-active {
+        button {
+          background: $secondary60;
+
+          .v-btn__content {
+            color: $neutral100;
+          }
+        }
+      }
+    }
+  }
+  .btn {
+    padding: 0;
+    min-width: unset;
+    width: rem(40);
+    height: rem(40) !important;
+  }
+}
+.chipGroup {
+  margin: 0.25rem;
+  .v-slide-group__container {
+    padding: 0.2rem;
+  }
+  .v-chip--selected {
+    &:not(.v-chip--disabled) {
+      .v-chip__overlay {
+        opacity: 0 !important;
+      }
+      box-shadow: rgba(105, 111, 119, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.315) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    }
+  }
+}

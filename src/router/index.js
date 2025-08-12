@@ -46,6 +46,10 @@ const routes = [
         path: "mediaPhoto",
         component: () => import("@/views/basicLayout/mediaPhotoComponent.vue"),
       },
+      {
+        path: "apply",
+        component: () => import("@/views/basicLayout/applyComponent.vue"),
+      },
     ],
   },
   {

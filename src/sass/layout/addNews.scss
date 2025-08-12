@@ -1,0 +1,76 @@
+@use '@/sass/common/mixins/scrollbar.scss' as *;
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.addNews {
+  &.container.page {
+    [class^='v-col-'],
+    [class*=' v-col-'] {
+      padding: 8px !important;
+    }
+    .v-window-item {
+      [class^='text-'],
+      [class*='text-'] {
+        + p {
+          line-height: 2rem;
+          margin-bottom: 3rem;
+          color: $neutral20;
+        }
+      }
+      .alert {
+        .v-alert__content {
+          line-height: 2rem;
+          color: $neutral20;
+        }
+        .v-alert-title {
+          font-size: 1rem;
+          font-weight: 700;
+          color: $neutral20;
+        }
+      }
+    }
+    .v-container {
+      padding-top: 0;
+    }
+    .checkCard {
+      h4 {
+        margin-left: 1.25rem;
+        font-size: rem(20);
+        letter-spacing: 0.1rem;
+        padding: 1rem 0 2rem 0;
+      }
+      .v-radio-group {
+        margin-bottom: 0.75rem;
+        .v-label {
+          color: $neutral10;
+          opacity: 1;
+        }
+        .v-radio {
+          .v-label {
+            color: $neutral20;
+          }
+        }
+      }
+      .v-select {
+        width: rem(150);
+        .v-field__append-inner {
+          .v-select__menu-icon {
+            display: none;
+            &::before {
+              display: none !important;
+            }
+          }
+        }
+      }
+      .formGrp {
+        + .btnGrp {
+          margin-top: 1rem;
+          .v-btn {
+            height: rem(48);
+          }
+        }
+      }
+    }
+  }
+}

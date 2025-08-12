@@ -226,7 +226,7 @@
               <v-divider class="pt-2 mb-2"></v-divider>
 
               <!-- 邀請樣式start -->
-              <layoutCard title="卡片樣 (直式)" flexWrap="wrap">
+              <layoutCard title="卡片樣式 (直式)" flexWrap="wrap">
                 <layoutCardItem :height="'20px'" :width="'340px'">
                   <template #label> Type:Elevated </template>
                   <template #content>

@@ -1,8 +1,153 @@
-@use '@/sass/variables.scss' as *;
 @use '@/sass/common/mixins/scrollbar.scss' as *;
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.container.page {
+  .v-breadcrumbs {
+    margin-left: rem(24);
+    padding-top: 0;
+    .icon {
+      margin-right: 0.5rem;
+    }
+  }
+  .title {
+    line-height: rem(32);
+    font-size: 2em;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding-left: 1.5rem;
+    color: $neutral10;
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 12px;
+      height: 32px;
+      border-radius: 0.5rem;
+      background: $secondary60;
+    }
+  }
+}
+
 .scrollCard {
   .box {
     overflow-x: auto;
     @include scrollbar;
+  }
+}
+.functionGrp {
+  .v-expansion-panels {
+    box-shadow: unset;
+  }
+  .v-container {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    padding: 0.5rem;
+    @include screen('tablet') {
+      padding: 0.5rem 0;
+    }
+  }
+  .btnList {
+    button {
+      margin-left: 0.5rem;
+    }
+  }
+  .v-btn {
+    &.submit {
+      background: linear-gradient(to bottom, #371b1a 0%, #663838 100%);
+    }
+  }
+}
+.searchGrp {
+  container-type: inline-size;
+  .v-expansion-panel {
+    padding: 0 rem(36);
+    @container (max-width: 800px) {
+      padding: 0;
+    }
+    .v-expansion-panel-title {
+      container-type: inline-size;
+      height: unset;
+      &.v-expansion-panel-title--active {
+        .btnList {
+          display: none !important;
+        }
+      }
+      &:hover {
+        > .v-expansion-panel-title__overlay {
+          opacity: 0;
+        }
+      }
+
+      .formGrid {
+        display: flex;
+        .btnList {
+          max-width: rem(200);
+        }
+
+        @container (max-width: 800px) {
+          display: block;
+          .btnList {
+            width: 100%;
+            max-width: unset;
+          }
+        }
+      }
+    }
+    .v-expansion-panel-text {
+      line-height: unset;
+
+      .formGrp {
+        margin-bottom: 0.75rem;
+      }
+      .v-text-field .v-input__details {
+        padding-inline: unset;
+      }
+    }
+    .v-expansion-panel-title {
+    }
+
+    .v-input__control {
+      .v-label {
+        margin-top: 1.5rem;
+      }
+    }
+
+    .formGrp {
+      display: flex;
+      .v-input {
+        height: rem(40);
+        .v-field__input {
+          height: rem(40);
+        }
+      }
+      label {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        min-width: rem(80);
+        display: inline-block;
+      }
+      .v-input__append {
+        margin-inline-start: 0px;
+        padding: 0 1rem;
+      }
+    }
+    .btnList {
+      .v-btn {
+        height: rem(40);
+        &:first-child {
+          margin-right: 1rem;
+        }
+      }
+    }
+    .closeSearchMoreBtn {
+      margin-bottom: -1rem;
+      min-width: rem(100);
+      border-radius: 6px 6px 0 0;
+    }
   }
 }
