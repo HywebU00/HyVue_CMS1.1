@@ -1,8 +1,18 @@
 <template>
   <v-container class="container">
-    <v-breadcrumbs :items="['首頁', '節點', '節點']"></v-breadcrumbs>
-    <v-divider class="pt-1 mb-3"></v-divider>
-    <h2>特殊範例頁面 - 網站總覽</h2>
+    <v-breadcrumbs :items="['首頁', '節點', '節點']">
+      <template v-slot:prepend>
+        <span
+          class="material-symbols-rounded text-neutral-darken-5 icon"
+          size="small"
+        >
+          home
+        </span>
+      </template>
+    </v-breadcrumbs>
+
+    <v-divider class="mb-3"></v-divider>
+    <h2 class="title">表格（Tables）</h2>
     <v-divider class="mt-3 mb-4"></v-divider>
     <!-- tablet 卡片列 start -->
     <v-card class="mb-5">
@@ -12,14 +22,8 @@
           <v-row class="mb-1">
             <v-col cols="12" class="py-0"
               ><div>
-                <v-chip-group v-model="selection">
-                  <v-chip
-                    v-for="item in 6"
-                    :key="item"
-                    color="primary"
-                    link
-                    label
-                  >
+                <v-chip-group class="chipGroup" v-model="selection">
+                  <v-chip v-for="item in 6" :key="item" link label>
                     標籤
                   </v-chip>
                 </v-chip-group>
@@ -30,17 +34,24 @@
               <v-menu transition="slide-y-transition">
                 <template v-slot:activator="{ props }">
                   <v-btn
+                    class="btn"
+                    size="large"
                     variant="flat"
                     color="primary "
-                    size="small"
-                    prepend-icon="mdi-cog-outline"
                     v-bind="props"
-                    >批次處理</v-btn
+                  >
+                    <template #prepend>
+                      <span class="icon material-symbols-outlined">
+                        more_vert
+                      </span>
+                    </template>
+
+                    批次處理</v-btn
                   >
                 </template>
                 <v-card class="pa-2">
                   <v-btn
-                    size="small"
+                    size="large"
                     variant="outlined"
                     class="my-1"
                     block
@@ -49,7 +60,7 @@
                     >刪除</v-btn
                   >
                   <v-btn
-                    size="small"
+                    size="large"
                     variant="outlined"
                     class="my-1"
                     block
@@ -58,12 +69,12 @@
                     >編輯</v-btn
                   >
                   <v-btn
-                    size="small"
+                    size="large"
                     variant="outlined"
                     class="my-1"
                     block
                     color="primary"
-                    prepend-icon="mdi-delete"
+                    prepend-icon="mdi-cog"
                     >設定</v-btn
                   >
                 </v-card>
@@ -71,7 +82,8 @@
               <v-btn
                 variant="flat"
                 color="primary "
-                size="small"
+                class="btn"
+                size="large"
                 prepend-icon="mdi-plus"
                 >新增</v-btn
               >
@@ -83,52 +95,66 @@
               <v-table>
                 <thead class="bg-thead">
                   <tr>
-                    <th class="text-left" style="width: 50px"></th>
-                    <th class="text-center" style="width: 50px">序號</th>
-                    <th class="text-left">置頂</th>
-                    <th class="text-center" style="min-width: 400px">標題</th>
-                    <th class="text-left">資料分類</th>
-                    <th class="text-left">上線日期</th>
-                    <th class="text-left">下線日期</th>
-                    <th class="text-left">語系</th>
-                    <th class="text-left">狀態</th>
-                    <th class="text-left" style="width: 100px">動作</th>
+                    <th class="text-center" style="width: 100px"></th>
+                    <th class="text-center" style="width: 100px">序號</th>
+                    <th class="text-center">置頂</th>
+                    <th class="text-center" style="width: 600px">標題</th>
+                    <th class="text-center" style="width: 100px">資料分類</th>
+                    <th class="text-center">上線日期</th>
+                    <th class="text-center">下線日期</th>
+                    <th class="text-center" style="width: 100px">語系</th>
+                    <th class="text-center">狀態</th>
+                    <th class="text-center" style="width: 130px">動作</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr v-for="item in data" :key="item.name">
-                    <td>
-                      <v-checkbox
-                        value="1"
-                        label=""
-                        hide-details=""
-                        type="checkbox"
-                      ></v-checkbox>
+                    <td class="text-center">
+                      <div class="d-flex justify-center">
+                        <v-checkbox
+                          value="1"
+                          label=""
+                          hide-details=""
+                          type="checkbox"
+                        ></v-checkbox>
+                      </div>
                     </td>
                     <td class="text-center">{{ item.id }}</td>
                     <td>
                       <template v-if="item.top == true">
-                        <v-chip label color="primary">置頂</v-chip>
+                        <div class="d-flex justify-center">
+                          <v-chip
+                            variant="outlined"
+                            class="chip pa-1"
+                            label
+                            color="primary"
+                            >置頂</v-chip
+                          >
+                        </div>
                       </template>
                     </td>
-                    <td>{{ item.title }}</td>
+                    <td class="text-center">{{ item.title }}</td>
                     <td>{{ item.class }}</td>
                     <td>{{ item.dateStart }}</td>
                     <td>{{ item.dateEnd }}</td>
-                    <td>{{ item.lang }}</td>
+                    <td class="pa-2 text-center">{{ item.lang }}</td>
                     <td>{{ item.status }}</td>
                     <td>
-                      <div class="btnGroup d-flex">
-                        <v-btn
-                          size="x-small"
-                          icon="mdi-delete"
-                          variant="text"
-                        ></v-btn>
-                        <v-btn
-                          size="x-small"
-                          icon="mdi-pencil"
-                          variant="text"
-                        ></v-btn>
+                      <div class="btnGroup d-flex justify-space-between">
+                        <v-btn class="btn" color="primary" variant="text">
+                          <template #prepend>
+                            <span class="material-symbols-outlined icon">
+                              delete
+                            </span>
+                          </template>
+                        </v-btn>
+                        <v-btn class="btn" color="primary" variant="text">
+                          <template #prepend>
+                            <span class="material-symbols-outlined icon">
+                              edit
+                            </span>
+                          </template>
+                        </v-btn>
                       </div>
                     </td>
                   </tr>
@@ -138,15 +164,60 @@
           </v-row>
         </v-container>
         <!-- Pagination start -->
-        <div class="text-center pb-5">
-          <v-pagination
-            v-model="page"
-            :length="5"
-            rounded="0"
-            active-color="primary"
-            color="primary"
-            size="small"
-          ></v-pagination>
+        <div class="text-center mt-4 pb-5 paginationText">
+          <div class="d-flex justify-center align-center">
+            共 <span class="text-primary">308</span> 筆資料，第
+            <span class="text-primary">1/18</span>
+            頁，每頁顯示
+            <div class="mx-2">
+              <v-text-field
+                variant="outlined"
+                density="compact"
+                type="number"
+                width="55px"
+                hide-details
+                value="1"
+                single-line
+              ></v-text-field>
+            </div>
+            <span>筆</span>
+            <v-btn
+              class="ml-2"
+              rounded="sm"
+              color="secondary-lighten-1"
+              elevation="0"
+              >確定</v-btn
+            >
+          </div>
+          <div class="mt-4">
+            <div class="pagination d-flex align-center justify-center">
+              <v-btn
+                rounded="sm"
+                class="btn"
+                variant="text"
+                color="neutral-darken-5"
+              >
+                <span class="material-symbols-rounded"> first_page </span>
+              </v-btn>
+              <v-pagination
+                v-model="page"
+                :length="15"
+                total-visible="5"
+                rounded="sm"
+                active-color="primary"
+                color="neutral-darken-5"
+                size="small"
+              />
+              <v-btn
+                rounded="sm"
+                class="btn"
+                variant="text"
+                color="neutral-darken-5"
+              >
+                <span class="material-symbols-rounded"> last_page </span>
+              </v-btn>
+            </div>
+          </div>
         </div>
         <!-- Pagination end -->
       </div>
@@ -161,14 +232,8 @@
           <v-row class="mb-1">
             <v-col cols="12" class="py-0"
               ><div>
-                <v-chip-group v-model="selection">
-                  <v-chip
-                    v-for="item in 6"
-                    :key="item"
-                    color="primary"
-                    link
-                    label
-                  >
+                <v-chip-group class="chipGroup" v-model="selection">
+                  <v-chip v-for="item in 6" :key="item" link label>
                     標籤
                   </v-chip>
                 </v-chip-group>
@@ -179,7 +244,8 @@
               <v-btn
                 variant="flat"
                 color="primary "
-                size="small"
+                class="btn"
+                size="large"
                 prepend-icon="mdi-plus"
                 >新增</v-btn
               >
@@ -191,46 +257,57 @@
               <v-table>
                 <thead class="bg-thead">
                   <tr>
-                    <th class="text-left" style="width: 50px"></th>
-                    <th class="text-center" style="width: 50px">序號</th>
-                    <th class="text-left">圖片</th>
+                    <th class="text-center" style="width: 100px"></th>
+                    <th class="text-center" style="width: 100px">序號</th>
+                    <th class="text-center">圖片</th>
                     <th class="text-center" style="min-width: 400px">標題</th>
-                    <th class="text-left">資料分類</th>
-                    <th class="text-left">狀態</th>
-                    <th class="text-left" style="width: 100px">動作</th>
+                    <th class="text-center">資料分類</th>
+                    <th class="text-center">狀態</th>
+                    <th class="text-center" style="width: 100px">動作</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr v-for="item in data" :key="item.name">
                     <td>
-                      <v-checkbox
-                        value="1"
-                        label=""
-                        hide-details=""
-                        type="checkbox"
-                      ></v-checkbox>
+                      <div class="d-flex justify-center">
+                        <v-checkbox
+                          value="1"
+                          label=""
+                          hide-details=""
+                          type="checkbox"
+                        ></v-checkbox>
+                      </div>
                     </td>
                     <td class="text-center">{{ item.id }}</td>
                     <td>
-                      <v-img
-                        :width="60"
-                        aspect-ratio="1/1"
-                        cover
-                        src="~@/assets/demo/06.jpg"
-                      ></v-img>
+                      <div class="d-flex justify-center pa-2">
+                        <v-img
+                          :width="150"
+                          aspect-ratio="1/1"
+                          cover
+                          src="~@/assets/demo/hyBg_Image.jpg"
+                        ></v-img>
+                      </div>
                     </td>
-                    <td>{{ item.title }}</td>
-                    <td>{{ item.class }}</td>
-                    <td>{{ item.status }}</td>
+                    <td class="text-center">{{ item.title }}</td>
+                    <td class="text-center">{{ item.class }}</td>
+                    <td class="text-center">{{ item.status }}</td>
                     <td>
                       <v-menu transition="slide-y-transition">
                         <template v-slot:activator="{ props }">
                           <v-btn
-                            icon="mdi-chevron-down"
-                            class="ma-2"
+                            class="ma-2 btn"
+                            color="secondary-lighten-1"
+                            variant="outlined"
                             v-bind="props"
-                            size="x-small"
                           >
+                            <template #prepend>
+                              <span
+                                class="icon material-symbols-outlined text-center"
+                              >
+                                keyboard_arrow_down
+                              </span>
+                            </template>
                           </v-btn>
                         </template>
                         <v-card class="pa-2">
@@ -262,15 +339,60 @@
           </v-row>
         </v-container>
         <!-- Pagination start -->
-        <div class="text-center pb-5">
-          <v-pagination
-            v-model="page"
-            :length="5"
-            rounded="0"
-            active-color="primary"
-            color="primary"
-            size="small"
-          ></v-pagination>
+        <div class="text-center mt-4 pb-5 paginationText">
+          <div class="d-flex justify-center align-center">
+            共 <span class="text-primary">308</span> 筆資料，第
+            <span class="text-primary">1/18</span>
+            頁，每頁顯示
+            <div class="mx-2">
+              <v-text-field
+                variant="outlined"
+                density="compact"
+                type="number"
+                width="55px"
+                hide-details
+                value="1"
+                single-line
+              ></v-text-field>
+            </div>
+            <span>筆</span>
+            <v-btn
+              class="ml-2"
+              rounded="sm"
+              color="secondary-lighten-1"
+              elevation="0"
+              >確定</v-btn
+            >
+          </div>
+          <div class="mt-4">
+            <div class="pagination d-flex align-center justify-center">
+              <v-btn
+                rounded="sm"
+                class="btn"
+                variant="text"
+                color="neutral-darken-5"
+              >
+                <span class="material-symbols-rounded"> first_page </span>
+              </v-btn>
+              <v-pagination
+                v-model="page"
+                :length="15"
+                total-visible="5"
+                rounded="sm"
+                active-color="primary"
+                color="neutral-darken-5"
+                size="small"
+              />
+              <v-btn
+                rounded="sm"
+                class="btn"
+                variant="text"
+                color="neutral-darken-5"
+              >
+                <span class="material-symbols-rounded"> last_page </span>
+              </v-btn>
+            </div>
+          </div>
         </div>
         <!-- Pagination end -->
       </div>
@@ -287,14 +409,8 @@
           <v-row class="mb-1">
             <v-col cols="12" class="py-0"
               ><div>
-                <v-chip-group v-model="selection">
-                  <v-chip
-                    v-for="item in 6"
-                    :key="item"
-                    color="primary"
-                    link
-                    label
-                  >
+                <v-chip-group class="chipGroup" v-model="selection">
+                  <v-chip v-for="item in 6" :key="item" link label>
                     標籤
                   </v-chip>
                 </v-chip-group>
@@ -305,7 +421,8 @@
               <v-btn
                 variant="flat"
                 color="primary "
-                size="small"
+                class="btn"
+                size="large"
                 prepend-icon="mdi-plus"
                 >新增</v-btn
               >
@@ -320,20 +437,7 @@
         </v-container>
       </div>
     </v-card>
-    <v-divider class="border-opacity-100 my-8" color="#ccc">
-      dataTable樣式
-    </v-divider>
-    <v-card>
-      <div class="">
-        <v-container>
-          <v-row class="mt-0">
-            <v-col>
-              <dataTable></dataTable>
-            </v-col>
-          </v-row>
-        </v-container>
-      </div>
-    </v-card>
+
     <!-- tablet 卡片列 end -->
   </v-container>
 </template>

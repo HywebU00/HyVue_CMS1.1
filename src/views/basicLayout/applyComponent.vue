@@ -10,7 +10,7 @@
         </span>
       </template>
     </v-breadcrumbs>
-    <v-divider class="pt-1 mb-3"></v-divider>
+    <v-divider class="mb-3"></v-divider>
     <h2 class="title">新增申請</h2>
     <v-divider class="mt-3 mb-4"></v-divider>
     <v-row class="mx-1">
@@ -78,7 +78,9 @@
                       @click.stop="this.panel = 0"
                       >進階搜尋</v-btn
                     >
-                    <v-btn color="primary" class="submit">查詢</v-btn>
+                    <v-btn color="primary" rounded="sm" class="submit"
+                      >查詢</v-btn
+                    >
                   </v-col>
                 </v-row>
               </v-expansion-panel-title>
@@ -629,6 +631,21 @@
               </v-col>
             </v-row>
             <!-- 左右兩欄 end -->
+            <v-row>
+              <v-col class="d-flex justify-center">
+                <v-btn
+                  variant="outlined"
+                  class="mx-2"
+                  color="primary"
+                  size="large"
+                >
+                  <div class="px-2">取消</div>
+                </v-btn>
+                <v-btn color="primary" class="mx-2" size="large">
+                  <div class="px-2">送出</div>
+                </v-btn>
+              </v-col>
+            </v-row>
           </v-card>
         </v-form>
         <!-- 搜尋列表 end -->

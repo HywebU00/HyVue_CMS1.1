@@ -10,7 +10,7 @@
         </span>
       </template>
     </v-breadcrumbs>
-    <v-divider class="pt-1 mb-3"></v-divider>
+    <v-divider class="mb-3"></v-divider>
     <h2 class="title">媒體照片 (MediaPhoto)</h2>
     <v-divider class="mt-3 mb-4"></v-divider>
     <v-row no-gutters>

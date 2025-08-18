@@ -2,12 +2,13 @@
   <v-menu v-model="menu" :close-on-content-click="false" location="center">
     <template v-slot:activator="{ props }">
       <v-text-field
-        variant="solo"
+        :variant="variant"
         label="日期選擇"
         v-bind="props"
         hide-details="auto"
-        density="compact"
+        rounded="sm"
         single-line
+        density="comfortable"
         v-model="formattedDate"
         prepend-inner-icon="mdi-calendar-range"
       ></v-text-field>
@@ -35,6 +36,13 @@
 
 <script>
 export default {
+  name: "datepickerModalVue",
+  props: {
+    variant: {
+      type: String,
+      default: "solo",
+    },
+  },
   data() {
     return {
       menu: false,

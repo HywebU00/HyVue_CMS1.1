@@ -1,0 +1,28 @@
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.radioGroup {
+  .v-input__control {
+    > .v-label {
+      font-size: rem(16);
+      opacity: 1;
+      color: $neutral20;
+      font-weight: 700;
+      margin: 0.5rem;
+    }
+  }
+  .v-selection-control-group {
+    label {
+      font-weight: 500;
+    }
+  }
+}
+.switch {
+  .v-switch__thumb {
+    transform: scale(1) !important;
+  }
+  .v-label {
+    color: $neutral20;
+  }
+}

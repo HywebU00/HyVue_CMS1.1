@@ -122,6 +122,7 @@ export default createVuetify({
     VTabs: {
       height: "72px",
     },
+
     // VAvatar: {
     //   size: "50px",
     // },

@@ -2,7 +2,7 @@
 @use 'sass:map';
 
 //  自訂圓角基準值
-$border-radius-root: 8px;
+$border-radius-root: 4px;
 @use 'vuetify/settings' with (
   $border-radius-root: $border-radius-root,
   $rounded: (

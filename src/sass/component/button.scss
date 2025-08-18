@@ -1,0 +1,19 @@
+@use '@/sass/common/mixins/scrollbar.scss' as *;
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.v-btn {
+  &.btn {
+    padding: 0.5rem;
+    min-width: unset;
+    .v-btn__prepend {
+      margin: 0;
+    }
+  }
+  // .v-btn__prepend {
+  //   &.icon {
+  //     margin-right: 0.25em;
+  //   }
+  // }
+}

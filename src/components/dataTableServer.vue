@@ -19,12 +19,10 @@
         <td>{{ item.status }}</td>
         <td>
           <div class="btnGroup d-flex">
-            <v-btn elevation="0" color="primary" size="small" class="mr-1"
+            <v-btn elevation="0" color="primary" variant="tonal" class="mr-2"
               >刪除</v-btn
             >
-            <v-btn elevation="0" color="primary" variant="outlined" size="small"
-              >新增</v-btn
-            >
+            <v-btn elevation="0" color="primary" variant="outlined">新增</v-btn>
           </div>
         </td>
         <td class="d-flex justify-center align-center">
@@ -35,7 +33,7 @@
             </template>
             <v-card class="pa-2">
               <v-btn
-                size="small"
+                size="large"
                 variant="outlined"
                 class="my-1"
                 block
@@ -44,7 +42,7 @@
                 >刪除</v-btn
               >
               <v-btn
-                size="small"
+                size="large"
                 variant="outlined"
                 class="my-1"
                 block
@@ -56,6 +54,63 @@
           </v-menu>
         </td>
       </tr>
+    </template>
+    <template #bottom>
+      <div class="text-center mt-4 pb-5 paginationText">
+        <div class="d-flex justify-center align-center">
+          共 <span class="text-primary">308</span> 筆資料，第
+          <span class="text-primary">1/18</span>
+          頁，每頁顯示
+          <div class="mx-2">
+            <v-text-field
+              variant="outlined"
+              density="compact"
+              type="number"
+              width="55px"
+              hide-details
+              value="1"
+              single-line
+            ></v-text-field>
+          </div>
+          <span>筆</span>
+          <v-btn
+            class="ml-2"
+            rounded="sm"
+            color="secondary-lighten-1"
+            elevation="0"
+            >確定</v-btn
+          >
+        </div>
+        <div class="mt-4">
+          <div class="pagination d-flex align-center justify-center">
+            <v-btn
+              rounded="sm"
+              class="btn"
+              variant="text"
+              color="neutral-darken-5"
+            >
+              <span class="material-symbols-rounded"> first_page </span>
+            </v-btn>
+            <v-pagination
+              v-model="page"
+              :length="15"
+              total-visible="5"
+              rounded="sm"
+              active-color="primary"
+              color="neutral-darken-5"
+              size="small"
+            />
+            <v-btn
+              rounded="sm"
+              class="btn"
+              variant="text"
+              color="neutral-darken-5"
+            >
+              <span class="material-symbols-rounded"> last_page </span>
+            </v-btn>
+          </div>
+        </div>
+      </div>
     </template>
   </v-data-table-server>
 </template>
@@ -132,6 +187,7 @@ const FakeAPI = {
 export default {
   data: () => ({
     itemsPerPage: 5,
+    page: 1,
     headers: [
       {
         title: "帳號",
