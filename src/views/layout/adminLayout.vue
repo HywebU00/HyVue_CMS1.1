@@ -81,7 +81,7 @@
           </v-list-item>
           <v-list-item title="Grid System" :to="'/component/system'">
           </v-list-item>
-          <v-list-item title="From" :to="'/component/from'"> </v-list-item>
+          <v-list-item title="Form" :to="'/component/form'"> </v-list-item>
           <v-list-item title="Table" :to="'/component/table'"> </v-list-item>
           <v-list-item title="Card" :to="'/component/card'"> </v-list-item>
           <v-list-item title="Chart" :to="'/component/chart'"> </v-list-item>
