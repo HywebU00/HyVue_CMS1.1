@@ -132,8 +132,8 @@
                     <template #content>
                       <v-slider
                         v-model="slider5"
-                        :max="max"
-                        :min="min"
+                        :max="10"
+                        :min="0"
                         class="align-center"
                         color="primary"
                         track-color="neutral-darken-3"
@@ -165,8 +165,8 @@
                     <template #content>
                       <v-slider
                         v-model="slider6"
-                        :max="max"
-                        :min="min"
+                        :max="10"
+                        :min="1"
                         class="align-center"
                         hide-details
                         color="primary"
@@ -207,8 +207,8 @@
                     <template #content>
                       <v-slider
                         v-model="slider7"
-                        :max="max"
-                        :min="min"
+                        :max="10"
+                        :min="0"
                         class="align-center"
                         hide-details
                         color="primary"
@@ -739,7 +739,7 @@ export default {
       media3: 50,
       alarm: 0,
       zoom: 0,
-      value: 0,
+      value: [0, 20],
       slider: 0,
       slider1: 50,
       slider2: 50,
