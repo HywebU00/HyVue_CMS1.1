@@ -28,7 +28,6 @@
                     label="文字標準表單"
                     rounded="sm"
                     single-line
-                    density="comfortable"
                     hide-details="auto"
                   ></v-text-field>
                 </v-col>
@@ -46,7 +45,7 @@
                   <v-text-field
                     rounded="sm"
                     single-line
-                    density="comfortable"
+                    density="compact"
                     label="文字標準表單"
                     hide-details="auto"
                     error-messages="請填寫正確的格式"
@@ -332,7 +331,7 @@
                   ></v-text-field>
                 </v-col>
                 <v-col cols="auto">
-                  <v-btn class="h-100" color="primary">選擇</v-btn>
+                  <v-btn color="primary">選擇</v-btn>
                 </v-col>
               </v-row>
               <v-row>
@@ -557,7 +556,7 @@
                   ></v-text-field>
                 </v-col>
                 <v-col cols="auto">
-                  <v-btn class="h-100" color="primary">選擇</v-btn>
+                  <v-btn color="primary">選擇</v-btn>
                 </v-col>
               </v-row>
               <v-row class="formGrp">

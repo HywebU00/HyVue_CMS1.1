@@ -1,0 +1,84 @@
+@use 'sass:map';
+@use '@/sass/common/mixins/text.scss' as *;
+// 你要的自訂高度
+$densities: (
+  default: rem(56),
+  comfortable: rem(48),
+  compact: rem(40),
+);
+$button-sizes: ();
+// v-input 自動產生對應 CSS
+@each $name, $height in $densities {
+  .v-input.v-input--density-#{$name} {
+    .v-field {
+      min-height: $height;
+      height: $height;
+    }
+  }
+}
+
+// 自訂按鈕 設定及變數
+$button-height: (
+  x-small: rem(28),
+  small: rem(36),
+  default: rem(48),
+  large: rem(56),
+  x-large: rem(60),
+);
+
+$button-font-size: (
+  x-small: 12px,
+  small: 14px,
+  default: 16px,
+  large: 18px,
+  x-large: 20px,
+);
+
+$button-padding-ratio: (
+  x-small: 1.5,
+  small: 2,
+  default: 2.5,
+  large: 3,
+  x-large: 3.5,
+);
+@each $name, $height in $button-height {
+  .v-btn--size-#{$name} {
+    --v-btn-height: #{$height};
+    --v-btn-size: map.get($button-font-size, $name);
+    padding: 0 #{map.get($button-padding-ratio, $name) * 8px};
+    font-size: var(--v-btn-size);
+  }
+}
+
+//chip
+
+$chip-sizes: (
+  'x-small': 24px,
+  'small': 32px,
+  'default': 44px,
+  'large': 48px,
+  'x-large': 56px,
+);
+
+@each $size, $height in $chip-sizes {
+  .v-chip.v-chip--density-#{$size} {
+    height: $height;
+    line-height: $height; // 讓文字垂直置中
+  }
+}
+
+//avatar
+$avatar-sizes: (
+  'x-small': 24px,
+  'small': 32px,
+  'default': 60px,
+  'large': 60px,
+  'x-large': 64px,
+);
+
+@each $size, $dimension in $avatar-sizes {
+  .v-avatar.v-avatar--size-#{$size} {
+    width: $dimension;
+    height: $dimension;
+  }
+}

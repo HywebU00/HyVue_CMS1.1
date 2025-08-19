@@ -15,12 +15,8 @@
                 <layoutCardItem :height="'40px'" style="width: 150px">
                   <template #label>Type:Square</template>
                   <template #content>
-                    <v-badge dot color="error" offset-y="26">
-                      <v-avatar
-                        size="32"
-                        rounded="sm"
-                        class="bg-neutral-darken-5"
-                      >
+                    <v-badge dot color="error" offset-y="38">
+                      <v-avatar rounded="sm" class="bg-neutral-darken-5">
                         <span class="material-icons-outlined"> person </span>
                       </v-avatar>
                     </v-badge>
@@ -29,12 +25,8 @@
                 <layoutCardItem :height="'40px'" style="width: 150px">
                   <template #label>Type:Circle</template>
                   <template #content>
-                    <v-badge dot color="error" offset-y="26">
-                      <v-avatar
-                        size="32"
-                        class="bg-neutral-darken-5"
-                        rounded="full"
-                      >
+                    <v-badge dot color="error" offset-y="36">
+                      <v-avatar class="bg-neutral-darken-5" rounded="full">
                         <span class="material-icons-outlined"> person </span>
                       </v-avatar>
                     </v-badge>
@@ -47,7 +39,7 @@
                   <template #content>
                     <v-badge dot color="error" offset-y="26">
                       <v-avatar
-                        size="32"
+                        size="small"
                         class="bg-neutral-darken-5"
                         rounded="full"
                       >
@@ -67,11 +59,7 @@
                       width="10"
                       height="10"
                     >
-                      <v-avatar
-                        class="bg-neutral-darken-5"
-                        size="48"
-                        rounded="full"
-                      >
+                      <v-avatar class="bg-neutral-darken-5" rounded="full">
                         <span class="material-icons-outlined"> person </span>
                       </v-avatar>
                     </v-badge>
@@ -89,7 +77,7 @@
                       rounded="full"
                     >
                       <v-avatar
-                        size="60"
+                        size="large"
                         class="bg-neutral-darken-5"
                         rounded="full"
                       >
@@ -123,7 +111,7 @@
                 <layoutCardItem :height="'40px'" style="width: 150px">
                   <template #label>Avatar:Pic</template>
                   <template #content>
-                    <v-badge dot color="error" offset-y="64">
+                    <v-badge dot color="error" offset-y="32">
                       <v-avatar
                         image="@/assets/demo/account.jpg"
                         rounded="full"
@@ -264,7 +252,7 @@
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'20px'" style="width: 300px">
-                  <template #label>4 : 3</template>
+                  <template #label>3 : 1</template>
                   <template #content>
                     <div class="">
                       <v-img

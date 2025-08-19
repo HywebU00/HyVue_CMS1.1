@@ -74,13 +74,11 @@
                     <v-btn
                       variant="tonal"
                       color="primary"
-                      class="searchMoreBtn"
+                      class="searchMoreBtn mr-2"
                       @click.stop="this.panel = 0"
                       >進階搜尋</v-btn
                     >
-                    <v-btn color="primary" rounded="sm" class="submit"
-                      >查詢</v-btn
-                    >
+                    <v-btn color="primary" class="submit">查詢</v-btn>
                   </v-col>
                 </v-row>
               </v-expansion-panel-title>

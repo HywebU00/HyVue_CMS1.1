@@ -123,8 +123,8 @@ export default createVuetify({
       height: "72px",
     },
 
-    // VAvatar: {
-    //   size: "50px",
-    // },
+    VAvatar: {
+      size: "44px",
+    },
   },
 });

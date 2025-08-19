@@ -1,19 +1,36 @@
 @use '@/sass/variables.scss' as *;
+@use 'vuetify_variables.scss' as *;
 @use 'sass:map';
 
 //  自訂圓角基準值
-$border-radius-root: 4px;
+$border-radius-root: 8px;
+
 @use 'vuetify/settings' with (
-  $border-radius-root: $border-radius-root,
-  $rounded: (
-    0: 0,
-    'sm': calc($border-radius-root / 2),
-    null: $border-radius-root,
-    'def': $border-radius-root,
-    'md': $border-radius-root * 1.5,
-    'lg': $border-radius-root * 2.25,
-    'xl': $border-radius-root * 6,
-    'full': 120px,
-    'circle': 50%,
-  )
-);
+    $border-radius-root: $border-radius-root,
+    // $field-control-height: 60px,
+    $rounded:
+      (
+        0: 0,
+        'sm': calc($border-radius-root / 2),
+        null: $border-radius-root,
+        'def': $border-radius-root,
+        'md': $border-radius-root * 1.5,
+        'lg': $border-radius-root * 2.25,
+        'xl': $border-radius-root * 6,
+        'full': 120px,
+        'circle': 50%,
+      ),
+
+    // 預設可能是 40px
+  );
+
+.v-row {
+  [class^='v-col-'],
+  [class*=' v-col-'] + [class^='v-col-'],
+  [class*=' v-col-'] {
+    padding: 10px !important;
+  }
+  // .v-col + .v-col {
+  //   padding: 10px;
+  // }
+}

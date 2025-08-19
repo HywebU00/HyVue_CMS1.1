@@ -69,7 +69,7 @@
                   >
                 </layoutCardItem>
                 <layoutCardItem :height="'20px'" :width="'150px'">
-                  <template #label> Radius: 18/LG</template>
+                  <template #label> Radius: 24/LG</template>
                   <template #content>
                     <v-btn color="primary" size="large" rounded="lg">
                       radius 18 / LG
@@ -313,7 +313,13 @@
                 <layoutCardItem :height="'20px'" :width="'150px'">
                   <template #label> Type: Outlined </template>
                   <template #content>
-                    <v-chip color="primary" variant="outlined" link label>
+                    <v-chip
+                      size="large"
+                      color="primary"
+                      variant="outlined"
+                      link
+                      label
+                    >
                       標籤
                     </v-chip>
                   </template>

@@ -45,8 +45,8 @@
   .cardCheckbox {
     position: absolute;
     z-index: 99;
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
   }
   .v-selection-control__wrapper {
     top: 1rem;
@@ -245,6 +245,8 @@
     margin: 0.25rem;
 
     label {
+      // background: red;
+      // border: 1px solid red;
       position: absolute;
       width: 100%;
       height: 100%;

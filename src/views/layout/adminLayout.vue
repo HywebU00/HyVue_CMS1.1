@@ -18,15 +18,11 @@
         @click.stop="rail = !rail"
       ></v-app-bar-nav-icon>
       <!-- 平台logo start -->
-      <div class="logoImg d-none d-md-flex mt-5 align-center justify-center">
-        <v-img
-          class="logo"
-          height="32"
-          max-width="32"
-          src="~@/assets/images/logo.png"
-          alt=""
-        />
-        <h1 class="ml-2 text-h4 text-primary">HyVue CMS</h1>
+      <div class="logoImg d-none d-md-flex align-center justify-center">
+        <div class="d-flex align-center justify-center">
+          <img class="logo" src="~@/assets/images/logo.png" alt="" />
+          <h1 class="ml-2 text-h4 text-primary">HyVue CMS</h1>
+        </div>
       </div>
       <!-- 平台logo end -->
       <!-- 選單 start -->
@@ -116,8 +112,9 @@
       <!-- 使用者 登入視窗start -->
       <div class="loginInfo">
         <div class="user">
-          <v-badge class="img" dot color="error" offset-y="32">
+          <v-badge class="img" dot color="error" offset-y="49">
             <v-avatar
+              size="large"
               image="@/assets/demo/account.jpg"
               rounded="full"
             ></v-avatar>

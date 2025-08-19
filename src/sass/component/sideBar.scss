@@ -1,4 +1,5 @@
 @use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/scrollbar.scss' as *;
 @use '@/sass/common/mixins/mediaquery.scss' as *;
 @use '@/sass/variables.scss' as *;
 //左側選單
@@ -12,13 +13,16 @@
     display: flex;
     flex-direction: column;
     .logoImg {
-      + .v-list {
-        margin-top: 1rem;
+      img {
+        width: rem(36);
+        height: rem(36);
       }
+      padding-bottom: rem(20);
+      padding-top: rem(30);
     }
     .v-list-group--open {
       > .v-list-item {
-        background: $gradients;
+        background: $gradients_v;
         color: $neutral100;
         box-shadow: none;
       }
@@ -29,10 +33,11 @@
       }
     }
     .v-list-item {
+      height: rem(50);
       + .v-list-group__items {
         border-left: 1px solid #ccc;
         .v-list-item {
-          height: rem(35);
+          height: rem(48);
           padding-inline-start: 12px !important;
           padding: 4px 8px;
           .v-list-item-title {
@@ -63,21 +68,29 @@
       }
     }
     .v-list--nav {
+      overflow-y: auto;
+      @include scrollbar;
       padding-inline-start: 16px;
       padding-inline-end: 16px;
     }
     //使用者登入資訊
     .loginInfo {
       display: flex;
-      margin: 1rem;
+
       overflow: hidden;
       align-items: center;
       justify-content: flex-start;
       text-transform: unset;
-      padding: 0 0.5rem 0.5rem;
-      height: unset;
+      padding: 1rem 1.5rem 1rem 1.5rem;
+      margin-bottom: 1rem;
+      height: rem(138);
       .user {
         display: flex;
+        .v-badge__badge {
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+        }
       }
       ul.list {
         margin-left: 1.25rem;

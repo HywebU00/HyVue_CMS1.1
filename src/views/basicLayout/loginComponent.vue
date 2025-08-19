@@ -13,7 +13,6 @@
 
         <v-form fast-fail>
           <v-text-field
-            density="compact"
             messages="說明文字"
             single-line
             variant="outlined"
@@ -27,7 +26,6 @@
             label="請輸入密碼"
             single-line
             :type="visible ? 'text' : 'password'"
-            density="compact"
             :messages="['說明文字']"
             variant="outlined"
             @click="visible = !visible"
