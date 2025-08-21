@@ -121,18 +121,15 @@
             @click="pushLink('element', 'system')"
           >
           </v-list-item>
-          <v-list-item
-            value="page1_form"
-            title="page1"
-            @click="pushLink('element', 'form')"
-          >
-          </v-list-item>
+
           <v-list-item
             value="page2"
             title="page2"
             @click="pushLink('element', 'page')"
           >
           </v-list-item>
+
+          <v-list-item title="page2＿to" :to="'/element/page'"> </v-list-item>
           <v-list-item
             value="form"
             title="form"
