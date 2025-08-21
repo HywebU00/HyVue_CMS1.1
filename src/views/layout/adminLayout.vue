@@ -127,6 +127,18 @@
             @click="pushLink('element', 'form')"
           >
           </v-list-item>
+          <v-list-item
+            value="test"
+            title="test"
+            @click="pushLink('element', 'test')"
+          >
+          </v-list-item>
+          <v-list-item
+            value="test2"
+            title="test2"
+            @click="pushLink('element', 'test')"
+          >
+          </v-list-item>
 
           <!-- <v-list-item title="Table" :to="'/element/table'"> </v-list-item> -->
 
