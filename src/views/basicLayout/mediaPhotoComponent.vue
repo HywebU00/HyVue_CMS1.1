@@ -32,12 +32,11 @@
                   <v-divider class=""></v-divider>
                 </v-col>
                 <v-col class="btnList" cols="12">
-                  <v-btn
-                    class="btn"
-                    variant="flat"
-                    color="primary "
-                    prepend-icon="mdi-plus"
-                    >新增</v-btn
+                  <v-btn variant="flat" class="px-3" color="primary ">
+                    <v-btn-prepend class="mr-1 d-flex align-center">
+                      <span class="material-symbols-outlined"> add </span>
+                    </v-btn-prepend>
+                    新增</v-btn
                   >
                 </v-col>
                 <v-divider class="mx-3 mb-3"></v-divider>
@@ -128,7 +127,7 @@
                 <div class="mx-2">
                   <v-text-field
                     variant="outlined"
-                    density="compact"
+                    density="comfortable"
                     type="number"
                     width="55px"
                     hide-details

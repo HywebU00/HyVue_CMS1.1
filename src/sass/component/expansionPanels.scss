@@ -5,7 +5,12 @@
     font-weight: 700;
     color: $neutral10;
     font-size: rem(20);
-    height: rem(76);
+    height: rem(56);
+  }
+  .v-expansion-panel-title__icon {
+    i {
+      font-size: 1.25rem;
+    }
   }
   .v-expansion-panel-text {
     font-size: rem(16);

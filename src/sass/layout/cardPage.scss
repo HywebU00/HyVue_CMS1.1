@@ -1,0 +1,59 @@
+@use '@/sass/common/mixins/scrollbar.scss' as *;
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+.cardPage {
+  .albumCardList {
+    container-type: inline-size;
+
+    .cardGrp {
+      margin-top: rem(38);
+      max-width: 100%;
+      padding: 0.5rem 1rem;
+      > div {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .card {
+        &.default {
+          margin: 0 rem(14) rem(28) rem(14);
+          width: calc(25% - rem(28));
+        }
+        &.list {
+          min-width: rem(650);
+          .cardCheckbox {
+            + .v-img {
+              height: rem(170);
+            }
+          }
+        }
+      }
+      &.listStyle {
+        overflow-x: auto;
+        @include scrollbar;
+      }
+      @container (max-width: 1200px) {
+        .card {
+          &.default {
+            width: calc(33.3% - rem(28));
+          }
+        }
+      }
+      @container (max-width: 900px) {
+        .card {
+          &.default {
+            width: calc(50% - rem(28));
+          }
+        }
+      }
+      @container (max-width: 520px) {
+        .card {
+          &.default {
+            width: calc(100% - rem(28));
+          }
+        }
+      }
+    }
+  }
+}

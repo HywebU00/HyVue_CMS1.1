@@ -5,7 +5,8 @@ table {
     white-space: nowrap;
   }
   .v-data-table__td {
-    background: #dadfe0;
+    background: $secondary60;
+    color: $neutral100;
   }
 }
 .v-table {
@@ -22,11 +23,6 @@ table {
       }
       > tbody {
         > tr {
-          // &:not(:last-child) {
-          //   > td {
-          //     border-bottom: 1px solid $neutral80;
-          //   }
-          // }
           td {
             border-bottom: 1px solid $neutral60;
             &:not(:last-child) {

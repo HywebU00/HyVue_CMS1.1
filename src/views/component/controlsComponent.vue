@@ -7,7 +7,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 font-weight-bold">
                 滑桿元件（ sliders）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
@@ -22,15 +22,19 @@
                     <template #label>Show First Icon : True</template>
                     <template #content>
                       <v-slider
-                        color="primary"
+                        color="secondary"
                         v-model="media"
                         hide-details="auto"
                         track-color="neutral-darken-3"
                       >
                         <template v-slot:prepend>
-                          <span class="material-icons"> volume_up </span>
-                        </template></v-slider
-                      >
+                          <span
+                            class="material-icons-round text-neutral-darken-6"
+                          >
+                            volume_up
+                          </span>
+                        </template>
+                      </v-slider>
                     </template>
                   </layoutCardItem>
                   <layoutCardItem
@@ -42,15 +46,23 @@
                     <template #content>
                       <v-slider
                         v-model="media2"
-                        color="primary"
+                        color="secondary"
                         hide-details="auto"
                         track-color="neutral-darken-3"
                       >
                         <template v-slot:prepend>
-                          <span class="material-icons"> volume_up </span>
+                          <span
+                            class="material-icons-round text-neutral-darken-6"
+                          >
+                            volume_up
+                          </span>
                         </template>
                         <template v-slot:append>
-                          <span class="material-icons-outlined"> search </span>
+                          <span
+                            class="material-icons-round text-neutral-darken-6"
+                          >
+                            search
+                          </span>
                         </template>
                       </v-slider>
                     </template>
@@ -64,12 +76,16 @@
                     <template #content>
                       <v-slider
                         v-model="media3"
-                        color="primary"
+                        color="secondary"
                         track-color="neutral-darken-3"
                         hide-details="auto"
                       >
                         <template v-slot:append>
-                          <span class="material-icons-outlined"> search </span>
+                          <span
+                            class="material-icons-round text-neutral-darken-6"
+                          >
+                            search
+                          </span>
                         </template>
                       </v-slider>
                     </template>
@@ -91,7 +107,7 @@
                       <v-slider
                         v-model="slider3"
                         thumb-label="always"
-                        color="primary"
+                        color="secondary"
                         track-color="neutral-darken-3"
                         hide-details="auto"
                       ></v-slider>
@@ -108,7 +124,7 @@
                     >
                     <template #content>
                       <v-slider
-                        color="primary"
+                        color="secondary"
                         v-model="slider4"
                         thumb-label="always"
                         track-color="neutral-darken-3"
@@ -135,14 +151,14 @@
                         :max="10"
                         :min="0"
                         class="align-center"
-                        color="primary"
+                        color="secondary"
                         track-color="neutral-darken-3"
                         hide-details="auto"
                       >
                         <template v-slot:prepend>
                           <v-text-field
                             v-model="slider1"
-                            density="compact"
+                            density="comfortable"
                             style="width: 70px"
                             type="number"
                             hide-details
@@ -169,14 +185,14 @@
                         :min="1"
                         class="align-center"
                         hide-details
-                        color="primary"
+                        color="secondary"
                         track-color="neutral-darken-3"
                       >
                         <template v-slot:append>
                           <v-text-field
                             v-model="slider6"
                             variant="outlined"
-                            density="compact"
+                            density="comfortable"
                             style="width: 70px"
                             type="number"
                             hide-details
@@ -186,7 +202,7 @@
                         <template v-slot:prepend>
                           <v-text-field
                             v-model="slider1"
-                            density="compact"
+                            density="comfortable"
                             style="width: 70px"
                             type="number"
                             variant="outlined"
@@ -211,14 +227,14 @@
                         :min="0"
                         class="align-center"
                         hide-details
-                        color="primary"
+                        color="secondary"
                         track-color="neutral-darken-3"
                       >
                         <template v-slot:append>
                           <v-text-field
                             v-model="slider3"
                             variant="outlined"
-                            density="compact"
+                            density="comfortable"
                             style="width: 70px"
                             type="number"
                             hide-details
@@ -242,7 +258,7 @@
                         step="10"
                         tick-size="4"
                         hide-details
-                        color="primary"
+                        color="secondary"
                         track-color="neutral-darken-3"
                       ></v-slider>
                     </template>
@@ -257,7 +273,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 font-weight-bold">
                 下拉選擇框（Selects）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
@@ -273,6 +289,9 @@
                     <template #content>
                       <v-select
                         label="Select"
+                        density="comfortable"
+                        rounded="sm"
+                        single-line
                         :items="[
                           'California',
                           'Colorado',
@@ -296,6 +315,8 @@
                       <v-select
                         label="Select"
                         disabled
+                        density="comfortable"
+                        rounded="sm"
                         :items="[
                           'California',
                           'Colorado',
@@ -311,6 +332,7 @@
                   <layoutCardItem
                     label-align="justify-start"
                     style="width: 100%"
+                    density="comfortable"
                     :height="'20px'"
                   >
                     <template #label>Type: Outlined</template>
@@ -318,6 +340,8 @@
                       <v-select
                         label="Select"
                         variant="outlined"
+                        density="comfortable"
+                        rounded="sm"
                         single-line
                         :items="[
                           'California',
@@ -343,6 +367,8 @@
                         label="Select"
                         single-line
                         variant="solo"
+                        density="comfortable"
+                        rounded="sm"
                         :items="[
                           'California',
                           'Colorado',
@@ -365,6 +391,8 @@
                     <template #content>
                       <v-select
                         label="Select"
+                        density="comfortable"
+                        rounded="sm"
                         single-line
                         variant="solo"
                         :items="[
@@ -391,6 +419,8 @@
                         label="Select"
                         variant="solo-inverted"
                         single-line
+                        density="comfortable"
+                        rounded="sm"
                         :items="[
                           'California',
                           'Colorado',
@@ -419,6 +449,8 @@
                         label="Select"
                         variant="outlined"
                         single-line
+                        density="comfortable"
+                        rounded="sm"
                         :items="[
                           'California',
                           'Colorado',
@@ -445,6 +477,8 @@
                         variant="outlined"
                         :items="fruits"
                         label="Favorite Fruits"
+                        density="comfortable"
+                        rounded="sm"
                         single-line
                         multiple
                       >
@@ -495,7 +529,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 font-weight-bold">
                 範圍滑桿元件（Range sliders）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
@@ -512,7 +546,7 @@
                       v-model="value"
                       strict
                       track-color="neutral-darken-3"
-                      color="primary"
+                      color="secondary"
                     ></v-range-slider>
                   </template>
                 </layoutCardItem>
@@ -535,7 +569,7 @@
                       v-model="value2"
                       step="10"
                       thumb-label="always"
-                      color="primary"
+                      color="secondary"
                       hide-details="auto"
                       track-color="neutral-darken-3"
                     ></v-range-slider>
@@ -556,7 +590,7 @@
                       v-model="range"
                       :step="0"
                       thumb-label="always"
-                      color="primary"
+                      color="secondary"
                       hide-details="auto"
                       track-color="neutral-darken-3"
                     >
@@ -592,13 +626,13 @@
                       :step="1"
                       class="align-center"
                       track-color="neutral-darken-3"
-                      color="primary"
+                      color="secondary"
                       hide-details
                     >
                       <template v-slot:prepend>
                         <v-text-field
                           v-model="range[0]"
-                          density="compact"
+                          density="comfortable"
                           style="width: 70px"
                           type="number"
                           variant="outlined"
@@ -624,13 +658,13 @@
                       :step="1"
                       class="align-center"
                       track-color="neutral-darken-3"
-                      color="primary"
+                      color="secondary"
                       hide-details
                     >
                       <template v-slot:append>
                         <v-text-field
                           v-model="range[1]"
-                          density="compact"
+                          density="comfortable"
                           style="width: 70px"
                           type="number"
                           variant="outlined"
@@ -655,7 +689,7 @@
                       :max="10"
                       :min="-10"
                       :step="1"
-                      color="primary"
+                      color="secondary"
                       class="align-center"
                       track-color="neutral-darken-3"
                       hide-details
@@ -663,7 +697,7 @@
                       <template v-slot:prepend>
                         <v-text-field
                           v-model="range[0]"
-                          density="compact"
+                          density="comfortable"
                           style="width: 70px"
                           type="number"
                           variant="outlined"
@@ -674,7 +708,7 @@
                       <template v-slot:append>
                         <v-text-field
                           v-model="range[1]"
-                          density="compact"
+                          density="comfortable"
                           style="width: 70px"
                           type="number"
                           variant="outlined"
@@ -705,7 +739,7 @@
                       show-ticks="always"
                       thumb-label="always"
                       tick-size="4"
-                      color="primary"
+                      color="secondary"
                       hide-details="auto"
                       track-color="neutral-darken-3"
                     >

@@ -204,6 +204,7 @@
                     label="行內排列"
                     hide-details="auto"
                     color="primary"
+                    density="comfortable"
                   >
                     <v-radio label="立即" value="1"></v-radio>
                     <v-radio label="排程" value="2"></v-radio> </v-radio-group
@@ -214,6 +215,7 @@
                   <v-select
                     label="下拉式選單"
                     variant="outlined"
+                    density="comfortable"
                     single-line
                     hide-details
                     v-model:menu="menuOpen"
@@ -235,6 +237,7 @@
                   ><v-radio-group
                     inline
                     label="行內排列"
+                    density="comfortable"
                     hide-details="auto"
                     color="primary"
                   >
@@ -247,6 +250,7 @@
                   <v-select
                     label="下拉式選單"
                     variant="outlined"
+                    density="comfortable"
                     single-line
                     v-model:menu="menuOpen2"
                     hide-details
@@ -269,6 +273,7 @@
                     inline
                     label="行內排列"
                     hide-details="auto"
+                    density="comfortable"
                     color="primary"
                   >
                     <v-radio label="立即" value="1"></v-radio>
@@ -279,6 +284,7 @@
                 <v-col class="pb-0" cols="">
                   <v-select
                     label="下拉式選單"
+                    density="comfortable"
                     variant="outlined"
                     single-line
                     v-model:menu="menuOpen3"

@@ -150,7 +150,7 @@
                 <div class="mx-2">
                   <v-text-field
                     variant="outlined"
-                    density="compact"
+                    density="comfortable"
                     type="number"
                     width="55px"
                     hide-details

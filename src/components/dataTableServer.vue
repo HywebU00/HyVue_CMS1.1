@@ -11,41 +11,61 @@
   >
     <template v-slot:item="{ item }">
       <tr>
-        <td class="">{{ item.id }}</td>
-        <td class="">{{ item.name }}</td>
-        <td class="">{{ item.class }}</td>
-        <td class="">{{ item.title }}</td>
-        <td class="">{{ item.password }}</td>
+        <td class="text-center">{{ item.id }}</td>
+        <td class="text-center">{{ item.name }}</td>
+        <td class="text-center">{{ item.class }}</td>
+        <td class="text-center">{{ item.title }}</td>
+        <td class="text-center">{{ item.password }}</td>
         <td>{{ item.status }}</td>
         <td>
           <div class="btnGroup d-flex">
-            <v-btn elevation="0" color="primary" variant="tonal" class="mr-2"
+            <v-btn
+              elevation="0"
+              color="primary"
+              size="small"
+              variant="tonal"
+              rounded="def"
+              class="mr-2"
               >刪除</v-btn
             >
-            <v-btn elevation="0" color="primary" variant="outlined">新增</v-btn>
+            <v-btn
+              elevation="0"
+              color="primary"
+              rounded="def"
+              size="small"
+              variant="outlined"
+              >新增</v-btn
+            >
           </div>
         </td>
         <td class="d-flex justify-center align-center">
           <v-menu transition="slide-y-transition">
             <template v-slot:activator="{ props }">
-              <v-btn icon="mdi-cog" class="ma-2" v-bind="props" size="x-small">
+              <v-btn
+                rounded="def"
+                size="small"
+                color="primary"
+                variant="outlined"
+                v-bind="props"
+              >
+                <span class="material-icons-outlined"> settings </span>
               </v-btn>
             </template>
             <v-card class="pa-2">
               <v-btn
-                size="large"
                 variant="outlined"
                 class="my-1"
                 block
+                size="small"
                 color="primary"
                 prepend-icon="mdi-delete"
                 >刪除</v-btn
               >
               <v-btn
-                size="large"
                 variant="outlined"
                 class="my-1"
                 block
+                size="small"
                 prepend-icon="mdi-pencil"
                 color="primary"
                 >編輯</v-btn
@@ -64,10 +84,11 @@
           <div class="mx-2">
             <v-text-field
               variant="outlined"
-              density="compact"
+              density="comfortable"
               type="number"
               width="55px"
               hide-details
+              rounded="sm"
               value="1"
               single-line
             ></v-text-field>
@@ -191,19 +212,24 @@ export default {
     headers: [
       {
         title: "帳號",
-        align: "start",
+        align: "center",
         sortable: false,
         key: "id",
       },
-      { title: "姓名", key: "name", align: "start", sortable: false },
-      { title: "單位", key: "class", align: "start", sortable: false },
-      { title: "職稱", key: "title", align: "start", sortable: false },
-      { title: "申請時密碼", key: "password", align: "start", sortable: false },
-      { title: "狀態", key: "status", align: "start", sortable: false },
+      { title: "姓名", key: "name", align: "center", sortable: false },
+      { title: "單位", key: "class", align: "center", sortable: false },
+      { title: "職稱", key: "title", align: "center", sortable: false },
+      {
+        title: "申請時密碼",
+        key: "password",
+        align: "center",
+        sortable: false,
+      },
+      { title: "狀態", key: "status", align: "center", sortable: false },
       {
         title: "動作",
         key: "iron",
-        align: "start",
+        align: "center",
         sortable: false,
         width: 100,
       },

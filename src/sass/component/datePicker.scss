@@ -6,7 +6,7 @@
 .dateRangerPicker,
 .multiDatePicker {
   .dp__input {
-    height: rem(48);
+    height: rem(40);
     border: 0px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   }
@@ -41,4 +41,8 @@
   .v-date-picker-month__day {
     color: $neutral20;
   }
+}
+.v-date-picker-month__day .v-btn.v-date-picker-month__day-btn {
+  width: rem(40);
+  height: rem(40);
 }

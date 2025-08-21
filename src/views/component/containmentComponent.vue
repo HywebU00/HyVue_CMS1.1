@@ -7,9 +7,7 @@
         <v-card class="h-100">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
-                按鈕樣式 ( Button)
-              </h4>
+              <h4 class="text-h4 mb-2 font-weight-bold">按鈕樣式 ( Button)</h4>
               <v-divider class="pt-2 mb-2"></v-divider>
               <!-- 尺寸效果 start -->
               <layoutCard title="尺寸效果">
@@ -72,7 +70,7 @@
                   <template #label> Radius: 24/LG</template>
                   <template #content>
                     <v-btn color="primary" size="large" rounded="lg">
-                      radius 18 / LG
+                      radius 24 / LG
                     </v-btn></template
                   >
                 </layoutCardItem>
@@ -220,9 +218,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
-                卡片樣式 (Cards)
-              </h4>
+              <h4 class="text-h4 mb-2 font-weight-bold">卡片樣式 (Cards)</h4>
               <v-divider class="pt-2 mb-2"></v-divider>
 
               <!-- 邀請樣式start -->
@@ -297,9 +293,7 @@
         <v-card>
           <div class="mb-1">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
-                標籤樣式 (chip)
-              </h4>
+              <h4 class="text-h4 mb-2 font-weight-bold">標籤樣式 (chip)</h4>
               <v-divider class="py-2 mb-2"></v-divider>
               <!-- 標籤列 start -->
               <!-- 樣態 start -->
@@ -409,9 +403,7 @@
         <v-card>
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
-                對話框（Dialogs）
-              </h4>
+              <h4 class="text-h4 mb-2 font-weight-bold">對話框（Dialogs）</h4>
               <v-divider class="pt-2 mb-2"></v-divider>
               <!-- 預設樣式 start -->
               <layoutCard title="預設樣式">
@@ -500,7 +492,7 @@
         <v-card>
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 font-weight-bold">
                 擴展面板（Expansion panels）
               </h4>
               <v-divider class="py-2 mb-2"></v-divider>
@@ -669,9 +661,7 @@
         <v-card>
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
-                提示(Tooltips)
-              </h4>
+              <h4 class="text-h4 mb-2 font-weight-bold">提示(Tooltips)</h4>
               <v-divider class="py-2 mb-2"></v-divider>
               <!-- 標籤列 start -->
               <layoutCard title=" 提示(Tooltips)">

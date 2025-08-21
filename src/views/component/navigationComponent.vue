@@ -7,7 +7,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 font-weight-bold">
                 麵包屑導航（Breadcrumbs）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
@@ -86,9 +86,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
-                頁籤元件（Tabs）
-              </h4>
+              <h4 class="text-h4 mb-2 font-weight-bold">頁籤元件（Tabs）</h4>
               <v-divider class="pt-2 mb-2"></v-divider>
 
               <layoutCard title="Tabs 分頁元件" flexWrap="wrap">

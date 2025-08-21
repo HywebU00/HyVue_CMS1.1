@@ -126,5 +126,11 @@ export default createVuetify({
     VAvatar: {
       size: "44px",
     },
+    VTextField: {
+      rounded: "sm",
+    },
+    VBtn: {
+      rounded: "sm",
+    },
   },
 });

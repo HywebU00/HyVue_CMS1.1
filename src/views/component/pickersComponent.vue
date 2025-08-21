@@ -7,7 +7,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 font-weight-bold">
                 日期選擇器元件（Date pickers）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>

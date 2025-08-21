@@ -46,7 +46,7 @@
         <v-card class="h-100 itemCard">
           <h4 class="">今日熱門網頁</h4>
 
-          <v-table density="compact">
+          <v-table density="comfortable">
             <thead class="bg-thead">
               <tr>
                 <th class="text-center">序列</th>
@@ -70,7 +70,7 @@
       <v-col md="6" cols="12">
         <v-card class="h-100 itemCard">
           <h4 class="">公告資訊</h4>
-          <v-table density="compact">
+          <v-table density="comfortable">
             <thead class="bg-thead">
               <tr>
                 <th class="text-center">序列</th>

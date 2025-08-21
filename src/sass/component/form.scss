@@ -44,7 +44,6 @@
     padding: 0 0.5rem;
     > [class^='v-col-'] {
       &:has(.fromGrpTitle) {
-        // text-align: start;
         .fromGrpTitle {
           text-align: center;
         }

@@ -1,8 +1,18 @@
 <template>
-  <v-container class="container">
-    <v-breadcrumbs :items="['首頁', '節點', '節點']"></v-breadcrumbs>
-    <v-divider class="pt-1 mb-3"></v-divider>
-    <h2>特殊範例頁面 - 網站總覽</h2>
+  <v-container class="container page cardPage">
+    <v-breadcrumbs :items="['首頁', '節點', '節點']">
+      <template v-slot:prepend>
+        <span
+          class="material-symbols-rounded text-neutral-darken-5 icon"
+          size="small"
+        >
+          home
+        </span>
+      </template>
+    </v-breadcrumbs>
+
+    <v-divider class="mb-3"></v-divider>
+    <h2 class="title">卡片（Cards）</h2>
     <v-divider class="mt-3 mb-4"></v-divider>
     <!-- 卡片列start -->
     <v-card class="mb-5">
@@ -12,84 +22,82 @@
           <v-row>
             <v-col cols="12" class="py-0"
               ><div>
-                <v-chip-group v-model="selection">
-                  <v-chip
-                    v-for="item in 6"
-                    :key="item"
-                    color="primary"
-                    link
-                    label
-                  >
+                <v-chip-group class="chipGroup" v-model="selection">
+                  <v-chip v-for="item in 6" :key="item" link label>
                     標籤
                   </v-chip>
                 </v-chip-group>
               </div>
-              <v-divider class="my-2"></v-divider>
+              <v-divider class="mb-0"></v-divider>
             </v-col>
-            <v-col class="pb-0 justify-end d-flex" cols="12">
-              <v-btn
-                variant="flat"
-                color="primary "
-                size="small"
-                class="mb-4"
-                prepend-icon="mdi-plus"
-                >新增</v-btn
+            <v-col class="pt-0 justify-end d-flex" cols="12">
+              <v-btn variant="flat" class="px-3" color="primary " rounded="def">
+                <v-btn-prepend class="mr-1 d-flex align-center">
+                  <span class="material-symbols-outlined"> add </span>
+                </v-btn-prepend>
+                新增</v-btn
               >
             </v-col>
           </v-row>
           <!-- 標籤列 end -->
           <v-row class="albumCardList mt-0">
-            <v-col
-              v-for="item in 10"
-              :key="item"
-              cols="12"
-              sm="6"
-              md="4"
-              lg="3"
-              xl="2"
-            >
-              <v-card class="card">
-                <div class="cardContainer">
-                  <v-img src="~@/assets/demo/01.jpg" cover></v-img>
-                  <div class="info">
-                    <v-card-item>
-                      <v-card-title>資料標題</v-card-title>
-                      <v-card-subtitle>負責人/科別</v-card-subtitle>
-                      <p>資料內容記事資料內容記事資料內容記事...</p>
-                    </v-card-item>
-                    <v-card-text>
-                      <v-row class="iconList">
-                        <v-col>
-                          <v-icon icon="mdi:mdi-clock" />
-                          <span>112/03/27</span></v-col
-                        >
-                        <v-col class="d-flex justify-end">
-                          <v-icon icon="mdi:mdi-eye" />
-                          <span>112</span></v-col
-                        >
-                      </v-row>
-                    </v-card-text>
-                    <v-card-actions>
-                      <v-btn variant="tonal" color="primary" block>
-                        more
-                      </v-btn>
-                    </v-card-actions>
-                  </div>
-                </div>
-              </v-card>
+            <v-col class="cardGrp mx-auto">
+              <div class="">
+                <card v-for="item in 8" :key="item" variant="elevated" />
+              </div>
             </v-col>
           </v-row>
         </v-container>
         <!-- Pagination start -->
-        <div class="text-center pb-5">
-          <v-pagination
-            v-model="page"
-            :length="5"
-            rounded="0"
-            active-color="primary"
-            color="primary"
-            size="small"
-          ></v-pagination>
+        <div class="text-center mt-4 pb-5 paginationText">
+          <div class="d-flex justify-center align-center">
+            共 <span class="text-primary">308</span> 筆資料，第
+            <span class="text-primary">1/18</span>
+            頁，每頁顯示
+            <div class="mx-2">
+              <v-text-field
+                variant="outlined"
+                density="comfortable"
+                type="number"
+                width="55px"
+                hide-details
+                value="1"
+                single-line
+              ></v-text-field>
+            </div>
+            <span>筆</span>
+            <v-btn class="ml-2" color="secondary-lighten-1" elevation="0"
+              >確定</v-btn
+            >
+          </div>
+          <div class="mt-4">
+            <div class="pagination d-flex align-center justify-center">
+              <v-btn
+                rounded="sm"
+                class="btn"
+                variant="text"
+                color="neutral-darken-5"
+              >
+                <span class="material-symbols-rounded"> first_page </span>
+              </v-btn>
+              <v-pagination
+                v-model="page"
+                :length="15"
+                total-visible="5"
+                rounded="sm"
+                active-color="primary"
+                color="neutral-darken-5"
+              />
+              <v-btn
+                rounded="sm"
+                class="btn"
+                variant="text"
+                color="neutral-darken-5"
+              >
+                <span class="material-symbols-rounded"> last_page </span>
+              </v-btn>
+            </div>
+          </div>
         </div>
         <!-- Pagination end -->
       </div>
@@ -126,100 +134,121 @@
             </v-col>
           </v-row>
           <!-- 標籤列 end -->
-          <v-row class="albumCardList list">
-            <v-col
-              v-for="item in 10"
-              :key="item"
-              cols="12"
-              sm="6"
-              md="4"
-              lg="3"
-              xl="2"
-            >
-              <v-card class="card">
-                <div class="cardContainer">
-                  <v-img src="~@/assets/demo/02.jpg" cover></v-img>
-                  <div class="info">
-                    <v-card-item>
-                      <v-card-title>資料標題</v-card-title>
-                      <v-card-subtitle>負責人/科別</v-card-subtitle>
-                      <p>資料內容記事資料內容記事資料內容記事...</p>
-                    </v-card-item>
-                    <v-card-text>
-                      <v-row class="iconList">
-                        <v-col>
-                          <v-icon icon="mdi:mdi-clock" />
-                          <span>112/03/27</span></v-col
-                        >
-                        <v-col class="d-flex justify-end">
-                          <v-icon icon="mdi:mdi-eye" />
-                          <span>112</span></v-col
-                        >
-                      </v-row>
-                    </v-card-text>
-                  </div>
-                </div>
-              </v-card>
+          <v-row class="albumCardList">
+            <v-col class="cardGrp mx-auto listStyle">
+              <div class=" ">
+                <card
+                  type="list"
+                  v-for="item in 8"
+                  :key="item"
+                  variant="elevated"
+                />
+              </div>
             </v-col>
           </v-row>
         </v-container>
         <!-- Pagination start -->
-        <div class="text-center pb-5">
-          <v-pagination
-            v-model="page"
-            :length="5"
-            rounded="0"
-            active-color="primary"
-            color="primary"
-            size="small"
-          ></v-pagination>
+        <div class="text-center mt-4 pb-5 paginationText">
+          <div class="d-flex justify-center align-center">
+            共 <span class="text-primary">308</span> 筆資料，第
+            <span class="text-primary">1/18</span>
+            頁，每頁顯示
+            <div class="mx-2">
+              <v-text-field
+                variant="outlined"
+                density="comfortable"
+                type="number"
+                width="55px"
+                hide-details
+                value="1"
+                single-line
+              ></v-text-field>
+            </div>
+            <span>筆</span>
+            <v-btn class="ml-2" color="secondary-lighten-1" elevation="0"
+              >確定</v-btn
+            >
+          </div>
+          <div class="mt-4">
+            <div class="pagination d-flex align-center justify-center">
+              <v-btn
+                rounded="sm"
+                class="btn"
+                variant="text"
+                color="neutral-darken-5"
+              >
+                <span class="material-symbols-rounded"> first_page </span>
+              </v-btn>
+              <v-pagination
+                v-model="page"
+                :length="15"
+                total-visible="5"
+                rounded="sm"
+                active-color="primary"
+                color="neutral-darken-5"
+              />
+              <v-btn
+                rounded="sm"
+                class="btn"
+                variant="text"
+                color="neutral-darken-5"
+              >
+                <span class="material-symbols-rounded"> last_page </span>
+              </v-btn>
+            </div>
+          </div>
         </div>
+
         <!-- Pagination end -->
       </div>
     </v-card>
     <!-- 卡片列表 end -->
     <v-card class="mb-5">
       <div class="">
-        <v-container class="container">
-          <v-row class="pa-4">
-            <v-col
-              class="px-1"
-              v-for="item in 12"
-              :key="item"
-              cols="4"
-              sm="4"
-              md="3"
-              lg="2"
-            >
-              <v-card class="photoCard">
+        <v-row class="albumCardList mt-0">
+          <v-col class="cardGrp mx-auto">
+            <div class="">
+              <v-card
+                class="card default"
+                variant="elevated"
+                v-for="item in 8"
+                :key="item"
+              >
                 <div class="cardContainer">
-                  <div class="img">
-                    <v-label></v-label>
-                    <v-checkbox
-                      v-ripple.stop
-                      class="checkbox"
-                      color="light"
-                      v-model="selected"
-                      :value="item"
-                    ></v-checkbox>
-                    <v-img src="~@/assets/demo/03.jpg" cover></v-img>
-                  </div>
+                  <v-checkbox
+                    color="primary-lighten-2"
+                    label="cardCheckbox"
+                    class="cardCheckbox"
+                    hide-details="auto"
+                  >
+                  </v-checkbox>
+                  <v-img src="~@/assets/demo/hyBg_Image.jpg" cover></v-img>
                   <div class="info">
                     <v-card-item>
-                      <v-card-title>檔案名稱檔案名稱檔案名稱</v-card-title>
+                      <div class="d-flex">
+                        <v-avatar
+                          image="@/assets/demo/account.jpg"
+                          rounded="full"
+                        ></v-avatar>
+                        <div class="titleText">
+                          <v-card-title>資料標題資料標題</v-card-title>
+                          <v-card-subtitle>負責人/科別次標題</v-card-subtitle>
+                        </div>
+                      </div>
                     </v-card-item>
                   </div>
                 </div>
               </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
+            </div>
+          </v-col>
+        </v-row>
       </div>
     </v-card>
   </v-container>
 </template>
 
 <script>
+import card from "@/components/card.vue";
 export default {
   data: () => ({
     tab: null,
@@ -256,6 +285,9 @@ export default {
         return;
       }
     },
+  },
+  components: {
+    card,
   },
 };
 </script>

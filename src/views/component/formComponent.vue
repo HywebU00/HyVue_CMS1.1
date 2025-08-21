@@ -26,8 +26,8 @@
                 <v-col cols="12">
                   <v-text-field
                     label="文字標準表單"
-                    rounded="sm"
                     single-line
+                    density="comfortable"
                     hide-details="auto"
                   ></v-text-field>
                 </v-col>
@@ -35,7 +35,6 @@
                   <v-text-field
                     label="文字標準表單"
                     hide-details="auto"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     :messages="['文字標準表單']"
@@ -43,7 +42,6 @@
                 </v-col>
                 <v-col cols="12">
                   <v-text-field
-                    rounded="sm"
                     single-line
                     density="compact"
                     label="文字標準表單"
@@ -67,7 +65,6 @@
                   <v-text-field
                     label="日期選擇"
                     hide-details="auto"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     append-inner-icon="mdi-calendar-range"
@@ -80,7 +77,6 @@
                     :messages="['文字標準表單']"
                     label="日期選擇"
                     append-inner-icon="mdi-calendar-range"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                   >
@@ -93,7 +89,6 @@
                   <v-text-field
                     append-inner-icon="mdi-calendar-range"
                     label="日期選擇"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     :messages="['文字標準表單']"
@@ -106,7 +101,6 @@
                   <v-text-field
                     label="日期選擇"
                     error-messages="日期選擇"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     append-inner-icon="mdi-calendar-range"
@@ -122,7 +116,6 @@
                     append-inner-icon="mdi-calendar-range"
                     label="日期選擇"
                     hide-details="auto"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                   ></v-text-field
@@ -303,7 +296,6 @@
                     label="文字標準表單"
                     variant="outlined"
                     hide-details="auto"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                   ></v-text-field>
@@ -313,7 +305,6 @@
                     label="文字標準表單"
                     hide-details="auto"
                     variant="outlined"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                   ></v-text-field>
@@ -324,7 +315,6 @@
                   <v-text-field
                     variant="outlined"
                     label="文字標準表單"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     hide-details="auto"
@@ -343,7 +333,6 @@
                     variant="outlined"
                     :messages="['說明文字']"
                     append-inner-icon="mdi-pencil"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                   ></v-text-field>
@@ -356,7 +345,6 @@
                     variant="outlined"
                     :append-inner-icon="visible ? 'mdi-eye-off' : 'mdi-eye'"
                     :type="visible ? 'text' : 'password'"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     :messages="['說明文字']"
@@ -371,7 +359,6 @@
                     variant="outlined"
                     hide-details="auto"
                     :messages="['文字標準表單']"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                   ></v-text-field>
@@ -386,7 +373,6 @@
               <v-row>
                 <v-col cols="3">
                   <v-select
-                    rounded="sm"
                     single-line
                     variant="outlined"
                     density="comfortable"
@@ -398,7 +384,6 @@
                 </v-col>
                 <v-col cols="9">
                   <v-text-field
-                    rounded="sm"
                     single-line
                     variant="outlined"
                     density="comfortable"
@@ -411,7 +396,6 @@
                 <v-col cols="3">
                   <v-text-field
                     placeholder="886"
-                    rounded="sm"
                     single-line
                     variant="outlined"
                     density="comfortable"
@@ -424,7 +408,6 @@
                 </v-col>
                 <v-col cols="6">
                   <v-text-field
-                    rounded="sm"
                     variant="outlined"
                     single-line
                     density="comfortable"
@@ -438,7 +421,6 @@
                 </v-col>
                 <v-col cols="3">
                   <v-text-field
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     variant="outlined"
@@ -449,7 +431,6 @@
               <v-row>
                 <v-col cols="3">
                   <v-text-field
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     variant="outlined"
@@ -459,7 +440,6 @@
                 </v-col>
                 <v-col cols="9">
                   <v-text-field
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     label="文字標準表單"
@@ -473,7 +453,6 @@
                   <v-select
                     label="下拉式選單"
                     variant="outlined"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     class="h-100"
@@ -485,7 +464,6 @@
                   <v-select
                     label="下拉式選單"
                     variant="outlined"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     class="h-100"
@@ -496,7 +474,6 @@
                 <v-col cols="">
                   <v-text-field
                     label="文字標準表單"
-                    rounded="sm"
                     single-line
                     variant="outlined"
                     density="comfortable"
@@ -525,7 +502,6 @@
                     label="文字標準表單"
                     hide-details="auto"
                     variant="outlined"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                   ></v-text-field>
@@ -535,7 +511,6 @@
                     variant="outlined"
                     label="文字標準表單"
                     hide-details="auto"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                   ></v-text-field>
@@ -549,7 +524,6 @@
                   <v-text-field
                     variant="outlined"
                     label="文字標準表單"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     hide-details="auto"
@@ -569,7 +543,6 @@
                     label="有icon的輸入匡"
                     type="text"
                     hide-details="auto"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     :messages="['說明文字']"
@@ -584,7 +557,6 @@
                 <v-col>
                   <v-text-field
                     variant="outlined"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     label="密碼表單"
@@ -605,7 +577,6 @@
                     label="文字標準表單"
                     hide-details="auto"
                     :messages="['文字標準表單']"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                   ></v-text-field>
@@ -624,7 +595,6 @@
                 <v-col cols="4" lg="3">
                   <v-select
                     variant="outlined"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     label="下拉式選單"
@@ -635,7 +605,6 @@
                 <v-col cols="8" lg="7">
                   <v-text-field
                     variant="outlined"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     label="文字標準表單"
@@ -650,7 +619,6 @@
                 <v-col cols="4" lg="3">
                   <v-text-field
                     placeholder="886"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     variant="outlined"
@@ -663,7 +631,6 @@
                 </v-col>
                 <v-col cols="5" lg="4">
                   <v-text-field
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     hide-details="auto"
@@ -677,7 +644,6 @@
                 </v-col>
                 <v-col cols="3">
                   <v-text-field
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     hide-details="auto"
@@ -691,7 +657,6 @@
                 </v-col>
                 <v-col cols="4" lg="3">
                   <v-text-field
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     label="文字標準表單"
@@ -701,7 +666,6 @@
                 </v-col>
                 <v-col cols="8" lg="7">
                   <v-text-field
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     label="文字標準表單"
@@ -717,7 +681,6 @@
                 <v-col cols="3">
                   <v-select
                     label="下拉式選單"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     variant="outlined"
@@ -730,7 +693,6 @@
                   <v-select
                     label="下拉式選單"
                     variant="outlined"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     hide-details="auto"
@@ -740,7 +702,6 @@
                 <v-col cols="">
                   <v-text-field
                     label="文字標準表單"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     variant="outlined"
@@ -763,7 +724,6 @@
               <v-row>
                 <v-col>
                   <v-textarea
-                    rounded="sm"
                     density="comfortable"
                     hide-details="auto"
                     variant="outlined"
@@ -775,7 +735,6 @@
                 <v-col>
                   <v-textarea
                     hide-details="auto"
-                    rounded="sm"
                     density="comfortable"
                     label="必填文字"
                     messages="說明文字"
@@ -801,7 +760,6 @@
                 <v-col
                   ><v-select
                     label="下拉式選單"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     variant="outlined"
@@ -815,7 +773,6 @@
                   ><v-select
                     label="下拉式選單"
                     hide-details="auto"
-                    rounded="sm"
                     single-line
                     variant="outlined"
                     density="comfortable"
@@ -828,7 +785,6 @@
                 <v-col
                   ><v-select
                     label="下拉式選單"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     hide-details="auto"
@@ -842,7 +798,6 @@
                 <v-col
                   ><v-select
                     label="下拉式選單"
-                    rounded="sm"
                     single-line
                     density="comfortable"
                     disabled

@@ -81,9 +81,9 @@
           </v-list-item>
           <v-list-item title="Grid System" :to="'/component/system'">
           </v-list-item>
-          <!-- <v-list-item title="Form" :to="'/component/form'"> </v-list-item> -->
+          <v-list-item title="Form" :to="'/component/form'"> </v-list-item>
           <v-list-item title="Table" :to="'/component/table'"> </v-list-item>
-          <v-list-item title="Form1" :to="'/component/form'"> </v-list-item>
+
           <v-list-item title="Card" :to="'/component/card'"> </v-list-item>
           <v-list-item title="Chart" :to="'/component/chart'"> </v-list-item>
         </v-list-group>
@@ -125,7 +125,7 @@
             <li>企劃處</li>
           </ul>
         </div>
-        <v-btn class="iconBtn">
+        <v-btn class="iconBtn" rounded="def">
           <span class="material-symbols-rounded"> logout </span>
         </v-btn>
       </div>

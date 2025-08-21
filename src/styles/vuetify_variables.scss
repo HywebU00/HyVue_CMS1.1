@@ -1,18 +1,46 @@
 @use 'sass:map';
 @use '@/sass/common/mixins/text.scss' as *;
-// 你要的自訂高度
+
+// input設定
+// input 設定：每個密度對應 height + padding
 $densities: (
-  default: rem(56),
-  comfortable: rem(48),
-  compact: rem(40),
+  default: (
+    height: rem(56),
+    padding: 16px,
+  ),
+  comfortable: (
+    height: rem(40),
+    padding: 4px 12px,
+    top: 0px,
+  ),
+  compact: (
+    height: rem(36),
+    padding: 2px 8px,
+    top: 0px,
+  ),
 );
-$button-sizes: ();
-// v-input 自動產生對應 CSS
-@each $name, $height in $densities {
+
+// 自動產生 CSS
+@each $name, $config in $densities {
   .v-input.v-input--density-#{$name} {
+    &.v-select--active-menu,
+    &.v-select--selected {
+      .v-field__field {
+        .v-label {
+          top: map-get($config, top);
+        }
+      }
+    }
     .v-field {
-      min-height: $height;
-      height: $height;
+      &:not(:has(textarea)) {
+        min-height: map-get($config, height);
+        height: map-get($config, height);
+      }
+    }
+
+    .v-field__input:not(textarea) {
+      min-height: map-get($config, height);
+      padding: map-get($config, padding);
     }
   }
 }
@@ -21,7 +49,7 @@ $button-sizes: ();
 $button-height: (
   x-small: rem(28),
   small: rem(36),
-  default: rem(48),
+  default: rem(40),
   large: rem(56),
   x-large: rem(60),
 );
@@ -51,7 +79,6 @@ $button-padding-ratio: (
 }
 
 //chip
-
 $chip-sizes: (
   'x-small': 24px,
   'small': 32px,
@@ -80,5 +107,22 @@ $avatar-sizes: (
   .v-avatar.v-avatar--size-#{$size} {
     width: $dimension;
     height: $dimension;
+  }
+}
+
+// pagination
+$pagination-btn-sizes: (
+  'x-small': rem(28),
+  'small': rem(36),
+  'default': rem(40),
+  'large': rem(56),
+  'x-large': rem(60),
+);
+
+@each $size, $height in $pagination-btn-sizes {
+  .v-pagination .v-btn.v-btn--size-#{$size} {
+    height: $height;
+    line-height: $height; // 讓文字垂直置中
+    min-width: $height;
   }
 }

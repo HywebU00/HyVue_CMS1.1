@@ -72,6 +72,7 @@
       @include scrollbar;
       padding-inline-start: 16px;
       padding-inline-end: 16px;
+      height: calc(100% - 201px);
     }
     //使用者登入資訊
     .loginInfo {
@@ -106,8 +107,8 @@
       }
       .iconBtn {
         min-width: auto;
-        width: rem(44);
-        height: rem(44);
+        width: rem(40);
+        height: rem(40);
         padding: 0;
         margin-left: auto;
         color: $neutral30;
@@ -213,6 +214,7 @@
     .iconBtn {
       background-color: #fff;
       color: $secondary60;
+      margin: 0 auto;
     }
     .user {
       display: none;

@@ -7,9 +7,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
-                頭像 （Avatars）
-              </h4>
+              <h4 class="text-h4 mb-2 font-weight-bold">頭像 （Avatars）</h4>
               <v-divider class="pt-2 mb-2"></v-divider>
               <layoutCard title="樣式" flexWrap="wrap">
                 <layoutCardItem :height="'40px'" style="width: 150px">
@@ -150,9 +148,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 text-primary font-weight-bold mb-2">
-                圖標（Icons）
-              </h4>
+              <h4 class="text-h4 font-weight-bold mb-2">圖標（Icons）</h4>
               <v-divider class="pt-2 mb-2"></v-divider>
               <layoutCard title="顏色" flexWrap="wrap">
                 <layoutCardItem :height="'40px'" style="width: 150px">
@@ -204,9 +200,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 text-primary font-weight-bold mb-2">
-                圖像 （Images）
-              </h4>
+              <h4 class="text-h4 font-weight-bold mb-2">圖像 （Images）</h4>
               <v-divider class="pt-2 mb-2"></v-divider>
               <layoutCard title="圖片尺寸" flexWrap="wrap">
                 <layoutCardItem :height="'20px'" style="width: 300px">

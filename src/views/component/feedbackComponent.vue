@@ -7,9 +7,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
-                警告框（Alerts）
-              </h4>
+              <h4 class="text-h4 mb-2 font-weight-bold">警告框（Alerts）</h4>
               <v-divider class="pt-2 mb-2"></v-divider>
               <layoutCard title="狀態" flexWrap="wrap">
                 <layoutCardItem
@@ -366,7 +364,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 font-weight-bold">
                 空狀態元件（Empty state）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
@@ -459,7 +457,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 font-weight-bold">
                 環狀進度元件 （Progress circular）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
@@ -595,7 +593,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 font-weight-bold">
                 線性進度條元件（Progress linear）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
@@ -757,7 +755,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 font-weight-bold">
                 消息列元件（SnackBars）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
@@ -919,7 +917,7 @@
         <v-card class="">
           <div class="">
             <v-container class="container">
-              <h4 class="text-h4 mb-2 text-primary font-weight-bold">
+              <h4 class="text-h4 mb-2 font-weight-bold">
                 時間軸元件（Timeline）
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>

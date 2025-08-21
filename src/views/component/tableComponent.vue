@@ -19,7 +19,7 @@
       <div class="">
         <v-container class="container">
           <!-- 標籤列 start -->
-          <v-row class="mb-1">
+          <v-row>
             <v-col cols="12" class="py-0"
               ><div>
                 <v-chip-group class="chipGroup" v-model="selection">
@@ -34,24 +34,22 @@
               <v-menu transition="slide-y-transition">
                 <template v-slot:activator="{ props }">
                   <v-btn
-                    class="btn"
-                    size="large"
+                    class="px-3 d-flex align-center"
                     variant="flat"
+                    rounded="def"
                     color="primary "
                     v-bind="props"
                   >
-                    <template #prepend>
-                      <span class="icon material-symbols-outlined">
+                    <v-btn-prepend class="d-flex align-center"
+                      ><span class="material-symbols-outlined">
                         more_vert
                       </span>
-                    </template>
-
-                    批次處理</v-btn
-                  >
+                    </v-btn-prepend>
+                    批次處理
+                  </v-btn>
                 </template>
                 <v-card class="pa-2">
                   <v-btn
-                    size="large"
                     variant="outlined"
                     class="my-1"
                     block
@@ -60,7 +58,6 @@
                     >刪除</v-btn
                   >
                   <v-btn
-                    size="large"
                     variant="outlined"
                     class="my-1"
                     block
@@ -69,7 +66,6 @@
                     >編輯</v-btn
                   >
                   <v-btn
-                    size="large"
                     variant="outlined"
                     class="my-1"
                     block
@@ -79,13 +75,11 @@
                   >
                 </v-card>
               </v-menu>
-              <v-btn
-                variant="flat"
-                color="primary "
-                class="btn"
-                size="large"
-                prepend-icon="mdi-plus"
-                >新增</v-btn
+              <v-btn variant="flat" class="px-3" color="primary " rounded="def">
+                <v-btn-prepend class="mr-1 d-flex align-center">
+                  <span class="material-symbols-outlined"> add </span>
+                </v-btn-prepend>
+                新增</v-btn
               >
             </v-col>
           </v-row>
@@ -110,7 +104,10 @@
                 <tbody>
                   <tr v-for="item in data" :key="item.name">
                     <td class="text-center">
-                      <div class="d-flex justify-center">
+                      <div
+                        class="d-flex justify-center"
+                        style="min-width: 40px"
+                      >
                         <v-checkbox
                           value="1"
                           label=""
@@ -133,7 +130,9 @@
                         </div>
                       </template>
                     </td>
-                    <td class="text-center">{{ item.title }}</td>
+                    <td class="text-center" style="min-width: 200px">
+                      {{ item.title }}
+                    </td>
                     <td>{{ item.class }}</td>
                     <td>{{ item.dateStart }}</td>
                     <td>{{ item.dateEnd }}</td>
@@ -172,11 +171,11 @@
             <div class="mx-2">
               <v-text-field
                 variant="outlined"
-                density="compact"
                 type="number"
                 width="55px"
                 hide-details
                 value="1"
+                density="comfortable"
                 single-line
               ></v-text-field>
             </div>
@@ -206,7 +205,6 @@
                 rounded="sm"
                 active-color="primary"
                 color="neutral-darken-5"
-                size="small"
               />
               <v-btn
                 rounded="sm"
@@ -229,7 +227,7 @@
       <div class="">
         <v-container class="container">
           <!-- 標籤列 start -->
-          <v-row class="mb-1">
+          <v-row class="">
             <v-col cols="12" class="py-0"
               ><div>
                 <v-chip-group class="chipGroup" v-model="selection">
@@ -241,13 +239,11 @@
               <v-divider class="my-2"></v-divider>
             </v-col>
             <v-col class="pb-0 justify-end d-flex" cols="12">
-              <v-btn
-                variant="flat"
-                color="primary "
-                class="btn"
-                size="large"
-                prepend-icon="mdi-plus"
-                >新增</v-btn
+              <v-btn variant="flat" class="px-3" color="primary " rounded="def">
+                <v-btn-prepend class="mr-1 d-flex align-center">
+                  <span class="material-symbols-outlined"> add </span>
+                </v-btn-prepend>
+                新增</v-btn
               >
             </v-col>
           </v-row>
@@ -269,7 +265,10 @@
                 <tbody>
                   <tr v-for="item in data" :key="item.name">
                     <td>
-                      <div class="d-flex justify-center">
+                      <div
+                        class="d-flex justify-center"
+                        style="min-width: 40px"
+                      >
                         <v-checkbox
                           value="1"
                           label=""
@@ -289,26 +288,30 @@
                         ></v-img>
                       </div>
                     </td>
-                    <td class="text-center">{{ item.title }}</td>
+                    <td class="text-center" style="min-width: 200px">
+                      {{ item.title }}
+                    </td>
                     <td class="text-center">{{ item.class }}</td>
                     <td class="text-center">{{ item.status }}</td>
                     <td>
                       <v-menu transition="slide-y-transition">
                         <template v-slot:activator="{ props }">
-                          <v-btn
-                            class="ma-2 btn"
-                            color="secondary-lighten-1"
-                            variant="outlined"
-                            v-bind="props"
-                          >
-                            <template #prepend>
+                          <div class="d-flex justify-center">
+                            <v-btn
+                              class="pa-0"
+                              rounded="def"
+                              size="small"
+                              color="primary"
+                              variant="outlined"
+                              v-bind="props"
+                            >
                               <span
-                                class="icon material-symbols-outlined text-center"
+                                class="material-symbols-outlined text-center"
                               >
                                 keyboard_arrow_down
                               </span>
-                            </template>
-                          </v-btn>
+                            </v-btn>
+                          </div>
                         </template>
                         <v-card class="pa-2">
                           <v-btn
@@ -347,7 +350,7 @@
             <div class="mx-2">
               <v-text-field
                 variant="outlined"
-                density="compact"
+                density="comfortable"
                 type="number"
                 width="55px"
                 hide-details
@@ -356,11 +359,7 @@
               ></v-text-field>
             </div>
             <span>筆</span>
-            <v-btn
-              class="ml-2"
-              rounded="sm"
-              color="secondary-lighten-1"
-              elevation="0"
+            <v-btn class="ml-2" color="secondary-lighten-1" elevation="0"
               >確定</v-btn
             >
           </div>
@@ -381,7 +380,6 @@
                 rounded="sm"
                 active-color="primary"
                 color="neutral-darken-5"
-                size="small"
               />
               <v-btn
                 rounded="sm"
@@ -406,8 +404,8 @@
       <div class="">
         <v-container class="container">
           <!-- 標籤列 start -->
-          <v-row class="mb-1">
-            <v-col cols="12" class="py-0"
+          <v-row class="">
+            <v-col cols="12"
               ><div>
                 <v-chip-group class="chipGroup" v-model="selection">
                   <v-chip v-for="item in 6" :key="item" link label>
@@ -417,14 +415,12 @@
               </div>
               <v-divider class="my-2"></v-divider>
             </v-col>
-            <v-col class="pb-0 justify-end d-flex" cols="12">
-              <v-btn
-                variant="flat"
-                color="primary "
-                class="btn"
-                size="large"
-                prepend-icon="mdi-plus"
-                >新增</v-btn
+            <v-col class="justify-end d-flex" cols="12">
+              <v-btn rounded="def" variant="flat" class="px-3" color="primary ">
+                <v-btn-prepend class="mr-1 d-flex align-center">
+                  <span class="material-symbols-outlined"> add </span>
+                </v-btn-prepend>
+                新增</v-btn
               >
             </v-col>
           </v-row>
