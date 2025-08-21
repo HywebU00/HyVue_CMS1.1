@@ -756,30 +756,20 @@
 </template>
 
 <script>
-//載入 文字編輯器
-import { QuillEditor } from "@vueup/vue-quill";
-import "@vueup/vue-quill/dist/vue-quill.snow.css";
-
-//載入 日期選擇器
-import VueDatePicker from "@vuepic/vue-datepicker";
-import "@vuepic/vue-datepicker/dist/main.css";
-//載入 Ｖuetify組合 日期選擇器
-import datepickerModalVue from "@/components/datepickerModal.vue";
-
-export default {
-  data: () => ({
-    rules: [(v) => v.length <= 10 || "10字為限"],
-    visible: false,
-    expand: false,
-    model: true,
-    model2: true,
-    date: null,
-    rangeDate: null,
-    multiDate: null,
-  }),
-  components: {
-    QuillEditor,
-    VueDatePicker,
-  },
-};
+// export default {
+//   data: () => ({
+//     rules: [(v) => v.length <= 10 || "10字為限"],
+//     visible: false,
+//     expand: false,
+//     model: true,
+//     model2: true,
+//     date: null,
+//     rangeDate: null,
+//     multiDate: null,
+//   }),
+// components: {
+//   QuillEditor,
+//   VueDatePicker,
+// },
+// };
 </script>

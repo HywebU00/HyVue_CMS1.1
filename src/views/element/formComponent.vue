@@ -16,7 +16,7 @@
     <v-divider class="mt-3 mb-4"></v-divider>
 
     <v-row class="">
-      <!-- <v-col md="6" cols="12">
+      <v-col md="6" cols="12">
         <v-card class="pa-2 h-100">
           <h4 class="text-h4 my-3 ml-4 font-weight-bold">文字標準表單</h4>
           <v-divider class="mx-3"></v-divider>
@@ -124,9 +124,9 @@
             </v-container>
           </v-form>
         </v-card>
-      </v-col> -->
+      </v-col>
       <!-- 單選核取表單 start -->
-      <!-- <v-col md="6" cols="12">
+      <v-col md="6" cols="12">
         <v-card class="pa-2 h-100">
           <h4 class="text-h4 my-3 ml-4 font-weight-bold">單選核取表單</h4>
           <v-divider class="mx-3"></v-divider>
@@ -231,10 +231,10 @@
             </v-container>
           </v-form>
         </v-card>
-      </v-col> -->
+      </v-col>
       <!-- 單選核取表單 end -->
       <!-- 複選核取表單 start -->
-      <!-- <v-col md="6" cols="12">
+      <v-col md="6" cols="12">
         <v-card class="pa-2 h-100">
           <h4 class="text-h4 my-3 ml-4 font-weight-bold">複選核取表單</h4>
           <v-divider class="mx-3"></v-divider>
@@ -281,10 +281,10 @@
             </v-container>
           </v-form>
         </v-card>
-      </v-col> -->
+      </v-col>
       <!-- 複選核取表單 end -->
       <!-- 組合型表單 start -->
-      <!-- <v-col md="6" cols="12">
+      <v-col md="6" cols="12">
         <v-card class="pa-2 h-100">
           <h4 class="text-h4 my-3 ml-4 font-weight-bold">組合型表單</h4>
           <v-divider class="mx-3"></v-divider>
@@ -484,10 +484,10 @@
             </v-container>
           </v-form>
         </v-card>
-      </v-col> -->
+      </v-col>
       <!-- 組合型表單 end -->
       <!-- 組合型表單 start -->
-      <!-- <v-col md="6" cols="12">
+      <v-col md="6" cols="12">
         <v-card class="pa-2 h-100">
           <h4 class="text-h4 my-3 ml-4 font-weight-bold">組合型表單</h4>
           <v-divider class="mx-3"></v-divider>
@@ -712,10 +712,10 @@
             </v-container>
           </v-form>
         </v-card>
-      </v-col> -->
+      </v-col>
       <!-- 組合型表單 end -->
       <!-- 文字標準表單 start -->
-      <!-- <v-col md="6" cols="12">
+      <v-col md="6" cols="12">
         <v-card class="pa-2 h-100">
           <h4 class="text-h4 my-3 ml-4 font-weight-bold">文字標準表單</h4>
           <v-divider class="mx-3"></v-divider>
@@ -747,7 +747,7 @@
             </v-container>
           </v-form>
         </v-card>
-      </v-col> -->
+      </v-col>
       <!-- 文字標準表單 end -->
       <!-- 下拉選單樣式 start -->
       <v-col md="6" cols="12">
@@ -883,7 +883,7 @@
       </v-col>
       <!-- 日期選擇器 end -->
       <!-- Vueutify組合 日期選擇器 start -->
-      <!-- <v-col cols="12" md="6">
+      <v-col cols="12" md="6">
         <v-card class="pa-2 h-100 overflow-visible">
           <h4 class="text-h4 my-3 ml-4 font-weight-bold">
             Vueutify 組合 日期選擇器
@@ -910,8 +910,38 @@
             </v-container>
           </v-form>
         </v-card>
-      </v-col> -->
+      </v-col>
       <!-- 日期選擇器 end -->
     </v-row>
   </v-container>
 </template>
+
+<script>
+//載入 文字編輯器
+import { QuillEditor } from "@vueup/vue-quill";
+import "@vueup/vue-quill/dist/vue-quill.snow.css";
+
+//載入 日期選擇器
+import VueDatePicker from "@vuepic/vue-datepicker";
+import "@vuepic/vue-datepicker/dist/main.css";
+//載入 Ｖuetify組合 日期選擇器
+import datepickerModalVue from "@/components/datepickerModal.vue";
+
+export default {
+  data: () => ({
+    rules: [(v) => v.length <= 10 || "10字為限"],
+    visible: false,
+    expand: false,
+    model: true,
+    model2: true,
+    date: null,
+    rangeDate: null,
+    multiDate: null,
+  }),
+  components: {
+    QuillEditor,
+    VueDatePicker,
+    datepickerModalVue,
+  },
+};
+</script>
