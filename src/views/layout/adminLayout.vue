@@ -122,8 +122,14 @@
           >
           </v-list-item>
           <v-list-item
-            value="page"
-            title="page"
+            value="page1_form"
+            title="page1"
+            @click="pushLink('element', 'form')"
+          >
+          </v-list-item>
+          <v-list-item
+            value="page2"
+            title="page2"
             @click="pushLink('element', 'page')"
           >
           </v-list-item>

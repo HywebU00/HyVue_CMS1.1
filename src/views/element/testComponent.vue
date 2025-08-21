@@ -17,7 +17,7 @@
 
     <v-row class="">
       <h1>測試測試</h1>
-      <!-- <v-col md="6" cols="12">
+      <v-col md="6" cols="12">
         <v-card class="pa-2 h-100">
           <h4 class="text-h4 my-3 ml-4 font-weight-bold">文字標準表單</h4>
           <v-divider class="mx-3"></v-divider>
@@ -125,7 +125,7 @@
             </v-container>
           </v-form>
         </v-card>
-      </v-col> -->
+      </v-col>
       <!-- 單選核取表單 start -->
       <!-- <v-col md="6" cols="12">
         <v-card class="pa-2 h-100">
