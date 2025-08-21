@@ -67,7 +67,7 @@ const routes = [
       },
       {
         path: "form",
-        component: () => import("@/views/element/formComponent.vue"),
+        component: () => import("@/views/element/form_Component.vue"),
       },
       {
         path: "table",
