@@ -750,7 +750,7 @@
       </v-col> -->
       <!-- 文字標準表單 end -->
       <!-- 下拉選單樣式 start -->
-      <!-- <v-col md="6" cols="12">
+      <v-col md="6" cols="12">
         <v-card class="pa-2 h-100">
           <h4 class="text-h4 my-3 ml-4 font-weight-bold">下拉選單樣式</h4>
           <v-divider class="mx-3"></v-divider>
@@ -810,7 +810,7 @@
             </v-container>
           </v-form>
         </v-card>
-      </v-col> -->
+      </v-col>
       <!-- 下拉選單樣式 end -->
       <!-- 文字編輯器 start -->
       <v-col cols="12" md="6">
@@ -818,9 +818,9 @@
           <h4 class="text-h4 my-3 ml-4 font-weight-bold">文字編輯器</h4>
           <v-divider class="mx-3"></v-divider>
           <!-- 若無需使用則 npm uninstall -D @vueup/vue-quill@latest 解安裝 -->
-          <!-- <div class="pa-4">
+          <div class="pa-4">
             <quill-editor style="height: 200px"></quill-editor>
-          </div> -->
+          </div>
         </v-card>
       </v-col>
       <!-- 下文字編輯器 end -->
@@ -832,7 +832,7 @@
           </h4>
           <v-divider class="mx-3"></v-divider>
           <!-- 若無需使用則 npm uninstall -D @vuepic/vue-datepicker 解安裝 -->
-          <!-- <v-form>
+          <v-form>
             <v-container>
               <v-row class="formGrp">
                 <v-col class="pb-0" cols="12" lg="2">
@@ -878,7 +878,7 @@
                 </v-col>
               </v-row>
             </v-container>
-          </v-form> -->
+          </v-form>
         </v-card>
       </v-col>
       <!-- 日期選擇器 end -->

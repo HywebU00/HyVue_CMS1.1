@@ -40,11 +40,9 @@
                     color="primary "
                     v-bind="props"
                   >
-                    <v-btn-prepend class="d-flex align-center"
-                      ><span class="material-symbols-outlined">
-                        more_vert
-                      </span>
-                    </v-btn-prepend>
+                    <div class="d-flex align-center">
+                      <span class="material-symbols-outlined"> more_vert </span>
+                    </div>
                     批次處理
                   </v-btn>
                 </template>
@@ -76,9 +74,9 @@
                 </v-card>
               </v-menu>
               <v-btn variant="flat" class="px-3" color="primary " rounded="def">
-                <v-btn-prepend class="mr-1 d-flex align-center">
+                <div class="mr-1 d-flex align-center">
                   <span class="material-symbols-outlined"> add </span>
-                </v-btn-prepend>
+                </div>
                 新增</v-btn
               >
             </v-col>
@@ -240,9 +238,9 @@
             </v-col>
             <v-col class="pb-0 justify-end d-flex" cols="12">
               <v-btn variant="flat" class="px-3" color="primary " rounded="def">
-                <v-btn-prepend class="mr-1 d-flex align-center">
+                <div class="mr-1 d-flex align-center">
                   <span class="material-symbols-outlined"> add </span>
-                </v-btn-prepend>
+                </div>
                 新增</v-btn
               >
             </v-col>
@@ -417,9 +415,9 @@
             </v-col>
             <v-col class="justify-end d-flex" cols="12">
               <v-btn rounded="def" variant="flat" class="px-3" color="primary ">
-                <v-btn-prepend class="mr-1 d-flex align-center">
+                <div class="mr-1 d-flex align-center">
                   <span class="material-symbols-outlined"> add </span>
-                </v-btn-prepend>
+                </div>
                 新增</v-btn
               >
             </v-col>

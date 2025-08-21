@@ -6,34 +6,11 @@ const routes = [
     path: "/",
     component: () => import("@/views/layout/adminLayout.vue"),
     children: [
-      // {
-      //   path: "system",
-      //   component: () => import("@/views/component/systemComponent.vue"),
-      // },
-      // {
-      //   path: "component",
-      //   component: () => import("@/views/admin/Component.vue"),
-      // },
       {
         path: "/",
         component: () => import("@/views/basicLayout/defaultComponent.vue"),
       },
-      // {
-      //   path: "from",
-      //   component: () => import("@/views/basicLayout/fromComponent.vue"),
-      // },
-      // {
-      //   path: "table",
-      //   component: () => import("@/views/basicLayout/tableComponent.vue"),
-      // },
-      // {
-      //   path: "card",
-      //   component: () => import("@/views/basicLayout/cardComponent.vue"),
-      // },
-      // {
-      //   path: "chart",
-      //   component: () => import("@/views/basicLayout/chartComponent.vue"),
-      // },
+
       {
         path: "widget",
         component: () => import("@/views/basicLayout/widgetComponent.vue"),
@@ -53,56 +30,56 @@ const routes = [
     ],
   },
   {
-    path: "/component",
+    path: "/element",
     component: () => import("@/views/layout/adminLayout.vue"),
     children: [
       {
         path: "containment",
-        component: () => import("@/views/component/containmentComponent.vue"),
+        component: () => import("@/views/element/containmentComponent.vue"),
       },
       {
         path: "navigation",
-        component: () => import("@/views/component/navigationComponent.vue"),
+        component: () => import("@/views/element/navigationComponent.vue"),
       },
       {
         path: "controls",
-        component: () => import("@/views/component/controlsComponent.vue"),
+        component: () => import("@/views/element/controlsComponent.vue"),
       },
       {
         path: "selection",
-        component: () => import("@/views/component/selectionComponent.vue"),
+        component: () => import("@/views/element/selectionComponent.vue"),
       },
       {
         path: "feedback",
-        component: () => import("@/views/component/feedbackComponent.vue"),
+        component: () => import("@/views/element/feedbackComponent.vue"),
       },
       {
         path: "imageIcon",
-        component: () => import("@/views/component/imageIconComponent.vue"),
+        component: () => import("@/views/element/imageIconComponent.vue"),
       },
       {
         path: "pickers",
-        component: () => import("@/views/component/pickersComponent.vue"),
+        component: () => import("@/views/element/pickersComponent.vue"),
       },
       {
         path: "system",
-        component: () => import("@/views/component/systemComponent.vue"),
+        component: () => import("@/views/element/systemComponent.vue"),
       },
       {
         path: "form",
-        component: () => import("@/views/component/formComponent.vue"),
+        component: () => import("@/views/element/formComponent.vue"),
       },
       {
         path: "table",
-        component: () => import("@/views/component/tableComponent.vue"),
+        component: () => import("@/views/element/tableComponent.vue"),
       },
       {
         path: "card",
-        component: () => import("@/views/component/cardComponent.vue"),
+        component: () => import("@/views/element/cardComponent.vue"),
       },
       {
         path: "chart",
-        component: () => import("@/views/component/chartComponent.vue"),
+        component: () => import("@/views/element/chartComponent.vue"),
       },
     ],
   },
