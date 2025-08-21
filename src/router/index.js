@@ -66,8 +66,12 @@ const routes = [
         component: () => import("@/views/element/systemComponent.vue"),
       },
       {
-        path: "form",
+        path: "test",
         component: () => import("@/views/element/form_Component.vue"),
+      },
+      {
+        path: "test2",
+        component: () => import("@/views/element/formComponent.vue"),
       },
       {
         path: "table",
