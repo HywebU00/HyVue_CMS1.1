@@ -831,86 +831,8 @@
             vue-datepicker 日期選擇器
           </h4>
           <v-divider class="mx-3"></v-divider>
-          <!-- 若無需使用則 npm uninstall -D @vuepic/vue-datepicker 解安裝 -->
-          <v-form>
-            <v-container>
-              <v-row class="formGrp">
-                <v-col class="pb-0" cols="12" lg="2">
-                  <label class="text-primary ml-0" for="">選擇日期</label>
-                </v-col>
-                <v-col cols="">
-                  <VueDatePicker
-                    class="datePicker"
-                    v-model="date"
-                    :enable-time-picker="false"
-                  ></VueDatePicker>
-                </v-col>
-              </v-row>
-              <v-row class="formGrp">
-                <v-col class="pb-0" cols="12" lg="2">
-                  <label class="text-primary ml-0" for="">日期範圍</label>
-                </v-col>
-                <v-col cols="">
-                  <VueDatePicker
-                    class="dateRangerPicker"
-                    range
-                    :enable-time-picker="false"
-                    v-model="rangeDate"
-                    select-text="確定"
-                    cancel-text="取消"
-                  ></VueDatePicker>
-                </v-col>
-              </v-row>
-              <v-row class="formGrp">
-                <v-col class="pb-0" cols="12" lg="2">
-                  <label class="text-primary ml-0" for="">多日曆選取</label>
-                </v-col>
-                <v-col cols="">
-                  <VueDatePicker
-                    class="multiDatePicker"
-                    range
-                    :enable-time-picker="false"
-                    :multi-calendars="{ solo: true }"
-                    v-model="multiDate"
-                    select-text="確定"
-                    cancel-text="取消"
-                  ></VueDatePicker>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-form>
         </v-card>
       </v-col>
-      <!-- 日期選擇器 end -->
-      <!-- Vueutify組合 日期選擇器 start -->
-      <!-- <v-col cols="12" md="6">
-        <v-card class="pa-2 h-100 overflow-visible">
-          <h4 class="text-h4 my-3 ml-4 font-weight-bold">
-            Vueutify 組合 日期選擇器
-          </h4>
-          <v-divider class="mx-3"></v-divider>
-          <v-form>
-            <v-container>
-              <v-row class="formGrp">
-                <v-col class="pb-0" cols="12" lg="2">
-                  <label class="text-primary ml-0" for="">選擇日期</label>
-                </v-col>
-                <v-col cols=""
-                  ><datepickerModalVue> </datepickerModalVue>
-                </v-col>
-              </v-row>
-              <v-row class="formGrp">
-                <v-col class="pb-0" cols="12" lg="2">
-                  <label class="text-primary ml-0" for="">選擇日期</label>
-                </v-col>
-                <v-col cols=""
-                  ><datepickerModalVue variant="outlined"> </datepickerModalVue>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-form>
-        </v-card>
-      </v-col> -->
       <!-- 日期選擇器 end -->
     </v-row>
   </v-container>
@@ -941,7 +863,6 @@ export default {
   components: {
     QuillEditor,
     VueDatePicker,
-    datepickerModalVue,
   },
 };
 </script>
