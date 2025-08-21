@@ -66,8 +66,8 @@ const routes = [
         component: () => import("@/views/element/systemComponent.vue"),
       },
       {
-        path: "test",
-        component: () => import("@/views/element/form_Component.vue"),
+        path: "form",
+        component: () => import("@/views/element/testComponent.vue"),
       },
       {
         path: "test2",

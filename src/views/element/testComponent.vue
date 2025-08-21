@@ -16,6 +16,7 @@
     <v-divider class="mt-3 mb-4"></v-divider>
 
     <v-row class="">
+      <h1>測試測試</h1>
       <!-- <v-col md="6" cols="12">
         <v-card class="pa-2 h-100">
           <h4 class="text-h4 my-3 ml-4 font-weight-bold">文字標準表單</h4>
@@ -750,90 +751,6 @@
       </v-col> -->
       <!-- 文字標準表單 end -->
       <!-- 下拉選單樣式 start -->
-      <v-col md="6" cols="12">
-        <v-card class="pa-2 h-100">
-          <h4 class="text-h4 my-3 ml-4 font-weight-bold">下拉選單樣式</h4>
-          <v-divider class="mx-3"></v-divider>
-          <v-form>
-            <v-container>
-              <v-row>
-                <v-col
-                  ><v-select
-                    label="下拉式選單"
-                    single-line
-                    density="comfortable"
-                    variant="outlined"
-                    hide-details="auto"
-                    :items="['選項ㄧ', '選項二', '選項三']"
-                  ></v-select
-                ></v-col>
-              </v-row>
-              <v-row>
-                <v-col
-                  ><v-select
-                    label="下拉式選單"
-                    hide-details="auto"
-                    single-line
-                    variant="outlined"
-                    density="comfortable"
-                    messages="說明文字"
-                    :items="['選項ㄧ', '選項二', '選項三']"
-                  ></v-select
-                ></v-col>
-              </v-row>
-              <v-row>
-                <v-col
-                  ><v-select
-                    label="下拉式選單"
-                    single-line
-                    density="comfortable"
-                    hide-details="auto"
-                    variant="outlined"
-                    error-messages="下拉式選單"
-                    :items="['選項ㄧ', '選項二', '選項三']"
-                  ></v-select
-                ></v-col>
-              </v-row>
-              <v-row>
-                <v-col
-                  ><v-select
-                    label="下拉式選單"
-                    single-line
-                    density="comfortable"
-                    disabled
-                    hide-details="auto"
-                    variant="outlined"
-                    :items="['選項ㄧ', '選項二', '選項三']"
-                  ></v-select
-                ></v-col>
-              </v-row>
-            </v-container>
-          </v-form>
-        </v-card>
-      </v-col>
-      <!-- 下拉選單樣式 end -->
-      <!-- 文字編輯器 start -->
-      <v-col cols="12" md="6">
-        <v-card class="pa-2 h-100">
-          <h4 class="text-h4 my-3 ml-4 font-weight-bold">文字編輯器</h4>
-          <v-divider class="mx-3"></v-divider>
-          <!-- 若無需使用則 npm uninstall -D @vueup/vue-quill@latest 解安裝 -->
-          <div class="pa-4">
-            <quill-editor style="height: 200px"></quill-editor>
-          </div>
-        </v-card>
-      </v-col>
-      <!-- 下文字編輯器 end -->
-      <!-- 日期選擇器 start -->
-      <v-col cols="12" md="6">
-        <v-card class="pa-2 h-100 overflow-visible">
-          <h4 class="text-h4 my-3 ml-4 font-weight-bold">
-            vue-datepicker 日期選擇器
-          </h4>
-          <v-divider class="mx-3"></v-divider>
-        </v-card>
-      </v-col>
-      <!-- 日期選擇器 end -->
     </v-row>
   </v-container>
 </template>
