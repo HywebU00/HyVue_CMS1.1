@@ -925,7 +925,7 @@ import "@vueup/vue-quill/dist/vue-quill.snow.css";
 import VueDatePicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
 //載入 Ｖuetify組合 日期選擇器
-import datepickerModalVue from "@/components/datepickerModal.vue";
+// import datepickerModalVue from "@/components/datepickerModal.vue";
 
 export default {
   data: () => ({
@@ -941,7 +941,6 @@ export default {
   components: {
     QuillEditor,
     VueDatePicker,
-    datepickerModalVue,
   },
 };
 </script>
