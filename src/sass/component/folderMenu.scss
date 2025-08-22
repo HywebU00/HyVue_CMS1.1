@@ -36,8 +36,8 @@
     overflow-y: scroll;
     .v-list-item--active {
       .v-list-item__overlay {
-        // background: $secondary80;
-        // opacity: 20%;
+        background: $secondary80;
+        opacity: 20%;
       }
     }
     .v-list-item--nav:not(:only-child) {

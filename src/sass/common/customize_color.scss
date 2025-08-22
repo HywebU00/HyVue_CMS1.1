@@ -22,6 +22,7 @@ $theme-config: (
     light: #36e79e,
     thead: #057bb7,
     cardBg: #80cbd733,
+    roundedTag: url('@/assets/images/roundedTag.svg') no-repeat bottom center,
   ),
   red: (
     class: 'red',
@@ -30,18 +31,20 @@ $theme-config: (
     primary30: #b6636e,
     primary50: #f6e8ed,
     //secondary 設定
-    secondary: #f9f6f7,
+    secondary: #ad3b5f,
+    // #f9f6f7,
     secondary40: #ad3b5f,
     secondary60: #c88490,
     secondary80: #e6c9cc,
     secondary100: #ebf0f9,
     //gradients
-    gradients: linear-gradient(0deg, #91404a 0%, #b6636e 50%, #e6c9cc 100%),
-    gradients_v: linear-gradient(90deg, #91404a 0%, #b6636e 65%, #e6c9cc 100%),
+    gradients: linear-gradient(0deg, #91404a 0%, #c88490 50%, #e6c9cc 100%),
+    gradients_v: linear-gradient(90deg, #91404a 0%, #c88490 65%, #e6c9cc 100%),
     //other
-    light: '#36e79e',
-    thead: '#ad3b5f',
+    light: #36e79e,
+    thead: #ad3b5f,
     cardBg: #f6e8ed,
+    roundedTag: url('@/assets/images/roundedTag.svg') no-repeat bottom center,
   ),
 );
 
@@ -61,13 +64,34 @@ $theme-config: (
   $gradients_v: map-get($value, gradients_v);
   //other
   $cardBg: map-get($value, cardBg);
+  $roundedTag: map-get($value, roundedTag);
+  $thead: map-get($value, thead);
 
   .v-theme--#{$class} {
     .sideBar {
-      > .v-navigation-drawer__content .v-list-group--open > .v-list-item {
+      > .v-navigation-drawer__content {
+        .v-list-group--open {
+          > .v-list-item {
+            background: $gradients_v;
+          }
+        }
+        .loginInfo {
+          .iconBtn {
+            background-color: $secondary60;
+          }
+        }
+      }
+      &.hidden {
         background: $gradients_v;
+        .loginInfo {
+          .iconBtn {
+            background-color: #fff;
+            color: $secondary60;
+          }
+        }
       }
     }
+
     .folderMenu {
       &.v-list {
         .v-list-item--active {
@@ -83,168 +107,72 @@ $theme-config: (
         background: $cardBg;
       }
     }
-    // .content {
-    //   background: $mainBg;
-    //   &.mpImg {
-    //     background: $mainImg;
-    //     background-size: cover;
-    //   }
-    // }
+    .container.page {
+      .title {
+        &:after {
+          background: $secondary60;
+        }
+      }
+      .countCard {
+        &.v-card {
+          .content {
+            background: $gradients_v;
+          }
+        }
+      }
+    }
 
-    // .page {
-    //   .searchGrp {
-    //     .searchMoreBtn {
-    //       background: $GradientBg;
-    //     }
-    //   }
-    //   .filterList {
-    //     .formContent {
-    //       .item {
-    //         border-right: 1px solid $third;
-    //       }
-    //       .functionBtnGrp > span {
-    //         border-right: 1px solid $third;
-    //       }
-    //     }
-    //   }
-    //   .pageContent {
-    //     &::-webkit-scrollbar-thumb {
-    //       background: #331919c2;
-    //       // background: lighten($scrollbarColor, 10);
-    //     }
-    //   }
-    // }
-    // .mpPage {
-    //   .pageContent {
-    //     .title {
-    //       span.icon {
-    //         background: $primary;
-    //         &::before,
-    //         &::after {
-    //           background: $light;
-    //         }
-    //       }
-    //     }
-    //     // &::-webkit-scrollbar-thumb {
-    //     //   background: rgba(0, 0, 0, 0.6);
-    //     // }
-    //   }
-    //   .linkSection {
-    //     .linkBtn {
-    //       background: $GradientBg;
-
-    //       color: #fff;
-    //     }
-    //   }
-    //   .newsSection {
-    //     .newCard {
-    //       &::before,
-    //       &::after {
-    //         background-color: $primary;
-    //         border: 5px solid $light;
-    //       }
-    //     }
-    //   }
-    // }
-    //table style
-    // .v-table {
-    //   .v-table__wrapper {
-    //     > table {
-    //       > thead {
-    //         background: $theadColor;
-    //         > tr > th {
-    //           color: #fff;
-    //           font-size: rem(16);
-    //         }
-    //       }
-    //       tbody {
-    //         tr {
-    //           &:not(:last-child) {
-    //             td {
-    //               border-bottom: unset;
-    //             }
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
-    // tbody {
-    //   tr {
-    //     &:nth-child(even) {
-    //       background-color: $tbodyColor;
-    //     }
-    //     &:not(:last-child) {
-    //       td {
-    //         border-bottom: unset;
-    //       }
-    //     }
-    //   }
-    // }
-    // .v-data-table {
-    //   .v-table__wrapper {
-    //     > table {
-    //       > thead > tr th {
-    //         height: rem(40);
-    //         background: $theadColor;
-    //       }
-    //       tbody {
-    //         tr {
-    //           &:nth-child(even) {
-    //             td {
-    //               background-color: $tbodyColor;
-    //             }
-    //           }
-    //           &:not(:last-child) {
-    //             td {
-    //               border-bottom: unset;
-    //             }
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
-    // .v-tabs {
-    //   margin: 0 1rem;
-    //   .v-btn__content {
-    //     color: $primary;
-    //     font-weight: bold;
-    //     // font-size: 1.1em;
-    //   }
-    //   .v-tab__slider {
-    //     color: $light;
-    //     height: 3px;
-    //   }
-    // }
-
-    // &.isSmallScreen {
-    //   .navDrawer {
-    //     .drawerBtn {
-    //       &:hover {
-    //         background: lighten($scrollbarColor, 30);
-    //       }
-    //     }
-    //   }
-    // }
-    //v-dialog Btn style
-    //   &.v-dialog {
-    //     .v-card-actions {
-    //       .v-btn {
-    //         margin: 0 1rem 0.5rem 0;
-    //         @include screen('tablet') {
-    //           width: 78px;
-    //         }
-    //         &.submit {
-    //           background: $GradientBg !important;
-    //         }
-    //         &.cancel {
-    //           background: linear-gradient(to bottom, #6a6a6a 0%, #9a9a9a 100%) !important;
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
+    .v-slider {
+      &.v-input--horizontal {
+        .v-slider-thumb__label-container {
+          .v-slider-thumb__label {
+            &::before {
+              background: $roundedTag;
+            }
+          }
+        }
+      }
+    }
+    .v-empty-state {
+      .v-empty-state__headline {
+        .img {
+          background-color: $primary;
+        }
+      }
+      .v-empty-state__media {
+        i {
+          background-color: $primary;
+        }
+      }
+    }
+    .tabs {
+      .v-tab {
+        background: $secondary;
+        color: $primary;
+        .v-tab__slider {
+          background: $primary;
+        }
+      }
+    }
+    .textTabs {
+      .v-tab__slider {
+        background: $primary;
+      }
+    }
+    table {
+      .v-data-table__td {
+        background: $thead;
+      }
+    }
+    .pagination {
+      .v-pagination {
+        .v-pagination__item.v-pagination__item--is-active {
+          button {
+            background: $primary;
+          }
+        }
+      }
+    }
   }
 }
 

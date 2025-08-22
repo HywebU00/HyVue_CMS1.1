@@ -108,7 +108,6 @@ export default {
       this.themeDark = false;
       this.createCookie("Theme", `${color}`, 356);
     },
-
     themeInit() {
       const savedTheme = this.readCookie("Theme");
       if (savedTheme == null) {

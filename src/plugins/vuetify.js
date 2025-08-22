@@ -82,7 +82,7 @@ export default createVuetify({
           "primary-lighten-1": "#b6636E", //$primary50
           "primary-lighten-2": "#f6e8ed", //$primary70
           //secondary 設定
-          secondary: "#f9f6f7", //secondary40
+          secondary: "#ad3b5f", //secondary40
           "secondary-lighten-0": "#ad3b5f",
           "secondary-lighten-1": "#c88490", //secondary60
           "secondary-lighten-2": "#e6c9cc", //secondary80
@@ -110,7 +110,7 @@ export default createVuetify({
           "error-lighten-1": "#FFEDF1", //red70
           light: "#36e79e",
           //thead
-          thead: "#057bb7", //secondary60,
+          thead: "#ad3b5f", //secondary60,
         },
       },
       dark: {

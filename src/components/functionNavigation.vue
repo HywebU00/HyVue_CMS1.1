@@ -275,6 +275,7 @@ export default {
         this.theme = "default";
         this.themeDark = false;
       } else {
+        this.theme = savedTheme;
         this.themeDark = true;
       }
       this.changeTheme(this.theme);
