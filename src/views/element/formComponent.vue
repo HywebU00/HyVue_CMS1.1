@@ -813,16 +813,16 @@
       </v-col>
       <!-- 下拉選單樣式 end -->
       <!-- 文字編輯器 start -->
-      <v-col cols="12" md="6">
+      <!-- <v-col cols="12" md="6">
         <v-card class="pa-2 h-100">
           <h4 class="text-h4 my-3 ml-4 font-weight-bold">文字編輯器</h4>
           <v-divider class="mx-3"></v-divider>
-          <!-- 若無需使用則 npm uninstall -D @vueup/vue-quill@latest 解安裝 -->
+          若無需使用則 npm uninstall -D @vueup/vue-quill@latest 解安裝
           <div class="pa-4">
             <quill-editor style="height: 200px"></quill-editor>
           </div>
         </v-card>
-      </v-col>
+      </v-col> -->
       <!-- 下文字編輯器 end -->
       <!-- 日期選擇器 start -->
       <v-col cols="12" md="6">
@@ -918,8 +918,8 @@
 
 <script>
 //載入 文字編輯器
-import { QuillEditor } from "@vueup/vue-quill";
-import "@vueup/vue-quill/dist/vue-quill.snow.css";
+// import { QuillEditor } from "@vueup/vue-quill";
+// import "@vueup/vue-quill/dist/vue-quill.snow.css";
 
 //載入 日期選擇器
 import VueDatePicker from "@vuepic/vue-datepicker";
@@ -939,7 +939,7 @@ export default {
     multiDate: null,
   }),
   components: {
-    QuillEditor,
+    // QuillEditor,
     VueDatePicker,
     datepickerModalVue,
   },
