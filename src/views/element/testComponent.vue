@@ -906,10 +906,10 @@
           <h4 class="text-h4 my-3 ml-4 font-weight-bold">文字編輯器</h4>
           <v-divider class="mx-3"></v-divider>
           <!-- 若無需使用則 npm uninstall -D @vueup/vue-quill@latest 解安裝 -->
-          <div class="pa-4">
+          <!-- <div class="pa-4">
             <quill-editor style="height: 200px"></quill-editor>
             <QuillEditor style="height: 200px" />
-          </div>
+          </div> -->
         </v-card>
       </v-col>
       <!-- 下文字編輯器 end -->
