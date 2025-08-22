@@ -905,8 +905,12 @@
         <v-card class="pa-2 h-100">
           <h4 class="text-h4 my-3 ml-4 font-weight-bold">文字編輯器</h4>
           <v-divider class="mx-3"></v-divider>
+          <div class="">
+            <div ref="editor" style="height: 200px"></div>
+          </div>
           <!-- 若無需使用則 npm uninstall -D @vueup/vue-quill@latest 解安裝 -->
           <!-- <div class="pa-4">
+          <>
             <quill-editor style="height: 200px"></quill-editor>
             <QuillEditor style="height: 200px" />
           </div> -->
@@ -919,7 +923,9 @@
 
 <script>
 // import { QuillEditor } from "@vueup/vue-quill";
-import "@vueup/vue-quill/dist/vue-quill.snow.css";
+// import "@vueup/vue-quill/dist/vue-quill.snow.css";
+import Quill from "quill";
+import "quill/dist/quill.snow.css"; // 主題樣式
 //載入 日期選擇器
 import VueDatePicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
@@ -935,7 +941,21 @@ export default {
     date: null,
     rangeDate: null,
     multiDate: null,
+    quill: null,
   }),
+  mounted() {
+    this.quill = new Quill(this.$refs.editor, {
+      theme: "snow", // 可選 'snow', 'bubble', 'core'
+      modules: {
+        toolbar: [
+          ["bold", "italic", "underline", "strike"],
+          [{ header: 1 }, { header: 2 }],
+          [{ list: "ordered" }, { list: "bullet" }],
+          ["link", "image"],
+        ],
+      },
+    });
+  },
   components: {
     // QuillEditor,
     VueDatePicker,
