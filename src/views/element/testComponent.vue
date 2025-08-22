@@ -918,7 +918,7 @@
 </template>
 
 <script>
-import { QuillEditor } from "@vueup/vue-quill";
+// import { QuillEditor } from "@vueup/vue-quill";
 import "@vueup/vue-quill/dist/vue-quill.snow.css";
 //載入 日期選擇器
 import VueDatePicker from "@vuepic/vue-datepicker";
@@ -937,7 +937,7 @@ export default {
     multiDate: null,
   }),
   components: {
-    QuillEditor,
+    // QuillEditor,
     VueDatePicker,
     datepickerModalVue,
   },
