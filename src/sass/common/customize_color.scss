@@ -2,134 +2,380 @@
 @use '@/sass/common/mixins/mediaquery.scss' as *;
 @use '@/sass/variables.scss' as *;
 
-//暗黑版樣式設定 dark Style-------
-.v-theme--dark {
-  .navigation {
-    .v-btn {
-      .v-btn__content {
-        .material-symbols-rounded {
-          color: $neutral100;
-        }
+$theme-config: (
+  default: (
+    class: 'default',
+    // primary 設定
+    primary: #014d92,
+    primary30: #0463b8,
+    primary50: #f6fbff,
+    //secondary 設定
+    secondary: #2d62b3,
+    secondary40: #0055a0,
+    secondary60: #057bb7,
+    secondary80: #80cbd7,
+    secondary100: #ebf0f9,
+    //gradients
+    gradients: linear-gradient(0deg, #0156a2 0%, rgba(28, 147, 208, 1) 50%, rgba(128, 203, 220, 1) 100%),
+    gradients_v: linear-gradient(90deg, rgba(1, 86, 162, 1) 0%, rgba(28, 147, 208, 1) 65%, rgba(128, 203, 220, 1) 100%),
+    //other
+    light: #36e79e,
+    thead: #057bb7,
+    cardBg: #80cbd733,
+  ),
+  red: (
+    class: 'red',
+    // primary 設定
+    primary: #91404a,
+    primary30: #b6636e,
+    primary50: #f6e8ed,
+    //secondary 設定
+    secondary: #f9f6f7,
+    secondary40: #ad3b5f,
+    secondary60: #c88490,
+    secondary80: #e6c9cc,
+    secondary100: #ebf0f9,
+    //gradients
+    gradients: linear-gradient(0deg, #91404a 0%, #b6636e 50%, #e6c9cc 100%),
+    gradients_v: linear-gradient(90deg, #91404a 0%, #b6636e 65%, #e6c9cc 100%),
+    //other
+    light: '#36e79e',
+    thead: '#ad3b5f',
+    cardBg: #f6e8ed,
+  ),
+);
+
+@each $name, $value in $theme-config {
+  $class: map-get($value, class);
+  $primary: map-get($value, primary);
+  $primary30: map-get($value, primary30);
+  $primary50: map-get($value, primary50);
+  //secondary 設定
+  $secondary: map-get($value, secondary);
+  $secondary40: map-get($value, secondary40);
+  $secondary60: map-get($value, secondary60);
+  $secondary80: map-get($value, secondary80);
+  $secondary100: map-get($value, secondary100);
+  //gradients
+  $gradients: map-get($value, gradients);
+  $gradients_v: map-get($value, gradients_v);
+  //other
+  $cardBg: map-get($value, cardBg);
+
+  .v-theme--#{$class} {
+    .sideBar {
+      > .v-navigation-drawer__content .v-list-group--open > .v-list-item {
+        background: $gradients_v;
       }
     }
-  }
-  .sideBar {
-    .drawerBtn {
-      background-color: rgb(35 35 35);
-      span {
-        color: #fff;
-      }
-    }
-    .v-navigation-drawer__content {
-      .v-list-item {
-        .v-list-item__prepend {
-          i {
-            color: #fff;
-          }
-        }
-        .v-list-item__content {
-          .v-list-item-title {
-            color: #fff;
-          }
-        }
-      }
-      .v-list-group {
-        > .v-list-item {
-          &:hover,
-          &.v-list-item--active {
-            background: #ccc;
-            color: #000;
-            img {
-              filter: unset;
-            }
-            .v-list-item__content {
-              .v-list-item-title {
-                color: #000;
-              }
-            }
-            .v-list-item__prepend {
-              i {
-                color: #000;
-              }
-            }
-          }
-        }
-      }
+    .folderMenu {
       .v-list {
         .v-list-item--active {
           .v-list-item__overlay {
-            background: $neutral100;
-          }
-        }
-      }
-      .logoImg {
-        .logo {
-          + img {
-            filter: invert(1);
+            background: $secondary80;
+            opacity: 20%;
           }
         }
       }
     }
-    &.v-theme--dark {
-      background: rgb(35 35 35);
-      .v-list-item__content {
-        img {
-          filter: invert(1);
-        }
+    .v-list .v-card {
+      &.v-card--variant-flat {
+        background: $cardBg;
       }
     }
+    // .content {
+    //   background: $mainBg;
+    //   &.mpImg {
+    //     background: $mainImg;
+    //     background-size: cover;
+    //   }
+    // }
+
+    // .page {
+    //   .searchGrp {
+    //     .searchMoreBtn {
+    //       background: $GradientBg;
+    //     }
+    //   }
+    //   .filterList {
+    //     .formContent {
+    //       .item {
+    //         border-right: 1px solid $third;
+    //       }
+    //       .functionBtnGrp > span {
+    //         border-right: 1px solid $third;
+    //       }
+    //     }
+    //   }
+    //   .pageContent {
+    //     &::-webkit-scrollbar-thumb {
+    //       background: #331919c2;
+    //       // background: lighten($scrollbarColor, 10);
+    //     }
+    //   }
+    // }
+    // .mpPage {
+    //   .pageContent {
+    //     .title {
+    //       span.icon {
+    //         background: $primary;
+    //         &::before,
+    //         &::after {
+    //           background: $light;
+    //         }
+    //       }
+    //     }
+    //     // &::-webkit-scrollbar-thumb {
+    //     //   background: rgba(0, 0, 0, 0.6);
+    //     // }
+    //   }
+    //   .linkSection {
+    //     .linkBtn {
+    //       background: $GradientBg;
+
+    //       color: #fff;
+    //     }
+    //   }
+    //   .newsSection {
+    //     .newCard {
+    //       &::before,
+    //       &::after {
+    //         background-color: $primary;
+    //         border: 5px solid $light;
+    //       }
+    //     }
+    //   }
+    // }
+    //table style
+    // .v-table {
+    //   .v-table__wrapper {
+    //     > table {
+    //       > thead {
+    //         background: $theadColor;
+    //         > tr > th {
+    //           color: #fff;
+    //           font-size: rem(16);
+    //         }
+    //       }
+    //       tbody {
+    //         tr {
+    //           &:not(:last-child) {
+    //             td {
+    //               border-bottom: unset;
+    //             }
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // tbody {
+    //   tr {
+    //     &:nth-child(even) {
+    //       background-color: $tbodyColor;
+    //     }
+    //     &:not(:last-child) {
+    //       td {
+    //         border-bottom: unset;
+    //       }
+    //     }
+    //   }
+    // }
+    // .v-data-table {
+    //   .v-table__wrapper {
+    //     > table {
+    //       > thead > tr th {
+    //         height: rem(40);
+    //         background: $theadColor;
+    //       }
+    //       tbody {
+    //         tr {
+    //           &:nth-child(even) {
+    //             td {
+    //               background-color: $tbodyColor;
+    //             }
+    //           }
+    //           &:not(:last-child) {
+    //             td {
+    //               border-bottom: unset;
+    //             }
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+    // .v-tabs {
+    //   margin: 0 1rem;
+    //   .v-btn__content {
+    //     color: $primary;
+    //     font-weight: bold;
+    //     // font-size: 1.1em;
+    //   }
+    //   .v-tab__slider {
+    //     color: $light;
+    //     height: 3px;
+    //   }
+    // }
+
+    // &.isSmallScreen {
+    //   .navDrawer {
+    //     .drawerBtn {
+    //       &:hover {
+    //         background: lighten($scrollbarColor, 30);
+    //       }
+    //     }
+    //   }
+    // }
+    //v-dialog Btn style
+    //   &.v-dialog {
+    //     .v-card-actions {
+    //       .v-btn {
+    //         margin: 0 1rem 0.5rem 0;
+    //         @include screen('tablet') {
+    //           width: 78px;
+    //         }
+    //         &.submit {
+    //           background: $GradientBg !important;
+    //         }
+    //         &.cancel {
+    //           background: linear-gradient(to bottom, #6a6a6a 0%, #9a9a9a 100%) !important;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
-  .infoBtnContainer {
-    li {
-      div {
-        color: #fff;
-      }
-    }
-  }
-  .treeviewBlock {
-    .treeTitle {
-      color: #fff;
-    }
-    .item {
-      > div {
-        &:hover {
-          .treeTitle {
-            color: #000;
-            .text-primary {
-              color: #000 !important;
-            }
-          }
-        }
-      }
-    }
-  }
-  .dp__main {
-    .dp__input {
-      background-color: rgba(255, 255, 255, 0.05);
-      color: #fff;
-    }
-  }
-  .ql-snow {
-    .ql-stroke {
-      stroke: #959595;
-    }
-    .ql-picker {
-      color: #fff;
-    }
-    .ql-picker-label {
-      color: #fff;
-      &:hover {
-        color: #000;
-      }
-    }
-    .ql-active {
-      color: #000;
-    }
-    .ql-expanded {
-      color: #000;
-    }
-    .ql-picker.ql-expanded .ql-picker-label {
-      color: #959595;
-    }
-  }
+}
+
+//暗黑版樣式設定 dark Style-------
+.v-theme--dark {
+  // .navigation {
+  //   .v-btn {
+  //     .v-btn__content {
+  //       .material-symbols-rounded {
+  //         color: $neutral100;
+  //       }
+  //     }
+  //   }
+  // }
+  // .sideBar {
+  //   .drawerBtn {
+  //     background-color: rgb(35 35 35);
+  //     span {
+  //       color: #fff;
+  //     }
+  //   }
+  //   .v-navigation-drawer__content {
+  //     .v-list-item {
+  //       .v-list-item__prepend {
+  //         i {
+  //           color: #fff;
+  //         }
+  //       }
+  //       .v-list-item__content {
+  //         .v-list-item-title {
+  //           color: #fff;
+  //         }
+  //       }
+  //     }
+  //     .v-list-group {
+  //       > .v-list-item {
+  //         &:hover,
+  //         &.v-list-item--active {
+  //           background: #ccc;
+  //           color: #000;
+  //           img {
+  //             filter: unset;
+  //           }
+  //           .v-list-item__content {
+  //             .v-list-item-title {
+  //               color: #000;
+  //             }
+  //           }
+  //           .v-list-item__prepend {
+  //             i {
+  //               color: #000;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //     .v-list {
+  //       .v-list-item--active {
+  //         .v-list-item__overlay {
+  //           background: $neutral100;
+  //         }
+  //       }
+  //     }
+  //     .logoImg {
+  //       .logo {
+  //         + img {
+  //           filter: invert(1);
+  //         }
+  //       }
+  //     }
+  //   }
+  //   &.v-theme--dark {
+  //     background: rgb(35 35 35);
+  //     .v-list-item__content {
+  //       img {
+  //         filter: invert(1);
+  //       }
+  //     }
+  //   }
+  // }
+  // .infoBtnContainer {
+  //   li {
+  //     div {
+  //       color: #fff;
+  //     }
+  //   }
+  // }
+  // .treeviewBlock {
+  //   .treeTitle {
+  //     color: #fff;
+  //   }
+  //   .item {
+  //     > div {
+  //       &:hover {
+  //         .treeTitle {
+  //           color: #000;
+  //           .text-primary {
+  //             color: #000 !important;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // .dp__main {
+  //   .dp__input {
+  //     background-color: rgba(255, 255, 255, 0.05);
+  //     color: #fff;
+  //   }
+  // }
+  // .ql-snow {
+  //   .ql-stroke {
+  //     stroke: #959595;
+  //   }
+  //   .ql-picker {
+  //     color: #fff;
+  //   }
+  //   .ql-picker-label {
+  //     color: #fff;
+  //     &:hover {
+  //       color: #000;
+  //     }
+  //   }
+  //   .ql-active {
+  //     color: #000;
+  //   }
+  //   .ql-expanded {
+  //     color: #000;
+  //   }
+  //   .ql-picker.ql-expanded .ql-picker-label {
+  //     color: #959595;
+  //   }
+  // }
 }

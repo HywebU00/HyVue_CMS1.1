@@ -74,15 +74,43 @@ export default createVuetify({
           thead: "#dadfe0",
         },
       },
-      color2: {
+      red: {
         dark: false,
         colors: {
-          primary: "#4e0c30",
-          secondary: "#852648",
-          loginColor: "#4e0c30",
-          light: "#ff378c",
-          navText: "#4e0c30",
-          thead: "#e0dadd",
+          // primary 設定
+          primary: "#91404A", //$primary30
+          "primary-lighten-1": "#b6636E", //$primary50
+          "primary-lighten-2": "#f6e8ed", //$primary70
+          //secondary 設定
+          secondary: "#f9f6f7", //secondary40
+          "secondary-lighten-0": "#ad3b5f",
+          "secondary-lighten-1": "#c88490", //secondary60
+          "secondary-lighten-2": "#e6c9cc", //secondary80
+          "secondary-lighten-3": "#ebf0f9", //secondary100
+          //Neutral 設定
+          neutral: "#ffffff", //Neutral100
+          "neutral-darken-1": "#F8F8F8", //Neutral80
+          "neutral-darken-2": "#F1F1F1", //Neutral70
+          "neutral-darken-3": "#DEE0E3", //Neutral60
+          "neutral-darken-4": "#97A3B6", //Neutral40
+          "neutral-darken-5": "#69707D", //Neutral30
+          "neutral-darken-6": "#555555", //Neutral20
+          "neutral-darken-7": "#333333", //Neutral10
+          //Success 設定
+          success: "#00754B", //Green30
+          "success-lighten-1": "#EEF8E4", //Green70
+          //Info 設定
+          info: "#00529B", //blue30
+          "info-lighten-1": "#E7F3FF", //blue70
+          //warning 設定
+          warning: "#C23E00", //warning30
+          "warning-lighten-1": "#FAECE6", //warning70
+          //Error 設定
+          error: "#C40000", //red30
+          "error-lighten-1": "#FFEDF1", //red70
+          light: "#36e79e",
+          //thead
+          thead: "#057bb7", //secondary60,
         },
       },
       dark: {

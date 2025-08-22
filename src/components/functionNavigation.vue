@@ -62,6 +62,8 @@
             <v-btn
               icon
               size="small"
+              color="neutral-darken-3"
+              rounded="circle"
               role="button"
               @click="fontSizeChange('small')"
               :class="[{ active: this.fontSize === 'small' }, 'bg-primary']"
@@ -74,6 +76,8 @@
               icon
               size="small"
               role="button"
+              color="neutral-darken-3"
+              rounded="circle"
               @click="fontSizeChange('medium')"
               :class="[{ active: this.fontSize === 'medium' }, 'bg-primary']"
             >
@@ -84,6 +88,8 @@
             <v-btn
               icon
               size="small"
+              rounded="circle"
+              color="neutral-darken-3"
               role="button"
               @click="fontSizeChange('large')"
               :class="[{ active: this.fontSize === 'large' }, 'bg-primary']"
@@ -111,6 +117,7 @@
         <ul class="d-flex">
           <li>
             <v-btn
+              rounded="circle"
               icon
               size="x-small"
               @click="changeTheme('default')"
@@ -121,6 +128,7 @@
             <v-btn
               icon
               size="x-small"
+              rounded="circle"
               @click="changeTheme('color1')"
               :class="['color1', { active: this.theme === 'color1' }]"
             ></v-btn>
@@ -129,14 +137,16 @@
             <v-btn
               icon
               size="x-small"
-              @click="changeTheme('color2')"
-              :class="['color2', { active: this.theme === 'color2' }]"
+              rounded="circle"
+              @click="changeTheme('red')"
+              :class="['color2', { active: this.theme === 'red' }]"
             ></v-btn>
           </li>
           <li>
             <v-btn
               icon
               size="x-small"
+              rounded="circle"
               @click="changeTheme('color3')"
               :class="['color3', { active: this.theme === 'color3' }]"
             ></v-btn>

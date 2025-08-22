@@ -30,7 +30,7 @@
         density="compact"
         nav
         class="folderMenu"
-        :opened="opened"
+        v-model:opened="opened"
         @update:opened="menuTarget"
       >
         <!-- 若要點擊選單都展開，移除「@update:opened="menuTarget"」 -->
@@ -60,82 +60,85 @@
               </template>
             </v-list-item>
           </template>
-          <v-list-item
+          <v-list-item title="Containment" :to="'/element/containment'">
+          </v-list-item>
+          <!-- <v-list-item
             title="Containment"
             value="containment"
             @click="pushLink('element', 'containment')"
           >
-          </v-list-item>
-          <!-- <v-list-item title="Controls" :to="'/element/controls'">
           </v-list-item> -->
-          <v-list-item
+          <v-list-item title="Controls" :to="'/element/controls'">
+          </v-list-item>
+          <!-- <v-list-item
             title="Controls"
             value="controls"
             @click="pushLink('element', 'controls')"
           >
-          </v-list-item>
-          <!-- <v-list-item title="Feedback" :to="'/element/feedback'">
           </v-list-item> -->
-          <v-list-item
+          <v-list-item title="Feedback" :to="'/element/feedback'">
+          </v-list-item>
+          <!-- <v-list-item
             title="Feedback"
             value="feedback"
             @click="pushLink('element', 'feedback')"
           >
-          </v-list-item>
-          <!-- <v-list-item title="Image & Icon" :to="'/element/imageIcon'">
           </v-list-item> -->
-          <v-list-item
+          <v-list-item title="Image & Icon" :to="'/element/imageIcon'">
+          </v-list-item>
+          <!-- <v-list-item
             title="Image & Icon"
             value="ImageIcon"
             @click="pushLink('element', 'imageIcon')"
           >
-          </v-list-item>
-          <!-- <v-list-item title="Navigation" :to="'/element/navigation'">
           </v-list-item> -->
-          <v-list-item
+          <v-list-item title="Navigation" :to="'/element/navigation'">
+          </v-list-item>
+          <!-- <v-list-item
             title="Navigation"
             value="navigation"
             @click="pushLink('element', 'navigation')"
           >
-          </v-list-item>
-          <!-- <v-list-item title="Pickers" :to="'/element/pickers'"> </v-list-item> -->
-          <v-list-item
+          </v-list-item> -->
+          <v-list-item title="Pickers" :to="'/element/pickers'"> </v-list-item>
+          <!-- <v-list-item
             title="Pickers"
             value="pickers"
             @click="pushLink('element', 'pickers')"
           >
-          </v-list-item>
-          <!-- <v-list-item title="Selection" :to="'/element/selection'">
           </v-list-item> -->
-          <v-list-item
+          <v-list-item title="Selection" :to="'/element/selection'">
+          </v-list-item>
+          <!-- <v-list-item
             title="Selection"
             value="selection"
             @click="pushLink('element', 'selection')"
           >
-          </v-list-item>
-          <!-- <v-list-item title="Grid System" :to="'/element/system'">
           </v-list-item> -->
-          <v-list-item
+          <v-list-item title="Grid System" :to="'/element/system'">
+          </v-list-item>
+          <!-- <v-list-item
             title="Grid System"
             value="system"
             @click="pushLink('element', 'system')"
           >
-          </v-list-item>
+          </v-list-item> -->
 
-          <v-list-item
+          <!-- <v-list-item
             value="page2"
             title="page2"
             @click="pushLink('element', 'page')"
           >
-          </v-list-item>
+          </v-list-item> -->
 
-          <v-list-item title="page2＿to" :to="'/element/page'"> </v-list-item>
-          <v-list-item
+          <!-- <v-list-item title="page2＿to" :to="'/element/page'"> </v-list-item> -->
+          <v-list-item title="form" :to="'/element/form'"> </v-list-item>
+          <!-- <v-list-item
             value="form"
             title="form"
             @click="pushLink('element', 'form')"
           >
-          </v-list-item>
+          </v-list-item> -->
           <!-- <v-list-item
             value="test"
             title="test"
@@ -143,28 +146,28 @@
           >
           </v-list-item> -->
 
-          <!-- <v-list-item title="Table" :to="'/element/table'"> </v-list-item> -->
+          <v-list-item title="Table" :to="'/element/table'"> </v-list-item>
 
-          <v-list-item
+          <!-- <v-list-item
             value="table"
             title="Table"
             @click="pushLink('element', 'table')"
           >
-          </v-list-item>
-          <v-list-item
+          </v-list-item> -->
+          <!-- <v-list-item
             title="Card"
             value="card"
             @click="pushLink('element', 'card')"
           >
-          </v-list-item>
-          <v-list-item
+          </v-list-item> -->
+          <!-- <v-list-item
             title="Chart"
             value="chart"
             @click="pushLink('element', 'chart')"
           >
-          </v-list-item>
-          <!-- <v-list-item title="Card" :to="'/element/card'"> </v-list-item>
-          <v-list-item title="Chart" :to="'/element/chart'"> </v-list-item> -->
+          </v-list-item> -->
+          <v-list-item title="Card" :to="'/element/card'"> </v-list-item>
+          <v-list-item title="Chart" :to="'/element/chart'"> </v-list-item>
         </v-list-group>
         <!-- Components end -->
         <!-- Basic Layout start -->

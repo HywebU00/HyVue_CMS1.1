@@ -924,8 +924,8 @@
 <script>
 // import { QuillEditor } from "@vueup/vue-quill";
 // import "@vueup/vue-quill/dist/vue-quill.snow.css";
-import Quill from "quill";
-import "quill/dist/quill.snow.css"; // 主題樣式
+// import Quill from "quill";
+// import "quill/dist/quill.snow.css"; // 主題樣式
 //載入 日期選擇器
 import VueDatePicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
@@ -943,19 +943,19 @@ export default {
     multiDate: null,
     quill: null,
   }),
-  mounted() {
-    this.quill = new Quill(this.$refs.editor, {
-      theme: "snow", // 可選 'snow', 'bubble', 'core'
-      modules: {
-        toolbar: [
-          ["bold", "italic", "underline", "strike"],
-          [{ header: 1 }, { header: 2 }],
-          [{ list: "ordered" }, { list: "bullet" }],
-          ["link", "image"],
-        ],
-      },
-    });
-  },
+  // mounted() {
+  //   this.quill = new Quill(this.$refs.editor, {
+  //     theme: "snow", // 可選 'snow', 'bubble', 'core'
+  //     modules: {
+  //       toolbar: [
+  //         ["bold", "italic", "underline", "strike"],
+  //         [{ header: 1 }, { header: 2 }],
+  //         [{ list: "ordered" }, { list: "bullet" }],
+  //         ["link", "image"],
+  //       ],
+  //     },
+  //   });
+  // },
   components: {
     // QuillEditor,
     VueDatePicker,
