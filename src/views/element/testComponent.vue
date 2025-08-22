@@ -907,7 +907,8 @@
           <v-divider class="mx-3"></v-divider>
           <!-- 若無需使用則 npm uninstall -D @vueup/vue-quill@latest 解安裝 -->
           <div class="pa-4">
-            <quill-editor style="height: 200px"></quill-editor>
+            <!-- <quill-editor style="height: 200px"></quill-editor> -->
+            <QuillEditor style="height: 200px" />
           </div>
         </v-card>
       </v-col>
