@@ -36,4 +36,7 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
+  optimizeDeps: {
+    include: ['quill'], // 這裡加入 quill
+  },
 });
