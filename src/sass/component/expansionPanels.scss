@@ -4,7 +4,7 @@
   .v-expansion-panel-title {
     font-weight: 700;
     color: $neutral10;
-    font-size: rem(20);
+    font-size: 1.25em; //rem(20);
     height: rem(56);
   }
   .v-expansion-panel-title__icon {
@@ -13,7 +13,7 @@
     }
   }
   .v-expansion-panel-text {
-    font-size: rem(16);
+    font-size: 1em; //rem(16);
     line-height: 2rem;
   }
 }

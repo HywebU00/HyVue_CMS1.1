@@ -23,7 +23,7 @@
     <v-row no-gutters>
       <v-col class="" md="9" cols="12">
         <v-card class="pa-2 h-100">
-          <h4 class="text-h6 text-primary font-weight-bold">9！</h4>
+          <h4 class="text-h6 text-primary font-weight-bold">9</h4>
           <v-divider class="pt-1 mb-8"></v-divider> </v-card
       ></v-col>
       <v-col md="3" cols="12">

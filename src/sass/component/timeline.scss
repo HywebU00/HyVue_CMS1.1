@@ -17,7 +17,7 @@
       }
     }
     .title {
-      font-size: rem(28);
+      font-size: 1.75em; //rem(28);
       font-weight: 700;
       display: flex;
       align-items: start;
@@ -33,14 +33,14 @@
     p {
       display: block;
       margin-top: 1rem;
-      font-size: 1rem;
+      font-size: 1em;
       line-height: 2.25rem;
     }
   }
 }
 .timelineCard {
   .title {
-    font-size: rem(28);
+    font-size: 1.75em; //rem(28);
     font-weight: 700;
     display: flex;
     align-items: start;

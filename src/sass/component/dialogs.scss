@@ -8,7 +8,7 @@
   @include scrollbar;
   &.dialogSmall {
     .v-card-title {
-      font-size: 1rem;
+      font-size: 1em;
     }
   }
   &.scrollDialog {
@@ -34,7 +34,7 @@
       }
       .note {
         color: $neutral30;
-        font-size: rem(14);
+        font-size: 0.875em; //rem(14);
         line-height: rem(28);
       }
     }
@@ -48,7 +48,7 @@
     padding: rem(16) rem(24);
     display: flex;
     font-weight: 700;
-    font-size: rem(28);
+    font-size: 1.75em; //rem(28);
     span {
       display: flex;
       align-items: center;

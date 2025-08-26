@@ -179,14 +179,13 @@ export default {
   }),
   methods: {
     toggleDarkTheme() {
-      //let th = this.$vuetify.theme.global;
       let th = this.$vuetify.theme;
       const newTheme = th.name.value === "dark" ? "default" : "dark";
       // 使用官方新方法切換
+
+      this.themeDark = !this.themeDark;
       th.change(newTheme);
       this.createCookie("Theme", newTheme, 356);
-      this.themeDark = !this.themeDark;
-
       if (this.themeDark === true) {
         th.change("dark");
       } else {

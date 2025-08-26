@@ -50,7 +50,7 @@
   .v-btn {
     &.v-btn--variant-text {
       .v-btn__content {
-        font-size: 1rem;
+        font-size: 1em;
         font-weight: 700;
         color: $primary30;
       }
@@ -58,16 +58,15 @@
     &.loginBtn {
       min-height: rem(60);
       font-weight: 700;
-
       margin-top: 1rem;
       .v-btn__content {
-        font-size: rem(18);
+        font-size: 1.25em; //em(18);
       }
     }
   }
   .list {
     margin-top: 1.5rem;
-    font-size: 1rem;
+    font-size: 1em; //1rem;
     color: $neutral20;
     li {
       line-height: 2rem;

@@ -103,5 +103,17 @@ $fontSize-config: (
       line-height: 1.5rem;
       font-weight: 700;
     }
+    .photoCard {
+      &.v-card {
+        .v-card-title {
+          line-height: 1rem;
+          font-size: $font-size * 0.8;
+        }
+      }
+      .v-card-title {
+        cursor: pointer;
+        font-size: $font-size;
+      }
+    }
   }
 }

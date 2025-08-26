@@ -843,6 +843,8 @@
                     class="datePicker"
                     v-model="date"
                     :enable-time-picker="false"
+                    select-text="確定"
+                    cancel-text="取消"
                   ></VueDatePicker>
                 </v-col>
               </v-row>

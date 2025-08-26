@@ -1,4 +1,5 @@
 @use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/variables.scss' as *;
 .v-tooltip {
   &.v-overlay {
     .v-overlay__content {
@@ -6,37 +7,42 @@
       &[style*='transform-origin: center bottom'] {
         &::after {
           position: absolute;
-          transform: rotate(90deg);
+          transform: rotate(45deg);
           content: '';
           width: 10px;
           height: 10px;
-          bottom: -8px;
+          bottom: -5px;
+          border-radius: 0.2rem;
           left: calc(50% - 5px);
-          background: url('@/assets/images/tooltip-arrow.png') no-repeat center center;
+          background-color: #424242;
+          z-index: -2;
         }
       }
       &[style*='transform-origin: center top'] {
         &::after {
           position: absolute;
-          transform: rotate(-90deg);
+          transform: rotate(45deg);
           content: '';
           width: 10px;
+          border-radius: 0.2rem;
           height: 10px;
-          top: -8px;
+          top: -5px;
           left: calc(50% - 5px);
-          background: url('@/assets/images/tooltip-arrow.png') no-repeat center center;
+          background-color: #424242;
         }
       }
       &[style*='transform-origin: left center'] {
         &::after {
           position: absolute;
-          transform: rotate(180deg);
+
           content: '';
+          border-radius: 0.2rem;
           width: 10px;
           height: 10px;
-          left: -8px;
+          left: -5px;
+          transform: rotate(45deg);
           top: calc(50% - 5px);
-          background: url('@/assets/images/tooltip-arrow.png') no-repeat center center;
+          background-color: #424242;
         }
       }
       &[style*='transform-origin: right center'] {
@@ -45,9 +51,11 @@
           content: '';
           width: 10px;
           height: 10px;
-          right: -8px;
+          right: -5px;
+          border-radius: 0.2rem;
+          transform: rotate(45deg);
           top: calc(50% - 5px);
-          background: url('@/assets/images/tooltip-arrow.png') no-repeat center center;
+          background-color: #424242;
         }
       }
     }

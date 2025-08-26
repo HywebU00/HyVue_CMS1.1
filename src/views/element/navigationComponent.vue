@@ -131,8 +131,12 @@
                   <template #label>Type: Text</template>
                   <template #content>
                     <div class="bg-neutral-darken-2 pa-3 w-100 rounded-sm">
-                      <div class="mb-8 bg-white">
-                        <v-tabs v-model="tab2" class="textTabs" color="primary">
+                      <div class="mb-8">
+                        <v-tabs
+                          v-model="tab2"
+                          class="textTabs bg-white"
+                          color="primary"
+                        >
                           <v-tab :value="1">
                             <div class="title">頁籤項目ㄧ</div>
                           </v-tab>

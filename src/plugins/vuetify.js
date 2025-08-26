@@ -110,7 +110,7 @@ export default createVuetify({
           "error-lighten-1": "#FFEDF1", //red70
           light: "#36e79e",
           //thead
-          thead: "#ad3b5f", //secondary60,
+          thead: "#c88490", //secondary60,
         },
       },
       dark: {

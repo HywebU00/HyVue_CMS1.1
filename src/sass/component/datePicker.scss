@@ -12,6 +12,10 @@
   }
   .dp__action_buttons {
     text-wrap: nowrap;
+    button {
+      padding: 1em;
+      font-size: 1em;
+    }
   }
 }
 
@@ -33,6 +37,7 @@
   .v-picker__body {
     color: $neutral20;
   }
+
   .v-date-picker-header[class*='bg-'] {
     .v-date-picker-header__content {
       color: unset;

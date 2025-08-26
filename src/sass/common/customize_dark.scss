@@ -1,0 +1,631 @@
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
+@use '@/sass/variables.scss' as *;
+
+$theme-config: (
+  dark: (
+    class: 'dark',
+
+    neutral100: #ffffff,
+    neutral80: #f8f8f8,
+    neutral70: #f1f1f1,
+    neutral60: #e3e8ef,
+    neutral40: #97a3b6,
+    neutral30: #69707d,
+    neutral20: #555555,
+    neutral10: #333333,
+    neutral0: #111111,
+
+    //gradients
+    gradients: linear-gradient(0deg, #91404a 0%, #c88490 50%, #e6c9cc 100%),
+    gradients_v: linear-gradient(90deg, #91404a 0%, #c88490 65%, #e6c9cc 100%),
+    //other
+    light: #36e79e,
+    thead: #c88490,
+    cardBg: #f6e8ed,
+    roundedTag: url('@/assets/images/roundedTag_dark.svg') no-repeat bottom center,
+  ),
+);
+
+@each $name, $value in $theme-config {
+  $class: map-get($value, class);
+  $primary: map-get($value, primary);
+  $primary30: map-get($value, primary30);
+  $primary50: map-get($value, primary50);
+  //secondary 設定
+  $secondary: map-get($value, secondary);
+  $secondary40: map-get($value, secondary40);
+  $secondary60: map-get($value, secondary60);
+  $secondary80: map-get($value, secondary80);
+  $secondary100: map-get($value, secondary100);
+  //gradients
+  $gradients: map-get($value, gradients);
+  $gradients_v: map-get($value, gradients_v);
+  //other
+  $cardBg: map-get($value, cardBg);
+  $roundedTag: map-get($value, roundedTag);
+  $thead: map-get($value, thead);
+
+  .v-theme--dark {
+    .navigation {
+      .v-btn {
+        .v-btn__content {
+          .material-symbols-rounded {
+            color: $neutral100;
+          }
+        }
+      }
+    }
+    .v-breadcrumbs {
+      .v-breadcrumbs-item {
+        color: $neutral100;
+        &.v-breadcrumbs-item--disabled {
+          opacity: 0.8;
+        }
+      }
+    }
+    .container.page {
+      .title {
+        color: $neutral100;
+        &:after {
+          background: $neutral30;
+        }
+      }
+      .countCard {
+        &.v-card {
+          h4 {
+            color: $neutral100;
+          }
+          .content {
+            background: $neutral20;
+            + .caption {
+              color: $neutral100;
+            }
+          }
+        }
+      }
+      .itemCard {
+        &.v-card {
+          h4 {
+            color: $neutral100;
+          }
+        }
+      }
+    }
+    .scrollCard {
+      border-color: #5c5d60 !important;
+    }
+    .card {
+      .titleText {
+        .v-card-title {
+          color: $neutral100;
+        }
+        .v-card-subtitle {
+          color: $neutral100;
+        }
+      }
+      .v-card-item__content {
+        p {
+          color: $neutral100;
+        }
+      }
+      .iconList {
+        .icon {
+          color: $neutral100;
+        }
+        color: $neutral100;
+      }
+      &.v-card--variant-tonal {
+        background: $neutral10;
+      }
+    }
+    .sideBar {
+      .drawerBtn {
+        background-color: rgb(35 35 35);
+        span {
+          color: #fff;
+        }
+      }
+      .v-navigation-drawer__content {
+        .v-list-item {
+          .v-list-item__prepend {
+            i {
+              color: #fff;
+            }
+          }
+          .v-list-item__content {
+            .v-list-item-title {
+              color: #fff;
+            }
+          }
+        }
+        .v-list-group {
+          > .v-list-item {
+            &:hover,
+            &.v-list-item--active {
+              background: $neutral80;
+              color: #000;
+              img {
+                filter: unset;
+              }
+              .v-list-item__content {
+                .v-list-item-title {
+                  color: $neutral10;
+                }
+              }
+              .v-list-item__prepend {
+                i {
+                  color: $neutral10;
+                }
+              }
+            }
+          }
+        }
+        .v-list {
+          .v-list-item--active {
+            .v-list-item__overlay {
+              background: $neutral100;
+            }
+          }
+        }
+        .loginInfo {
+          .iconBtn {
+            background-color: $neutral20;
+            color: $neutral100;
+          }
+        }
+      }
+      &.v-theme--dark {
+        background: rgb(35 35 35);
+        .v-list-item__content {
+          img {
+            filter: invert(1);
+          }
+        }
+      }
+    }
+    .infoBtnContainer {
+      li {
+        div {
+          color: #fff;
+        }
+      }
+    }
+    .v-expansion-panel {
+      background: $neutral10;
+      .v-expansion-panel-title {
+        color: $neutral100;
+      }
+    }
+    .v-chip {
+      .v-chip__content {
+        i {
+          color: $neutral100;
+        }
+      }
+    }
+    .v-empty-state {
+      .v-empty-state__headline {
+        .img {
+          background: $neutral20;
+        }
+      }
+      .title {
+        color: $neutral100;
+      }
+      .v-empty-state__title,
+      .v-empty-state__text {
+        color: $neutral80;
+      }
+    }
+    .v-empty-state {
+      .v-empty-state__media {
+        i {
+          background: $neutral30;
+        }
+      }
+      .v-empty-state__headline {
+        color: $neutral100;
+      }
+    }
+    .v-picker {
+      color: $neutral100;
+      .v-picker__header {
+        .v-date-picker-header__content {
+          color: $neutral100 !important;
+        }
+      }
+      &.v-date-picker {
+        .v-date-picker-month__day {
+          color: $neutral100;
+        }
+        .v-picker__body {
+          color: $neutral100;
+        }
+      }
+    }
+    .treeviewBlock {
+      .treeTitle {
+        color: #fff;
+      }
+      .item {
+        > div {
+          &:hover {
+            .treeTitle {
+              color: #000;
+              .text-primary {
+                color: #000 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    .apexcharts-legend-text {
+      color: $neutral100 !important;
+    }
+    .v-slider {
+      .v-slider-track {
+        background: $neutral10;
+      }
+      &.v-input--horizontal {
+        .v-slider-thumb__label-container {
+          .v-slider-thumb__label {
+            &::before {
+              background: $roundedTag;
+            }
+          }
+        }
+      }
+    }
+    .v-btn {
+      &:hover {
+        .v-btn__overlay {
+          opacity: 0.2;
+        }
+      }
+      .v-ripple_container {
+        opacity: 0.3 !important;
+      }
+    }
+
+    .v-progress-circular {
+      .v-progress-circular__content .text {
+        span {
+          color: $neutral100;
+        }
+        color: $neutral100;
+      }
+    }
+    .v-progress-linear {
+      .v-progress-linear__background {
+        background-color: $neutral100 !important;
+      }
+    }
+    .dp__main {
+      .dp__input {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #fff;
+      }
+    }
+    .ql-snow {
+      .ql-stroke {
+        stroke: #959595;
+      }
+      .ql-picker {
+        color: #fff;
+      }
+      .ql-picker-label {
+        color: #fff;
+        &:hover {
+          color: #000;
+        }
+      }
+      .ql-active {
+        color: #000;
+      }
+      .ql-expanded {
+        color: #000;
+      }
+      .ql-picker.ql-expanded .ql-picker-label {
+        color: #959595;
+      }
+    }
+    .vue-apexcharts {
+      .apexcharts-xaxis,
+      .apexcharts-yaxis-texts-g {
+        text {
+          fill: $neutral100;
+        }
+      }
+    }
+    .pagination {
+      .v-pagination {
+        .v-pagination__item {
+          button.v-btn {
+            background: $neutral10;
+          }
+          &.v-pagination__item--is-active {
+            button.v-btn {
+              background: $neutral30;
+            }
+          }
+        }
+      }
+    }
+
+    .tabs {
+      button.v-tab {
+        background: $neutral30;
+        color: $neutral40;
+        .v-tab__slider {
+          background: $neutral40;
+        }
+      }
+    }
+    .textTabs {
+      &[class*='bg-'] {
+        background: $neutral10 !important;
+      }
+      .v-slide-group__content {
+        .v-btn__content {
+          .title {
+            color: $neutral100;
+          }
+          .v-tab__slider {
+            background: $neutral40;
+          }
+        }
+      }
+    }
+    .v-stepper {
+      .v-stepper-item {
+        .v-avatar {
+          &.v-theme--dark {
+            color: $neutral60 !important;
+          }
+        }
+      }
+      .v-stepper-item__subtitle {
+        .subtitle {
+          color: $neutral100;
+        }
+      }
+      .v-divider.v-theme--dark {
+        opacity: 0.6;
+      }
+      .v-stepper-window {
+        .v-card {
+          .title {
+            color: $neutral100;
+          }
+        }
+      }
+      .v-stepper-actions {
+        .v-btn--variant-outlined {
+          border-color: $neutral100;
+        }
+      }
+    }
+    .v-radio-group {
+      > .v-input__control > .v-label {
+        color: $neutral100;
+      }
+    }
+    .treeviewBlock {
+      .treeTitle {
+        color: $neutral0;
+      }
+      .item {
+        > .bold {
+          + ul {
+            .treeTitle {
+              color: $neutral100;
+              .icon {
+                color: $neutral100;
+              }
+            }
+            > div {
+              .item {
+                > div {
+                  &:hover {
+                    background: $neutral10;
+                  }
+                }
+              }
+
+              &:has(.bold) {
+                .bold {
+                  background: $neutral20;
+                  border: 1px solid $neutral20;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .addNews.container.page {
+      .checkCard .v-radio-group .v-radio .v-label {
+        color: $neutral100;
+      }
+      .v-window-item {
+        [class*='text-'] + p,
+        .alert {
+          color: $neutral100;
+          .v-alert-title {
+            color: $neutral100;
+          }
+          .v-alert__content {
+            color: $neutral100;
+          }
+        }
+      }
+    }
+  }
+  .v-snackbar {
+    .v-snackbar__wrapper {
+      &.v-snackbar--variant-outlined,
+      &.v-snackbar--variant-tonal {
+        &.v-theme--dark {
+          background: $neutral10;
+        }
+      }
+    }
+  }
+  .v-timeline {
+    &.v-theme--dark {
+      .v-timeline-divider {
+        .v-timeline-divider__dot {
+          background: $neutral30;
+        }
+      }
+    }
+  }
+  .timelineCard {
+    &.v-theme--dark {
+      .v-card-title[class*='bg-'] {
+        background-color: $neutral20 !important;
+      }
+      &.timelineCard {
+        &[class*='bg-'] {
+          background-color: $neutral20 !important;
+        }
+      }
+    }
+  }
+  .v-avatar {
+    &.v-theme--dark {
+      background-color: $neutral30 !important;
+    }
+  }
+  .datePicker,
+  .dateRangerPicker,
+  .multiDatePicker {
+    .dp__menu {
+      background-color: $neutral20;
+      border-color: $neutral20;
+      &:focus {
+        border-color: $neutral20;
+      }
+    }
+    .dp__range_start,
+    .dp__range_end {
+      background-color: $neutral100;
+      color: $neutral10;
+    }
+    .dp__range_between {
+      background-color: $neutral30;
+      border-color: $neutral30;
+      color: $neutral100;
+    }
+    .dp__calendar_header {
+      color: $neutral100;
+    }
+    .dp__calendar_item {
+      color: #fff;
+    }
+    .dp__arrow_bottom {
+      background: $neutral20;
+      border-color: $neutral20;
+    }
+    .dp__action_button {
+      color: $neutral100;
+      &:hover {
+        border-color: $neutral60;
+      }
+    }
+    .dp__month_year_wrap {
+      button {
+        color: $neutral100;
+      }
+    }
+    .dp__today {
+      border-color: $neutral100;
+    }
+    .dp__selection_preview {
+      color: $neutral100;
+    }
+    .dp__active_date {
+      background: $neutral100;
+      color: $neutral0;
+    }
+    .dp__action_select {
+      background: $neutral10;
+      &:hover {
+        background: $neutral30;
+      }
+    }
+  }
+  .v-table {
+    &.v-theme--dark {
+      table {
+        .v-data-table__td {
+          background: $neutral20;
+        }
+      }
+      .v-table__wrapper > table > tbody > tr td:not(:last-child) {
+        border-right: $neutral30 1px solid;
+      }
+    }
+  }
+  .loginCard {
+    .v-theme--dark {
+      .title {
+        color: $neutral100;
+      }
+      .v-input {
+        .v-input__details .v-messages__message {
+          color: $neutral80;
+        }
+        .v-label {
+          color: $neutral100;
+        }
+      }
+      .v-btn.v-btn--variant-text {
+        .v-btn__content {
+          color: $neutral80;
+        }
+      }
+      .list {
+        li {
+          color: $neutral100;
+        }
+      }
+    }
+  }
+  .v-overlay__content {
+    .dialogCard {
+      &.v-theme--dark {
+        .v-card-title {
+          &[class*='bg-'] {
+            background: $neutral10 !important;
+          }
+        }
+      }
+    }
+  }
+  .v-dialog {
+    &.largeScrollDialog {
+      .v-theme--dark {
+        .v-card-text p {
+          color: $neutral100;
+        }
+        .v-table {
+          thead {
+            background: $neutral20 !important;
+          }
+        }
+      }
+    }
+  }
+  .v-tooltip {
+    &.v-theme--dark {
+      .v-overlay__content {
+        color: $neutral100;
+      }
+    }
+  }
+}
+
+//暗黑版樣式設定 dark Style-------

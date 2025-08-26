@@ -11,7 +11,7 @@
       border-radius: 6px 6px 0 0;
       margin-right: 0.15rem;
       .v-btn__content {
-        font-size: 1rem;
+        font-size: 1em;
         font-weight: 700;
         .title {
           color: $neutral100;
@@ -32,7 +32,7 @@
     &.v-tab.v-btn {
       min-width: rem(260);
       .v-btn__content {
-        font-size: 1rem;
+        font-size: 1em;
         font-weight: 700;
       }
     }
