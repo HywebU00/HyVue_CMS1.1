@@ -1,7 +1,7 @@
 @use '@/sass/common/mixins/text.scss' as *;
 @use '@/sass/common/mixins/mediaquery.scss' as *;
 @use '@/sass/variables.scss' as *;
-
+@use 'sass:map';
 $theme-config: (
   dark: (
     class: 'dark',
@@ -28,23 +28,23 @@ $theme-config: (
 );
 
 @each $name, $value in $theme-config {
-  $class: map-get($value, class);
-  $primary: map-get($value, primary);
-  $primary30: map-get($value, primary30);
-  $primary50: map-get($value, primary50);
+  $class: map.get($value, class);
+  $primary: map.get($value, primary);
+  $primary30: map.get($value, primary30);
+  $primary50: map.get($value, primary50);
   //secondary 設定
-  $secondary: map-get($value, secondary);
-  $secondary40: map-get($value, secondary40);
-  $secondary60: map-get($value, secondary60);
-  $secondary80: map-get($value, secondary80);
-  $secondary100: map-get($value, secondary100);
+  $secondary: map.get($value, secondary);
+  $secondary40: map.get($value, secondary40);
+  $secondary60: map.get($value, secondary60);
+  $secondary80: map.get($value, secondary80);
+  $secondary100: map.get($value, secondary100);
   //gradients
-  $gradients: map-get($value, gradients);
-  $gradients_v: map-get($value, gradients_v);
+  $gradients: map.get($value, gradients);
+  $gradients_v: map.get($value, gradients_v);
   //other
-  $cardBg: map-get($value, cardBg);
-  $roundedTag: map-get($value, roundedTag);
-  $thead: map-get($value, thead);
+  $cardBg: map.get($value, cardBg);
+  $roundedTag: map.get($value, roundedTag);
+  $thead: map.get($value, thead);
 
   .v-theme--dark {
     .navigation {

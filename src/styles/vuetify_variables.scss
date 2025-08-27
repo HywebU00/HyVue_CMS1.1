@@ -27,20 +27,20 @@ $densities: (
     &.v-select--selected {
       .v-field__field {
         .v-label {
-          top: map-get($config, top);
+          top: map.get($config, top);
         }
       }
     }
     .v-field {
       &:not(:has(textarea)) {
-        min-height: map-get($config, height);
-        height: map-get($config, height);
+        min-height: map.get($config, height);
+        height: map.get($config, height);
       }
     }
 
     .v-field__input:not(textarea) {
-      min-height: map-get($config, height);
-      padding: map-get($config, padding);
+      min-height: map.get($config, height);
+      padding: map.get($config, padding);
     }
   }
 }
