@@ -2,7 +2,7 @@
   <v-card class="card" :class="type" :variant="variant">
     <div class="cardContainer">
       <v-checkbox
-        color="primary-lighten-2"
+        color="primary70"
         label="cardCheckbox"
         class="cardCheckbox"
         hide-details="auto"

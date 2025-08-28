@@ -3,7 +3,7 @@
     <!-- 上方文字 -->
     <div
       :style="{ height, width }"
-      class="mb-3 text-subtitle-2 text-neutral-darken-5 d-flex"
+      class="mb-3 text-subtitle-2 text-neutral30 d-flex"
       :class="labelAlign"
     >
       <div class="text-start">

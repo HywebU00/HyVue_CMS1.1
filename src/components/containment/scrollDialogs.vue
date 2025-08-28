@@ -30,7 +30,7 @@
           <v-btn
             class="closeBtn"
             text="Close"
-            color="neutral-darken-4"
+            color="neutral40"
             @click="isActive.value = false"
           ></v-btn>
 

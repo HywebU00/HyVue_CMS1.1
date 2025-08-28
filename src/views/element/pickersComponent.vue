@@ -17,7 +17,7 @@
                   <template #content>
                     <v-date-picker
                       class="textDatePicker"
-                      color="secondary-lighten-1"
+                      color="secondary60"
                       header-color="neutral100"
                       show-adjacent-months
                     ></v-date-picker>
@@ -36,7 +36,7 @@
                   <template #label>State:Flat</template>
                   <template #content>
                     <v-date-picker
-                      color="secondary-lighten-1"
+                      color="secondary60"
                       elevation="6"
                       show-adjacent-months
                     ></v-date-picker>

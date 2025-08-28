@@ -1,6 +1,6 @@
 <template>
   <v-table>
-    <thead class="bg-secondary-lighten-1">
+    <thead class="bg-secondary60">
       <tr>
         <th width="30" class="text-center">編號</th>
         <th class="text-center">標題</th>

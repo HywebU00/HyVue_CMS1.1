@@ -248,7 +248,7 @@
                     <v-alert
                       closable
                       title="Alert title"
-                      color="neutral-darken-7"
+                      color="neutral10"
                       text="這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊這是一般提醒訊息區塊"
                     >
                       <template #prepend
@@ -483,7 +483,7 @@
                     <v-progress-circular
                       model-value="75"
                       class="rounded"
-                      color="secondary-lighten-1"
+                      color="secondary60"
                       :size="90"
                       :width="6"
                     >
@@ -536,7 +536,7 @@
                       :rotate="360"
                       :size="100"
                       :width="15"
-                      color="secondary-lighten-1"
+                      color="secondary60"
                     >
                     </v-progress-circular>
                   </template>
@@ -549,7 +549,7 @@
                       :rotate="360"
                       :size="100"
                       :width="15"
-                      color="secondary-lighten-1"
+                      color="secondary60"
                     >
                     </v-progress-circular>
                   </template>
@@ -565,7 +565,7 @@
                       :rotate="360"
                       :size="100"
                       :width="5"
-                      color="secondary-lighten-1"
+                      color="secondary60"
                     >
                     </v-progress-circular>
                   </template>
@@ -579,7 +579,7 @@
                       :rotate="360"
                       :size="100"
                       :width="15"
-                      color="secondary-lighten-1"
+                      color="secondary60"
                     >
                     </v-progress-circular>
                   </template>
@@ -629,7 +629,7 @@
                       <div class="d-flex align-center">
                         <v-progress-linear
                           model-value="50"
-                          color="secondary-lighten-1"
+                          color="secondary60"
                           :height="14"
                           rounded
                         ></v-progress-linear>
@@ -694,7 +694,7 @@
                     <v-progress-linear
                       model-value="20"
                       rounded
-                      color="secondary-lighten-1"
+                      color="secondary60"
                       :height="14"
                     ></v-progress-linear>
                   </template>
@@ -708,7 +708,7 @@
                   <template #content>
                     <v-progress-linear
                       model-value="20"
-                      color="secondary-lighten-1"
+                      color="secondary60"
                       :height="14"
                     ></v-progress-linear>
                   </template>
@@ -725,7 +725,7 @@
                   <template #content>
                     <v-progress-linear
                       model-value="20"
-                      color="secondary-lighten-1"
+                      color="secondary60"
                       :height="8"
                       rounded
                     ></v-progress-linear>
@@ -740,7 +740,7 @@
                   <template #content>
                     <v-progress-linear
                       model-value="20"
-                      color="secondary-lighten-1"
+                      color="secondary60"
                       :height="14"
                       rounded
                     ></v-progress-linear>
@@ -767,10 +767,7 @@
                   <template #content>
                     <v-snackbar :timeout="2000">
                       <template v-slot:activator="{ props }">
-                        <v-btn
-                          color="neutral-darken-6"
-                          class="ma-2"
-                          v-bind="props"
+                        <v-btn color="neutral20" class="ma-2" v-bind="props"
                           >open</v-btn
                         >
                       </template>
@@ -830,7 +827,7 @@
                       v-model="snackbar_outlined"
                       :timeout="-1"
                       rounded="pill"
-                      color="secondary-lighten-1"
+                      color="secondary60"
                       variant="outlined"
                     >
                       Hello, I am a snackbar
@@ -838,7 +835,7 @@
                         <v-btn
                           variant="text"
                           icon
-                          color="secondary-lighten-1"
+                          color="secondary60"
                           @click="snackbar_outlined = false"
                         >
                           <span class="material-icons">close</span>
@@ -846,7 +843,7 @@
                       </template>
                     </v-snackbar>
                     <v-btn
-                      color="secondary-lighten-1"
+                      color="secondary60"
                       variant="outlined"
                       class="ma-2"
                       @click="snackbar_outlined = true"
@@ -888,7 +885,7 @@
                   <template #content>
                     <v-btn
                       rounded="sm"
-                      color="neutral-darken-6"
+                      color="neutral20"
                       @click="snackbar = true"
                     >
                       Open
@@ -927,7 +924,7 @@
                   <template #label>垂直時間軸</template>
                   <template #content>
                     <div>
-                      <v-timeline dot-color="secondary-lighten-1">
+                      <v-timeline dot-color="secondary60">
                         <v-timeline-item size="small">
                           <template v-slot:opposite>
                             Opposite content
@@ -1038,10 +1035,7 @@
               <layoutCard title="水平排列" flexWrap="wrap">
                 <layoutCardItem>
                   <template #content>
-                    <v-timeline
-                      direction="horizontal"
-                      dot-color="secondary-lighten-1"
-                    >
+                    <v-timeline direction="horizontal" dot-color="secondary60">
                       <v-timeline-item size="small" v-for="i in 2" :key="i">
                         <template v-slot:opposite> Opposite content </template>
                         <div>
@@ -1147,7 +1141,7 @@
                           </div>
                           <div class="mx-2">
                             <v-card class="timelineCard">
-                              <v-card-title class="bg-secondary-lighten-1">
+                              <v-card-title class="bg-secondary60">
                                 <div class="title">
                                   <span class="material-icons-outlined">
                                     comment
@@ -1174,7 +1168,7 @@
                             </v-card>
                           </div>
                           <div class="mx-2">
-                            <v-card class="bg-secondary-lighten-1 timelineCard">
+                            <v-card class="bg-secondary60 timelineCard">
                               <v-card-title>
                                 <div class="title">
                                   <span class="material-icons-outlined">

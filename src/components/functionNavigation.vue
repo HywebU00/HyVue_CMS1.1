@@ -62,7 +62,7 @@
             <v-btn
               icon
               size="small"
-              color="neutral-darken-3"
+              color="neutral60"
               rounded="circle"
               role="button"
               @click="fontSizeChange('small')"
@@ -76,7 +76,7 @@
               icon
               size="small"
               role="button"
-              color="neutral-darken-3"
+              color="neutral60"
               rounded="circle"
               @click="fontSizeChange('medium')"
               :class="[{ active: this.fontSize === 'medium' }, 'bg-primary']"
@@ -89,7 +89,7 @@
               icon
               size="small"
               rounded="circle"
-              color="neutral-darken-3"
+              color="neutral60"
               role="button"
               @click="fontSizeChange('large')"
               :class="[{ active: this.fontSize === 'large' }, 'bg-primary']"

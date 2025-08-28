@@ -34,7 +34,7 @@
                     <v-breadcrumbs :items="['Foo', 'Bar', 'Fizz']">
                       <template v-slot:prepend>
                         <span
-                          class="material-symbols-rounded text-neutral-darken-4"
+                          class="material-symbols-rounded text-neutral40"
                           size="small"
                         >
                           home
@@ -130,7 +130,7 @@
                 >
                   <template #label>Type: Text</template>
                   <template #content>
-                    <div class="bg-neutral-darken-2 pa-3 w-100 rounded-sm">
+                    <div class="bg-neutral70 pa-3 w-100 rounded-sm">
                       <div class="mb-8">
                         <v-tabs
                           v-model="tab2"

@@ -2,10 +2,7 @@
   <v-container class="container page cardPage">
     <v-breadcrumbs :items="['首頁', '節點', '節點']">
       <template v-slot:prepend>
-        <span
-          class="material-symbols-rounded text-neutral-darken-5 icon"
-          size="small"
-        >
+        <span class="material-symbols-rounded text-neutral30 icon" size="small">
           home
         </span>
       </template>
@@ -66,18 +63,11 @@
               ></v-text-field>
             </div>
             <span>筆</span>
-            <v-btn class="ml-2" color="secondary-lighten-1" elevation="0"
-              >確定</v-btn
-            >
+            <v-btn class="ml-2" color="secondary60" elevation="0">確定</v-btn>
           </div>
           <div class="mt-4">
             <div class="pagination d-flex align-center justify-center">
-              <v-btn
-                rounded="sm"
-                class="btn"
-                variant="text"
-                color="neutral-darken-5"
-              >
+              <v-btn rounded="sm" class="btn" variant="text" color="neutral30">
                 <span class="material-symbols-rounded"> first_page </span>
               </v-btn>
               <v-pagination
@@ -86,14 +76,9 @@
                 total-visible="5"
                 rounded="sm"
                 active-color="primary"
-                color="neutral-darken-5"
+                color="neutral30"
               />
-              <v-btn
-                rounded="sm"
-                class="btn"
-                variant="text"
-                color="neutral-darken-5"
-              >
+              <v-btn rounded="sm" class="btn" variant="text" color="neutral30">
                 <span class="material-symbols-rounded"> last_page </span>
               </v-btn>
             </div>
@@ -165,18 +150,11 @@
               ></v-text-field>
             </div>
             <span>筆</span>
-            <v-btn class="ml-2" color="secondary-lighten-1" elevation="0"
-              >確定</v-btn
-            >
+            <v-btn class="ml-2" color="secondary60" elevation="0">確定</v-btn>
           </div>
           <div class="mt-4">
             <div class="pagination d-flex align-center justify-center">
-              <v-btn
-                rounded="sm"
-                class="btn"
-                variant="text"
-                color="neutral-darken-5"
-              >
+              <v-btn rounded="sm" class="btn" variant="text" color="neutral30">
                 <span class="material-symbols-rounded"> first_page </span>
               </v-btn>
               <v-pagination
@@ -185,14 +163,9 @@
                 total-visible="5"
                 rounded="sm"
                 active-color="primary"
-                color="neutral-darken-5"
+                color="neutral30"
               />
-              <v-btn
-                rounded="sm"
-                class="btn"
-                variant="text"
-                color="neutral-darken-5"
-              >
+              <v-btn rounded="sm" class="btn" variant="text" color="neutral30">
                 <span class="material-symbols-rounded"> last_page </span>
               </v-btn>
             </div>
@@ -216,7 +189,7 @@
               >
                 <div class="cardContainer">
                   <v-checkbox
-                    color="primary-lighten-2"
+                    color="primary70"
                     label="cardCheckbox"
                     class="cardCheckbox"
                     hide-details="auto"
@@ -248,7 +221,7 @@
 </template>
 
 <script>
-import card from "@/components/card.vue";
+import card from "@/components/containment/card.vue";
 export default {
   data: () => ({
     tab: null,

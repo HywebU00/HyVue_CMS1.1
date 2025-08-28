@@ -2,10 +2,7 @@
   <v-container class="container page addNews">
     <v-breadcrumbs :items="['首頁', '節點', '節點']">
       <template v-slot:prepend>
-        <span
-          class="material-symbols-rounded text-neutral-darken-5 icon"
-          size="small"
-        >
+        <span class="material-symbols-rounded text-neutral30 icon" size="small">
           home
         </span>
       </template>
@@ -50,27 +47,19 @@
                   <v-card-text>
                     <v-window v-model="tab">
                       <v-window-item value="one">
-                        <div class="text-h1 my-3 text-neutral-darken-6">
-                          標題一
-                        </div>
+                        <div class="text-h1 my-3 text-neutral20">標題一</div>
                         <p>
                           可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。落然幾檢，牛即弟告者出行飯在教快政有我調個萬，對拿回色無為還成師營各手年天為完種風全，容人友成子選包母何有響好。著是情以裡來不子不覺野行？媽生頭濟那基女的此的下，社麗後難，無升美的力設們就很紙事而不題智香是水學，總切市沒不質熱雜，是視當為青阿少認消大究法成我，都不的友構，的陽式拿八檢腳種合飯市車那張甚活些全萬別他設給步後出領。
                         </p>
-                        <div class="text-h2 my-3 text-neutral-darken-6">
-                          標題一
-                        </div>
+                        <div class="text-h2 my-3 text-neutral20">標題一</div>
                         <p>
                           可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。落然幾檢，牛即弟告者出行飯在教快政有我調個萬，對拿回色無為還成師營各手年天為完種風全，容人友成子選包母何有響好。著是情以裡來不子不覺野行？媽生頭濟那基女的此的下，社麗後難，無升美的力設們就很紙事而不題智香是水學，總切市沒不質熱雜，是視當為青阿少認消大究法成我，都不的友構，的陽式拿八檢腳種合飯市車那張甚活些全萬別他設給步後出領。
                         </p>
-                        <div class="text-h4 my-3 text-neutral-darken-6">
-                          標題ㄧ
-                        </div>
+                        <div class="text-h4 my-3 text-neutral20">標題ㄧ</div>
                         <p>
                           可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。落然幾檢，牛即弟告者出行飯在教快政有我調個萬，對拿回色無為還成師營各手年天為完種風全，容人友成子選包母何有響好。著是情以裡來不子不覺野行？媽生頭濟那基女的此的下，社麗後難，無升美的力設們就很紙事而不題智香是水學，總切市沒不質熱雜，是視當為青阿少認消大究法成我，都不的友構，的陽式拿八檢腳種合飯市車那張甚活些全萬別他設給步後出領。
                         </p>
-                        <div class="text-h5 my-3 text-neutral-darken-6">
-                          標題ㄧ
-                        </div>
+                        <div class="text-h5 my-3 text-neutral20">標題ㄧ</div>
                         <p>
                           可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。落然幾檢，牛即弟告者出行飯在教快政有我調個萬，對拿回色無為還成師營各手年天為完種風全，容人友成子選包母何有響好。著是情以裡來不子不覺野行？媽生頭濟那基女的此的下，社麗後難，無升美的力設們就很紙事而不題智香是水學，總切市沒不質熱雜，是視當為青阿少認消大究法成我，都不的友構，的陽式拿八檢腳種合飯市車那張甚活些全萬別他設給步後出領。
                         </p>
@@ -78,7 +67,7 @@
                           border-color="primary"
                           title="卡片標題"
                           rounded="md"
-                          class="alert bg-neutral-darken-1"
+                          class="alert bg-neutral80"
                         >
                           可是能沒笑時打定式義生類還來世辦嗎然北高，日賽館，優子民有也南大我同流童，度念服為去道花能又人別新為開心表好？出了和……新調不？種爸員孩；服分把信系、到筆物前大西一落小海那？開比來個導未求大方大是不。
                         </v-alert>
@@ -113,7 +102,7 @@
                 <v-btn
                   class="ml-2"
                   rounded="sm"
-                  color="secondary-lighten-1"
+                  color="secondary60"
                   elevation="0"
                   >確定</v-btn
                 >
@@ -124,7 +113,7 @@
                     rounded="sm"
                     class="btn"
                     variant="text"
-                    color="neutral-darken-5"
+                    color="neutral30"
                   >
                     <span class="material-symbols-rounded"> first_page </span>
                   </v-btn>
@@ -134,14 +123,14 @@
                     total-visible="5"
                     rounded="sm"
                     active-color="primary"
-                    color="neutral-darken-5"
+                    color="neutral30"
                     size="small"
                   />
                   <v-btn
                     rounded="sm"
                     class="btn"
                     variant="text"
-                    color="neutral-darken-5"
+                    color="neutral30"
                   >
                     <span class="material-symbols-rounded"> last_page </span>
                   </v-btn>

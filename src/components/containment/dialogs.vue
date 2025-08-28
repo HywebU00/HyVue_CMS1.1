@@ -19,7 +19,7 @@
           <v-btn
             class="closeBtn"
             text="Close"
-            color="neutral-darken-4"
+            color="neutral40"
             @click="isActive.value = false"
           ></v-btn>
           <v-btn variant="outlined" text="不同意" color="primary"></v-btn>

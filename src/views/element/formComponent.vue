@@ -2,10 +2,7 @@
   <v-container class="container page">
     <v-breadcrumbs :items="['首頁', '節點', '節點']">
       <template v-slot:prepend>
-        <span
-          class="material-symbols-rounded text-neutral-darken-5 icon"
-          size="small"
-        >
+        <span class="material-symbols-rounded text-neutral30 icon" size="small">
           home
         </span>
       </template>
@@ -142,18 +139,18 @@
                     hide-details="auto"
                   >
                     <v-radio
-                      class="d-flex align-start text-neutral-darken-6"
+                      class="d-flex align-start text-neutral20"
                       label="我是選項一我有很多字我是選項我有很多字我是選項我有很多字我是選項我有很多字我是選項我有很多字我是選項我有很多字我是選項我有很多字我是選項我有很多字我是選項我有很多字"
                       value="1"
                     ></v-radio>
                     <v-radio
                       label="我是選項二"
-                      class="text-neutral-darken-6"
+                      class="text-neutral20"
                       value="2"
                     ></v-radio>
                     <v-radio
                       label="我是選項三"
-                      class="text-neutral-darken-6"
+                      class="text-neutral20"
                       value="3"
                     ></v-radio> </v-radio-group
                 ></v-col>
@@ -169,17 +166,17 @@
                   >
                     <v-radio
                       label="我是選項一"
-                      class="text-neutral-darken-6"
+                      class="text-neutral20"
                       value="1"
                     ></v-radio>
                     <v-radio
                       label="我是選項二"
-                      class="text-neutral-darken-6"
+                      class="text-neutral20"
                       value="2"
                     ></v-radio>
                     <v-radio
                       label="我是選項三"
-                      class="text-neutral-darken-6"
+                      class="text-neutral20"
                       value="3"
                     ></v-radio> </v-radio-group
                 ></v-col>
@@ -194,17 +191,17 @@
                   >
                     <v-radio
                       label="我是選項一"
-                      class="text-neutral-darken-6"
+                      class="text-neutral20"
                       value="1"
                     ></v-radio>
                     <v-radio
                       label="我是選項二"
-                      class="text-neutral-darken-6"
+                      class="text-neutral20"
                       value="2"
                     ></v-radio>
                     <v-radio
                       label="我是選項三"
-                      class="text-neutral-darken-6"
+                      class="text-neutral20"
                       value="3"
                     ></v-radio> </v-radio-group
                 ></v-col>
@@ -213,14 +210,14 @@
                 <v-col>
                   <v-switch
                     class="switch"
-                    color="neutral-darken-5"
+                    color="neutral30"
                     @click="model = !model"
                     hide-details
                     :label="model ? `開啟` : `關閉`"
                   ></v-switch>
                   <v-switch
                     class="switch"
-                    color="neutral-darken-5"
+                    color="neutral30"
                     inset
                     hide-details
                     @click="model2 = !model2"
@@ -242,9 +239,7 @@
             <v-container>
               <v-row class="formGrp">
                 <v-col class="">
-                  <label
-                    class="text-neutral-darken-6 text-h6 my-3 d-block"
-                    for=""
+                  <label class="text-neutral20 text-h6 my-3 d-block" for=""
                     >水平複選核取表單</label
                   >
                   <v-row>
@@ -252,7 +247,7 @@
                       <v-checkbox
                         color="primary"
                         :label="`我是選項${i}`"
-                        class="text-neutral-darken-6"
+                        class="text-neutral20"
                         hide-details="auto"
                       ></v-checkbox>
                     </v-col>
@@ -261,16 +256,14 @@
               </v-row>
               <v-row class="formGrp">
                 <v-col class="">
-                  <label
-                    class="text-neutral-darken-6 text-h6 my-3 d-block"
-                    for=""
+                  <label class="text-neutral20 text-h6 my-3 d-block" for=""
                     >複選核取表單</label
                   >
                   <v-row class="d-block">
                     <v-col v-for="i in 3" :key="i" class="py-0">
                       <v-checkbox
                         color="primary"
-                        class="text-neutral-darken-6"
+                        class="text-neutral20"
                         :label="`我是選項${i}`"
                         hide-details="auto"
                       ></v-checkbox>

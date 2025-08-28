@@ -14,7 +14,7 @@
                   <template #label>Type:Square</template>
                   <template #content>
                     <v-badge dot color="error" offset-y="38">
-                      <v-avatar rounded="sm" class="bg-neutral-darken-5">
+                      <v-avatar rounded="sm" class="bg-neutral30">
                         <span class="material-icons-outlined"> person </span>
                       </v-avatar>
                     </v-badge>
@@ -24,7 +24,7 @@
                   <template #label>Type:Circle</template>
                   <template #content>
                     <v-badge dot color="error" offset-y="36">
-                      <v-avatar class="bg-neutral-darken-5" rounded="full">
+                      <v-avatar class="bg-neutral30" rounded="full">
                         <span class="material-icons-outlined"> person </span>
                       </v-avatar>
                     </v-badge>
@@ -38,7 +38,7 @@
                     <v-badge dot color="error" offset-y="26">
                       <v-avatar
                         size="small"
-                        class="bg-neutral-darken-5"
+                        class="bg-neutral30"
                         rounded="full"
                       >
                         <span class="material-icons-outlined"> person </span>
@@ -57,7 +57,7 @@
                       width="10"
                       height="10"
                     >
-                      <v-avatar class="bg-neutral-darken-5" rounded="full">
+                      <v-avatar class="bg-neutral30" rounded="full">
                         <span class="material-icons-outlined"> person </span>
                       </v-avatar>
                     </v-badge>
@@ -76,7 +76,7 @@
                     >
                       <v-avatar
                         size="large"
-                        class="bg-neutral-darken-5"
+                        class="bg-neutral30"
                         rounded="full"
                       >
                         <span class="material-icons-outlined"> person </span>
@@ -90,7 +90,7 @@
                   <template #label>Avatar:Icon</template>
                   <template #content>
                     <v-badge dot color="error" offset-y="32">
-                      <v-avatar rounded="full" class="bg-neutral-darken-5">
+                      <v-avatar rounded="full" class="bg-neutral30">
                         <span class="material-icons-outlined"> person </span>
                       </v-avatar>
                     </v-badge>
@@ -123,7 +123,7 @@
                   <template #label>Show State:True</template>
                   <template #content>
                     <v-badge dot color="error" offset-y="32">
-                      <v-avatar class="bg-neutral-darken-5" rounded="full">
+                      <v-avatar class="bg-neutral30" rounded="full">
                         <span class="material-icons-outlined"> person </span>
                       </v-avatar>
                     </v-badge>
@@ -133,7 +133,7 @@
                   <template #label>Show Number:True</template>
                   <template #content>
                     <v-badge :content="34" color="error">
-                      <v-avatar class="bg-neutral-darken-5">
+                      <v-avatar class="bg-neutral30">
                         <span class="material-icons-outlined"> person </span>
                       </v-avatar>
                     </v-badge>
@@ -269,7 +269,7 @@
                         rounded="md"
                         :width="300"
                         :aspect-ratio="3 / 2"
-                        class="bg-neutral-darken-3"
+                        class="bg-neutral60"
                         src="@/assets/demo/hyBg_Image.jpg"
                       ></v-img>
                     </div>
@@ -300,7 +300,7 @@
                         rounded="md"
                         cover
                         :aspect-ratio="3 / 2"
-                        class="bg-neutral-darken-3"
+                        class="bg-neutral60"
                         src="@/assets/demo/hyBg_Image.jpg"
                       ></v-img>
                     </div>

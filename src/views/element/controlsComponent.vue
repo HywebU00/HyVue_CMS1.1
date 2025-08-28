@@ -25,12 +25,10 @@
                         color="secondary"
                         v-model="media"
                         hide-details="auto"
-                        track-color="neutral-darken-3"
+                        track-color="neutral60"
                       >
                         <template v-slot:prepend>
-                          <span
-                            class="material-icons-round text-neutral-darken-6"
-                          >
+                          <span class="material-icons-round text-neutral20">
                             volume_up
                           </span>
                         </template>
@@ -48,19 +46,15 @@
                         v-model="media2"
                         color="secondary"
                         hide-details="auto"
-                        track-color="neutral-darken-3"
+                        track-color="neutral60"
                       >
                         <template v-slot:prepend>
-                          <span
-                            class="material-icons-round text-neutral-darken-6"
-                          >
+                          <span class="material-icons-round text-neutral20">
                             volume_up
                           </span>
                         </template>
                         <template v-slot:append>
-                          <span
-                            class="material-icons-round text-neutral-darken-6"
-                          >
+                          <span class="material-icons-round text-neutral20">
                             search
                           </span>
                         </template>
@@ -77,13 +71,11 @@
                       <v-slider
                         v-model="media3"
                         color="secondary"
-                        track-color="neutral-darken-3"
+                        track-color="neutral60"
                         hide-details="auto"
                       >
                         <template v-slot:append>
-                          <span
-                            class="material-icons-round text-neutral-darken-6"
-                          >
+                          <span class="material-icons-round text-neutral20">
                             search
                           </span>
                         </template>
@@ -108,7 +100,7 @@
                         v-model="slider3"
                         thumb-label="always"
                         color="secondary"
-                        track-color="neutral-darken-3"
+                        track-color="neutral60"
                         hide-details="auto"
                       ></v-slider>
                     </template>
@@ -127,7 +119,7 @@
                         color="secondary"
                         v-model="slider4"
                         thumb-label="always"
-                        track-color="neutral-darken-3"
+                        track-color="neutral60"
                         hide-details="auto"
                       >
                         <template v-slot:thumb-label>
@@ -152,7 +144,7 @@
                         :min="0"
                         class="align-center"
                         color="secondary"
-                        track-color="neutral-darken-3"
+                        track-color="neutral60"
                         hide-details="auto"
                       >
                         <template v-slot:prepend>
@@ -186,7 +178,7 @@
                         class="align-center"
                         hide-details
                         color="secondary"
-                        track-color="neutral-darken-3"
+                        track-color="neutral60"
                       >
                         <template v-slot:append>
                           <v-text-field
@@ -228,7 +220,7 @@
                         class="align-center"
                         hide-details
                         color="secondary"
-                        track-color="neutral-darken-3"
+                        track-color="neutral60"
                       >
                         <template v-slot:append>
                           <v-text-field
@@ -259,7 +251,7 @@
                         tick-size="4"
                         hide-details
                         color="secondary"
-                        track-color="neutral-darken-3"
+                        track-color="neutral60"
                       ></v-slider>
                     </template>
                   </layoutCardItem>
@@ -545,7 +537,7 @@
                     <v-range-slider
                       v-model="value"
                       strict
-                      track-color="neutral-darken-3"
+                      track-color="neutral60"
                       color="secondary"
                     ></v-range-slider>
                   </template>
@@ -571,7 +563,7 @@
                       thumb-label="always"
                       color="secondary"
                       hide-details="auto"
-                      track-color="neutral-darken-3"
+                      track-color="neutral60"
                     ></v-range-slider>
                   </template>
                 </layoutCardItem>
@@ -592,7 +584,7 @@
                       thumb-label="always"
                       color="secondary"
                       hide-details="auto"
-                      track-color="neutral-darken-3"
+                      track-color="neutral60"
                     >
                       <template v-slot:thumb-label="{ modelValue }">
                         <v-icon
@@ -625,7 +617,7 @@
                       :min="-10"
                       :step="1"
                       class="align-center"
-                      track-color="neutral-darken-3"
+                      track-color="neutral60"
                       color="secondary"
                       hide-details
                     >
@@ -657,7 +649,7 @@
                       :min="-10"
                       :step="1"
                       class="align-center"
-                      track-color="neutral-darken-3"
+                      track-color="neutral60"
                       color="secondary"
                       hide-details
                     >
@@ -691,7 +683,7 @@
                       :step="1"
                       color="secondary"
                       class="align-center"
-                      track-color="neutral-darken-3"
+                      track-color="neutral60"
                       hide-details
                     >
                       <template v-slot:prepend>
@@ -741,7 +733,7 @@
                       tick-size="4"
                       color="secondary"
                       hide-details="auto"
-                      track-color="neutral-darken-3"
+                      track-color="neutral60"
                     >
                       <template v-slot:thumb-label="{ modelValue }">
                         <v-icon

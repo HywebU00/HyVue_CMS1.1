@@ -416,7 +416,7 @@
                 <layoutCardItem :height="'20px'" :width="'150px'">
                   <template #label> Type : Color </template>
                   <template #content>
-                    <dialogs bgcolor="bg-neutral-darken-1" />
+                    <dialogs bgcolor="bg-neutral80" />
                   </template>
                 </layoutCardItem>
               </layoutCard>
@@ -437,7 +437,7 @@
 
                       <template v-slot:default="{ isActive }">
                         <v-card>
-                          <v-card-title class="bg-neutral-darken-1">
+                          <v-card-title class="bg-neutral80">
                             <span class="material-icons-outlined"> link </span>
                             Copy link
                           </v-card-title>
@@ -447,7 +447,7 @@
                             <v-btn
                               class="closeBtn"
                               text="Close"
-                              color="neutral-darken-4"
+                              color="neutral40"
                               @click="isActive.value = false"
                             ></v-btn>
                             <v-btn
@@ -720,7 +720,7 @@
 </template>
 
 <script>
-import card from "@/components/card.vue";
+import card from "@/components/containment/card.vue";
 import dialogs from "@/components/containment/dialogs.vue";
 import scrollDialogs from "@/components/containment/scrollDialogs.vue";
 import largeScrollDialogs from "@/components/containment/largeScrollDialogs.vue";

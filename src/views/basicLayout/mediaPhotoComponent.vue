@@ -2,10 +2,7 @@
   <v-container class="container page mediaPhoto">
     <v-breadcrumbs :items="['首頁', '節點', '節點']">
       <template v-slot:prepend>
-        <span
-          class="material-symbols-rounded text-neutral-darken-5 icon"
-          size="small"
-        >
+        <span class="material-symbols-rounded text-neutral30 icon" size="small">
           home
         </span>
       </template>
@@ -81,7 +78,7 @@
                         ><v-card class="card" variant="elevated">
                           <div class="cardContainer">
                             <v-checkbox
-                              color="primary-lighten-2"
+                              color="primary70"
                               label="cardCheckbox"
                               class="cardCheckbox"
                               hide-details="auto"
@@ -139,7 +136,7 @@
                 <v-btn
                   class="ml-2"
                   rounded="sm"
-                  color="secondary-lighten-1"
+                  color="secondary60"
                   elevation="0"
                   >確定</v-btn
                 >
@@ -150,7 +147,7 @@
                     rounded="sm"
                     class="btn"
                     variant="text"
-                    color="neutral-darken-5"
+                    color="neutral30"
                   >
                     <span class="material-symbols-rounded"> first_page </span>
                   </v-btn>
@@ -160,14 +157,14 @@
                     total-visible="5"
                     rounded="sm"
                     active-color="primary"
-                    color="neutral-darken-5"
+                    color="neutral30"
                     size="small"
                   />
                   <v-btn
                     rounded="sm"
                     class="btn"
                     variant="text"
-                    color="neutral-darken-5"
+                    color="neutral30"
                   >
                     <span class="material-symbols-rounded"> last_page </span>
                   </v-btn>

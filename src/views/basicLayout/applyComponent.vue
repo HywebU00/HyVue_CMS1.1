@@ -2,10 +2,7 @@
   <v-container class="container page applyPage">
     <v-breadcrumbs :items="['首頁', '節點', '節點']">
       <template v-slot:prepend>
-        <span
-          class="material-symbols-rounded text-neutral-darken-5 icon"
-          size="small"
-        >
+        <span class="material-symbols-rounded text-neutral30 icon" size="small">
           home
         </span>
       </template>
@@ -132,7 +129,7 @@
                     <v-row>
                       <v-col class="checkGrp" id="list">
                         <v-checkbox
-                          class="text-neutral-darken-6"
+                          class="text-neutral20"
                           density="compact"
                           hide-details
                           label="繼續追蹤"
@@ -140,12 +137,12 @@
                         <v-checkbox
                           density="compact"
                           hide-details
-                          class="text-neutral-darken-6"
+                          class="text-neutral20"
                           label="建議解除列管"
                         ></v-checkbox>
                         <v-checkbox
                           density="compact"
-                          class="text-neutral-darken-6"
+                          class="text-neutral20"
                           hide-details
                           label="解除列管"
                         ></v-checkbox>
@@ -312,7 +309,7 @@
                   v-for="i in 3"
                   :key="i"
                   color="primary"
-                  class="text-neutral-darken-6"
+                  class="text-neutral20"
                   :label="`選項${i}`"
                   hide-details="auto"
                 ></v-checkbox>
