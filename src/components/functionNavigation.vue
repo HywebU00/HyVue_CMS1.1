@@ -129,8 +129,8 @@
               icon
               size="x-small"
               rounded="circle"
-              @click="changeTheme('color1')"
-              :class="['color1', { active: this.theme === 'color1' }]"
+              @click="changeTheme('green')"
+              :class="['color1', { active: this.theme === 'green' }]"
             ></v-btn>
           </li>
           <li>
@@ -147,8 +147,8 @@
               icon
               size="x-small"
               rounded="circle"
-              @click="changeTheme('color3')"
-              :class="['color3', { active: this.theme === 'color3' }]"
+              @click="changeTheme('purple')"
+              :class="['color3', { active: this.theme === 'purple' }]"
             ></v-btn>
           </li>
         </ul>

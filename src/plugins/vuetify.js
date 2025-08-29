@@ -52,19 +52,18 @@ export default createVuetify({
           thead: "#057bb7", //secondary60,
         },
       },
-      color1: {
+      green: {
         dark: false,
         colors: {
           // primary 設定
-          primary: "#014d92", //$primary30
-          primary50: "#0463b8", //$primary50
-          primary70: "#f6fbff", //$primary70
+          primary: "#1f7848", //$primary30
+          primary50: "#44aa55", //$primary50
+          primary70: "#e5f7eb", //$primary70
           //secondary 設定
-          secondary: "#2d62b3", //secondary40
-          "secondary-lighten-0": "#0055A0",
-          secondary60: "#057bb7", //secondary60
-          secondary80: "#80cbd7", //secondary80
-          secondary100: "#ebf0f9", //secondary100
+          secondary: "#1ab64c", //secondary40
+          secondary60: "#33a59c", //secondary60
+          secondary80: "#86d9bc", //secondary80
+          secondary100: "#f2fbf6", //secondary100
           //Neutral 設定
           neutral: "#ffffff", //Neutral100
           neutral80: "#F8F8F8", //Neutral80
@@ -91,19 +90,18 @@ export default createVuetify({
           thead: "#057bb7", //secondary60,
         },
       },
-      color3: {
+      purple: {
         dark: false,
         colors: {
           // primary 設定
-          primary: "#014d92", //$primary30
-          primary50: "#0463b8", //$primary50
-          primary70: "#f6fbff", //$primary70
+          primary: "#8e0d70", //$primary30
+          primary50: "#cf3eab", //$primary50
+          primary70: "#f8ebf6", //$primary70
           //secondary 設定
-          secondary: "#2d62b3", //secondary40
-          "secondary-lighten-0": "#0055A0",
-          secondary60: "#057bb7", //secondary60
-          secondary80: "#80cbd7", //secondary80
-          secondary100: "#ebf0f9", //secondary100
+          secondary: "#911a76", //secondary40
+          secondary60: "#ce3d86", //secondary60
+          secondary80: "#dd6081", //secondary80
+          secondary100: "#fff2fa", //secondary100
           //Neutral 設定
           neutral: "#ffffff", //Neutral100
           neutral80: "#F8F8F8", //Neutral80

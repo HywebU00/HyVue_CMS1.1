@@ -7,8 +7,8 @@ $theme-config: (
     class: 'default',
     // primary 設定
     primary: #014d92,
-    primary30: #0463b8,
-    primary50: #f6fbff,
+    primary50: #0463b8,
+    primary70: #f6fbff,
     //secondary 設定
     secondary: #2d62b3,
     secondary40: #0055a0,
@@ -24,15 +24,57 @@ $theme-config: (
     cardBg: #80cbd733,
     roundedTag: url('@/assets/images/roundedTag.svg') no-repeat bottom center,
   ),
+  green: (
+    class: 'green',
+    // primary 設定
+    primary: '#1f7848',
+    primary50: '#44aa55',
+    primary70: '#e5f7eb',
+    //secondary 設定
+    secondary: '#1ab64c',
+    secondary40: '#1ab64c',
+    secondary60: '#33a59c',
+    secondary80: '#86d9bc',
+    secondary100: '#f2fbf6',
+    //gradients
+    gradients: linear-gradient(0deg, #1f7848 0%, #33a59c 50%, #86d9af 100%),
+    gradients_v: linear-gradient(90deg, #1f7848 0%, #33a59c 50%, #86d9af 100%),
+    //other
+    light: #36e79e,
+    thead: #33a59c,
+    cardBg: #f2fbf6,
+    roundedTag: url('@/assets/images/roundedTag_red.svg') no-repeat bottom center,
+  ),
+  purple: (
+    class: 'purple',
+    // primary 設定
+    primary: #8e0d70,
+    primary50: #cf3eab,
+    primary70: #f8ebf6,
+    //secondary 設定
+    secondary: #911a76,
+    secondary40: #911a76,
+    secondary60: #ce3d86,
+    secondary80: #dd6081,
+    secondary100: #fff2fa,
+
+    //gradients
+    gradients: linear-gradient(0deg, #8e0d70 0%, #ce3d86 50%, #dd6081 100%),
+    gradients_v: linear-gradient(90deg, #8e0d70 0%, #ce3d86 50%, #dd6081 100%),
+    //other
+    light: #36e79e,
+    thead: #ce3d86,
+    cardBg: #f6e8ed,
+    roundedTag: url('@/assets/images/roundedTag_red.svg') no-repeat bottom center,
+  ),
   red: (
     class: 'red',
     // primary 設定
     primary: #91404a,
-    primary30: #b6636e,
-    primary50: #f6e8ed,
+    primary50: #b6636e,
+    primary70: #f6e8ed,
     //secondary 設定
     secondary: #ad3b5f,
-    // #f9f6f7,
     secondary40: #ad3b5f,
     secondary60: #c88490,
     secondary80: #e6c9cc,
@@ -51,8 +93,8 @@ $theme-config: (
 @each $name, $value in $theme-config {
   $class: map.get($value, class);
   $primary: map.get($value, primary);
-  $primary30: map.get($value, primary30);
   $primary50: map.get($value, primary50);
+  $primary70: map.get($value, primary70);
   //secondary 設定
   $secondary: map.get($value, secondary);
   $secondary40: map.get($value, secondary40);
