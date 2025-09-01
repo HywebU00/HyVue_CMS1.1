@@ -230,5 +230,83 @@ $theme-config: (
         background: $primary;
       }
     }
+
+    //apexcharts CSS
+    // .apexcharts-pie {
+    //   .apexcharts-series[rel='1'] {
+    //     path {
+    //       fill: $secondary40;
+    //     }
+    //   }
+    //   .apexcharts-series[rel='2'] {
+    //     path {
+    //       fill: $secondary60;
+    //     }
+    //   }
+    //   .apexcharts-series[rel='3'] {
+    //     path {
+    //       fill: $secondary80;
+    //     }
+    //   }
+    //   .apexcharts-series[rel='4'] {
+    //     path {
+    //       fill: $primary;
+    //     }
+    //   }
+    //   .apexcharts-series[rel='5'] {
+    //     path {
+    //       fill: $secondary40;
+    //     }
+    //   }
+    // }
+    // .apexcharts-legend-marker[rel='1'] {
+    //   svg {
+    //     path {
+    //       fill: $secondary40;
+    //     }
+    //   }
+    // }
+    // .apexcharts-legend-marker[rel='2'] {
+    //   svg {
+    //     path {
+    //       fill: $secondary60;
+    //     }
+    //   }
+    // }
+    // .apexcharts-legend-marker[rel='3'] {
+    //   svg {
+    //     path {
+    //       fill: $secondary80;
+    //     }
+    //   }
+    // }
+    // .apexcharts-legend-marker[rel='4'] {
+    //   svg {
+    //     path {
+    //       fill: $primary;
+    //     }
+    //   }
+    // }
+    // .apexcharts-legend-marker[rel='5'] {
+    //   svg {
+    //     path {
+    //       fill: $secondary40;
+    //     }
+    //   }
+    // }
+    // .apexcharts-bar-series {
+    //   .apexcharts-series[rel='1'] {
+    //     path {
+    //       stroke: $secondary40;
+    //       fill: $secondary40;
+    //     }
+    //   }
+    //   .apexcharts-series[rel='2'] {
+    //     path {
+    //       stroke: $secondary60;
+    //       fill: $secondary60;
+    //     }
+    //   }
+    // }
   }
 }

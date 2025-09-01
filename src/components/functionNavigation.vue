@@ -19,7 +19,7 @@
     >
       <template v-slot:activator="{ props }">
         <v-btn class="shadow-20" v-bind="props">
-          <v-badge :content="2" color="light">
+          <v-badge :content="2" color="light" offset-y="-5" size="sm">
             <span class="material-symbols-rounded"> notifications </span>
           </v-badge>
         </v-btn>
