@@ -144,6 +144,9 @@
   &.v-card--variant-outlined {
     border: thin solid $neutral40;
   }
+  &.v-card--variant-flat {
+    background: #80cbd733;
+  }
 }
 
 .albumCardList {

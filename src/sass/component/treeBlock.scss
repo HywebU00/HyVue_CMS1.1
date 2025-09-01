@@ -44,7 +44,7 @@
     }
     > div {
       &:hover {
-        background: #f1eeee;
+        background: $neutral60;
         border-radius: 0.5rem;
       }
       padding: 0.2rem;
@@ -63,6 +63,9 @@
         .bold {
           background-color: #fff;
           border: 1px solid $neutral60;
+          &:hover {
+            background: $neutral60;
+          }
         }
       }
     }

@@ -45,7 +45,7 @@
                     資料夾分類
                   </h4>
                   <div class="px-2">
-                    <v-btn class="my-3 btn" size="small" color="primary" block>
+                    <v-btn class="my-3 py-6" block size="small" color="primary">
                       展開所有分類
                     </v-btn>
                   </div>

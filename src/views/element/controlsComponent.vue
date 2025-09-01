@@ -1,6 +1,6 @@
 <template>
-  <v-container class="container">
-    <h2>控制组件(controls)</h2>
+  <v-container class="container page">
+    <h2 class="title">控制组件(controls)</h2>
     <v-divider class="mt-3 mb-4"></v-divider>
     <v-row>
       <v-col cols="12">

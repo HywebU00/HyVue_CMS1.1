@@ -19,21 +19,19 @@
     >
       <template v-slot:activator="{ props }">
         <v-btn class="shadow-20" v-bind="props">
-          <v-badge :content="2" color="light" offset-y="-5" size="sm">
+          <v-badge :content="2" color="light" :offset-y="-5">
             <span class="material-symbols-rounded"> notifications </span>
           </v-badge>
         </v-btn>
       </template>
       <v-card min-width="100" class="infoBtnContainer">
         <ul class="">
-          <li v-for="item in 5" :key="item">
+          <li v-for="item in 3" :key="item">
             <a href="#">
-              <v-icon color="light" icon="mdi-circle-medium"></v-icon>
               <div>
-                <span class="title">本月薪資入帳，立即查看</span>
                 <span class="time">111/06/30</span>
+                <span class="title">本月薪資入帳，立即查看</span>
               </div>
-              <v-icon icon="mdi-chevron-right"></v-icon>
             </a>
           </li>
         </ul>
@@ -61,12 +59,10 @@
           <li>
             <v-btn
               icon
-              size="small"
-              color="neutral60"
               rounded="circle"
               role="button"
               @click="fontSizeChange('small')"
-              :class="[{ active: this.fontSize === 'small' }, 'bg-primary']"
+              :class="[{ active: this.fontSize === 'small' }]"
             >
               小
             </v-btn>
@@ -74,12 +70,10 @@
           <li>
             <v-btn
               icon
-              size="small"
               role="button"
-              color="neutral60"
               rounded="circle"
               @click="fontSizeChange('medium')"
-              :class="[{ active: this.fontSize === 'medium' }, 'bg-primary']"
+              :class="[{ active: this.fontSize === 'medium' }]"
             >
               中
             </v-btn>
@@ -87,12 +81,10 @@
           <li>
             <v-btn
               icon
-              size="small"
               rounded="circle"
-              color="neutral60"
               role="button"
               @click="fontSizeChange('large')"
-              :class="[{ active: this.fontSize === 'large' }, 'bg-primary']"
+              :class="[{ active: this.fontSize === 'large' }]"
             >
               大
             </v-btn>
@@ -117,7 +109,7 @@
         <ul class="d-flex">
           <li>
             <v-btn
-              rounded="circle"
+              rounded="sm"
               icon
               size="x-small"
               @click="changeTheme('default')"
@@ -128,7 +120,7 @@
             <v-btn
               icon
               size="x-small"
-              rounded="circle"
+              rounded="sm"
               @click="changeTheme('green')"
               :class="['color1', { active: this.theme === 'green' }]"
             ></v-btn>
@@ -137,7 +129,7 @@
             <v-btn
               icon
               size="x-small"
-              rounded="circle"
+              rounded="sm"
               @click="changeTheme('red')"
               :class="['color2', { active: this.theme === 'red' }]"
             ></v-btn>
@@ -146,7 +138,7 @@
             <v-btn
               icon
               size="x-small"
-              rounded="circle"
+              rounded="sm"
               @click="changeTheme('purple')"
               :class="['color3', { active: this.theme === 'purple' }]"
             ></v-btn>

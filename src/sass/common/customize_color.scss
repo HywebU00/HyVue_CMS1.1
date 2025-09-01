@@ -43,7 +43,7 @@ $theme-config: (
     light: #36e79e,
     thead: #33a59c,
     cardBg: #f2fbf6,
-    roundedTag: url('@/assets/images/roundedTag_red.svg') no-repeat bottom center,
+    roundedTag: url('@/assets/images/roundedTag_green.svg') no-repeat bottom center,
   ),
   purple: (
     class: 'purple',
@@ -65,7 +65,7 @@ $theme-config: (
     light: #36e79e,
     thead: #ce3d86,
     cardBg: #f6e8ed,
-    roundedTag: url('@/assets/images/roundedTag_red.svg') no-repeat bottom center,
+    roundedTag: url('@/assets/images/roundedTag_purple.svg') no-repeat bottom center,
   ),
   red: (
     class: 'red',
@@ -133,7 +133,26 @@ $theme-config: (
         }
       }
     }
-
+    .navigation {
+      .v-btn {
+        &:active {
+          background: $secondary60;
+          .v-btn__content {
+            span[class*='material-'] {
+              color: $neutral100;
+            }
+          }
+        }
+        &[aria-expanded='true'] {
+          background: $secondary60;
+          .v-btn__content {
+            span[class*='material-'] {
+              color: $neutral100;
+            }
+          }
+        }
+      }
+    }
     .folderMenu {
       &.v-list {
         .v-list-item--active {
@@ -189,7 +208,7 @@ $theme-config: (
     }
     .tabs {
       .v-tab {
-        background: $secondary;
+        background: $secondary60;
         color: $primary;
         .v-tab__slider {
           background: $primary;
@@ -228,6 +247,19 @@ $theme-config: (
       }
       .dp__action_select {
         background: $primary;
+      }
+    }
+
+    .fontBtnContainer .v-btn {
+      background: $neutral60;
+      &.active {
+        background: $secondary60;
+        color: $neutral100;
+      }
+    }
+    .card {
+      &.v-card--variant-flat {
+        background: $cardBg;
       }
     }
 

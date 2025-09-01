@@ -85,7 +85,7 @@ export default createVuetify({
           //Error 設定
           error: "#C40000", //red30
           "error-lighten-1": "#FFEDF1", //red70
-          light: "#36e79e",
+          light: "#86d9bc",
           //thead
           thead: "#33a59c", //secondary60
         },
@@ -123,7 +123,7 @@ export default createVuetify({
           //Error 設定
           error: "#C40000", //red30
           "error-lighten-1": "#FFEDF1", //red70
-          light: "#36e79e",
+          light: "#dd6081",
           //thead
           thead: "#ce3d86", //secondary60
         },
@@ -162,7 +162,7 @@ export default createVuetify({
           //Error 設定
           error: "#C40000", //red30
           "error-lighten-1": "#FFEDF1", //red70
-          light: "#36e79e",
+          light: "#e6c9cc",
           //thead
           thead: "#c88490", //secondary60,
         },
@@ -172,7 +172,7 @@ export default createVuetify({
         colors: {
           primary: "#fefefe",
           secondary: "#695f5f",
-          light: "#36e79e",
+          light: "#33a59c",
           thead: "#555555",
         },
       },

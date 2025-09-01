@@ -1,6 +1,6 @@
 <template>
-  <v-container class="container">
-    <h2>容器组件（Containment）</h2>
+  <v-container class="container page">
+    <h2 class="title">容器组件（Containment）</h2>
     <v-divider class="mt-3 mb-4"></v-divider>
     <v-row>
       <v-col cols="12">
@@ -220,7 +220,6 @@
             <v-container class="container">
               <h4 class="text-h4 mb-2 font-weight-bold">卡片樣式 (Cards)</h4>
               <v-divider class="pt-2 mb-2"></v-divider>
-
               <!-- 邀請樣式start -->
               <layoutCard title="卡片樣式 (直式)" flexWrap="wrap">
                 <layoutCardItem :height="'20px'" :width="'340px'">
@@ -262,27 +261,11 @@
               </layoutCard>
               <layoutCard
                 title="卡片樣式 (橫式) "
-                subtitle="增加 Class='albumCardList list'改變 卡片樣為橫式"
+                subtitle="增加 Class='list'改變 卡片樣為橫式"
                 flexWrap="wrap"
               >
-                <!-- <div class="albumCardList list">
-                  <card />
-                </div> -->
-                <card type="list" />
                 <!-- 橫向樣式 start -->
-                <!-- <v-row class="albumCardList list">
-                  <v-col
-                    v-for="item in 1"
-                    :key="item"
-                    cols="12"
-                    sm="6"
-                    md="4"
-                    lg="3"
-                    xl="2"
-                  >
-                    <card type="list" />
-                  </v-col>
-                </v-row> -->
+                <card type="list" />
                 <!-- 橫向樣式 end -->
               </layoutCard>
             </v-container>

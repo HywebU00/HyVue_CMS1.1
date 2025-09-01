@@ -17,9 +17,10 @@
     height: rem(40) !important;
     padding: 0;
     margin: 0 0.25rem;
+
     .v-btn__content {
       .material-symbols-rounded {
-        font-size: 1.2em;
+        font-size: rem(18);
         color: $neutral10;
       }
     }
@@ -35,7 +36,6 @@
   }
   .v-btn {
     box-shadow: unset;
-    border: 3px solid #fff;
 
     &.active {
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -44,28 +44,43 @@
 }
 .fontBtnContainer {
   @include btnContainer;
+  ul {
+    .v-btn {
+      width: rem(44);
+      height: rem(44);
+    }
+  }
 }
 .colorBtnContainer {
   @include btnContainer;
+
   ul {
+    .v-btn {
+      width: rem(24);
+      height: rem(24);
+      border-radius: 0.2rem;
+    }
+    li {
+      padding: rem(7);
+    }
     :nth-child(1) {
       button {
-        background: #0463b8;
+        background: #99c4e5;
       }
     }
     :nth-child(2) {
       button {
-        background: #44aa55;
+        background: #8dd8d2;
       }
     }
     :nth-child(3) {
       button {
-        background: #b6636e;
+        background: #eebbbb;
       }
     }
     :nth-child(4) {
       button {
-        background: #cf3eab;
+        background: #db87c6;
       }
     }
   }
@@ -89,17 +104,14 @@
     &:first-child {
       margin-top: 0rem;
     }
-    &:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
+
     padding-bottom: 0.5rem;
     margin-top: 0.5rem;
     a {
       display: flex;
 
       width: 100%;
-      color: #000;
+      color: $neutral10;
       text-decoration: none;
       position: relative;
     }
@@ -115,7 +127,9 @@
     }
     .time {
       margin-left: 1.25rem;
-      font-size: 1em;
+      font-size: 0.9em;
+      color: $neutral30;
+      font-weight: 600;
     }
     .arrow_icon {
       position: absolute;

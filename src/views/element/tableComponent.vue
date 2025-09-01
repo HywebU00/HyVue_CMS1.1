@@ -1,5 +1,5 @@
 <template>
-  <v-container class="container">
+  <v-container class="container page">
     <v-breadcrumbs :items="['首頁', '節點', '節點']">
       <template v-slot:prepend>
         <span class="material-symbols-rounded text-neutral30 icon" size="small">

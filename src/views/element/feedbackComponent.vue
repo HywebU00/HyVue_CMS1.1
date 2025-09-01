@@ -1,6 +1,6 @@
 <template>
-  <v-container class="container">
-    <h2>回饋組件（Feedback）</h2>
+  <v-container class="container page">
+    <h2 class="title">回饋組件（Feedback）</h2>
     <v-divider class="mt-3 mb-4"></v-divider>
     <v-row>
       <v-col cols="12">

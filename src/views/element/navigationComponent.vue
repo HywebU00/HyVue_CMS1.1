@@ -1,6 +1,6 @@
 <template>
-  <v-container class="container">
-    <h2>導航式組件（Navigation）</h2>
+  <v-container class="container page">
+    <h2 class="title">導航式組件（Navigation）</h2>
     <v-divider class="mt-3 mb-4"></v-divider>
     <v-row>
       <v-col cols="12">
@@ -95,7 +95,11 @@
                   :height="'40px'"
                   label-align="justify-start"
                 >
-                  <template #label>Type: Default</template>
+                  <template #label
+                    >Type: Default
+                    <br />
+                    元件 新增class= " tabs "
+                  </template>
                   <template #content>
                     <div class="mb-8 w-100">
                       <v-tabs v-model="tab" class="tabs">
@@ -128,7 +132,11 @@
                   :height="'40px'"
                   label-align="justify-start"
                 >
-                  <template #label>Type: Text</template>
+                  <template #label
+                    >Type: Text
+                    <br />
+                    元件 新增class= " textTabs "
+                  </template>
                   <template #content>
                     <div class="bg-neutral70 pa-3 w-100 rounded-sm">
                       <div class="mb-8">

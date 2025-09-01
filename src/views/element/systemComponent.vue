@@ -1,8 +1,8 @@
 <template>
-  <v-container class="container">
+  <v-container class="container page">
     <v-breadcrumbs :items="['首頁', '節點', '節點']"></v-breadcrumbs>
     <v-divider class="pt-1 mb-3"></v-divider>
-    <h2>共通元素 - 格線系統</h2>
+    <h2 class="title">共通元素 - 格線系統</h2>
     <v-divider class="mt-3 mb-4"></v-divider>
     <div class="text-caption mb-2">Vuetify 預設隔線系統</div>
     <h3 class="my-5 text-h6">flex-8-4</h3>

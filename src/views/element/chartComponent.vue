@@ -1,8 +1,8 @@
 <template>
-  <v-container class="container">
+  <v-container class="container page">
     <v-breadcrumbs :items="['首頁', '節點', '節點']"></v-breadcrumbs>
     <v-divider class="pt-1 mb-3"></v-divider>
-    <h2>共通元素 - 圖表</h2>
+    <h2 class="title">共通元素 - 圖表</h2>
     <v-divider class="mt-3 mb-4"></v-divider>
     <v-row>
       <v-col md="8" cols="12">
