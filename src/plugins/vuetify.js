@@ -87,7 +87,7 @@ export default createVuetify({
           "error-lighten-1": "#FFEDF1", //red70
           light: "#36e79e",
           //thead
-          thead: "#057bb7", //secondary60,
+          thead: "#33a59c", //secondary60
         },
       },
       purple: {
@@ -125,7 +125,7 @@ export default createVuetify({
           "error-lighten-1": "#FFEDF1", //red70
           light: "#36e79e",
           //thead
-          thead: "#057bb7", //secondary60,
+          thead: "#ce3d86", //secondary60
         },
       },
       red: {

@@ -27,15 +27,15 @@ $theme-config: (
   green: (
     class: 'green',
     // primary 設定
-    primary: '#1f7848',
-    primary50: '#44aa55',
-    primary70: '#e5f7eb',
+    primary: #1f7848,
+    primary50: #44aa55,
+    primary70: #e5f7eb,
     //secondary 設定
-    secondary: '#1ab64c',
-    secondary40: '#1ab64c',
-    secondary60: '#33a59c',
-    secondary80: '#86d9bc',
-    secondary100: '#f2fbf6',
+    secondary: #1ab64c,
+    secondary40: #1ab64c,
+    secondary60: #33a59c,
+    secondary80: #86d9bc,
+    secondary100: #f2fbf6,
     //gradients
     gradients: linear-gradient(0deg, #1f7848 0%, #33a59c 50%, #86d9af 100%),
     gradients_v: linear-gradient(90deg, #1f7848 0%, #33a59c 50%, #86d9af 100%),
