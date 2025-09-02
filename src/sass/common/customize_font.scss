@@ -115,5 +115,21 @@ $fontSize-config: (
         font-size: $font-size;
       }
     }
+    .searchGrp {
+      .v-expansion-panel {
+        .formGrp {
+          label {
+            font-size: $font-size;
+          }
+        }
+      }
+    }
+    .checkGrp {
+      .v-input {
+        .v-label {
+          font-size: $font-size;
+        }
+      }
+    }
   }
 }

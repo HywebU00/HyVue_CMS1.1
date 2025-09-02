@@ -20,7 +20,16 @@
       <!-- 平台logo start -->
       <div class="logoImg d-none d-md-flex align-center justify-center">
         <div class="d-flex align-center justify-center">
-          <img class="logo" src="~@/assets/images/logo.png" alt="" />
+          <img
+            :class="['logo', rail ? 'd-none' : '']"
+            src="~@/assets/images/logo.png"
+            alt=""
+          />
+          <img
+            :class="['logo', !rail ? 'd-none' : '']"
+            src="~@/assets/images/logo_w.png"
+            alt=""
+          />
           <h1 class="ml-2 text-h4 text-primary">HyVue CMS</h1>
         </div>
       </div>
