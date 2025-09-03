@@ -3,6 +3,7 @@
     <apexchart
       height="350"
       type="line"
+      class="lineChart"
       :options="options"
       :series="series"
     ></apexchart>

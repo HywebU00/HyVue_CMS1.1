@@ -9,7 +9,12 @@
         <v-card class="pa-2" height="100%">
           <h4 class="text-h5 font-weight-bold">AreaChart</h4>
           <v-divider class="pt-2 mb-2"></v-divider>
-          <areaChart /> </v-card
+          <!-- 除 AreaChart 色彩由 ＣＳＳ控制 切換顏色出現相對應的元件外，其餘Chart 統一由ＣＳＳ更改色彩 -->
+          <areaChart class="areaChart default" />
+          <areaChart class="areaChart dark" />
+          <areaChartGreen class="areaChart green" />
+          <areaChartRed class="areaChart red" />
+          <areaChartPurple class="areaChart purple" /> </v-card
       ></v-col>
       <v-col md="4" sm="6" cols="12">
         <v-card class="pa-2" style="height: 100%">
@@ -52,6 +57,9 @@
 
 <script>
 import areaChart from "@/components/chart/areaChart.vue";
+import areaChartGreen from "@/components/chart/areaChart_green.vue";
+import areaChartRed from "@/components/chart/areaChart_red.vue";
+import areaChartPurple from "@/components/chart/areaChart_purple.vue";
 import BarChart from "@/components/chart/barChart.vue";
 import PieChart from "@/components/chart/pieChart.vue";
 import LineChart from "@/components/chart/lineChart.vue";
@@ -66,12 +74,16 @@ export default {
     selection: 1,
   }),
   methods: {},
+  mounted() {},
   components: {
     PieChart,
     BarChart,
     areaChart,
+    areaChartGreen,
+    areaChartRed,
     LineChart,
     lineAndBarChart,
+    areaChartPurple,
   },
 };
 </script>

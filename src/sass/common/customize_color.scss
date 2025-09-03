@@ -23,6 +23,7 @@ $theme-config: (
     thead: #057bb7,
     cardBg: #80cbd733,
     roundedTag: url('@/assets/images/roundedTag.svg') no-repeat bottom center,
+    loginBg: url('@/assets/demo/HyCMS_blue.jpg') center center no-repeat,
   ),
   green: (
     class: 'green',
@@ -44,6 +45,7 @@ $theme-config: (
     thead: #33a59c,
     cardBg: #f2fbf6,
     roundedTag: url('@/assets/images/roundedTag_green.svg') no-repeat bottom center,
+    loginBg: url('@/assets/demo/HyCMS_green.jpg') center center no-repeat,
   ),
   purple: (
     class: 'purple',
@@ -66,6 +68,7 @@ $theme-config: (
     thead: #ce3d86,
     cardBg: #f6e8ed,
     roundedTag: url('@/assets/images/roundedTag_purple.svg') no-repeat bottom center,
+    loginBg: url('@/assets/demo/HyCMS_purple.jpg') center center no-repeat,
   ),
   red: (
     class: 'red',
@@ -87,6 +90,7 @@ $theme-config: (
     thead: #c88490,
     cardBg: #f6e8ed,
     roundedTag: url('@/assets/images/roundedTag_red.svg') no-repeat bottom center,
+    loginBg: url('@/assets/demo/HyCMS_red.jpg') center center no-repeat,
   ),
 );
 
@@ -108,6 +112,7 @@ $theme-config: (
   $cardBg: map.get($value, cardBg);
   $roundedTag: map.get($value, roundedTag);
   $thead: map.get($value, thead);
+  $loginBg: map.get($value, loginBg);
 
   .v-theme--#{$class} {
     .sideBar {
@@ -264,68 +269,7 @@ $theme-config: (
     }
 
     //apexcharts CSS
-    // .apexcharts-pie {
-    //   .apexcharts-series[rel='1'] {
-    //     path {
-    //       fill: $secondary40;
-    //     }
-    //   }
-    //   .apexcharts-series[rel='2'] {
-    //     path {
-    //       fill: $secondary60;
-    //     }
-    //   }
-    //   .apexcharts-series[rel='3'] {
-    //     path {
-    //       fill: $secondary80;
-    //     }
-    //   }
-    //   .apexcharts-series[rel='4'] {
-    //     path {
-    //       fill: $primary;
-    //     }
-    //   }
-    //   .apexcharts-series[rel='5'] {
-    //     path {
-    //       fill: $secondary40;
-    //     }
-    //   }
-    // }
-    // .apexcharts-legend-marker[rel='1'] {
-    //   svg {
-    //     path {
-    //       fill: $secondary40;
-    //     }
-    //   }
-    // }
-    // .apexcharts-legend-marker[rel='2'] {
-    //   svg {
-    //     path {
-    //       fill: $secondary60;
-    //     }
-    //   }
-    // }
-    // .apexcharts-legend-marker[rel='3'] {
-    //   svg {
-    //     path {
-    //       fill: $secondary80;
-    //     }
-    //   }
-    // }
-    // .apexcharts-legend-marker[rel='4'] {
-    //   svg {
-    //     path {
-    //       fill: $primary;
-    //     }
-    //   }
-    // }
-    // .apexcharts-legend-marker[rel='5'] {
-    //   svg {
-    //     path {
-    //       fill: $secondary40;
-    //     }
-    //   }
-    // }
+
     // .apexcharts-bar-series {
     //   .apexcharts-series[rel='1'] {
     //     path {
@@ -339,6 +283,374 @@ $theme-config: (
     //       fill: $secondary60;
     //     }
     //   }
+    //   .apexcharts-series[rel='3'] {
+    //     path {
+    //       stroke: $secondary80;
+    //       fill: $secondary80;
+    //     }
+    //   }
+    //   .apexcharts-series[rel='4'] {
+    //     path {
+    //       stroke: $primary;
+    //       fill: $primary;
+    //     }
+    //   }
+    //   .apexcharts-series[rel='5'] {
+    //     path {
+    //       stroke: $secondary40;
+    //       fill: $secondary40;
+    //     }
+    //   }
     // }
+
+    .pieChart {
+      .apexcharts-pie {
+        .apexcharts-series[rel='1'] {
+          path {
+            fill: $secondary40;
+          }
+        }
+        .apexcharts-series[rel='2'] {
+          path {
+            fill: $secondary60;
+          }
+        }
+        .apexcharts-series[rel='3'] {
+          path {
+            fill: $secondary80;
+          }
+        }
+        .apexcharts-series[rel='4'] {
+          path {
+            fill: $primary;
+          }
+        }
+        .apexcharts-series[rel='5'] {
+          path {
+            fill: $secondary40;
+          }
+        }
+      }
+      .apexcharts-tooltip {
+        .apexcharts-tooltip-series-group-0 {
+          background-color: $secondary40 !important;
+        }
+        .apexcharts-tooltip-series-group-1 {
+          background-color: $secondary60 !important;
+        }
+        .apexcharts-tooltip-series-group-2 {
+          background-color: $secondary80 !important;
+        }
+        .apexcharts-tooltip-series-group-3 {
+          background-color: $primary !important;
+        }
+        .apexcharts-tooltip-series-group-4 {
+          background-color: $secondary40 !important;
+        }
+      }
+      .apexcharts-legend-marker {
+        &[rel='1'] {
+          svg {
+            path {
+              fill: $secondary40;
+            }
+          }
+        }
+        &[rel='2'] {
+          svg {
+            path {
+              fill: $secondary60;
+            }
+          }
+        }
+        &[rel='3'] {
+          svg {
+            path {
+              fill: $secondary80;
+            }
+          }
+        }
+        &[rel='4'] {
+          svg {
+            path {
+              fill: $primary;
+            }
+          }
+        }
+        &[rel='5'] {
+          svg {
+            path {
+              fill: $secondary40;
+            }
+          }
+        }
+      }
+    }
+    .areaChart {
+      // .apexcharts-series[zIndex='0'] {
+      //   path {
+      //     stroke: $primary;
+      //   }
+      // }
+      // .apexcharts-series[zIndex='1'] {
+      //   path {
+      //     stroke: $secondary;
+      //   }
+      // }
+      // .apexcharts-legend {
+      //   .apexcharts-legend-series[rel='1'] {
+      //     .apexcharts-legend-marker {
+      //       svg {
+      //         path {
+      //           fill: $primary;
+      //         }
+      //       }
+      //     }
+      //   }
+      //   .apexcharts-legend-series[rel='2'] {
+      //     .apexcharts-legend-marker {
+      //       svg {
+      //         path {
+      //           fill: $primary;
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+      // .apexcharts-tooltip {
+      //   .apexcharts-tooltip-series-group-0 {
+      //     .apexcharts-tooltip-marker {
+      //       color: $primary !important;
+      //     }
+      //   }
+      //   .apexcharts-tooltip-series-group-1 {
+      //     .apexcharts-tooltip-marker {
+      //       color: $secondary !important;
+      //     }
+      //   }
+      // }
+      // .apexcharts-line-series {
+      //   .apexcharts-series {
+      //     path {
+      //       stroke: #c23e00;
+      //     }
+      //   }
+      // }
+    }
+    .areaChart {
+      height: 0;
+      overflow: hidden;
+      min-height: 0 !important;
+      &.#{$class} {
+        display: block;
+        height: unset;
+        min-height: 395px !important;
+      }
+    }
+    .lineChart {
+      .apexcharts-line-series {
+        .apexcharts-series {
+          path {
+            stroke: $secondary60;
+          }
+        }
+      }
+      .apexcharts-tooltip {
+        .apexcharts-tooltip-series-group-0 {
+          .apexcharts-tooltip-marker {
+            color: $secondary60 !important;
+          }
+        }
+      }
+      .apexcharts-hidden-element-shown {
+        .apexcharts-series-markers {
+          path {
+            fill: $secondary60;
+          }
+        }
+      }
+    }
+    .lineAndBar {
+      .apexcharts-bar-series {
+        .apexcharts-series {
+          &[rel='1'] {
+            path {
+              stroke: $secondary60;
+              fill: $secondary60;
+            }
+          }
+          &[rel='2'] {
+            path {
+              stroke: $secondary80;
+              fill: $secondary80;
+            }
+          }
+        }
+      }
+      .apexcharts-hidden-element-shown {
+        .apexcharts-series-markers {
+          path {
+            fill: #c23e00;
+          }
+        }
+      }
+      .apexcharts-legend-marker {
+        &[rel='1'] {
+          svg {
+            path {
+              fill: $secondary60;
+            }
+          }
+        }
+        &[rel='2'] {
+          svg {
+            path {
+              fill: $secondary80;
+            }
+          }
+        }
+        &[rel='3'] {
+          svg {
+            path {
+              fill: #c23e00;
+            }
+          }
+        }
+      }
+      .apexcharts-line-series {
+        .apexcharts-series {
+          path {
+            stroke: #c23e00;
+          }
+        }
+      }
+      .apexcharts-tooltip {
+        .apexcharts-tooltip-series-group-0 {
+          .apexcharts-tooltip-marker {
+            color: $secondary60 !important;
+          }
+        }
+        .apexcharts-tooltip-series-group-1 {
+          .apexcharts-tooltip-marker {
+            color: $secondary80 !important;
+          }
+        }
+        .apexcharts-tooltip-series-group-2 {
+          .apexcharts-tooltip-marker {
+            color: #c23e00 !important;
+          }
+        }
+      }
+    }
+    .barChart {
+      .apexcharts-bar-series {
+        .apexcharts-series {
+          &[rel='1'] {
+            path {
+              stroke: $primary;
+              fill: $primary;
+            }
+          }
+          &[rel='2'] {
+            path {
+              stroke: $secondary60;
+              fill: $secondary60;
+            }
+          }
+          &[rel='3'] {
+            path {
+              stroke: $secondary100;
+              fill: $secondary100;
+            }
+          }
+          &[rel='4'] {
+            path {
+              stroke: $secondary80;
+              fill: $secondary80;
+            }
+          }
+          &[rel='5'] {
+            path {
+              stroke: $secondary40;
+              fill: $secondary40;
+            }
+          }
+        }
+      }
+      .apexcharts-legend-marker {
+        &[rel='1'] {
+          path {
+            stroke: $primary;
+            fill: $primary;
+          }
+        }
+        &[rel='2'] {
+          path {
+            stroke: $secondary60;
+            fill: $secondary60;
+          }
+        }
+        &[rel='3'] {
+          path {
+            stroke: $secondary100;
+            fill: $secondary100;
+          }
+        }
+        &[rel='4'] {
+          path {
+            stroke: $secondary80;
+            fill: $secondary80;
+          }
+        }
+        &[rel='5'] {
+          path {
+            stroke: $secondary40;
+            fill: $secondary40;
+          }
+        }
+      }
+      .apexcharts-tooltip {
+        .apexcharts-tooltip-series-group-0 {
+          .apexcharts-tooltip-marker {
+            color: $primary !important;
+          }
+        }
+        .apexcharts-tooltip-series-group-1 {
+          .apexcharts-tooltip-marker {
+            color: $secondary60 !important;
+          }
+        }
+        .apexcharts-tooltip-series-group-2 {
+          .apexcharts-tooltip-marker {
+            color: $secondary100 !important;
+          }
+        }
+        .apexcharts-tooltip-series-group-3 {
+          .apexcharts-tooltip-marker {
+            color: $secondary80 !important;
+          }
+        }
+        .apexcharts-tooltip-series-group-4 {
+          .apexcharts-tooltip-marker {
+            color: $secondary40 !important;
+          }
+        }
+      }
+    }
+  }
+  .loginPage {
+    &:has(.v-theme--#{$class}) {
+      background: $loginBg;
+      .loginCard {
+        .title {
+          color: $primary;
+        }
+        .v-btn.v-btn--variant-text {
+          .v-btn__content {
+            color: $primary;
+          }
+        }
+      }
+    }
   }
 }

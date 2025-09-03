@@ -2,6 +2,7 @@
   <apexchart
     type="donut"
     style="width: 100%"
+    class="pieChart"
     :options="chartOptions"
     :series="series"
   ></apexchart>

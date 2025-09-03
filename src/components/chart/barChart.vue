@@ -1,5 +1,6 @@
 <template>
   <apexchart
+    class="barChart"
     height="350"
     type="bar"
     :options="chartOptions"

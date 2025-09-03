@@ -461,6 +461,16 @@ $theme-config: (
         }
       }
     }
+    .areaChart {
+      height: 0;
+      overflow: hidden;
+      min-height: 0 !important;
+      &.#{$class} {
+        display: block;
+        height: unset;
+        min-height: 395px !important;
+      }
+    }
   }
   .v-snackbar {
     .v-snackbar__wrapper {

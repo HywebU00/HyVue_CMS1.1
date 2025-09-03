@@ -50,7 +50,7 @@ export default {
             format: "dd/MM/yy HH:mm",
           },
         },
-        colors: ["#0463b8", "#80cbd7"],
+        colors: ["#cf3eab", "#dd6081"],
         stroke: {
           show: true,
           curve: "smooth",

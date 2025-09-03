@@ -1,5 +1,6 @@
 <template>
   <apexchart
+    class="lineAndBar"
     height="350"
     type="line"
     :options="chartOptions"
@@ -56,16 +57,9 @@ export default {
               color: "#008FFB",
             },
             labels: {
-              style: {
-                colors: "#008FFB",
-              },
+              style: {},
             },
-            // title: {
-            //   text: "Income (thousand crores)",
-            //   style: {
-            //     color: "#008FFB",
-            //   },
-            // },
+
             tooltip: {
               enabled: false,
             },
@@ -89,12 +83,6 @@ export default {
             tooltip: {
               enabled: false,
             },
-            // title: {
-            //   text: "Operating Cashflow (thousand crores)",
-            //   style: {
-            //     color: "#00E396",
-            //   },
-            // },
           },
           {
             seriesName: "Revenue",
@@ -104,21 +92,14 @@ export default {
             },
             axisBorder: {
               show: false,
-              color: "#FEB019",
+              color: "#c23e00",
             },
             labels: {
               show: false,
               style: {
-                colors: "#FEB019",
+                colors: "#c23e00",
               },
             },
-
-            // title: {
-            //   text: "Revenue (thousand crores)",
-            //   style: {
-            //     color: "#FEB019",
-            //   },
-            // },
           },
         ],
         tooltip: {
