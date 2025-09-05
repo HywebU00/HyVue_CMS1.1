@@ -29,7 +29,12 @@
       <v-col md="8" cols="12">
         <v-card class="itemCard h-100">
           <h4 class="">Area Charts</h4>
-          <areaChart /> </v-card
+          <!-- 除 AreaChart 色彩由 ＣＳＳ控制 切換顏色出現相對應的元件外，其餘Chart 統一由ＣＳＳ更改色彩 -->
+          <areaChart class="areaChart default" />
+          <areaChart class="areaChart dark" />
+          <areaChartGreen class="areaChart green" />
+          <areaChartRed class="areaChart red" />
+          <areaChartPurple class="areaChart purple" /> </v-card
       ></v-col>
       <v-col md="4" cols="12">
         <v-card class="itemCard h-100">
@@ -96,8 +101,10 @@
 import gsap from "gsap";
 
 import pieChart from "@/components/chart/pieChart.vue";
-import areaChart from "@/components/chart/AreaChart.vue";
-
+import areaChart from "@/components/chart/areaChart.vue";
+import areaChartGreen from "@/components/chart/areaChart_green.vue";
+import areaChartRed from "@/components/chart/areaChart_red.vue";
+import areaChartPurple from "@/components/chart/areaChart_purple.vue";
 export default {
   data: () => ({
     functionGroupToggle: 0,
@@ -137,6 +144,9 @@ export default {
   components: {
     pieChart,
     areaChart,
+    areaChartGreen,
+    areaChartRed,
+    areaChartPurple,
   },
 };
 </script>

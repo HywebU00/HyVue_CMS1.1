@@ -81,9 +81,9 @@ export default {
     areaChart,
     areaChartGreen,
     areaChartRed,
+    areaChartPurple,
     LineChart,
     lineAndBarChart,
-    areaChartPurple,
   },
 };
 </script>

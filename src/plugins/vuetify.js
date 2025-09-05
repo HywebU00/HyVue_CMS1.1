@@ -137,7 +137,6 @@ export default createVuetify({
           primary70: "#f6e8ed", //$primary70
           //secondary 設定
           secondary: "#ad3b5f", //secondary40
-          "secondary-lighten-0": "#ad3b5f",
           secondary60: "#c88490", //secondary60
           secondary80: "#e6c9cc", //secondary80
           secondary100: "#ebf0f9", //secondary100
