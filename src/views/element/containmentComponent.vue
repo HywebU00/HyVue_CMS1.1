@@ -162,7 +162,13 @@
                     Show Lable:False</template
                   >
                   <template #content>
-                    <v-btn icon="mdi-web" size="large" color="primary"> </v-btn>
+                    <v-btn
+                      icon="mdi-web"
+                      rounded="full"
+                      size="large"
+                      color="primary"
+                    >
+                    </v-btn>
                   </template>
                 </layoutCardItem>
                 <layoutCardItem :height="'68px'">
@@ -647,7 +653,7 @@
               <h4 class="text-h4 mb-2 font-weight-bold">提示(Tooltips)</h4>
               <v-divider class="py-2 mb-2"></v-divider>
               <!-- 標籤列 start -->
-              <layoutCard title=" 提示(Tooltips)">
+              <layoutCard title="提示">
                 <layoutCardItem :height="'20px'" :width="'200px'">
                   <template #label>Direction: Left ⭠</template>
                   <template #content>

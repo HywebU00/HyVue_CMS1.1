@@ -462,7 +462,7 @@
               </h4>
               <v-divider class="pt-2 mb-2"></v-divider>
               <layoutCard title="狀態">
-                <layoutCardItem :height="'20px'" :width="'150px'">
+                <layoutCardItem :height="'60px'" :width="'180px'">
                   <template #label>State:None</template>
                   <template #content>
                     <v-progress-circular
@@ -477,8 +477,11 @@
                     </v-progress-circular>
                   </template>
                 </layoutCardItem>
-                <layoutCardItem :height="'20px'" :width="'150px'">
-                  <template #label>State:Default</template>
+                <layoutCardItem :height="'60px'" :width="'180px'">
+                  <template #label
+                    >State:Default<br />
+                    元件 新增class= " rounded "
+                  </template>
                   <template #content>
                     <v-progress-circular
                       model-value="75"
@@ -493,8 +496,12 @@
                     </v-progress-circular>
                   </template>
                 </layoutCardItem>
-                <layoutCardItem :height="'20px'" :width="'150px'">
-                  <template #label>State:Error</template>
+                <layoutCardItem :height="'60px'" :width="'180px'">
+                  <template #label
+                    >State:Error
+                    <br />
+                    元件 新增class= " rounded "
+                  </template>
                   <template #content>
                     <v-progress-circular
                       class="rounded"
@@ -509,8 +516,12 @@
                     </v-progress-circular>
                   </template>
                 </layoutCardItem>
-                <layoutCardItem :height="'20px'" :width="'150px'">
-                  <template #label>State:Success</template>
+                <layoutCardItem :height="'60px'" :width="'180px'">
+                  <template #label
+                    >State:Success
+                    <br />
+                    元件 新增class= " rounded "
+                  </template>
                   <template #content>
                     <v-progress-circular
                       color="success"
@@ -527,8 +538,12 @@
                 </layoutCardItem>
               </layoutCard>
               <layoutCard title="樣式">
-                <layoutCardItem :height="'20px'" :width="'150px'">
-                  <template #label>Type:Rounded</template>
+                <layoutCardItem :height="'60px'" :width="'180px'">
+                  <template #label
+                    >Type:Rounded
+                    <br />
+                    元件 新增class= " rounded "
+                  </template>
                   <template #content>
                     <v-progress-circular
                       :model-value="75"
@@ -541,7 +556,7 @@
                     </v-progress-circular>
                   </template>
                 </layoutCardItem>
-                <layoutCardItem :height="'20px'" :width="'150px'">
+                <layoutCardItem :height="'60px'" :width="'180px'">
                   <template #label>Type:Square</template>
                   <template #content>
                     <v-progress-circular
@@ -556,7 +571,7 @@
                 </layoutCardItem>
               </layoutCard>
               <layoutCard title="尺寸">
-                <layoutCardItem :height="'20px'" :width="'150px'">
+                <layoutCardItem :height="'60px'" :width="'180px'">
                   <template #label>Size:Small</template>
                   <template #content>
                     <v-progress-circular
@@ -570,7 +585,7 @@
                     </v-progress-circular>
                   </template>
                 </layoutCardItem>
-                <layoutCardItem :height="'20px'" :width="'150px'">
+                <layoutCardItem :height="'60px'" :width="'180px'">
                   <template #label>Size:Large</template>
                   <template #content>
                     <v-progress-circular

@@ -85,9 +85,9 @@
 
       .formGrid {
         display: flex;
-        .btnList {
-          max-width: rem(200);
-        }
+        // .btnList {
+        //   max-width: rem(200);
+        // }
 
         @container (max-width: 800px) {
           display: block;
@@ -148,4 +148,9 @@
       border-radius: 6px 6px 0 0;
     }
   }
+}
+.paginationText {
+  white-space: nowrap;
+  overflow-x: auto;
+  @include scrollbar;
 }

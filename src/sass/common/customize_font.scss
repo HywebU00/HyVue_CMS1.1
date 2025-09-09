@@ -1,8 +1,10 @@
 //body 預設字級
 @use '@/sass/variables.scss' as *;
+@use '@/sass/common/mixins/text.scss' as *;
+@use '@/sass/common/mixins/mediaquery.scss' as *;
 @use 'sass:map';
 body {
-  font-size: 0.938em; //1em;
+  font-size: 1em;
   font-weight: normal;
   line-height: 1.45em;
   font-family: $fontFamily;
@@ -16,22 +18,26 @@ body {
   }
 }
 $fontSize-config: (
-  medium: (
-    class: 'mediumSize',
-    font-size: 1rem,
-  ),
   small: (
     class: 'smallSize',
     font-size: 1rem * 0.875,
+    searchGrpBtnListWidth: 200,
+  ),
+  medium: (
+    class: 'mediumSize',
+    font-size: 1rem,
+    searchGrpBtnListWidth: 220,
   ),
   large: (
     class: 'largeSize',
     font-size: 1rem * 1.125,
+    searchGrpBtnListWidth: 230,
   ),
 );
 @each $name, $value in $fontSize-config {
   $class: map.get($value, class);
   $font-size: map.get($value, font-size);
+  $searchgrp-btnlist-width: map.get($value, searchGrpBtnListWidth);
   .#{$class} {
     .v-chip {
       .v-chip__content {
@@ -116,12 +122,39 @@ $fontSize-config: (
       }
     }
     .searchGrp {
+      container-type: inline-size;
       .v-expansion-panel {
         .formGrp {
           label {
             font-size: $font-size;
           }
         }
+        .v-expansion-panel-title {
+          .formGrid {
+            .btnList {
+              max-width: rem($searchgrp-btnlist-width);
+            }
+            @container (max-width: 800px) {
+              display: block;
+              .btnList {
+                width: 100%;
+                max-width: unset;
+              }
+            }
+          }
+        }
+      }
+    }
+    .v-timeline {
+      .v-timeline-item {
+        .title {
+          font-size: $font-size * 1.43; //rem(28);
+        }
+      }
+    }
+    .timelineCard {
+      .title {
+        font-size: $font-size * 1.43; //rem(28);
       }
     }
     .checkGrp {

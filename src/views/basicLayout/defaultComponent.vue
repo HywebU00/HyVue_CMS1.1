@@ -11,7 +11,7 @@
       </template>
     </v-breadcrumbs>
     <h2 class="title">系統首頁儀表板</h2>
-    <v-row class="mt-2" no-gutters>
+    <v-row class="mt-2 countCardGrp" no-gutters>
       <v-col sm="3" cols="12" v-for="item in countCards" :key="item.title">
         <v-card class="countCard">
           <h4 class="text-h6 font-weight-bold">
@@ -26,6 +26,8 @@
           <div class="caption">時間以...為計算準</div>
         </v-card>
       </v-col>
+    </v-row>
+    <v-row no-gutters>
       <v-col md="8" cols="12">
         <v-card class="itemCard h-100">
           <h4 class="">Area Charts</h4>

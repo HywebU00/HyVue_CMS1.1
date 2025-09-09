@@ -3,10 +3,34 @@
 @use '@/sass/common/mixins/mediaquery.scss' as *;
 @use '@/sass/variables.scss' as *;
 
+html {
+  overflow-y: auto;
+  @include scrollbar;
+}
 .container.page {
   [class^='v-col-'],
   [class*=' v-col-'] {
     padding: 10px !important;
+  }
+  container-type: inline-size;
+  .countCardGrp {
+    > div {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    @container (min-width: 575px) {
+      > div {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+    @container (min-width: 900px) {
+      > div {
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+    }
   }
   .countCard {
     h4 {
@@ -17,6 +41,7 @@
     }
     &.v-card {
       padding: 1rem;
+
       > div {
         display: flex;
         align-items: center;
@@ -42,6 +67,20 @@
           justify-content: end;
         }
       }
+      // @media screen and (max-width: 1200px) {
+      //   .content {
+      //     .text {
+      //       font-size: 1.75em;
+      //     }
+      //   }
+      // }
+      // @media screen and (max-width: 990px) {
+      //   .content {
+      //     .text {
+      //       font-size: 1.5em;
+      //     }
+      //   }
+      // }
     }
   }
   .itemCard {

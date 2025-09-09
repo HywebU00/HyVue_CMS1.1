@@ -471,6 +471,64 @@ $theme-config: (
         min-height: 395px !important;
       }
     }
+    .datePicker,
+    .dateRangerPicker,
+    .multiDatePicker {
+      .dp__menu {
+        background-color: $neutral20;
+        border-color: $neutral20;
+        &:focus {
+          border-color: $neutral20;
+        }
+      }
+      .dp__range_start,
+      .dp__range_end {
+        background-color: $neutral100;
+        color: $neutral10;
+      }
+      .dp__range_between {
+        background-color: $neutral30;
+        border-color: $neutral30;
+        color: $neutral100;
+      }
+      .dp__calendar_header {
+        color: $neutral100;
+      }
+      .dp__calendar_item {
+        color: #fff;
+      }
+      .dp__arrow_bottom {
+        background: $neutral20;
+        border-color: $neutral20;
+      }
+      .dp__action_button {
+        color: $neutral100;
+        &:hover {
+          border-color: $neutral60;
+        }
+      }
+      .dp__month_year_wrap {
+        button {
+          color: $neutral100;
+        }
+      }
+      .dp__today {
+        border-color: $neutral100;
+      }
+      .dp__selection_preview {
+        color: $neutral100;
+      }
+      .dp__active_date {
+        background: $neutral100;
+        color: $neutral0;
+      }
+      .dp__action_select {
+        background: $neutral10;
+        &:hover {
+          background: $neutral30;
+        }
+      }
+    }
   }
   .v-snackbar {
     .v-snackbar__wrapper {
@@ -508,64 +566,7 @@ $theme-config: (
       background-color: $neutral30 !important;
     }
   }
-  .datePicker,
-  .dateRangerPicker,
-  .multiDatePicker {
-    .dp__menu {
-      background-color: $neutral20;
-      border-color: $neutral20;
-      &:focus {
-        border-color: $neutral20;
-      }
-    }
-    .dp__range_start,
-    .dp__range_end {
-      background-color: $neutral100;
-      color: $neutral10;
-    }
-    .dp__range_between {
-      background-color: $neutral30;
-      border-color: $neutral30;
-      color: $neutral100;
-    }
-    .dp__calendar_header {
-      color: $neutral100;
-    }
-    .dp__calendar_item {
-      color: #fff;
-    }
-    .dp__arrow_bottom {
-      background: $neutral20;
-      border-color: $neutral20;
-    }
-    .dp__action_button {
-      color: $neutral100;
-      &:hover {
-        border-color: $neutral60;
-      }
-    }
-    .dp__month_year_wrap {
-      button {
-        color: $neutral100;
-      }
-    }
-    .dp__today {
-      border-color: $neutral100;
-    }
-    .dp__selection_preview {
-      color: $neutral100;
-    }
-    .dp__active_date {
-      background: $neutral100;
-      color: $neutral0;
-    }
-    .dp__action_select {
-      background: $neutral10;
-      &:hover {
-        background: $neutral30;
-      }
-    }
-  }
+
   .v-table {
     &.v-theme--dark {
       table {

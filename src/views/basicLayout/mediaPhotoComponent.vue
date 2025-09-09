@@ -39,7 +39,7 @@
                 <v-divider class="mx-3 mb-3"></v-divider>
               </v-row>
               <!-- 標籤列 end -->
-              <v-row no-gutters>
+              <v-row no-gutters class="mediaContent">
                 <v-col class="functionList" cols="12" md="3">
                   <h4 class="text-h4 mt-3 ml-1 mb-8 font-weight-bold">
                     資料夾分類
@@ -70,7 +70,7 @@
                     </v-slide-group-item>
                   </v-slide-group>
                 </v-col>
-                <v-col cols="12" md="9">
+                <v-col class="cardGrp" cols="12" md="9">
                   <!-- 卡片列表 start -->
                   <v-container class="container px-0">
                     <v-row class="pa-0 d-flex">
